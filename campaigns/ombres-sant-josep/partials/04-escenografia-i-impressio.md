@@ -1,5 +1,5 @@
 ::: {.panel tag="section"}
-### Escenografia mínima
+### Escenografia amb el material que ja tenim
 
 <div class="scene-art">
 <figure>
@@ -10,34 +10,109 @@
 
 ::: {.cols}
 ::: {.box}
-#### Imprimir miniatures
+#### Material disponible
 
-- 5 xiquets o xiquetes.
-- 5 bicicletes.
-- 2 agents o adults sospitosos.
-- 4 criatures menudes.
-- 1 criatura gran tipus demogorgon.
+- Pagoda de **83 x 83 x 83**: peça gran central.
+- 6 làmpares japoneses de **2 x 2 x 5**.
+- Mobiliari de HeroQuest.
+- Portes de HeroQuest.
+- Monstres de HeroQuest.
 :::
 
 ::: {.box .scale}
-#### Imprimir o fabricar escenografia
+#### Com reutilitzar-ho en Sant Josep
 
-- Arbres i roques.
-- Tanques i murs baixos.
-- Entrada de cova.
-- Caseta elèctrica.
-- Antena de ràdio.
-- Portal o esquerda.
+- **Pagoda:** entrada de cova, caseta elèctrica, altar del portal o edifici de fàbrica.
+- **Làmpares:** fanals del camí, punts de pista, llums intermitents o zones de por.
+- **Portes HQ:** reixes, porta del laboratori, tanca, túnel ocult o portal.
+- **Mobiliari HQ:** taules, armaris, cofres i tombes com a cobertura o objectius.
+- **Monstres HQ:** gos estrany, ombres, agents disfressats, criatures menudes o criatura final.
 :::
 
 ::: {.box .print}
-#### Reutilització
+#### Regla pràctica
 
-- Escola = taules, murs i pati.
-- Font de Garrut = arbres, roques i caseta.
-- Coves = murs, passadissos i cristalls.
-- Fàbrica = les mateixes parets amb caixes.
-- Upside Down = tot igual, però amb arrels, grisos i boira.
+- Si el mapa demana una peça que no teniu, useu una peça HQ i poseu-li nom.
+- Si una peça és massa fantàstica, feu que siga "una cosa que els xiquets no entenen bé".
+- No cal que l'escenografia siga realista: ha de recordar-vos on està la pista.
+- La mateixa peça pot canviar de paper entre episodis.
+:::
+:::
+:::
+
+::: {.panel tag="section"}
+### Llista mínima fàcil d'aconseguir
+
+Amb el material actual ja podeu començar. El que falta no ha de ser car ni perfecte: paper, cartó i tokens són suficients.
+
+::: {.cols}
+::: {.box}
+#### Imprescindible per jugar còmode
+
+- **5 marcadors de xiquet:** miniatures, peons, meeples o cartó amb nom.
+- **5 bicicletes:** tokens de paper, clips, bases buides o miniatures si les trobeu.
+- **6-8 marcadors de pista:** fitxes numerades, monedes o tokens de cartó.
+- **1 regla en polzades** o cinta mètrica marcada.
+- **Daus d6, d8, d10 i d12.**
+:::
+
+::: {.box .scale}
+#### Terreny casolà ràpid
+
+- **Camins:** tires de paper marró o tela.
+- **Tanques:** palets, peces de Lego, cartó fi o portes HQ tombades.
+- **Rocs:** pedres reals, taps pintats o blocs de suro.
+- **Arbres:** branquetes, taps verds, arbres de joguet o cartolina.
+- **Portal/esquerda:** cercle de paper violeta, porta HQ o la pagoda il·luminada.
+:::
+
+::: {.box .print}
+#### Tokens que val la pena imprimir
+
+- Bicicleta abandonada.
+- Petjades de fang negre.
+- Tros de tela.
+- Ràdio/cassette.
+- Cristalls negres.
+- Motxilla escolar.
+- Símbol de portal.
+:::
+:::
+:::
+
+::: {.panel tag="section"}
+### Millores per afegir més endavant
+
+Quan la campanya ja funcione, estes peces poden enriquir la taula sense canviar les regles.
+
+::: {.cols}
+::: {.box}
+#### Primera millora
+
+- 5 bicicletes físiques.
+- 2 adults: guarda municipal i agent sospitós.
+- 4 criatures menudes.
+- 1 criatura gran final.
+:::
+
+::: {.box .scale}
+#### Segona millora
+
+- Tanca modular.
+- Entrada de cova més clara.
+- Caseta elèctrica.
+- Antena de ràdio.
+- Cristalls negres en 3D.
+:::
+
+::: {.box .print}
+#### Millora d'ambient
+
+- Llum LED roja o violeta dins de la pagoda.
+- Arrels fetes amb cordill negre.
+- Boira de cotó gris.
+- Cartells o notes impreses per a pistes.
+- Bases de colors per distingir pistes, perills i objectius.
 :::
 :::
 :::
