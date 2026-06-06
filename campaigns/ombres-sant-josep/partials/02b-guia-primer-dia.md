@@ -22,7 +22,7 @@ Hui només heu de practicar quatre coses: moure un xiquet, acostar-vos a una pis
 - Una pista gran: el túnel ocult.
 - Arbres, roques, una tanca, l'entrada de la cova i un camí.
 - Daus d6, d8, d10 i d12.
-- Cartes Fortune si les teniu. Si no, useu cartes normals o ignoreu-les en esta primera escena.
+- Cartes Fortune si les teniu. Si no, useu cartes normals com a sorpreses senzilles o ignoreu-les en esta primera escena.
 :::
 
 ::: {.box .scale}
@@ -45,6 +45,38 @@ Hui només heu de practicar quatre coses: moure un xiquet, acostar-vos a una pis
 - Vehicles que no siguen bicicletes.
 - Baralles grans.
 - Horror complet. De moment, la por és una complicació narrativa.
+:::
+:::
+:::
+
+::: {.panel tag="section"}
+### Si useu una baralla normal
+
+No és una substitució exacta de les cartes Fortune. És només una manera fàcil de traure sorpreses mentre apreneu.
+
+::: {.cols}
+::: {.box}
+#### Quan robeu carta
+
+- Robeu una carta quan trobeu una pista.
+- Robeu una carta si una escena es queda parada.
+- Robeu una carta quan vulgueu saber si arriba una complicació.
+- Després d'usar-la, deixeu-la en una pila de descart.
+:::
+
+::: {.box .scale}
+#### Color de la carta
+
+- **Roja:** ajuda la colla. Troben una pista extra, guanyen temps o algú dona una bona idea.
+- **Negra:** complica l'escena. El guarda s'acosta, el gos borda, s'apaga una llanterna o se sent un soroll dins la cova.
+:::
+
+::: {.box .print}
+#### Número de la carta
+
+- **As-5:** complicació o ajuda menuda.
+- **6-10:** complicació o ajuda clara.
+- **Figura:** gir important. Apareix algú, canvia una pista o l'ombra es mou.
 :::
 :::
 :::
