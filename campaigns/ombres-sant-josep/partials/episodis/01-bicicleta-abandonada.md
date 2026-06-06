@@ -3,7 +3,7 @@
 
 Un company de classe no torna a casa després d'una excursió prop de les Coves de Sant Josep. A la vesprada, algú troba la seua bicicleta darrere d'una tanca, amb la roda davantera encara girant i fang negre als pedals.
 
-![Mapa de l'episodi 1](campaigns/ombres-sant-josep/assets/maps/episodi-01.svg){.map}
+![Mapa de l'episodi 1](campaigns/ombres-sant-josep/assets/maps/episodi-01.png){.map}
 
 ::: {.cols}
 ::: {.box}

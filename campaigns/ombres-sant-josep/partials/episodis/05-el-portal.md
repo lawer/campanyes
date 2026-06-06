@@ -3,7 +3,7 @@
 
 Tot apunta a la fàbrica abandonada. Les finestres estan tapades, però dins hi ha llum. El portal s'obri i es tanca com una ferida. Si la colla falla esta nit, alguna cosa molt gran entrarà a La Vall.
 
-![Mapa de l'episodi 5](campaigns/ombres-sant-josep/assets/maps/episodi-05.svg){.map}
+![Mapa de l'episodi 5](campaigns/ombres-sant-josep/assets/maps/episodi-05.png){.map}
 
 ::: {.cols}
 ::: {.box}

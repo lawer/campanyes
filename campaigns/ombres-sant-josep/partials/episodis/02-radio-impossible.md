@@ -3,7 +3,7 @@
 
 El Cerebrito munta una ràdio amb peces velles, una antena robada d'un transistor i massa cinta aillant. A mitjanit, la ràdio parla sola. La veu sona com el company desaparegut, però les paraules estan al revés.
 
-![Mapa de l'episodi 2](campaigns/ombres-sant-josep/assets/maps/episodi-02.svg){.map}
+![Mapa de l'episodi 2](campaigns/ombres-sant-josep/assets/maps/episodi-02.png){.map}
 
 ::: {.cols}
 ::: {.box}

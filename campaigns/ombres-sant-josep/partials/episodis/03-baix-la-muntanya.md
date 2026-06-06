@@ -3,7 +3,7 @@
 
 La senyal porta fins a una entrada amagada entre roques. Darrere hi ha passadissos de formigó, tubs rovellats i portes amb símbols que ningú del poble reconeix. La muntanya està buida per dins.
 
-![Mapa de l'episodi 3](campaigns/ombres-sant-josep/assets/maps/episodi-03.svg){.map}
+![Mapa de l'episodi 3](campaigns/ombres-sant-josep/assets/maps/episodi-03.png){.map}
 
 ::: {.cols}
 ::: {.box}

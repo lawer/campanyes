@@ -3,7 +3,7 @@
 
 La porta no dona al laboratori. Dona a La Vall, però no és La Vall. Els carrers estan buits, les parets respiren i les arrels pengen dels fanals. La Font de Garrut sona com un riu subterrani dins d'una ràdio trencada.
 
-![Mapa de l'episodi 4](campaigns/ombres-sant-josep/assets/maps/episodi-04.svg){.map}
+![Mapa de l'episodi 4](campaigns/ombres-sant-josep/assets/maps/episodi-04.png){.map}
 
 ::: {.cols}
 ::: {.box}
