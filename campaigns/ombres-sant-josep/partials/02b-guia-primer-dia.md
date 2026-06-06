@@ -20,9 +20,9 @@ Hui només heu de practicar quatre coses: moure un xiquet, acostar-vos a una pis
 - La bicicleta abandonada.
 - Quatre pistes menudes: fang, tela, gos i una cosa estranya prop de la reixa.
 - Una pista gran: el túnel ocult.
-- La pagoda com a torre estranya al costat de la cova: respirador, caseta tècnica o estructura que no hauria d'estar allí.
-- Les 6 làmpares com a pistes, llums del camí o zones on passen coses rares.
-- Portes i mobiliari de HeroQuest com a reixes, murs baixos, taules, roques o cobertura.
+- Una entrada de cova, roques, tanca i camí. Si encara no ho teniu imprés, useu paper, cartó o peces de HeroQuest.
+- Les 6 làmpares només com a marcadors de pista o llums estranyes, no com a decoració principal.
+- La pagoda i els monstres fantàstics queden per al final de campanya o com a substitució d'emergència.
 - Daus d6, d8, d10 i d12.
 - Cartes Fortune si les teniu. Si no, useu cartes normals com a sorpreses senzilles o ignoreu-les en esta primera escena.
 :::

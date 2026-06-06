@@ -1,5 +1,5 @@
 ::: {.panel tag="section"}
-### Escenografia amb el material que ja tenim
+### Escenografia recomanada
 
 <div class="scene-art">
 <figure>
@@ -8,11 +8,84 @@
 </figure>
 </div>
 
+La campanya funciona millor si els primers episodis semblen llocs reals: coves, camins, tanques, roques, casetes i mobiliari vell. La pagoda, les làmpares japoneses i els monstres fantàstics poden quedar com a últim recurs o per al final, quan el portal ja ha contaminat la taula.
+
 ::: {.cols}
 ::: {.box}
-#### Material disponible
+#### Prioritat 1: peces neutres
 
-- Pagoda alta de **83 x 83 x 83**: torre blava de molts pisos sobre base quadrada.
+- Entrada de cova.
+- Roques i murs baixos.
+- Tanques.
+- Caixes, barrils i sacs.
+- Portes, reixes i trampilles.
+- Cristalls negres o marcadors estranys.
+:::
+
+::: {.box .scale}
+#### Prioritat 2: usos múltiples
+
+- **Cova:** episodi 1, entrada oculta, túnel o refugi.
+- **Tanques:** coves, escola, fàbrica o límit perillós.
+- **Caixes/barrils:** cobertura, fàbrica, magatzem o barricada.
+- **Portes/reixes:** laboratori, túnel ocult, portal tancat o obstacle.
+- **Cristalls:** pistes, corrupció del portal o objectiu a destruir.
+:::
+
+::: {.box .print}
+#### Fantàstic al final
+
+- **Pagoda:** no la poseu en la primera escena si teniu cova o caseta. Reserveu-la per a torre del portal, nucli del laboratori o final.
+- **Làmpares japoneses:** useu-les com a marcadors de llum estranya, no com a decoració habitual.
+- **Monstres HQ:** només quan l'ombra ja es veu clarament. Abans, millor gos, guarda o sorolls fora de pla.
+:::
+:::
+:::
+
+::: {.panel tag="section"}
+### STLs públics per imprimir primer
+
+Busqueu peces gratuïtes o públiques i reviseu la llicència abans d'imprimir. La idea és imprimir poques coses que servisquen en molts episodis.
+
+::: {.cols}
+::: {.box}
+#### Per començar
+
+- [Entrada de cova / roques](https://www.printables.com/search/models?q=cave%20entrance%20terrain): episodi 1 i túnels.
+- [Tanques i murs baixos](https://www.printables.com/search/models?q=tabletop%20fence%20terrain): camins, escola, fàbrica i límits.
+- [Caixes i barrils](https://www.printables.com/search/models?q=tabletop%20crates%20barrels): cobertura universal.
+- [Portes i reixes](https://www.printables.com/search/models?q=tabletop%20door%20gate): túnel ocult, laboratori i portal.
+:::
+
+::: {.box .scale}
+#### Per enriquir
+
+- [OpenForge / tiles de caverna](https://www.thingiverse.com/search?q=OpenForge+cavern&type=things): passadissos baix la muntanya.
+- [OpenForge / murs i portes](https://www.thingiverse.com/search?q=OpenForge+door+wall&type=things): laboratori, fàbrica i túnels.
+- [Cristalls i roques estranyes](https://www.printables.com/search/models?q=crystal%20terrain%20stl): portal, pistes i objectius.
+- [Antena o torre de ràdio](https://www.printables.com/search/models?q=radio%20tower%20terrain): episodi 2 i fàbrica.
+:::
+
+::: {.box .print}
+#### Alternativa si no trobeu STL concret
+
+- Entreu a Printables, Thingiverse o MyMiniFactory i busqueu: `tabletop cave`, `tabletop fence`, `crates barrels`, `dungeon door`, `cavern tiles`, `crystal terrain`.
+- Trieu peces simples, sense massa fantasia i amb base plana.
+- Millor 6 peces reutilitzables que 20 peces molt específiques.
+:::
+:::
+:::
+
+::: {.panel tag="section"}
+### Material actual com a pla B
+
+Mentre imprimiu les peces neutres, el material fantàstic pot cobrir buits. Useu-lo amb moderació perquè Sant Josep mantinga el to de poble, cova i misteri.
+
+::: {.cols}
+::: {.box}
+#### El que ja tenim
+
+- Pagoda alta de **83 x 83 x 83**.
 - 6 làmpares japoneses de **2 x 2 x 5**.
 - Mobiliari de HeroQuest.
 - Portes de HeroQuest.
@@ -20,52 +93,19 @@
 :::
 
 ::: {.box .scale}
-#### Com reutilitzar-ho en Sant Josep
+#### Millor ús
 
-- **Pagoda:** torre estranya, respirador de la muntanya, caseta tècnica alta, torre de control abandonada o focus del portal.
-- **Làmpares:** fanals del camí, punts de pista, llums intermitents o zones de por.
-- **Portes HQ:** reixes, porta del laboratori, tanca, túnel ocult o portal.
-- **Mobiliari HQ:** taules, armaris, cofres i tombes com a cobertura o objectius.
-- **Monstres HQ:** gos estrany, ombres, agents disfressats, criatures menudes o criatura final.
+- **Portes HQ:** reixes, portes de laboratori, túnel ocult.
+- **Mobiliari HQ:** cobertura, taules, armaris, caixes o objectius.
+- **Làmpares:** punts de pista o llums impossibles.
+- **Monstres HQ:** ombres i criatura final.
 :::
 
 ::: {.box .print}
-#### Regla pràctica
+#### Última opció
 
-- Si el mapa demana una peça que no teniu, useu una peça HQ i poseu-li nom.
-- Si una peça és massa fantàstica, feu que siga "una cosa que els xiquets no entenen bé".
-- No cal que l'escenografia siga realista: ha de recordar-vos on està la pista.
-- La mateixa peça pot canviar de paper entre episodis.
-:::
-:::
-:::
-
-::: {.panel tag="section"}
-### Com usar la pagoda en cada episodi
-
-La pagoda no ha de ser literalment una pagoda dins de La Vall. En la història pot ser una estructura metàl·lica pintada de blau, una maqueta gegant trobada en una fàbrica, una torre d'extracció antiga o una cosa que l'altre costat ha posat en el món real.
-
-::: {.cols}
-::: {.box}
-#### Episodis 1-2
-
-- **Episodi 1:** posa-la al costat de la cova com a respirador o caseta tècnica. La bicicleta apareix prop d'ella, no dins.
-- **Episodi 2:** usa-la com a torre d'antena. Les làmpares marquen els punts on la ràdio fa soroll.
-:::
-
-::: {.box .scale}
-#### Episodis 3-4
-
-- **Episodi 3:** representa l'ascensor, porta o nucli del laboratori baix la muntanya.
-- **Episodi 4:** és la mateixa torre, però "malament": envoltada d'arrels, boira o cristalls.
-:::
-
-::: {.box .print}
-#### Episodi 5
-
-- Col·loca-la al centre o al fons de la fàbrica com a cor del portal.
-- Una porta HQ pot ser l'esquerda oberta a la base.
-- Una llum roja o violeta dins o darrere de la pagoda la converteix en objectiu final.
+- **Pagoda:** torre del portal, estructura impossible de l'altre costat o nucli final de la fàbrica.
+- Si apareix abans, feu que siga una maqueta, una torre tècnica o una cosa amagada que els adults no poden explicar.
 :::
 :::
 :::
