@@ -43,6 +43,14 @@
 - **Font:** [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Xuanzang_-_Xiyou_Zhenquan_(A_Complete_Narrative_of_Travels_in_the_West).jpg).
 - **Llicència:** domini públic.
 :::
+
+::: {.box}
+#### Làmines noves de campanya
+
+- **Fitxers:** primer-fanal-ambient.png, primer-fanal-setup.png i yaoguai-terreny-ambient.png.
+- **Font:** generades amb eina d'imatge IA per a este document.
+- **Ús:** ambientació i ajuda visual de la primera partida.
+:::
 :::
 :::
 

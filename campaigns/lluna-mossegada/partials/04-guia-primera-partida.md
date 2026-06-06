@@ -3,6 +3,13 @@
 
 Esta campanya assumeix que esteu aprenent `Age of Fantasy: Quest`. No intenteu usar totes les regles especials de colp. La Missió 0 està pensada per tocar les peces bàsiques del joc sense pressió.
 
+<div class="scene-art setup">
+<figure>
+<img src="campaigns/lluna-mossegada/assets/primer-fanal-setup.png" alt="Guia visual de preparació de la Missió 0 amb herois al sud, yaoguai al nord, fanal al centre, cofre a l'est i cobertura a l'oest">
+<figcaption>Preparació visual de la Missió 0: herois al sud, yaoguai al nord, fanal al centre, cofre a l'est i cobertura a l'oest</figcaption>
+</figure>
+</div>
+
 ::: {.cols}
 ::: {.box}
 #### Què preparar

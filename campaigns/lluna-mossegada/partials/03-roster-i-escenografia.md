@@ -62,6 +62,13 @@ Esta llista ve de `Age of Fantasy: Skirmish` (`AOFS 150pts`). Per a usar-los com
 ::: {.panel tag="section"}
 ### Escenografia necessària i alternatives
 
+<div class="scene-art">
+<figure>
+<img src="campaigns/lluna-mossegada/assets/yaoguai-terreny-ambient.png" alt="Ruïnes de temple amb yaoguai, pont roig, tòtems, pedres de segell i portal espiritual violeta">
+<figcaption>Referència visual: tòtems yaoguai, pedres de segell, portal espiritual i pont roig</figcaption>
+</figure>
+</div>
+
 ::: {.cols}
 ::: {.box}
 #### Imprescindible
