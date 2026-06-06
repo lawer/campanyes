@@ -20,7 +20,7 @@ Hui només heu de practicar quatre coses: moure un xiquet, acostar-vos a una pis
 - La bicicleta abandonada.
 - Quatre pistes menudes: fang, tela, gos i una cosa estranya prop de la reixa.
 - Una pista gran: el túnel ocult.
-- La pagoda com a entrada de la cova o caseta estranya.
+- La pagoda com a torre estranya al costat de la cova: respirador, caseta tècnica o estructura que no hauria d'estar allí.
 - Les 6 làmpares com a pistes, llums del camí o zones on passen coses rares.
 - Portes i mobiliari de HeroQuest com a reixes, murs baixos, taules, roques o cobertura.
 - Daus d6, d8, d10 i d12.

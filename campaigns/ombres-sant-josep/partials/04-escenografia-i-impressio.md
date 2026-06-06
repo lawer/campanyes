@@ -12,7 +12,7 @@
 ::: {.box}
 #### Material disponible
 
-- Pagoda de **83 x 83 x 83**: peça gran central.
+- Pagoda alta de **83 x 83 x 83**: torre blava de molts pisos sobre base quadrada.
 - 6 làmpares japoneses de **2 x 2 x 5**.
 - Mobiliari de HeroQuest.
 - Portes de HeroQuest.
@@ -22,7 +22,7 @@
 ::: {.box .scale}
 #### Com reutilitzar-ho en Sant Josep
 
-- **Pagoda:** entrada de cova, caseta elèctrica, altar del portal o edifici de fàbrica.
+- **Pagoda:** torre estranya, respirador de la muntanya, caseta tècnica alta, torre de control abandonada o focus del portal.
 - **Làmpares:** fanals del camí, punts de pista, llums intermitents o zones de por.
 - **Portes HQ:** reixes, porta del laboratori, tanca, túnel ocult o portal.
 - **Mobiliari HQ:** taules, armaris, cofres i tombes com a cobertura o objectius.
@@ -36,6 +36,36 @@
 - Si una peça és massa fantàstica, feu que siga "una cosa que els xiquets no entenen bé".
 - No cal que l'escenografia siga realista: ha de recordar-vos on està la pista.
 - La mateixa peça pot canviar de paper entre episodis.
+:::
+:::
+:::
+
+::: {.panel tag="section"}
+### Com usar la pagoda en cada episodi
+
+La pagoda no ha de ser literalment una pagoda dins de La Vall. En la història pot ser una estructura metàl·lica pintada de blau, una maqueta gegant trobada en una fàbrica, una torre d'extracció antiga o una cosa que l'altre costat ha posat en el món real.
+
+::: {.cols}
+::: {.box}
+#### Episodis 1-2
+
+- **Episodi 1:** posa-la al costat de la cova com a respirador o caseta tècnica. La bicicleta apareix prop d'ella, no dins.
+- **Episodi 2:** usa-la com a torre d'antena. Les làmpares marquen els punts on la ràdio fa soroll.
+:::
+
+::: {.box .scale}
+#### Episodis 3-4
+
+- **Episodi 3:** representa l'ascensor, porta o nucli del laboratori baix la muntanya.
+- **Episodi 4:** és la mateixa torre, però "malament": envoltada d'arrels, boira o cristalls.
+:::
+
+::: {.box .print}
+#### Episodi 5
+
+- Col·loca-la al centre o al fons de la fàbrica com a cor del portal.
+- Una porta HQ pot ser l'esquerda oberta a la base.
+- Una llum roja o violeta dins o darrere de la pagoda la converteix en objectiu final.
 :::
 :::
 :::
