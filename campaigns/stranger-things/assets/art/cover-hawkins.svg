@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" role="img" aria-label="Poble de Hawkins fantàstic sota llums roges">
+<defs><linearGradient id="sky" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#08091a"/><stop offset="1" stop-color="#1a0610"/></linearGradient><filter id="glow"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+<rect width="1200" height="520" fill="url(#sky)"/>
+<circle cx="600" cy="105" r="64" fill="#ff2b3d" opacity=".22" filter="url(#glow)"/>
+<path d="M0 340 C140 260 250 330 390 250 S670 305 790 230 1050 250 1200 190 L1200 520 L0 520Z" fill="#060814"/>
+<path d="M80 365 h140 v115 H80zM110 320 h80 l55 45 H55zM275 355 h130 v125H275zM305 312 h70 l55 43H250zM470 330h160v150H470zM500 270h100l75 60H430z" fill="#101827" stroke="#334155" stroke-width="3"/>
+<path d="M780 245h95v235h-95zM762 245h130l-65-75z" fill="#111827" stroke="#64748b" stroke-width="3"/><rect x="815" y="275" width="28" height="80" fill="#32d8ff" opacity=".55" filter="url(#glow)"/>
+<path d="M0 460 H1200" stroke="#32d8ff" stroke-width="2" opacity=".35"/><path d="M150 95 C280 150 390 40 520 95 S750 150 910 70 1100 120 1200 80" fill="none" stroke="#ff2b3d" stroke-width="5" opacity=".45" filter="url(#glow)"/>
+<g fill="#ffd166" filter="url(#glow)"><circle cx="130" cy="390" r="7"/><circle cx="330" cy="390" r="7"/><circle cx="540" cy="390" r="7"/><circle cx="980" cy="385" r="7"/></g>
+<path d="M930 470 C985 390 1040 420 1095 330" fill="none" stroke="#3b2b5c" stroke-width="18" stroke-linecap="round" opacity=".85"/><text x="600" y="500" text-anchor="middle" fill="#aab4c9" font-family="Arial" font-size="22">Hawkins · poble de frontera · la torre observa</text>
+</svg>

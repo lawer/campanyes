@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900" role="img" aria-label="Mapa episodi 4">
+  <rect width="900" height="900" fill="#c8c9c4"/>
+  <rect x="60" y="60" width="780" height="780" fill="none" stroke="#2b2b2b" stroke-width="6"/>
+  <path d="M80 210 C230 310 330 120 500 210 C650 290 690 160 820 210" fill="none" stroke="#3d3d3d" stroke-width="28" opacity=".65"/>
+  <path d="M95 660 C250 540 360 760 510 625 C650 505 700 710 825 600" fill="none" stroke="#3d3d3d" stroke-width="28" opacity=".65"/>
+  <rect x="130" y="330" width="190" height="160" fill="#8b8b8b" stroke="#222" stroke-width="4" opacity=".7"/>
+  <rect x="575" y="325" width="190" height="160" fill="#8b8b8b" stroke="#222" stroke-width="4" opacity=".7"/>
+  <circle cx="450" cy="455" r="42" fill="#111"/><text x="395" y="410" font-size="24">Major</text>
+  <circle cx="210" cy="405" r="28" fill="#c0392b"/><text x="150" y="520" font-size="22">Cristall</text>
+  <circle cx="650" cy="405" r="28" fill="#c0392b"/><text x="600" y="520" font-size="22">Motxilla</text>
+  <circle cx="420" cy="230" r="28" fill="#c0392b"/><text x="370" y="180" font-size="22">Ràdio</text>
+  <circle cx="510" cy="655" r="28" fill="#c0392b"/><text x="535" y="665" font-size="22">Mans</text>
+  <text x="330" y="470" font-size="28">L'altre costat</text>
+</svg>

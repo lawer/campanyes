@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="ca-valencia">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Llums en la Foscor - Arc 1 - Campanya AoFQ</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&family=Roboto+Slab:wght@400;600;700&display=swap');
+:root{
+  --bg:#05060d;--bg2:#0b1020;--panel:#121827;--panel2:#171f33;
+  --red:#ff2b3d;--red2:#9f1525;--cyan:#32d8ff;--blue:#405cff;
+  --amber:#ffd166;--green:#62e6a5;--text:#eef3ff;--muted:#aab4c9;
+  --soft:#d7def2;--line:rgba(120,150,210,.28);--shadow:rgba(0,0,0,.55);
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,Arial,sans-serif;font-size:16px;line-height:1.7}
+body:before{content:'';position:fixed;inset:0;pointer-events:none;z-index:-2;background:radial-gradient(circle at 50% -10%,rgba(255,43,61,.28),transparent 32%),radial-gradient(circle at 86% 12%,rgba(50,216,255,.18),transparent 32%),linear-gradient(180deg,#05060d 0%,#0b1020 46%,#05060d 100%)}
+body:after{content:'';position:fixed;inset:0;pointer-events:none;z-index:-1;opacity:.26;background:linear-gradient(transparent 95%,rgba(50,216,255,.22) 96%),linear-gradient(90deg,transparent 95%,rgba(255,43,61,.16) 96%);background-size:44px 44px}
+.wrap{max-width:1080px;margin:0 auto;padding:28px 18px 56px}
+p{margin:.45rem 0 0}a{color:var(--cyan)}code{background:rgba(50,216,255,.1);border:1px solid rgba(50,216,255,.18);border-radius:4px;padding:1px 5px;color:#c9f6ff}
+.cover{position:relative;overflow:hidden;min-height:520px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:70px 28px;border:1px solid rgba(255,43,61,.45);background:radial-gradient(circle at 50% 35%,rgba(255,43,61,.20),transparent 26%),linear-gradient(145deg,rgba(16,23,45,.92),rgba(5,6,13,.98) 58%,rgba(32,8,18,.94));box-shadow:0 28px 80px var(--shadow),inset 0 0 80px rgba(255,43,61,.08)}
+.cover:before{content:'01101100 01101001 01100111 01101000 01110100 01110011';position:absolute;left:24px;right:24px;bottom:18px;color:rgba(50,216,255,.16);font-family:Roboto Slab,serif;font-size:12px;letter-spacing:4px;white-space:nowrap;overflow:hidden}.cover:after{content:'HAWKINS';position:absolute;top:18px;right:22px;color:rgba(255,255,255,.07);font-family:Bebas Neue,sans-serif;font-size:86px;letter-spacing:8px;line-height:1}
+.label,.smallcap,.rank,.mtype,.mbar,.pill,.tag{font-family:Bebas Neue,Inter,sans-serif;text-transform:uppercase;letter-spacing:2.2px}.label{color:var(--cyan);font-size:18px;text-shadow:0 0 18px rgba(50,216,255,.55)}.label p,.subtitle p,.intro p,.smallcap p,.rank p,.name p,.desc p{margin:0}
+h1{font-family:Bebas Neue,Inter,sans-serif;font-size:clamp(62px,13vw,132px);line-height:.86;margin:18px 0 12px;color:#fff;letter-spacing:3px;text-transform:uppercase;text-shadow:0 0 8px #fff,0 0 24px var(--red),0 0 58px var(--red2),0 8px 0 #21040a}.subtitle{font-weight:800;color:var(--amber);font-size:clamp(15px,2.5vw,21px);text-transform:uppercase;letter-spacing:2px}.intro{max-width:780px;margin-top:24px;color:var(--soft);font-family:Roboto Slab,Georgia,serif;font-size:18px;background:rgba(5,6,13,.55);border:1px solid rgba(255,255,255,.08);padding:18px 22px;box-shadow:0 14px 34px rgba(0,0,0,.28)}
+.tags{margin-top:24px}.tags p,.stats p{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin:0}.tag,.pill{display:inline-flex;align-items:center;border:1px solid rgba(50,216,255,.34);background:rgba(50,216,255,.08);color:#dff9ff;border-radius:999px;padding:5px 10px;font-size:14px;line-height:1}.tag{border-color:rgba(255,43,61,.42);background:rgba(255,43,61,.10);color:#ffdbe0}
+.sh{text-align:center;margin:54px 0 20px}.sh h2{font-family:Bebas Neue,Inter,sans-serif;font-size:clamp(34px,7vw,62px);letter-spacing:2px;line-height:.95;color:#fff;text-transform:uppercase;text-shadow:0 0 20px rgba(50,216,255,.45)}.smallcap{color:var(--red);font-size:17px}.rule{border:0;height:2px;max-width:560px;margin:0 auto 28px;background:linear-gradient(90deg,transparent,var(--cyan),var(--red),var(--cyan),transparent);box-shadow:0 0 18px rgba(255,43,61,.5)}
+.grid,.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}.card,.panel,.mission,.villain,.ending{border:1px solid var(--line);background:linear-gradient(160deg,rgba(23,31,51,.96),rgba(9,12,24,.98));box-shadow:0 18px 48px rgba(0,0,0,.34)}.card{position:relative;padding:22px;border-top:3px solid var(--red)}.card:after{content:'';position:absolute;inset:auto 0 0;height:3px;background:linear-gradient(90deg,var(--red),var(--cyan));opacity:.9}.rank{color:var(--cyan);font-size:15px}.name{font-family:Bebas Neue,Inter,sans-serif;color:#fff;font-size:34px;letter-spacing:1px;line-height:1;margin:4px 0 10px}.desc{color:var(--muted);font-family:Roboto Slab,Georgia,serif;font-size:15px}.stats{margin-top:16px}.stats p{justify-content:flex-start}
+.art{display:block;width:100%;height:clamp(230px,36vw,390px);object-fit:cover;margin:22px 0;border:1px solid rgba(120,150,210,.28);background:#05060d;box-shadow:0 20px 50px rgba(0,0,0,.28);filter:saturate(.86) contrast(1.08) brightness(.82)}.art.compact{height:clamp(190px,28vw,320px);margin:14px 0}.art-card{padding:0;overflow:hidden}.art-card p{margin:0}.art-card img{display:block;width:100%}
+.portrait{display:block;width:100%;height:230px;object-fit:cover;object-position:top center;margin:4px 0 14px;border:1px solid rgba(255,43,61,.28);background:#05060d;filter:saturate(.92) contrast(1.05)}.box p:has(.portrait){margin:0}
+.panel{padding:26px;margin:26px 0}.panel h3,.rtitle{font-family:Bebas Neue,Inter,sans-serif;color:#fff;text-transform:uppercase;letter-spacing:2px;font-size:30px;line-height:1;margin:0 0 16px;text-shadow:0 0 18px rgba(255,43,61,.42)}.panel h3:before,.rtitle:before{content:'▣ ';color:var(--red)}.box{border:1px solid rgba(120,150,210,.22);background:rgba(5,9,18,.58);padding:16px}.box h4{font-family:Bebas Neue,Inter,sans-serif;color:var(--amber);font-size:22px;letter-spacing:1.5px;margin:0 0 8px;text-transform:uppercase}.box ul,.rbox ul{margin:0;padding:0;list-style:none}.box li,.rbox li{position:relative;padding:7px 0 7px 20px;color:var(--soft);border-bottom:1px solid rgba(120,150,210,.12)}.box li:last-child,.rbox li:last-child{border-bottom:0}.box li:before,.rbox li:before{content:'>';position:absolute;left:0;color:var(--cyan);font-weight:800}.box strong,.rbox strong{color:#fff}.scale{border-left:4px solid var(--cyan)!important}.print{border-left:4px solid var(--red)!important}.ai{border-left:4px solid var(--amber)!important}
+.chapter{margin:60px 0}.banner{position:relative;overflow:hidden;padding:30px 26px;margin-bottom:22px;border:1px solid rgba(50,216,255,.32);background:radial-gradient(circle at 88% 30%,rgba(50,216,255,.14),transparent 36%),linear-gradient(135deg,rgba(18,35,64,.9),rgba(5,6,13,.6))}.banner:after{content:'RUN';position:absolute;right:18px;bottom:-22px;font-family:Bebas Neue,sans-serif;font-size:118px;line-height:1;color:rgba(50,216,255,.08)}.banner.red{border-color:rgba(255,43,61,.38);background:radial-gradient(circle at 88% 30%,rgba(255,43,61,.18),transparent 36%),linear-gradient(135deg,rgba(58,10,23,.88),rgba(5,6,13,.62))}.banner.red:after{content:'LAB';color:rgba(255,43,61,.09)}.banner.violet{border-color:rgba(130,100,255,.42);background:radial-gradient(circle at 88% 30%,rgba(130,100,255,.20),transparent 36%),linear-gradient(135deg,rgba(34,22,68,.88),rgba(5,6,13,.7))}.banner.violet:after{content:'VOID';color:rgba(130,100,255,.10)}.ctitle{font-family:Bebas Neue,Inter,sans-serif;color:#fff;font-size:clamp(40px,8vw,72px);line-height:.95;letter-spacing:2px;text-shadow:0 0 22px rgba(255,43,61,.45)}
+.mission{margin:24px 0 34px;overflow:hidden}.mhead{display:flex;background:linear-gradient(90deg,rgba(255,43,61,.18),rgba(50,216,255,.06))}.mbar{width:54px;display:flex;align-items:center;justify-content:center;writing-mode:vertical-rl;padding:12px 0;background:linear-gradient(180deg,var(--red2),rgba(50,216,255,.28));color:#fff;font-size:15px;border-right:1px solid rgba(255,255,255,.1)}.mhc{flex:1;padding:18px 20px;border-bottom:1px solid rgba(120,150,210,.18)}.mtype{color:var(--cyan);font-size:15px}.mtitle{font-family:Bebas Neue,Inter,sans-serif;color:#fff;font-size:38px;line-height:1;letter-spacing:1px}.mbody{padding:22px}.quote{position:relative;margin:0 0 18px;padding:16px 18px 16px 22px;color:#fff;background:linear-gradient(90deg,rgba(255,43,61,.16),rgba(50,216,255,.06));border-left:4px solid var(--red);font-family:Roboto Slab,Georgia,serif;font-size:16px}.quote cite{display:block;margin-top:10px;color:var(--cyan);font-family:Bebas Neue,Inter,sans-serif;font-style:normal;font-size:16px;letter-spacing:2px;text-transform:uppercase}.rbox{border:1px solid rgba(255,43,61,.34);background:rgba(6,8,18,.78);padding:18px;margin-top:16px}.rbar{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.terrain{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:14px}.terrain .box{border-left:4px solid var(--green)}
+.maptop{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;padding:9px 14px;background:rgba(5,9,18,.8);border-top:1px solid rgba(120,150,210,.22);border-bottom:1px solid rgba(120,150,210,.22);color:var(--amber);font-family:Bebas Neue,Inter,sans-serif;text-transform:uppercase;letter-spacing:2px;font-size:15px}.map{display:block;width:100%;background:#05060d;border-bottom:1px solid rgba(120,150,210,.22)}
+.mission p:has(.map){margin:0}
+.villain{position:relative;overflow:hidden;padding:30px;margin:44px 0;border-color:rgba(130,100,255,.42);background:radial-gradient(circle at 85% 18%,rgba(130,100,255,.24),transparent 34%),linear-gradient(135deg,rgba(42,10,38,.82),rgba(6,8,18,.98))}.villain:after{content:'MIND FLAYER';position:absolute;right:16px;top:6px;color:rgba(255,255,255,.06);font-family:Bebas Neue,sans-serif;font-size:76px;letter-spacing:5px}.villain .name{font-size:54px;color:#fff;text-shadow:0 0 18px rgba(130,100,255,.8),0 0 42px rgba(255,43,61,.35)}.villain p{max-width:780px;color:var(--soft)}.ending{text-align:center;padding:34px;margin:42px 0;background:radial-gradient(circle at 50% 0%,rgba(255,43,61,.15),transparent 42%),linear-gradient(160deg,rgba(17,26,48,.9),rgba(6,8,18,.98))}.ending h3{font-family:Bebas Neue,Inter,sans-serif;font-size:46px;letter-spacing:2px;line-height:1;color:#fff;text-shadow:0 0 22px rgba(255,43,61,.5)}
+@media print{body{background:#fff;color:#111}.wrap{max-width:none}.cover,.card,.panel,.mission,.villain,.ending{box-shadow:none;break-inside:avoid}.cover{break-after:page}}
+@media(max-width:680px){.wrap{padding:12px}.cover{min-height:430px;padding:48px 16px}.cover:after{font-size:54px}.intro{font-size:16px;padding:14px}.mbar{width:40px}.mbody{padding:16px}.panel{padding:18px}.mission{margin-left:-4px;margin-right:-4px}.mtitle{font-size:31px}}
+</style>
+</head>
+<body><main class="wrap">
+<!--
+Campanya Pulp Alley ambientada a La Vall d'Uixó, 1986.
+El contingut editable viu en campaigns/ombres-sant-josep/partials/.
+-->
+<header class="cover local-cover">
+<div class="label">
+<p>Pulp Alley - Campanya cooperativa local - Tardor de 1986</p>
+</div>
+<h1 id="les-ombres-de-sant-josep">Les Ombres de Sant Josep</h1>
+<div class="subtitle">
+<p>Una campanya de misteri a La Vall d'Uixó per a 2-5 xiquets amb
+bicicletes</p>
+</div>
+<div class="intro">
+<p>Durant setmanes, la gent de La Vall parla de llums estranyes prop de
+les Coves de Sant Josep. Alguns animals apareixen morts o canviats. Una
+nit, després d'una excursió escolar, un company desapareix i la seua
+bicicleta apareix abandonada prop de l'entrada de les coves. Els adults
+diuen que són imaginacions. Vosaltres sabeu que no.</p>
+</div>
+<div class="tags">
+<p><span class="tag">Pulp Alley</span> <span
+class="tag">Cooperatiu</span> <span class="tag">La Vall d'Uixó</span>
+<span class="tag">1986</span> <span class="tag">Escape room de
+taula</span> <span class="tag">5 episodis</span></p>
+</div>
+</header>
+<section id="premissa" class="panel">
+<h3>Premissa</h3>
+<p>Esta campanya substitueix Hawkins per La Vall d'Uixó. Manté el sabor
+de colla de xiquets, bicicletes, misteri, ràdios casolanes i criatures
+de l'altre costat, però amb llocs reconeixibles: les Coves de Sant
+Josep, la Font de Garrut, camins de muntanya, una fàbrica abandonada i
+una escola de barri.</p>
+<p>No necessiteu exèrcits ni herois carregats d'equip. Una colla de 4-5
+xiquets, unes bicicletes, dos adults sospitosos i cinc criatures són
+suficients per a jugar tota la temporada.</p>
+</section>
+<section id="com-jugar-ho-en-pulp-alley" class="panel">
+<h3>Com jugar-ho en Pulp Alley</h3>
+<p>La campanya està pensada com a <strong>Pulp Alley
+cooperatiu</strong>. Cada jugador controla un xiquet o xiqueta. Si
+jugueu menys persones, repartiu la colla entre els jugadors. El director
+de joc pot portar amenaces, pistes i rellotges d'escena; si voleu jugar
+sense director, feu que les amenaces actuen com NPCs.</p>
+<p>La colla funciona com una sola <strong>league</strong> de 10 slots.
+Per mantindre el to de xiquets normals, usem la perk
+<strong>Mastermind</strong>: no hi ha Leader de nivell 4. El Líder de la
+colla és un Sidekick gratuït que fa de Leader durant els escenaris, i la
+resta són Allies o Followers. Això fa una colla vulnerable, ràpida i
+centrada en plot points.</p>
+<div class="cols">
+<section id="estructura-dun-episodi" class="box">
+<h4>Estructura d'un episodi</h4>
+<ul>
+<li>Taula recomanada: 3' x 3'.</li>
+<li>Duració: 6 torns.</li>
+<li>Plot points: 1 major i 4 menors.</li>
+<li>Desplegament: segons l'episodi.</li>
+<li>Recompenses: 5 cartes de Reward.</li>
+<li>Opcional: 1 spoiler si voleu més sorpresa.</li>
+</ul>
+</section>
+<section id="to-de-partida" class="box scale">
+<h4>To de partida</h4>
+<ul>
+<li>Els protagonistes són xiquets normals.</li>
+<li>Les baralles són últim recurs.</li>
+<li>Fugir, amagar-se, parlar i investigar és jugar bé.</li>
+<li>Una derrota significa separació, por, perdre una pista o que el
+portal avance.</li>
+</ul>
+</section>
+<section id="regla-dor" class="box print">
+<h4>Regla d'or</h4>
+<ul>
+<li>Usa les regles normals de Pulp Alley per moviments, perills,
+challenges, plot points i combats.</li>
+<li>Les regles d'esta campanya només expliquen escena, pistes i
+conseqüències.</li>
+<li>Si una escena es complica massa per a un xiquet, converteix combat
+en persecució.</li>
+<li>Les armes dels xiquets són simbòliques: llanternes, pedres,
+walkie-talkies, motxilles i bicicletes.</li>
+</ul>
+</section>
+</div>
+</section>
+<section id="regles-locals-de-campanya" class="panel">
+<h3>Regles locals de campanya</h3>
+<div class="cols">
+<section id="horror-suau" class="box">
+<h4>Horror suau</h4>
+<ul>
+<li>Les criatures i el portal són <strong>horrific</strong>.</li>
+<li>Useu Horror només quan aparega una criatura o una escena molt
+forta.</li>
+<li>Si no teniu Horror Deck, una fallada causa una condició narrativa:
+espantat, separat, bloquejat o veu estranya.</li>
+<li>L'efecte dura fins al final del torn o fins que un company faça una
+acció d'ajuda.</li>
+</ul>
+</section>
+<section id="npcs" class="box scale">
+<h4>NPCs</h4>
+<ul>
+<li>Els NPC no juguen cartes ni poden ser Director.</li>
+<li>Activen després dels personatges.</li>
+<li>Primer activen els NPC en contacte; després els altres
+aleatòriament.</li>
+<li>Si poden, ataquen el personatge més proper.</li>
+<li>Si no poden atacar, avancen cap al plot point major o fan
+soroll.</li>
+</ul>
+</section>
+<section id="bicicletes-com-muntures" class="box print">
+<h4>Bicicletes com muntures</h4>
+<ul>
+<li>Tracteu-les com una mount <strong>Single-Rider</strong>.</li>
+<li>Avantatge principal: moure fins a 16".</li>
+<li>No permeten accions mentre es va muntat.</li>
+<li>Caure de la bicicleta és un peril.</li>
+<li>Una bicicleta solta es queda quieta i pot convertir-se en plot
+point.</li>
+</ul>
+</section>
+</div>
+</section>
+<section id="full-de-temporada" class="panel">
+<h3>Full de temporada</h3>
+<p>Marqueu estes caselles durant la campanya. Serviran per a obrir un
+segon arc si vos agrada.</p>
+<div class="cols">
+<section id="pistes-principals" class="box">
+<h4>Pistes principals</h4>
+<ul>
+<li>Bicicleta trobada.</li>
+<li>Missatge de ràdio complet.</li>
+<li>Entrada oculta localitzada.</li>
+<li>Mostra de cristall negre recuperada.</li>
+<li>Nom de la fàbrica abandonada descobert.</li>
+</ul>
+</section>
+<section id="conseqüències" class="box scale">
+<h4>Conseqüències</h4>
+<ul>
+<li>Un adult vos creu.</li>
+<li>Un agent vos ha vist la cara.</li>
+<li>La criatura gran està ferida.</li>
+<li>La Sensitiva ha sentit el portal.</li>
+<li>El company desaparegut ha tornat canviat.</li>
+</ul>
+</section>
+<section id="rellotge-del-portal" class="box print">
+<h4>Rellotge del portal</h4>
+<ul>
+<li>Comença a 0.</li>
+<li>Puja +1 si falleu un episodi.</li>
+<li>Puja +1 si abandoneu una pista clau.</li>
+<li>Amb 3, hi ha més criatures menudes.</li>
+<li>Amb 5, la criatura gran pot travessar en l'episodi final.</li>
+</ul>
+</section>
+</div>
+</section>
+<section id="guia-per-al-primer-dia" class="panel">
+<h3>Guia per al primer dia</h3>
+<p>Esta campanya assumeix que no heu jugat mai a Pulp Alley. No cal
+llegir tot el manual abans de començar. Per al primer episodi només
+necessiteu moure, investigar pistes, resoldre perills i entendre què
+passa quan algú falla.</p>
+<div class="cols">
+<section id="prepareu-només-açò" class="box">
+<h4>Prepareu només açò</h4>
+<ul>
+<li>Les 5 fitxes de la colla.</li>
+<li>5 marcadors de pista: P1, P2, P3, P4 i Major.</li>
+<li>5 bicicletes o marcadors de bicicleta.</li>
+<li>6-8 peces de terreny: arbres, tanca, camí, entrada de cova i
+roques.</li>
+<li>Daus d6, d8, d10 i d12.</li>
+<li>Baralla Fortune. Si encara no la teniu, useu cartes normals només
+per traure números i reptes senzills.</li>
+</ul>
+</section>
+<section id="regles-mínimes" class="box scale">
+<h4>Regles mínimes</h4>
+<ul>
+<li>Cada dau que trau 4+ és un èxit.</li>
+<li>Un personatge activa una vegada per torn.</li>
+<li>En activar, pot moure fins a 12".</li>
+<li>Si mou més de 6", no pot investigar.</li>
+<li>Investigar una pista és una acció.</li>
+<li>Abans d'investigar una pista, sempre hi ha un peril.</li>
+</ul>
+</section>
+<section id="ignoreu-al-principi" class="box print">
+<h4>Ignoreu al principi</h4>
+<ul>
+<li>Experiència i reputació fins acabar l'episodi 1.</li>
+<li>Assets avançats.</li>
+<li>Secret societies.</li>
+<li>Vehicles normals.</li>
+<li>Bursts.</li>
+<li>Horror Deck complet si no el teniu.</li>
+</ul>
+</section>
+</div>
+</section>
+<section id="la-seqüència-que-heu-de-repetir" class="panel">
+<h3>La seqüència que heu de repetir</h3>
+<p>Poseu esta llista al costat de la taula. És suficient per jugar el
+primer episodi.</p>
+<div class="cols">
+<section id="trieu-qui-activa" class="box">
+<h4>1. Trieu qui activa</h4>
+<p>En cooperatiu, trieu el personatge que tinga més sentit. Si voleu
+usar el Director com diu el manual, el Director decideix quin jugador
+activa. Per a la primera partida, no vos compliqueu.</p>
+</section>
+<section id="mou" class="box scale">
+<h4>2. Mou</h4>
+<ul>
+<li>A peu: fins a 12".</li>
+<li>Amb bicicleta: fins a 16".</li>
+<li>Si mou més de 6", no pot fer accions.</li>
+<li>Si toca una zona perillosa, resol un peril.</li>
+</ul>
+</section>
+<section id="fes-una-acció" class="box print">
+<h4>3. Fes una acció</h4>
+<ul>
+<li>Investigar una pista.</li>
+<li>Amagar-se.</li>
+<li>Ajudar un company.</li>
+<li>Parlar amb un adult.</li>
+<li>Atacar només si és inevitable.</li>
+</ul>
+</section>
+</div>
+</section>
+<section id="plot-points-sense-embolics" class="panel">
+<h3>Plot points sense embolics</h3>
+<p>En esta campanya, un plot point és una pista important. La bicicleta,
+una nota, una porta, un cristall o una ràdio són plot points.</p>
+<div class="cols">
+<section id="per-investigar-una-pista" class="box">
+<h4>Per investigar una pista</h4>
+<ul>
+<li>El personatge ha d'arribar fins al marcador.</li>
+<li>No pot haver mogut més de 6" eixe torn.</li>
+<li>Primer resol un peril.</li>
+<li>Si supera el peril, intenta la pista.</li>
+<li>Si supera la pista, agafa una Reward card.</li>
+</ul>
+</section>
+<section id="si-falleu" class="box scale">
+<h4>Si falleu</h4>
+<ul>
+<li>Si falleu un peril, el personatge rep hits i acaba l'activació.</li>
+<li>Si falleu la pista, no rep hits.</li>
+<li>Els èxits parcials poden quedar acumulats com Long Action.</li>
+<li>Un altre company pot acabar la pista després.</li>
+</ul>
+</section>
+<section id="regla-tutorial" class="box print">
+<h4>Regla tutorial</h4>
+<p>En l'episodi 1, una fallada no hauria de deixar ningú fora de la
+partida. Convertiu-la en una complicació: el guarda s'acosta, cau una
+llanterna, es perd una motxilla o el gos comença a bordar.</p>
+</section>
+</div>
+</section>
+<section id="la-colla-protagonista" class="panel">
+<h3>La colla protagonista</h3>
+<p>Cada personatge és un perfil jugable de Pulp Alley 2E. La colla
+completa usa la perk <strong>Mastermind</strong>: el Líder és un
+Sidekick gratuït que fa de Leader, i la resta ocupen slots normals.
+Total ocupat: 10 slots.</p>
+<div class="cols">
+<section id="el-líder" class="box">
+<h4>El Líder</h4>
+<ul>
+<li><strong>Inspiració:</strong> Mike.</li>
+<li><strong>Rol Pulp Alley:</strong> Sidekick que fa de Leader per
+Mastermind.</li>
+<li><strong>Health:</strong> d8.</li>
+<li><strong>Brawl:</strong> 2d6. <strong>Shoot:</strong> no-dice.
+<strong>Dodge:</strong> 3d8.</li>
+<li><strong>Might:</strong> 2d6. <strong>Finesse:</strong> 3d8.
+<strong>Cunning:</strong> 3d8.</li>
+<li><strong>Habilitats:</strong> Aid, Plan.</li>
+<li><strong>Paper:</strong> coordina, anima i ajuda a superar
+challenges.</li>
+</ul>
+</section>
+<section id="el-cerebrito" class="box scale">
+<h4>El Cerebrito</h4>
+<ul>
+<li><strong>Inspiració:</strong> Dustin.</li>
+<li><strong>Rol Pulp Alley:</strong> Ally, 2 slots.</li>
+<li><strong>Health:</strong> d6.</li>
+<li><strong>Brawl:</strong> no-dice. <strong>Shoot:</strong> 1d6.
+<strong>Dodge:</strong> 2d6.</li>
+<li><strong>Might:</strong> 1d6. <strong>Finesse:</strong> 2d6.
+<strong>Cunning:</strong> 3d6.</li>
+<li><strong>Habilitat:</strong> Brainy.</li>
+<li><strong>Paper:</strong> ràdios, codis, cables, mapes i enigmes.</li>
+</ul>
+</section>
+<section id="el-deportista" class="box print">
+<h4>El Deportista</h4>
+<ul>
+<li><strong>Inspiració:</strong> Lucas.</li>
+<li><strong>Rol Pulp Alley:</strong> Ally, 2 slots.</li>
+<li><strong>Health:</strong> d6.</li>
+<li><strong>Brawl:</strong> 2d6. <strong>Shoot:</strong> no-dice.
+<strong>Dodge:</strong> 3d6.</li>
+<li><strong>Might:</strong> 2d6. <strong>Finesse:</strong> 1d6.
+<strong>Cunning:</strong> 1d6.</li>
+<li><strong>Habilitat:</strong> Speedy.</li>
+<li><strong>Paper:</strong> persecucions, rescats, salts i maniobres
+físiques.</li>
+</ul>
+</section>
+<section id="la-valenta" class="box">
+<h4>La Valenta</h4>
+<ul>
+<li><strong>Inspiració:</strong> Max.</li>
+<li><strong>Rol Pulp Alley:</strong> Ally, 2 slots.</li>
+<li><strong>Health:</strong> d6.</li>
+<li><strong>Brawl:</strong> 1d6. <strong>Shoot:</strong> no-dice.
+<strong>Dodge:</strong> 3d6.</li>
+<li><strong>Might:</strong> 1d6. <strong>Finesse:</strong> 3d6.
+<strong>Cunning:</strong> 1d6.</li>
+<li><strong>Habilitat:</strong> Daredevil.</li>
+<li><strong>Paper:</strong> riscos, bicicleta, entrar primer i eixir
+corrent.</li>
+</ul>
+</section>
+<section id="la-sensitiva" class="box scale">
+<h4>La Sensitiva</h4>
+<ul>
+<li><strong>Inspiració:</strong> Eleven/Will.</li>
+<li><strong>Rol Pulp Alley:</strong> Ally, 2 slots.</li>
+<li><strong>Health:</strong> d6.</li>
+<li><strong>Brawl:</strong> no-dice. <strong>Shoot:</strong> no-dice.
+<strong>Dodge:</strong> 2d6.</li>
+<li><strong>Might:</strong> 2d6. <strong>Finesse:</strong> 2d6.
+<strong>Cunning:</strong> 2d6.</li>
+<li><strong>Habilitat:</strong> Insight.</li>
+<li><strong>Paper:</strong> pressentiments, visions, sorolls impossibles
+i pistes del portal.</li>
+</ul>
+</section>
+<section id="bicicletes" class="box print">
+<h4>Bicicletes</h4>
+<ul>
+<li><strong>Regla:</strong> mount Single-Rider per a cada xiquet.</li>
+<li><strong>Moviment:</strong> fins a 16".</li>
+<li><strong>Limitació:</strong> no es poden intentar plot points mentre
+es va muntat.</li>
+<li><strong>Perill:</strong> baixar en marxa o travessar terreny difícil
+ràpid causa peril.</li>
+<li><strong>Pista:</strong> una bicicleta abandonada sempre és un plot
+point o un spoiler.</li>
+</ul>
+</section>
+</div>
+</section>
+<section id="lliga-resumida" class="panel">
+<h3>Lliga resumida</h3>
+<section id="les-ombres-de-sant-josep-1" class="box">
+<h4>Les Ombres de Sant Josep</h4>
+<ul>
+<li><strong>Perk:</strong> Mastermind, 1 slot.</li>
+<li><strong>Leader de scenario:</strong> El Líder, Sidekick
+gratuït.</li>
+<li><strong>Colleagues:</strong> Cerebrito, Deportista, Valenta,
+Sensitiva.</li>
+<li><strong>Slots ocupats:</strong> 1 perk + 4 Allies x 2 slots = 9
+slots.</li>
+<li><strong>Slot lliure recomanat:</strong> Associate.</li>
+</ul>
+</section>
+<section id="associate-recomanat-la-mestra" class="box print">
+<h4>Associate recomanat: La Mestra</h4>
+<ul>
+<li><strong>Slots:</strong> 1.</li>
+<li><strong>Abilities:</strong> Research &amp; Rumors, In the Know.</li>
+<li><strong>Ús narratiu:</strong> dona mapes antics, records
+d'excursions escolars i rumors que els adults no volen contar.</li>
+</ul>
+</section>
+</section>
+<section id="escenografia-mínima" class="panel">
+<h3>Escenografia mínima</h3>
+<div class="cols">
+<section id="imprimir-miniatures" class="box">
+<h4>Imprimir miniatures</h4>
+<ul>
+<li>5 xiquets o xiquetes.</li>
+<li>5 bicicletes.</li>
+<li>2 agents o adults sospitosos.</li>
+<li>4 criatures menudes.</li>
+<li>1 criatura gran tipus demogorgon.</li>
+</ul>
+</section>
+<section id="imprimir-o-fabricar-escenografia" class="box scale">
+<h4>Imprimir o fabricar escenografia</h4>
+<ul>
+<li>Arbres i roques.</li>
+<li>Tanques i murs baixos.</li>
+<li>Entrada de cova.</li>
+<li>Caseta elèctrica.</li>
+<li>Antena de ràdio.</li>
+<li>Portal o esquerda.</li>
+</ul>
+</section>
+<section id="reutilització" class="box print">
+<h4>Reutilització</h4>
+<ul>
+<li>Escola = taules, murs i pati.</li>
+<li>Font de Garrut = arbres, roques i caseta.</li>
+<li>Coves = murs, passadissos i cristalls.</li>
+<li>Fàbrica = les mateixes parets amb caixes.</li>
+<li>Upside Down = tot igual, però amb arrels, grisos i boira.</li>
+</ul>
+</section>
+</div>
+</section>
+<section id="kit-de-pistes-per-imprimir" class="panel">
+<h3>Kit de pistes per imprimir</h3>
+<p>Podeu jugar amb paper retallat. Feu tokens numerats i reveleu-los
+quan els xiquets arriben o resolguen un repte.</p>
+<div class="cols">
+<section id="tokens-útils" class="box">
+<h4>Tokens útils</h4>
+<ul>
+<li>P1-P6: pistes.</li>
+<li>R1-R3: parts de ràdio.</li>
+<li>C1-C4: cristalls negres.</li>
+<li>B1-B5: bicicletes.</li>
+<li>X: portal o esquerda.</li>
+</ul>
+</section>
+<section id="escape-room-de-taula" class="box scale">
+<h4>Escape room de taula</h4>
+<ul>
+<li>Missatges invertits.</li>
+<li>Mapes incomplets.</li>
+<li>Codis de tres xifres.</li>
+<li>Paraules amagades en una nota.</li>
+<li>Ràdio que només funciona en un lloc concret.</li>
+</ul>
+</section>
+<section id="temps-de-preparació" class="box print">
+<h4>Temps de preparació</h4>
+<ul>
+<li>Sessió 1: 45 min per preparar colla i tokens.</li>
+<li>Cada episodi: 10-15 min per muntar taula.</li>
+<li>Tot l'arc: 5 episodis de 45-75 min.</li>
+</ul>
+</section>
+</div>
+</section>
+<section id="episodi-1-la-bicicleta-abandonada" class="panel">
+<h2>Episodi 1: La bicicleta abandonada</h2>
+<p>Un company de classe no torna a casa després d'una excursió prop de
+les Coves de Sant Josep. A la vesprada, algú troba la seua bicicleta
+darrere d'una tanca, amb la roda davantera encara girant i fang negre
+als pedals.</p>
+<figure>
+<img src="campaigns/ombres-sant-josep/assets/maps/episodi-01.svg"
+class="map" alt="Mapa de l&#39;episodi 1" />
+<figcaption aria-hidden="true">Mapa de l'episodi 1</figcaption>
+</figure>
+<div class="cols">
+<section id="escenari-pulp-alley" class="box">
+<h4>Escenari Pulp Alley</h4>
+<ul>
+<li><strong>Base:</strong> The Trail of Clues.</li>
+<li><strong>Players/League:</strong> 1 league cooperativa.</li>
+<li><strong>Plot points:</strong> 1 major + 4 menors.</li>
+<li><strong>Deployment:</strong> Corners 12".</li>
+<li><strong>Turn limit:</strong> 6.</li>
+<li><strong>Rewards:</strong> 5 Reward cards.</li>
+<li><strong>Spoiler opcional:</strong> Red Herring.</li>
+</ul>
+</section>
+<section id="plot-points" class="box scale">
+<h4>Plot points</h4>
+<ul>
+<li><strong>Major:</strong> túnel ocult darrere de la reixa.</li>
+<li><strong>Menor:</strong> bicicleta abandonada.</li>
+<li><strong>Menor:</strong> petjades de fang negre.</li>
+<li><strong>Menor:</strong> tros de tela enganxat.</li>
+<li><strong>Menor:</strong> gos que gruny al bosc.</li>
+</ul>
+</section>
+<section id="amenaces" class="box print">
+<h4>Amenaces</h4>
+<ul>
+<li>1 gos estrany com Level 1 Animal NPC.</li>
+<li>1 guarda municipal com Level 1 Brawler NPC.</li>
+<li>Una ombra no combat: només causa Horror si algú s'acosta al
+túnel.</li>
+</ul>
+</section>
+</div>
+<section id="tutorial-pas-a-pas" class="box">
+<h4>Tutorial pas a pas</h4>
+<ul>
+<li><strong>Torn 1:</strong> activeu només la colla. Moveu cap a la
+bicicleta i les petjades. No feu aparéixer cap criatura encara.</li>
+<li><strong>Primera pista:</strong> useu la bicicleta com primer plot
+point. Expliqueu peril, challenge i Reward card amb calma.</li>
+<li><strong>Torn 2:</strong> entra el guarda. No ataca; pregunta què feu
+allí i bloqueja un camí.</li>
+<li><strong>Primer problema:</strong> si algú falla, no el deixeu fora
+de joc. Feu que perda temps, cride l'atenció o quede separat.</li>
+<li><strong>Final:</strong> quan resolgueu dues pistes menors, reveleu
+el túnel ocult com plot point major.</li>
+</ul>
+</section>
+<section id="pista-escape-room" class="box scale">
+<h4>Pista escape room</h4>
+<p>La bicicleta té tres adhesius: una lluna, una ona i un número pintat.
+El número no obri res fins que els jugadors ordenen els adhesius segons
+el mapa escolar: riu, cova, muntanya. Quan ho resolen, poden intentar el
+plot point major.</p>
+</section>
+</section>
+<section id="episodi-2-la-ràdio-impossible" class="panel">
+<h2>Episodi 2: La ràdio impossible</h2>
+<p>El Cerebrito munta una ràdio amb peces velles, una antena robada d'un
+transistor i massa cinta aillant. A mitjanit, la ràdio parla sola. La
+veu sona com el company desaparegut, però les paraules estan al
+revés.</p>
+<figure>
+<img src="campaigns/ombres-sant-josep/assets/maps/episodi-02.svg"
+class="map" alt="Mapa de l&#39;episodi 2" />
+<figcaption aria-hidden="true">Mapa de l'episodi 2</figcaption>
+</figure>
+<div class="cols">
+<section id="escenari-pulp-alley-1" class="box">
+<h4>Escenari Pulp Alley</h4>
+<ul>
+<li><strong>Base:</strong> The Sign of Four.</li>
+<li><strong>Players/League:</strong> 1 league cooperativa.</li>
+<li><strong>Plot points:</strong> 1 major + 4 menors.</li>
+<li><strong>Deployment:</strong> Scattered.</li>
+<li><strong>Turn limit:</strong> 6.</li>
+<li><strong>Rewards:</strong> 5 Reward cards + 1 Red Herring.</li>
+<li><strong>Regla:</strong> tots els plot points són no-drop.</li>
+</ul>
+</section>
+<section id="plot-points-1" class="box scale">
+<h4>Plot points</h4>
+<ul>
+<li><strong>Major:</strong> origen exacte de la senyal.</li>
+<li><strong>Menor:</strong> antena del terrat.</li>
+<li><strong>Menor:</strong> cassette amb missatge invertit.</li>
+<li><strong>Menor:</strong> mapa de freqüències.</li>
+<li><strong>Menor:</strong> caseta elèctrica de la Font de Garrut.</li>
+</ul>
+</section>
+<section id="amenaces-1" class="box print">
+<h4>Amenaces</h4>
+<ul>
+<li>2 agents del laboratori com Level 1 Shooter NPCs, però poden ser
+esquivats.</li>
+<li>1 zona de llums intermitents com perilous area.</li>
+<li>Si es revela el Red Herring, la senyal canvia de lloc 1d8".</li>
+</ul>
+</section>
+</div>
+<section id="pista-escape-room-1" class="box">
+<h4>Pista escape room</h4>
+<p>Doneu als jugadors una frase escrita al revés. Quan la lligen
+correctament diu: "sota la font, darrere del motor". Si ho resolen, el
+següent plot point que intenten rep +1 èxit acumulat de Long Action.</p>
+</section>
+</section>
+<section id="episodi-3-baix-la-muntanya" class="panel">
+<h2>Episodi 3: Baix la muntanya</h2>
+<p>La senyal porta fins a una entrada amagada entre roques. Darrere hi
+ha passadissos de formigó, tubs rovellats i portes amb símbols que ningú
+del poble reconeix. La muntanya està buida per dins.</p>
+<figure>
+<img src="campaigns/ombres-sant-josep/assets/maps/episodi-03.svg"
+class="map" alt="Mapa de l&#39;episodi 3" />
+<figcaption aria-hidden="true">Mapa de l'episodi 3</figcaption>
+</figure>
+<div class="cols">
+<section id="escenari-pulp-alley-2" class="box">
+<h4>Escenari Pulp Alley</h4>
+<ul>
+<li><strong>Base:</strong> The Lost Keys.</li>
+<li><strong>Players/League:</strong> 1 league cooperativa.</li>
+<li><strong>Plot points:</strong> 1 major + 4 menors.</li>
+<li><strong>Deployment:</strong> Sides 6".</li>
+<li><strong>Turn limit:</strong> 6.</li>
+<li><strong>Rewards:</strong> 5 Reward cards.</li>
+<li><strong>Regla:</strong> no es pot intentar el major fins tindre un
+plot point menor.</li>
+</ul>
+</section>
+<section id="plot-points-2" class="box scale">
+<h4>Plot points</h4>
+<ul>
+<li><strong>Major:</strong> porta del laboratori ocult.</li>
+<li><strong>Menor:</strong> clau oxidada.</li>
+<li><strong>Menor:</strong> tauler elèctric.</li>
+<li><strong>Menor:</strong> dossier tacat.</li>
+<li><strong>Menor:</strong> gàbia trencada.</li>
+</ul>
+</section>
+<section id="amenaces-2" class="box print">
+<h4>Amenaces</h4>
+<ul>
+<li>1 criatura menuda com Level 2 Animal NPC.</li>
+<li>1 agent com Level 2 Shooter NPC.</li>
+<li>Zones de cables i vidres com perilous areas.</li>
+</ul>
+</section>
+</div>
+<section id="pista-escape-room-2" class="box">
+<h4>Pista escape room</h4>
+<p>La porta té tres llums: roja, groga i verda. Els documents indiquen
+tres paraules: "riu", "pedra", "llum". Els jugadors han de posar-les en
+ordre segons el mapa: riu primer, pedra després, llum al final. Si ho
+fan, el plot point major requereix un èxit menys.</p>
+</section>
+</section>
+<section id="episodi-4-laltre-costat" class="panel">
+<h2>Episodi 4: L'altre costat</h2>
+<p>La porta no dona al laboratori. Dona a La Vall, però no és La Vall.
+Els carrers estan buits, les parets respiren i les arrels pengen dels
+fanals. La Font de Garrut sona com un riu subterrani dins d'una ràdio
+trencada.</p>
+<figure>
+<img src="campaigns/ombres-sant-josep/assets/maps/episodi-04.svg"
+class="map" alt="Mapa de l&#39;episodi 4" />
+<figcaption aria-hidden="true">Mapa de l'episodi 4</figcaption>
+</figure>
+<div class="cols">
+<section id="escenari-pulp-alley-3" class="box">
+<h4>Escenari Pulp Alley</h4>
+<ul>
+<li><strong>Base:</strong> Smash &amp; Grab.</li>
+<li><strong>Players/League:</strong> 1 league cooperativa.</li>
+<li><strong>Plot points:</strong> 1 major + 4 menors.</li>
+<li><strong>Deployment:</strong> Corners 12".</li>
+<li><strong>Turn limit:</strong> 6.</li>
+<li><strong>Rewards:</strong> 5 Reward cards.</li>
+<li><strong>Regla:</strong> tota zona d'arrels és perilous i
+obscuring.</li>
+</ul>
+</section>
+<section id="plot-points-3" class="box scale">
+<h4>Plot points</h4>
+<ul>
+<li><strong>Major:</strong> trobar el company desaparegut.</li>
+<li><strong>Menor:</strong> cristall negre.</li>
+<li><strong>Menor:</strong> motxilla escolar.</li>
+<li><strong>Menor:</strong> eco de ràdio.</li>
+<li><strong>Menor:</strong> marca de mans a la paret.</li>
+</ul>
+</section>
+<section id="amenaces-3" class="box print">
+<h4>Amenaces</h4>
+<ul>
+<li>2 criatures menudes com Level 1 Mindless Minions NPC.</li>
+<li>1 ombra horrific que no pot ser atacada.</li>
+<li>Si el Rellotge del portal és 3+, afegiu una tercera criatura
+menuda.</li>
+</ul>
+</section>
+</div>
+<section id="pista-escape-room-3" class="box">
+<h4>Pista escape room</h4>
+<p>El company només respon a paraules que recorda. Els jugadors han de
+dir tres records de campanya: una pista trobada, un lloc visitat i un
+objecte recuperat. Si ho fan, el major passa a ser no-drop.</p>
+</section>
+</section>
+<section id="episodi-5-el-portal" class="panel">
+<h2>Episodi 5: El portal</h2>
+<p>Tot apunta a la fàbrica abandonada. Les finestres estan tapades, però
+dins hi ha llum. El portal s'obri i es tanca com una ferida. Si la colla
+falla esta nit, alguna cosa molt gran entrarà a La Vall.</p>
+<figure>
+<img src="campaigns/ombres-sant-josep/assets/maps/episodi-05.svg"
+class="map" alt="Mapa de l&#39;episodi 5" />
+<figcaption aria-hidden="true">Mapa de l'episodi 5</figcaption>
+</figure>
+<div class="cols">
+<section id="escenari-pulp-alley-4" class="box">
+<h4>Escenari Pulp Alley</h4>
+<ul>
+<li><strong>Base:</strong> The Death Trap.</li>
+<li><strong>Players/League:</strong> 1 league cooperativa.</li>
+<li><strong>Plot points:</strong> 4 menors + 1 major especial.</li>
+<li><strong>Deployment:</strong> el Líder comença separat a 6" del
+portal; la resta a la cantonada oposada.</li>
+<li><strong>Turn limit:</strong> 6.</li>
+<li><strong>Rewards:</strong> 5 Reward cards.</li>
+<li><strong>Regla:</strong> el portal és el major i només es pot tancar
+després de passar dos menors.</li>
+</ul>
+</section>
+<section id="plot-points-4" class="box scale">
+<h4>Plot points</h4>
+<ul>
+<li><strong>Major:</strong> tancar el portal.</li>
+<li><strong>Menor:</strong> tallar corrent.</li>
+<li><strong>Menor:</strong> estabilitzar la ràdio.</li>
+<li><strong>Menor:</strong> rescatar el company.</li>
+<li><strong>Menor:</strong> destruir cristalls negres.</li>
+</ul>
+</section>
+<section id="amenaces-4" class="box print">
+<h4>Amenaces</h4>
+<ul>
+<li>1 criatura gran com Epic NPC amb Monster, Big i Predator.</li>
+<li>2 criatures menudes com Level 1 Mindless NPCs.</li>
+<li>Si el Rellotge del portal és 5, la criatura gran comença en
+joc.</li>
+<li>Si és menor de 5, entra al final del torn 3.</li>
+</ul>
+</section>
+</div>
+<section id="pista-escape-room-4" class="box">
+<h4>Pista escape room</h4>
+<p>Per tancar el portal cal una seqüència de tres paraules. Cada paraula
+ve d'un episodi anterior: bicicleta, ràdio, cristall. Si els jugadors
+recorden o consulten les pistes, poden intentar el major. Si fallen, el
+portal causa un peril a tots els personatges a 6".</p>
+</section>
+</section>
+<section id="finals-de-temporada" class="panel">
+<h3>Finals de temporada</h3>
+<div class="cols">
+<section id="portal-tancat" class="box">
+<h4>Portal tancat</h4>
+<p>La fàbrica queda en silenci. Els adults arriben tard i només veuen
+vidres trencats, bicicletes tirades i xiquets coberts de pols. Ningú vos
+creu del tot, però el company desaparegut torna a casa.</p>
+</section>
+<section id="portal-inestable" class="box scale">
+<h4>Portal inestable</h4>
+<p>Tanqueu l'esquerda, però alguna cosa queda dins de la muntanya. A la
+setmana següent, una ràdio escolar emet una veu que diu un nom de la
+colla.</p>
+</section>
+<section id="portal-obert" class="box print">
+<h4>Portal obert</h4>
+<p>Sobreviviu, però la criatura travessa. La temporada 2 comença amb
+animals desapareguts, apagades al poble i agents preguntant massa a prop
+de l'escola.</p>
+</section>
+</div>
+<section id="crèdits-i-ús" class="box">
+<h4>Crèdits i ús</h4>
+<p>Campanya fan-made per a ús personal, inspirada en misteri juvenil
+dels anys 80 i adaptada a Pulp Alley 2E. Pulp Alley és propietat dels
+seus autors. La campanya no reprodueix regles completes: cal el manual
+oficial per jugar.</p>
+</section>
+</section>
+</main></body></html>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" role="img" aria-label="Mapa missió 3 torre arcana">
+<rect width="600" height="600" fill="#080b16"/><rect x="45" y="45" width="510" height="510" fill="#111827" stroke="#ff2b3d" stroke-width="4"/>
+<path d="M90 180H510M90 360H510M200 90V520M400 90V520" stroke="#64748b" stroke-width="10"/>
+<g fill="#32d8ff" font-size="22" font-family="Arial" text-anchor="middle"><rect x="115" y="110" width="70" height="45"/><text x="150" y="140" fill="#06111f">C1</text><rect x="430" y="390" width="70" height="45"/><text x="465" y="420" fill="#06111f">C2</text></g>
+<g fill="#475569"><rect x="250" y="220" width="70" height="45"/><rect x="265" y="430" width="80" height="45"/><rect x="425" y="130" width="60" height="50"/></g>
+<g fill="#ff2b3d" font-size="18" font-family="Arial" text-anchor="middle"><circle cx="300" cy="180" r="18"/><text x="300" y="186" fill="#fff">G</text><circle cx="460" cy="300" r="18"/><text x="460" y="306" fill="#fff">G</text><circle cx="140" cy="440" r="18"/><text x="140" y="446" fill="#fff">G</text></g>
+<rect x="245" y="520" width="110" height="35" fill="#62e6a5"/><text x="300" y="545" text-anchor="middle" fill="#04110b" font-size="18">Eixida</text>
+<text x="300" y="590" text-anchor="middle" fill="#aab4c9" font-size="18">Cristalls C1-C2, portes als passadissos i eixida sud</text>
+</svg>

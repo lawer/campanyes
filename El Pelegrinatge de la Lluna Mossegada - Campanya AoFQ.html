@@ -1,0 +1,1491 @@
+<!DOCTYPE html>
+<html lang="ca-valencia">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>El Pelegrinatge de la Lluna Mossegada - Campanya AoFQ</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=EB+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Noto+Serif+TC:wght@500;700;900&display=swap');
+:root{
+  --jade:#70c79a;--jade2:#2d6b53;--jade3:#143a31;
+  --red:#9f3028;--red2:#d35a45;--lacquer:#39110e;
+  --gold:#d8b85a;--gold2:#8d6f2e;--oldgold:#b08a35;
+  --ink:#080706;--ink2:#12100c;--paper:#e0cf9f;--dim:#ab9973;--text:#dfd0b2;
+  --blue:#628fc8;--violet:#9b6bd6;--shadow:rgba(0,0,0,.42);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:#080706;
+  background-image:
+    radial-gradient(circle at 50% -8%,rgba(216,184,90,.13) 0 9%,transparent 24%),
+    radial-gradient(circle at 13% 10%,rgba(159,48,40,.20),transparent 30%),
+    radial-gradient(circle at 88% 18%,rgba(112,199,154,.11),transparent 33%),
+    radial-gradient(circle at 70% 92%,rgba(155,107,214,.10),transparent 34%),
+    linear-gradient(90deg,rgba(216,184,90,.025) 1px,transparent 1px),
+    linear-gradient(180deg,#080706 0%,#15110c 48%,#080706 100%);
+  background-size:auto,auto,auto,auto,44px 44px,auto;
+  color:var(--text);font-family:'EB Garamond',Georgia,serif;font-size:17px;line-height:1.75;
+}
+body:before,body:after{content:'';position:fixed;top:0;bottom:0;width:9px;z-index:2;pointer-events:none;background:linear-gradient(180deg,transparent,var(--gold2),transparent)}
+body:before{left:0}body:after{right:0}
+.wrap{max-width:1000px;margin:0 auto;padding:20px}
+.cover{
+  text-align:center;padding:82px 28px 54px;border:1px solid rgba(216,184,90,.38);
+  background:
+    radial-gradient(circle at 50% 25%,rgba(216,184,90,.13) 0 11%,transparent 25%),
+    radial-gradient(circle at 50% 24%,rgba(216,184,90,.33) 0 4%,transparent 4.4%),
+    linear-gradient(135deg,rgba(20,58,49,.38),rgba(8,7,6,.94) 46%,rgba(57,17,14,.56));
+  position:relative;overflow:hidden;box-shadow:0 20px 60px var(--shadow),inset 0 0 80px rgba(0,0,0,.35);
+}
+.cover:before{content:'';position:absolute;inset:14px;border:1px solid rgba(216,184,90,.18);pointer-events:none}
+.cover:after{content:'月';position:absolute;right:28px;top:18px;font-family:'Noto Serif TC',serif;font-size:92px;line-height:1;color:rgba(216,184,90,.075);text-shadow:0 0 22px rgba(216,184,90,.12);pointer-events:none}
+.label,.smallcap{font-family:Cinzel,serif;text-transform:uppercase;letter-spacing:4px;font-size:10px;color:var(--gold2)}
+.label:before,.label:after{content:'  -  ';color:var(--red2)}
+h1{font-family:'Noto Serif TC',Cinzel,serif;font-size:clamp(31px,7vw,62px);line-height:1.08;color:var(--gold);font-weight:900;text-shadow:0 0 28px rgba(216,184,90,.35),0 3px 0 #000;margin:18px 0 12px;letter-spacing:.5px}
+.subtitle{font-family:Cinzel,serif;letter-spacing:2px;color:var(--jade);font-size:14px;margin-bottom:28px;text-transform:uppercase}
+.intro{max-width:740px;margin:0 auto;color:var(--paper);font-style:italic;font-size:18px;text-shadow:0 1px 0 #000}
+.tags{display:flex;gap:9px;justify-content:center;flex-wrap:wrap;margin-top:28px}.tag{border:1px solid rgba(216,184,90,.44);color:var(--gold);font-family:Cinzel,serif;font-size:10px;letter-spacing:2px;text-transform:uppercase;padding:5px 12px;background:linear-gradient(180deg,rgba(57,17,14,.55),rgba(0,0,0,.22));box-shadow:inset 0 0 18px rgba(216,184,90,.04)}
+.sh{text-align:center;margin:52px 0 20px}.sh h2{font-family:'Noto Serif TC',Cinzel,serif;color:var(--gold);font-size:clamp(20px,4vw,32px);font-weight:900}.rule{border:0;height:1px;max-width:460px;margin:0 auto 30px;background:linear-gradient(90deg,transparent,var(--red2),var(--gold),var(--red2),transparent)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(245px,1fr));gap:17px}.card,.panel,.mission,.villain,.ending{background:linear-gradient(160deg,rgba(26,22,16,.96),rgba(11,9,7,.98));border:1px solid rgba(216,184,90,.24);box-shadow:0 16px 38px rgba(0,0,0,.28),inset 0 1px 0 rgba(255,255,255,.025)}.card{padding:20px;position:relative;overflow:hidden}.card:before{content:'';position:absolute;left:0;top:0;right:0;height:3px;background:linear-gradient(90deg,transparent,var(--jade),var(--gold),var(--red2),transparent)}
+.rank{font-family:Cinzel,serif;text-transform:uppercase;letter-spacing:3px;font-size:9px;color:var(--oldgold)}.name{font-family:'Noto Serif TC',Cinzel,serif;color:var(--gold);font-weight:900;font-size:22px;margin:4px 0 10px}.desc{color:var(--dim);font-style:italic;font-size:15.5px}.stats{display:flex;gap:6px;flex-wrap:wrap;margin-top:14px}.pill{font-family:Cinzel,serif;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;padding:3px 8px;border:1px solid rgba(216,184,90,.24);color:var(--paper);background:rgba(216,184,90,.05)}
+.portrait{height:210px;margin:-2px -2px 16px;border:1px solid rgba(216,184,90,.22);background:#080706;overflow:hidden;position:relative}.portrait:after{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 15%,transparent 35%,rgba(8,7,6,.22) 74%,rgba(8,7,6,.52));pointer-events:none}.portrait figure{height:100%;margin:0}.portrait figcaption{display:none}.portrait img{width:100%;height:100%;object-fit:cover;display:block;filter:sepia(.22) saturate(.9) contrast(1.08)}.portrait.contain img{object-fit:contain;background:linear-gradient(135deg,#100d09,#1a140d)}.caption{font-family:Cinzel,serif;text-transform:uppercase;letter-spacing:2px;font-size:8px;color:rgba(216,184,90,.55);margin-top:-9px;margin-bottom:10px}.caption p,.rank p,.name p,.desc p,.label p,.subtitle p,.intro p{margin:0}.tags p,.stats p{display:flex;gap:9px;justify-content:center;flex-wrap:wrap;margin:0}.stats p{justify-content:flex-start;gap:6px}.art-panel{display:grid;grid-template-columns:minmax(220px,340px) 1fr;gap:18px;align-items:center}.art-panel figure{margin:0}.art-panel figcaption{display:none}.art-panel img{width:100%;max-height:320px;object-fit:cover;border:1px solid rgba(216,184,90,.28);box-shadow:0 18px 42px rgba(0,0,0,.28);filter:sepia(.18) saturate(.86) contrast(1.04)}.credits li a{color:var(--jade);text-decoration:none}.credits li a:hover{text-decoration:underline}
+.panel{padding:24px;margin:24px 0}.panel h3,.rtitle{font-family:Cinzel,serif;color:var(--gold);text-transform:uppercase;letter-spacing:3px;font-size:12px;margin-bottom:13px}.panel h3:before,.rtitle:before{content:'✦ ';color:var(--red2)}.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(235px,1fr));gap:12px}.box{border:1px solid rgba(216,184,90,.14);padding:13px;background:linear-gradient(160deg,rgba(0,0,0,.25),rgba(20,58,49,.07))}.box h4{font-family:Cinzel,serif;color:var(--oldgold);font-size:10px;letter-spacing:2px;text-transform:uppercase;margin-bottom:7px}.box ul,.rlist{list-style:none}.box li,.rlist li{position:relative;padding-left:15px;color:var(--dim);font-size:14px;border-bottom:1px solid rgba(216,184,90,.06);padding-top:4px;padding-bottom:4px}.box li:before,.rlist li:before{content:'›';position:absolute;left:0;color:var(--jade);font-size:15px;top:2px}.box strong,.rlist strong{color:var(--paper)}
+.chapter{margin:54px 0}.banner{padding:26px 24px;border:1px solid rgba(112,199,154,.30);background:radial-gradient(circle at 88% 30%,rgba(112,199,154,.13),transparent 36%),linear-gradient(135deg,rgba(20,58,49,.55),rgba(0,0,0,.22));margin-bottom:20px;position:relative;overflow:hidden}.banner:after{content:'灯';position:absolute;right:18px;bottom:-18px;font-family:'Noto Serif TC',serif;font-size:90px;color:rgba(112,199,154,.055)}.banner.red{border-color:rgba(211,90,69,.34);background:radial-gradient(circle at 88% 30%,rgba(211,90,69,.13),transparent 36%),linear-gradient(135deg,rgba(57,17,14,.78),rgba(0,0,0,.2))}.banner.red:after{content:'鬼';color:rgba(211,90,69,.06)}.banner.violet{border-color:rgba(155,107,214,.36);background:radial-gradient(circle at 88% 30%,rgba(155,107,214,.15),transparent 36%),linear-gradient(135deg,rgba(42,26,61,.78),rgba(0,0,0,.22))}.banner.violet:after{content:'門';color:rgba(155,107,214,.07)}.ctitle{font-family:'Noto Serif TC',Cinzel,serif;color:var(--gold);font-size:30px;font-weight:900}.lore{color:var(--dim);font-style:italic;margin-top:8px;max-width:780px}
+.mission{margin:22px 0 32px;overflow:hidden}.mhead{display:flex;background:linear-gradient(90deg,rgba(57,17,14,.45),transparent)}.mbar{width:48px;background:linear-gradient(180deg,rgba(159,48,40,.55),rgba(20,58,49,.28));color:var(--gold);font-family:Cinzel,serif;font-size:9px;letter-spacing:2px;text-transform:uppercase;writing-mode:vertical-rl;display:flex;align-items:center;justify-content:center;padding:10px 0;border-right:1px solid rgba(216,184,90,.16)}.mhc{flex:1;padding:17px;border-bottom:1px solid rgba(216,184,90,.11)}.mtype{font-family:Cinzel,serif;color:var(--oldgold);font-size:9px;letter-spacing:3px;text-transform:uppercase}.mtitle{font-family:'Noto Serif TC',Cinzel,serif;color:var(--gold);font-weight:900;font-size:23px}.maptop,.mapleg{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;background:linear-gradient(90deg,rgba(0,0,0,.55),rgba(20,58,49,.13));padding:8px 12px;border-top:1px solid rgba(216,184,90,.10);border-bottom:1px solid rgba(216,184,90,.10);font-family:Cinzel,serif;color:var(--oldgold);font-size:9px;letter-spacing:2px;text-transform:uppercase}.mapleg{justify-content:flex-start}.li{display:inline-flex;align-items:center;gap:5px}.sw{width:12px;height:12px;border:1px solid;display:inline-block;box-shadow:0 0 8px rgba(216,184,90,.12)}.map{display:block;width:100%;background:#0b0a08;filter:saturate(.93) contrast(1.05)}
+.mbody{padding:20px 22px}.quote{border-left:3px solid var(--red2);background:linear-gradient(90deg,rgba(159,48,40,.12),rgba(216,184,90,.035));padding:13px 15px;color:var(--paper);font-style:italic;margin-bottom:15px}.quote cite{display:block;margin-top:8px;font-family:Cinzel,serif;color:var(--oldgold);font-size:9px;letter-spacing:2px;text-transform:uppercase;font-style:normal}.rbox{border:1px solid rgba(216,184,90,.20);background:rgba(0,0,0,.27);padding:15px;margin-top:15px}.rbar{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}.terrain{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:8px;margin-top:10px}.terrain .box{border-left:3px solid var(--jade2)}.scale{border-left:3px solid var(--blue)!important}.print{border-left:3px solid var(--red2)!important}.ai{border-left:3px solid var(--gold)!important}
+.villain{padding:28px;margin:38px 0;background:radial-gradient(circle at 85% 20%,rgba(155,107,214,.20),transparent 34%),linear-gradient(135deg,rgba(57,17,14,.55),#0d0b10);border-color:rgba(155,107,214,.36);position:relative;overflow:hidden}.villain:after{content:'鬼';position:absolute;right:22px;top:2px;font-family:'Noto Serif TC',serif;font-size:120px;color:rgba(155,107,214,.055)}.villain .name{font-size:32px;color:#c69cff;text-shadow:0 0 26px rgba(155,107,214,.35)}.ending{text-align:center;padding:34px;margin:38px 0;background:radial-gradient(circle at 50% 0%,rgba(216,184,90,.11),transparent 44%),linear-gradient(160deg,rgba(20,58,49,.28),rgba(11,9,7,.98))}.ending h3{font-family:'Noto Serif TC',Cinzel,serif;color:var(--gold);font-size:28px;margin-bottom:12px}footer{text-align:center;color:rgba(216,184,90,.38);font-family:Cinzel,serif;font-size:9px;letter-spacing:3px;text-transform:uppercase;padding:30px}
+@media print{body{background:#0b0a08}.wrap{max-width:none}.mission,.panel,.card,.villain,.ending{break-inside:avoid}.cover{break-after:page}.map{max-height:72vh}}
+@media(max-width:760px){.art-panel{grid-template-columns:1fr}.art-panel img{max-height:260px}.portrait{height:185px}}
+@media(max-width:640px){.wrap{padding:10px}.cover{padding:48px 14px 36px}.cover:after{font-size:64px;right:12px}.mbar{width:36px}.mbody{padding:14px}.maptop span:last-child{display:none}body:before,body:after{display:none}}
+</style>
+</head>
+<body><div class="wrap">
+<!--
+Este fitxer és l'índex de contingut d'esta campanya. El disseny està en templates/campanya.html.
+El contingut editable viu en campaigns/lluna-mossegada/partials/.
+Els mapes SVG estan externalitzats en campaigns/lluna-mossegada/assets/maps/.
+Queden fragments HTML només per a maquetació específica de missions.
+Per generar el document final: make html
+Per generar i validar: make validate
+-->
+<header class="cover">
+<div class="label">
+<p>Age of Fantasy: Quest - Campanya narrativa Kitchen Table</p>
+</div>
+<h1 id="el-pelegrinatge-de-la-lluna-mossegada">El Pelegrinatge de la
+Lluna Mossegada</h1>
+<div class="subtitle">
+<p>Una campanya en valencià per a Sun Wukong, Cerdito i el mestre
+Tripitaka</p>
+</div>
+<div class="intro">
+<p>La campana del santuari ha callat. Els yaoguai del Clan de la Lluna
+Mossegada han furtat els segells que mantenien tancada la porta de
+l'Oni. Dos guardians impossibles, un mico immortal i un porc massa
+valent per al seu propi bé, escorten Tripitaka a través de boscos,
+temples i ponts rojos abans que la nit mossegue el món.</p>
+</div>
+<div class="tags">
+<p><span class="tag">2 herois</span> <span class="tag">Tripitaka
+narratiu</span> <span class="tag">190 pts</span> <span class="tag">24" x
+24"</span> <span class="tag">Kitchen Table</span> <span class="tag">8
+missions</span> <span class="tag">Yaoguai</span></p>
+</div>
+</header>
+<section>
+<div class="sh">
+<div class="smallcap">
+<p>Els protagonistes</p>
+</div>
+<h2 id="els-dos-pelegrins-i-el-mestre">Els Dos Pelegrins I El
+Mestre</h2>
+</div>
+<hr class="rule">
+<div class="grid">
+<div class="card">
+<div class="portrait">
+<figure>
+<img src="campaigns/lluna-mossegada/assets/sun-wukong.png"
+alt="Il·lustració clàssica de Sun Wukong" />
+<figcaption aria-hidden="true">Il·lustració clàssica de Sun
+Wukong</figcaption>
+</figure>
+</div>
+<div class="caption">
+<p>Il·lustració tradicional · domini públic</p>
+</div>
+<div class="rank">
+<p>Heroi OPR creat en l'app - 105 pts</p>
+</div>
+<div class="name">
+<p>Sun Wukong</p>
+</div>
+<div class="desc">
+<p>Ràpid, insolent i impossible de retindre. En esta campanya és el
+personatge de mobilitat, emboscada i trucs. El seu paper és arribar als
+objectius, obrir camí i fer que els yaoguai miren on no toca.</p>
+</div>
+<div class="stats">
+<p><span class="pill">Qua 4+</span> <span class="pill">Def 6+</span>
+<span class="pill">Pow 3</span> <span class="pill">Str 5+</span> <span
+class="pill">Dex 5+</span> <span class="pill">Wil 6+</span> <span
+class="pill">Spear A3</span> <span class="pill">Pathfinder</span></p>
+</div>
+</div>
+<div class="card">
+<div class="portrait">
+<figure>
+<img src="campaigns/lluna-mossegada/assets/cerdito-zhu-bajie.png"
+alt="Il·lustració clàssica de Zhu Bajie, Cerdito" />
+<figcaption aria-hidden="true">Il·lustració clàssica de Zhu Bajie,
+Cerdito</figcaption>
+</figure>
+</div>
+<div class="caption">
+<p>Il·lustració tradicional · domini públic</p>
+</div>
+<div class="rank">
+<p>Heroi OPR creat en l'app - 85 pts</p>
+</div>
+<div class="name">
+<p>Cerdito</p>
+</div>
+<div class="desc">
+<p>Fort, famolenc i sorprenentment lleial. En esta campanya és el
+personatge que aguanta el centre, trenca portes, aparta enemics i
+protegeix el company quan el pla de Wukong deixa de ser un pla.</p>
+</div>
+<div class="stats">
+<p><span class="pill">Qua 4+</span> <span class="pill">Def 5+</span>
+<span class="pill">Pow 3</span> <span class="pill">Str 4+</span> <span
+class="pill">Dex 6+</span> <span class="pill">Wil 6+</span> <span
+class="pill">Heavy Hand Weapon A3 AP(1)</span> <span class="pill">Light
+Armor</span></p>
+</div>
+</div>
+<div class="card">
+<div class="portrait">
+<figure>
+<img src="campaigns/lluna-mossegada/assets/tripitaka-tang-seng.jpg"
+alt="Il·lustració clàssica de Tripitaka, Tang Seng" />
+<figcaption aria-hidden="true">Il·lustració clàssica de Tripitaka, Tang
+Seng</figcaption>
+</figure>
+</div>
+<div class="caption">
+<p>Il·lustració tradicional · domini públic</p>
+</div>
+<div class="rank">
+<p>Acompanyant narratiu - no suma punts</p>
+</div>
+<div class="name">
+<p>Tripitaka</p>
+</div>
+<div class="desc">
+<p>El mestre pelegrí no és un tercer heroi controlable. Camina amb
+Wukong i Cerdito, dona sentit al viatge i converteix cada victòria en
+alguna cosa més que una pallissa ben donada. Quan apareix al mapa,
+funciona com a objectiu narratiu, testimoni o persona a protegir.</p>
+</div>
+<div class="stats">
+<p><span class="pill">Sense activació pròpia</span> <span
+class="pill">No ataca</span> <span class="pill">No dona punts</span>
+<span class="pill">Objectiu narratiu</span></p>
+</div>
+</div>
+<div class="card">
+<div class="rank">
+<p>Aliats opcionals - recrear en l'app de Quest</p>
+</div>
+<div class="name">
+<p>El Clan dels Gats de Jade</p>
+</div>
+<div class="desc">
+<p>Guàrdies gat, caçadors ràpids, centaures felins i guerrers del clan
+que coneixen la vall. La llista original ve
+d'<code>Age of Fantasy: Skirmish</code>, així que els punts són
+orientatius i cal recrear-los en l'app de
+<code>Age of Fantasy: Quest</code> si han d'entrar en joc.</p>
+</div>
+<div class="stats">
+<p><span class="pill">Clan Guardian</span> <span class="pill">Sambari
+Hound</span> <span class="pill">Ndwari Centaur</span> <span
+class="pill">Ndoli Warriors</span></p>
+</div>
+</div>
+</div>
+</section>
+<section id="referència-ràpida-de-campanya" class="panel">
+<h3>Referència ràpida de campanya</h3>
+<div class="cols">
+<section id="kitchen-table-oficial" class="box">
+<h4>Kitchen Table oficial</h4>
+<ul>
+<li><strong>Taula:</strong> tots els mapes són de 24" x 24" útils.</li>
+<li><strong>Distàncies d'escenari:</strong> usa la meitat de la
+distància normal.</li>
+<li><strong>6" normal:</strong> 3" en estos mapes.</li>
+<li><strong>12" normal:</strong> 6" en estos mapes.</li>
+<li><strong>1" normal:</strong> 1/2" si voleu seguir-ho estrictament.
+Per agilitat amb xiquets, podeu mantindre 1" en interaccions.</li>
+</ul>
+</section>
+<section id="perfils-opr" class="box">
+<h4>Perfils OPR</h4>
+<ul>
+<li>No es modifiquen perfils, armes ni punts de l'app.</li>
+<li>Els enemics usen el roster yaoguai que ja tens.</li>
+<li>Les regles narratives marcades com a opcionals no substitueixen el
+manual.</li>
+<li>Si hi ha dubte, mana sempre la regla oficial d'OPR.</li>
+</ul>
+</section>
+<section id="tripitaka-acompanyant" class="box">
+<h4>Tripitaka, acompanyant</h4>
+<ul>
+<li><strong>No és una unitat:</strong> no té perfil, activació, accions,
+atac ni punts.</li>
+<li><strong>Fora del combat:</strong> per defecte viatja darrere del
+grup i només apareix en la narració.</li>
+<li><strong>Si una missió el posa al mapa:</strong> tracta'l com un
+marcador civil. No bloqueja moviment ni línia de visió.</li>
+<li><strong>Protegir el mestre:</strong> si un enemic acaba en contacte
+amb ell, Tripitaka queda capturat fins que un heroi contacte amb ell i
+gaste una interacció per alliberar-lo.</li>
+<li><strong>Derrota amable:</strong> si Tripitaka és capturat, la missió
+no acaba automàticament; afegeix un objectiu de rescat o perd la
+recompensa secundària.</li>
+</ul>
+</section>
+<section id="escala-enemiga" class="box">
+<h4>Escala enemiga</h4>
+<ul>
+<li><strong>Suau:</strong> 45-75 pts inicials.</li>
+<li><strong>Normal:</strong> 80-120 pts inicials.</li>
+<li><strong>Difícil:</strong> 125-180 pts o un boss sol.</li>
+<li><strong>Final:</strong> objectiu alternatiu contra el Jefe Oni, no
+combat just de punts.</li>
+</ul>
+</section>
+<section id="escenografia-disponible" class="box">
+<h4>Escenografia disponible</h4>
+<ul>
+<li>Pagoda 83 x 83 x 179 mm.</li>
+<li>6 làmpares de temple.</li>
+<li>Mobiliari HeroQuest clàssic: taules, cofres, altar, tombes, portes,
+tron, armaris i llibreries.</li>
+<li>Qualsevol peça impresa serà opcional i tindrà substitut.</li>
+</ul>
+</section>
+</div>
+</section>
+<section id="com-usar-tripitaka-en-la-campanya" class="panel">
+<h3>Com usar Tripitaka en la campanya</h3>
+<div class="cols">
+<section id="presència-normal" class="box">
+<h4>Presència normal</h4>
+<ul>
+<li>Tripitaka acompanya sempre els herois en la història, però no cal
+posar la miniatura al mapa.</li>
+<li>Quan no està al mapa, s'assumeix que espera en una zona segura, amb
+els gats samurais o uns passos darrere.</li>
+<li>No suma punts al grup de 190 pts i no modifica l'escalat dels
+enemics.</li>
+</ul>
+</section>
+<section id="quan-sí-apareix-al-mapa" class="box">
+<h4>Quan sí apareix al mapa</h4>
+<ul>
+<li>Usa una miniatura de monjo, civil o personatge HeroQuest.</li>
+<li>Col·loca'l només si la missió ho indica o si voleu afegir tensió
+narrativa.</li>
+<li>Es mou només quan una regla de missió ho diga, o quan un heroi en
+contacte gaste una interacció per guiar-lo 3".</li>
+</ul>
+</section>
+<section id="ajuda-narrativa-opcional" class="box">
+<h4>Ajuda narrativa opcional</h4>
+<ul>
+<li>Una vegada per missió, si Tripitaka està lliure i no capturat, pot
+donar consell: un heroi a 3" pot repetir una tirada d'interacció
+fallada.</li>
+<li>Si useu esta ajuda, no compteu Tripitaka com a objectiu secundari de
+recompensa en eixa missió.</li>
+<li>Esta regla és opcional i narrativa; si preferiu fidelitat estricta a
+OPR, ignoreu-la.</li>
+</ul>
+</section>
+</div>
+</section>
+<section class="panel art-panel">
+<figure>
+<img src="campaigns/lluna-mossegada/assets/xuanzang-journey.jpg"
+alt="Xuanzang en una il·lustració antiga de Viatge a l&#39;Oest" />
+<figcaption aria-hidden="true">Xuanzang en una il·lustració antiga de
+Viatge a l'Oest</figcaption>
+</figure>
+<h3 id="làmina-de-campanya">Làmina de campanya</h3>
+<div class="desc">
+<p>Esta imatge antiga de Xuanzang en el seu viatge pot usar-se com a
+portada alternativa, làmina d'interludi o inspiració visual per a
+Tripitaka quan el grup arribe a la pagoda. No té funció de joc: és
+ambient, pergamí i promesa de camí llarg.</p>
+</div>
+<div class="stats">
+<p><span class="pill">Interludi visual</span> <span class="pill">Domini
+públic</span> <span class="pill">Viatge a l'Oest</span></p>
+</div>
+</section>
+<section id="roster-enemic-clan-de-la-lluna-mossegada" class="panel">
+<h3>Roster enemic: Clan de la Lluna Mossegada</h3>
+<div class="cols">
+<section id="tropa" class="box">
+<h4>Tropa</h4>
+<ul>
+<li><strong>Guerreros Yaoguai [3] - 15 pts:</strong> patrulles, reforços
+i guàrdies nerviosos.</li>
+<li><strong>Arqueros Yaoguai [3] - 30 pts:</strong> pressió a distància;
+evita línies massa obertes.</li>
+<li><strong>Sabuesos Demonio [3] - 45 pts:</strong> alarmes,
+persecucions i flanqueig.</li>
+</ul>
+</section>
+<section id="especials" class="box">
+<h4>Especials</h4>
+<ul>
+<li><strong>Verdugo Nezumi - 75 pts:</strong> mini-boss
+d'emboscada.</li>
+<li><strong>Enjambre de Yokais - 80 pts:</strong> horror espiritual i
+enemic d'àrea.</li>
+<li><strong>Sacerdote - 140 pts:</strong> ritualista; millor amb molt
+poc suport.</li>
+</ul>
+</section>
+<section id="caps" class="box">
+<h4>Caps</h4>
+<ul>
+<li><strong>General Yaoguai - 110 pts:</strong> líder tàctic.</li>
+<li><strong>Carnicero Yaoguai - 180 pts:</strong> boss físic quasi
+equivalent al grup.</li>
+<li><strong>Jefe Oni - 395 pts:</strong> amenaça final; s'ha de véncer
+amb segells o aliats.</li>
+</ul>
+</section>
+</div>
+</section>
+<section id="roster-aliat-clan-dels-gats-de-jade" class="panel">
+<h3>Roster aliat: Clan dels Gats de Jade</h3>
+<p>Esta llista ve de <code>Age of Fantasy: Skirmish</code>
+(<code>AOFS 150pts</code>). Per a usar-los com a aliats reals en
+<code>Age of Fantasy: Quest</code>, recreeu-los en l'app de Quest i useu
+els punts nous. Fins llavors, el document els tracta sobretot com a
+reforços narratius, civils armats o presència de suport.</p>
+<div class="cols">
+<section id="nucli-del-clan" class="box">
+<h4>Nucli del clan</h4>
+<ul>
+<li><strong>Clan Guardian [1] - 55 pts Skirmish:</strong> líder
+honorable, protector del santuari i millor opció si necessiteu un aliat
+fort en la final.</li>
+<li><strong>Ndoli Warriors [3] - 30 pts Skirmish:</strong> guàrdies del
+temple, patrulla del poble o reforç de rereguarda.</li>
+</ul>
+</section>
+<section id="mobilitat" class="box">
+<h4>Mobilitat</h4>
+<ul>
+<li><strong>Sambari Hound [1] - 15 pts Skirmish:</strong> explorador
+ràpid, rastrejador o missatger del clan.</li>
+<li><strong>Ndwari Centaur [1] - 25 pts Skirmish:</strong> cavalleria
+felina ràpida; teniu 2 models per representar reforços o escortes.</li>
+</ul>
+</section>
+<section id="ús-en-quest" class="box scale">
+<h4>Ús en Quest</h4>
+<ul>
+<li><strong>Sense recrear en l'app:</strong> useu-los com a marcadors
+narratius, objectius a protegir o ajuda fora de taula.</li>
+<li><strong>Recreats en l'app:</strong> poden entrar com a aliat
+opcional quan una missió ho indique.</li>
+<li><strong>Campanya base:</strong> Wukong i Cerdito continuen sent els
+únics herois jugables principals.</li>
+<li><strong>Recomanació:</strong> si només voleu un reforç puntual,
+trieu el <code>Clan Guardian</code> o 1 <code>Ndwari Centaur</code>, no
+tot el clan.</li>
+</ul>
+</section>
+</div>
+</section>
+<section id="escenografia-necessària-i-alternatives" class="panel">
+<h3>Escenografia necessària i alternatives</h3>
+<div class="cols">
+<section id="imprescindible" class="box">
+<h4>Imprescindible</h4>
+<ul>
+<li>Pagoda, 6 làmpares i mobiliari HeroQuest.</li>
+<li>Tokens de paper numerats per a pistes, segells i objectius.</li>
+<li>Un regle amb polzades i, si pot ser, mitges polzades.</li>
+</ul>
+</section>
+<section id="opcional-per-imprimir" class="box print">
+<h4>Opcional per imprimir</h4>
+<ul>
+<li>3 tòtems yaoguai menuts.</li>
+<li>3 pedres de segell o monòlits.</li>
+<li>1 portal espiritual.</li>
+<li>1 pont roig o passarel·la.</li>
+</ul>
+</section>
+<section id="alternativa-casolana" class="box">
+<h4>Alternativa casolana</h4>
+<ul>
+<li>Tòtems: usa làmpares L1-L3.</li>
+<li>Portal: usa la pagoda o una porta HeroQuest.</li>
+<li>Pont: tira de cartó, tela roja o dos llibres separats.</li>
+<li>Monòlits: cofres, tombes o tokens numerats.</li>
+</ul>
+</section>
+</div>
+</section>
+<section id="abans-de-la-primera-partida" class="panel">
+<h3>Abans de la primera partida</h3>
+<p>Esta campanya assumeix que esteu aprenent
+<code>Age of Fantasy: Quest</code>. No intenteu usar totes les regles
+especials de colp. La Missió 0 està pensada per tocar les peces bàsiques
+del joc sense pressió.</p>
+<div class="cols">
+<section id="què-preparar" class="box">
+<h4>Què preparar</h4>
+<ul>
+<li>Taula útil de <strong>24" x 24"</strong>.</li>
+<li>Regle en polzades.</li>
+<li>Daus D6.</li>
+<li>Fitxes de <code>Sun Wukong</code> i <code>Cerdito</code> creades en
+l'app d'OPR.</li>
+<li>3 <code>Guerreros Yaoguai</code> i, si voleu provar tir, 3
+<code>Arqueros Yaoguai</code>.</li>
+<li>1 làmpada, 1 cofre i 1 peça de cobertura HeroQuest.</li>
+</ul>
+</section>
+<section id="què-ignorar-al-principi" class="box">
+<h4>Què ignorar al principi</h4>
+<ul>
+<li>No cal usar totes les recompenses, botiga o consumibles en la
+primera partida.</li>
+<li>No cal optimitzar punts: la Missió 0 és una escena
+d'aprenentatge.</li>
+<li>No cal recordar totes les habilitats; llegiu només les que apareguen
+en el moment.</li>
+<li>Si dubteu, feu la decisió més favorable als herois i continueu.</li>
+</ul>
+</section>
+<section id="ordre-mental-duna-ronda" class="box">
+<h4>Ordre mental d'una ronda</h4>
+<ul>
+<li>Tria qui s'activa.</li>
+<li>Mira què vol aconseguir: moure, atacar, interactuar o protegir.</li>
+<li>Mesura distàncies abans de moure.</li>
+<li>Resol tirades.</li>
+<li>Marca si algú queda fora de combat o si un objectiu s'ha
+completat.</li>
+<li>Passa a la següent activació.</li>
+</ul>
+</section>
+</div>
+</section>
+<section id="com-jugar-amb-els-enemics-sense-complicar-se"
+class="panel">
+<h3>Com jugar amb els enemics sense complicar-se</h3>
+<div class="cols">
+<section id="prioritat-simple-de-la-ia" class="box">
+<h4>Prioritat simple de la IA</h4>
+<ul>
+<li>Si un yaoguai pot atacar un heroi, ho intenta.</li>
+<li>Si no pot atacar però veu un heroi, es mou cap a ell o cap a
+cobertura útil.</li>
+<li>Si no veu cap heroi, es mou cap a l'objectiu de IA de la
+missió.</li>
+<li>Si hi ha empat, tria l'opció més divertida o més clara per al
+xiquet.</li>
+</ul>
+</section>
+<section id="com-fer-ho-familiar" class="box">
+<h4>Com fer-ho familiar</h4>
+<ul>
+<li>Explica què farà l'enemic abans de moure'l.</li>
+<li>Dona una pista si el teu fill no veu una opció bona.</li>
+<li>Les derrotes poden ser captura, fugida o pèrdua d'un objectiu, no
+mort definitiva.</li>
+<li>Premia idees creatives encara que no siguen l'opció més
+eficient.</li>
+</ul>
+</section>
+<section id="kitchen-table" class="box">
+<h4>Kitchen Table</h4>
+<ul>
+<li>Tots els mapes són de <strong>24" x 24"</strong>.</li>
+<li>Les distàncies d'escenari ja estan pensades per a este format.</li>
+<li>Manteniu les distàncies dels perfils OPR com indica l'app.</li>
+<li>Si una mitja polzada fa nosa, arrodoniu a favor dels herois.</li>
+</ul>
+</section>
+</div>
+</section>
+<section id="glossari-mínim-per-començar" class="panel">
+<h3>Glossari mínim per començar</h3>
+<div class="cols">
+<section id="perfil" class="box">
+<h4>Perfil</h4>
+<ul>
+<li><strong>Qua:</strong> qualitat general per a moltes tirades.</li>
+<li><strong>Def:</strong> defensa quan el model intenta bloquejar
+impactes.</li>
+<li><strong>Pow:</strong> energia per a habilitats de l'heroi.</li>
+<li><strong>Str, Dex, Wil:</strong> força, destresa i voluntat.</li>
+</ul>
+</section>
+<section id="taula" class="box">
+<h4>Taula</h4>
+<ul>
+<li><strong>Cobertura:</strong> una peça que ajuda a protegir-se.</li>
+<li><strong>Bloquejador:</strong> talla línia de visió.</li>
+<li><strong>Difícil:</strong> complica el moviment.</li>
+<li><strong>Objectiu:</strong> lloc o token que fa guanyar la
+missió.</li>
+</ul>
+</section>
+<section id="campanya" class="box">
+<h4>Campanya</h4>
+<ul>
+<li><strong>XP:</strong> experiència per progressar.</li>
+<li><strong>Gold:</strong> or per comprar o millorar.</li>
+<li><strong>Interacció:</strong> acció per encendre, obrir, rescatar,
+activar o arreplegar.</li>
+<li><strong>IA:</strong> comportament guiat dels enemics.</li>
+</ul>
+</section>
+</div>
+</section>
+<section class="chapter">
+<div class="banner">
+<div class="smallcap">
+<p>Pròleg - Aprendre el Camí</p>
+</div>
+<div class="ctitle">
+<p>El Primer Fanal</p>
+</div>
+<p>Abans que els yaoguai furten la campana i abans que l'Oni desperte,
+els pelegrins fan una prova senzilla al pati del santuari. Esta escena
+ensenya les bases de <code>Age of Fantasy: Quest</code> sense
+conseqüències greus.</p>
+</div>
+<article class="mission">
+<div class="mhead">
+<div class="mbar">
+<p>Missió 0</p>
+</div>
+<div class="mhc">
+<div class="mtype">
+<p>Tutorial guiat - Sense risc de campanya</p>
+</div>
+<div class="mtitle">
+<p>El Primer Fanal</p>
+</div>
+</div>
+</div>
+<div class="maptop">
+<span>Pati menut del santuari</span><span>24" x 24" - Kitchen Table -
+tutorial</span>
+</div>
+<p><img class="map" src="campaigns/lluna-mossegada/assets/maps/mission-00.svg" alt="Mapa de la missió 0"></p>
+<div class="mapleg">
+<p><span class="li"><span class="sw"
+style="border-color:#628fc8;background:rgba(98,143,200,.12)"></span>Herois</span><span
+class="li"><span class="sw"
+style="border-color:#d35a45"></span>Yaoguai</span><span class="li"><span
+class="sw" style="border-color:#65b88a"></span>Fanal /
+cobertura</span><span class="li"><span class="sw"
+style="border-color:#c8a44a"></span>Tripitaka</span></p>
+</div>
+<div class="mbody">
+<div class="quote">
+L'Abat Bakeneko deixa una làmpada apagada al centre del pati. "Abans de
+salvar la vall", diu, "aprendreu a no ensopegar amb els vostres propis
+peus." Wukong somriu. Cerdito pregunta si després hi haurà
+desdejuni.<cite>Entrenament al santuari</cite>
+</div>
+<p>Esta escena no és una missió normal. És una partida d'aprenentatge.
+Si alguna cosa ix malament, els gats samurais interrompen l'entrenament
+i ho tornen a explicar.</p>
+<div class="rbox">
+<div class="rtitle">
+<p>Objectiu del tutorial</p>
+</div>
+<ul>
+<li><strong>Objectiu principal:</strong> encendre el Fanal L1 i portar
+Tripitaka fins a 3" del cofre.</li>
+<li><strong>Enemics:</strong> 3 Guerreros Yaoguai entren en la ronda 2
+per la vora nord.</li>
+<li><strong>Victòria:</strong> el fanal està encés i Tripitaka no està
+capturat al final de qualsevol ronda.</li>
+<li><strong>Derrota amable:</strong> si un heroi cau o Tripitaka és
+capturat, atureu la partida, expliqueu què ha passat i torneu a jugar
+des de la ronda anterior.</li>
+<li><strong>Recompensa:</strong> cap XP obligatori. Si voleu premi,
+doneu +1g al grup per haver ajudat l'Abat.</li>
+</ul>
+<div class="rbar">
+<p><span class="pill">Aprendre activacions</span><span
+class="pill">Sense mort</span><span class="pill">20-30 minuts</span></p>
+</div>
+</div>
+<div class="terrain">
+<section id="preparació" class="box">
+<h4>Preparació</h4>
+<ul>
+<li>Desplega Wukong, Cerdito i Tripitaka dins de la zona sud de 3".</li>
+<li>Col·loca el Fanal al centre.</li>
+<li>Col·loca el cofre a l'est i una taula o cobertura a l'oest.</li>
+<li>Deixa els 3 Guerreros Yaoguai fora de la taula fins a la ronda
+2.</li>
+</ul>
+</section>
+<section id="ronda-1-moure-i-mesurar" class="box scale">
+<h4>Ronda 1: moure i mesurar</h4>
+<ul>
+<li>Activa Wukong i mou-lo cap al Fanal.</li>
+<li>Activa Cerdito i posa'l entre Tripitaka i el nord.</li>
+<li>Mou Tripitaka només si voleu practicar guiar un marcador: un heroi
+en contacte pot gastar una interacció per moure'l 3".</li>
+<li>Apreneu a mesurar abans de moure i a deixar clar on acaba cada
+miniatura.</li>
+</ul>
+</section>
+<section id="ronda-2-primer-combat" class="box print">
+<h4>Ronda 2: primer combat</h4>
+<ul>
+<li>Entren 3 Guerreros Yaoguai per la vora nord.</li>
+<li>Fes que un yaoguai avance cap al Fanal, un cap a Cerdito i un cap a
+Wukong.</li>
+<li>Practiqueu un atac de cos a cos i una tirada de defensa.</li>
+<li>Si oblideu una regla especial, ignoreu-la i continueu.</li>
+</ul>
+</section>
+</div>
+<div class="terrain">
+<section id="ronda-3-interactuar" class="box">
+<h4>Ronda 3: interactuar</h4>
+<ul>
+<li>Un heroi en contacte amb el Fanal pot gastar una interacció per
+encendre'l.</li>
+<li>Un heroi en contacte amb el cofre pot obrir-lo com a pràctica: dins
+hi ha una galeta seca i 1g.</li>
+<li>Expliqueu que moltes missions de Quest es guanyen interactuant amb
+objectius, no eliminant tots els enemics.</li>
+</ul>
+</section>
+<section id="ia-senzilla" class="box scale">
+<h4>IA senzilla</h4>
+<ul>
+<li>Si un yaoguai veu un heroi, va cap a ell.</li>
+<li>Si no veu cap heroi, va cap al Fanal.</li>
+<li>Si pot capturar Tripitaka, ho intenta, però només per ensenyar la
+regla de rescat.</li>
+</ul>
+</section>
+<section id="després-de-jugar" class="box print">
+<h4>Després de jugar</h4>
+<ul>
+<li>Pregunta al xiquet què ha aprés: moure, atacar, defensar,
+interactuar o protegir.</li>
+<li>Repetiu només les parts que no hagen quedat clares.</li>
+<li>Quan tot estiga clar, passeu a la Missió 1.</li>
+</ul>
+</section>
+</div>
+</div>
+</article>
+</section>
+<section class="chapter">
+<div class="banner">
+<div class="smallcap">
+<p>Capítol I - La Campana Robada</p>
+</div>
+<div class="ctitle">
+<p>Quan El Santuari Calla</p>
+</div>
+<p>Els pelegrins arriben a una vall on els gats samurais custodien un
+santuari antic. Però la campana que despertava el sol ha desaparegut, i
+en el seu lloc només queden petjades menudes, rialles i un olor de sofre
+dolç.</p>
+</div>
+<article class="mission">
+<div class="mhead">
+<div class="mbar">
+<p>Missió 1</p>
+</div>
+<div class="mhc">
+<div class="mtype">
+<p>Recuperació - Introducció</p>
+</div>
+<div class="mtitle">
+<p>El Robatori del Santuari</p>
+</div>
+</div>
+</div>
+<div class="maptop">
+<span>Santuari dels Gats de Jade</span><span>24" x 24" - Kitchen Table -
+quadrícula 3"</span>
+</div>
+<p><img class="map" src="campaigns/lluna-mossegada/assets/maps/mission-01.svg" alt="Mapa de la missió 1"></p>
+<div class="mapleg">
+<p><span class="li"><span class="sw"
+style="border-color:#628fc8;background:rgba(98,143,200,.12)"></span>Herois</span><span
+class="li"><span class="sw" style="border-color:#d35a45"></span>Aparició
+enemiga</span><span class="li"><span class="sw"
+style="border-color:#c8a44a;background:rgba(200,164,74,.25)"></span>Objectiu</span><span
+class="li"><span class="sw"
+style="border-color:#65b88a;background:rgba(101,184,138,.25)"></span>Làmpares</span></p>
+</div>
+<div class="mbody">
+<div class="quote">
+La porta de la pagoda està oberta. Un gat samurai jove manté la mà sobre
+l'espasa i mira Wukong com si ell fora el sospitós més probable. Cerdito
+olora l'aire i diu: "Han anat cap al nord. I s'han menjat les
+ofrenes."<cite>Arribada al santuari</cite>
+</div>
+<p>Els yaoguai han furtat la campana menuda del santuari. Els herois han
+de recuperar-la abans que els lladres fugen pel límit nord.</p>
+<div class="rbox">
+<div class="rtitle">
+<p>Regles de missió</p>
+</div>
+<ul>
+<li><strong>Enemics inicials:</strong> 3 Guerreros Yaoguai + 3 Arqueros
+Yaoguai (45 pts).</li>
+<li><strong>Objectiu principal:</strong> un heroi en contacte amb la
+Campana gasta una acció d'interacció per arreplegar-la. Després ha
+d'acabar una ronda en la zona sud.</li>
+<li><strong>Alarma covarda:</strong> si no hi ha cap heroi a 6" de la
+Campana al final de la ronda 3, afig 3 Guerreros Yaoguai per la vora
+nord.</li>
+<li><strong>Objectiu d'IA:</strong> els yaoguai sense línia de visió
+corren cap a la Campana. Si un yaoguai arriba a contactar-la, intenta
+retirar-se cap al nord.</li>
+<li><strong>Recompensa:</strong> 1 XP si recuperen la campana; +2g si
+també revelen el cofre-token.</li>
+</ul>
+<div class="rbar">
+<p><span class="pill">Base 2 herois</span><span class="pill">Duració 4-5
+rondes</span><span class="pill">To: tutorial</span></p>
+</div>
+</div>
+<div class="terrain">
+<section id="terreny" class="box">
+<h4>Terreny</h4>
+<ul>
+<li>Pagoda: bloquejador + impassable.</li>
+<li>Làmpares: cobertura menuda; també marquen el camí sagrat.</li>
+<li>Altar i taula: cobertura.</li>
+</ul>
+</section>
+<section id="si-jugueu-amb-3-4-herois" class="box scale">
+<h4>Si jugueu amb 3-4 herois</h4>
+<ul>
+<li>3 herois: afig 3 Sabuesos Demonio en ronda 3.</li>
+<li>4 herois: afig també 3 Guerreros per la vora est.</li>
+</ul>
+</section>
+<section id="escenografia" class="box print">
+<h4>Escenografia</h4>
+<ul>
+<li>Necessari: pagoda, 6 làmpares, altar, cofre, taula.</li>
+<li>Alternativa: el cofre pot ser un token de paper.</li>
+</ul>
+</section>
+</div>
+</div>
+</article>
+<article class="mission">
+<div class="mhead">
+<div class="mbar">
+<p>Missió 2</p>
+</div>
+<div class="mhc">
+<div class="mtype">
+<p>Patrulla i alarma</p>
+</div>
+<div class="mtitle">
+<p>Els Ulls del Bosc</p>
+</div>
+</div>
+</div>
+<div class="maptop">
+<span>Bosc dels Fanals Apagats</span><span>24" x 24" - Kitchen
+Table</span>
+</div>
+<p><img class="map" src="campaigns/lluna-mossegada/assets/maps/mission-02.svg" alt="Mapa de la missió 2"></p>
+<div class="mapleg">
+<p><span class="li"><span class="sw"
+style="border-color:#65b88a;background:rgba(45,107,83,.45)"></span>Bosc
+difícil/cobertura</span><span class="li"><span class="sw"
+style="border-color:#d35a45"></span>Patrulla</span><span
+class="li"><span class="sw"
+style="border-color:#c8a44a"></span>Eixida</span></p>
+</div>
+<div class="mbody">
+<div class="quote">
+Els fanals del camí estan apagats un a un. Neko de les Ombres assenyala
+marques en l'escorça: "No són llops. Són gossos que han aprés a
+riure."<cite>Entrada al bosc</cite>
+</div>
+<p>Els herois han de travessar el bosc i trobar el rastre del clan sense
+deixar que els sabuesos donen l'alarma.</p>
+<div class="rbox">
+<div class="rtitle">
+<p>Regles de missió</p>
+</div>
+<ul>
+<li><strong>Enemics inicials:</strong> 3 Sabuesos Demonio + 3 Guerreros
+Yaoguai (60 pts).</li>
+<li><strong>Objectiu principal:</strong> els dos herois han d'acabar una
+ronda a 3" de l'Eixida nord-est.</li>
+<li><strong>Fanals apagats:</strong> cada llum L1-L6 pot activar-se amb
+una interacció. Amb 3 fanals actius, la primera onada de reforços es
+cancel·la.</li>
+<li><strong>Alarma:</strong> si un Sabueso acaba la seua activació en
+contacte amb L4 o L6, afig 3 Arqueros en la vora nord al final de la
+ronda.</li>
+<li><strong>Objectiu d'IA:</strong> els sabuesos busquen el fanal més
+pròxim; els guerrers protegeixen l'Eixida.</li>
+</ul>
+<div class="rbar">
+<p><span class="pill">Recompensa: 1 XP</span><span class="pill">+1 pista
+si 3 fanals actius</span></p>
+</div>
+</div>
+<div class="terrain">
+<section id="terreny-1" class="box">
+<h4>Terreny</h4>
+<ul>
+<li>Boscos: cobertura + terreny difícil.</li>
+<li>Camí: terreny lliure.</li>
+<li>Fanals: objectius i cobertura menuda.</li>
+</ul>
+</section>
+<section id="herois" class="box scale">
+<h4>3-4 herois</h4>
+<ul>
+<li>3 herois: afig 3 Arqueros des del principi.</li>
+<li>4 herois: els Arqueros entren en ronda 2 encara que no hi haja
+alarma.</li>
+</ul>
+</section>
+<section id="escenografia-1" class="box print">
+<h4>Escenografia</h4>
+<ul>
+<li>Opcional: arbres impresos.</li>
+<li>Alternativa: paper verd, llibres o zones marcades amb daus.</li>
+</ul>
+</section>
+</div>
+</div>
+</article>
+<article class="mission">
+<div class="mhead">
+<div class="mbar">
+<p>Missió 3</p>
+</div>
+<div class="mhc">
+<div class="mtype">
+<p>Emboscada - Mini-boss</p>
+</div>
+<div class="mtitle">
+<p>L'Assassí de les Ombres</p>
+</div>
+</div>
+</div>
+<div class="maptop">
+<span>Hostal abandonat del Camí Estret</span><span>24" x 24" - Kitchen
+Table</span>
+</div>
+<p><img class="map" src="campaigns/lluna-mossegada/assets/maps/mission-03.svg" alt="Mapa de la missió 3"></p>
+<div class="mapleg">
+<p><span class="li"><span class="sw"
+style="border-color:#c8a44a;background:#3b2618"></span>Mobiliari
+HQ</span><span class="li"><span class="sw"
+style="border-color:#d35a45"></span>Nezumi / reforços</span></p>
+</div>
+<div class="mbody">
+<div class="quote">
+Una nota està clavada en la taula amb un ganivet fi: "El mico viu val
+or. El porc, si cap en un sac." Cerdito es queda mirant la nota massa
+estona. "Això és ofensiu de moltes maneres."<cite>Hostal
+abandonat</cite>
+</div>
+<p>El Verdugo Nezumi ataca de nit. La missió pot guanyar-se derrotant-lo
+o obligant-lo a fugir amb proves del contracte.</p>
+<div class="rbox">
+<div class="rtitle">
+<p>Regles de missió</p>
+</div>
+<ul>
+<li><strong>Enemics inicials:</strong> Verdugo Nezumi (75 pts). Afig 3
+Guerreros en ronda 3 si el Nezumi segueix viu.</li>
+<li><strong>Objectiu principal:</strong> derrotar el Nezumi o revelar el
+token Contracte i escapar per la zona sud.</li>
+<li><strong>Ombres fondes:</strong> fins que el Contracte siga revelat,
+el Nezumi pot usar el mobiliari com a cobertura encara que només el
+toque parcialment.</li>
+<li><strong>Objectiu d'IA:</strong> el Nezumi prioritza el heroi amb
+menys ferides restants; els guerrers bloquegen les eixides.</li>
+<li><strong>Conseqüència:</strong> si el Nezumi escapa, pot aparéixer
+com a reforç opcional en la Missió 7.</li>
+</ul>
+<div class="rbar">
+<p><span class="pill">Recompensa: 1 XP</span><span class="pill">+2g si
+recuperen el contracte</span></p>
+</div>
+</div>
+<div class="terrain">
+<section id="terreny-2" class="box">
+<h4>Terreny</h4>
+<ul>
+<li>Mobiliari HQ: cobertura.</li>
+<li>Murs de l'hostal: bloquejador; portes obertes en sud i
+laterals.</li>
+<li>Làmpares: no bloquegen, però il·luminen.</li>
+</ul>
+</section>
+<section id="herois-1" class="box scale">
+<h4>3-4 herois</h4>
+<ul>
+<li>3 herois: els 3 Guerreros entren en ronda 2.</li>
+<li>4 herois: afig també 3 Arqueros en la vora nord.</li>
+</ul>
+</section>
+</div>
+</div>
+</article>
+</section>
+<section class="chapter">
+<div class="banner red">
+<div class="smallcap">
+<p>Capítol II - El Clan de la Lluna Mossegada</p>
+</div>
+<div class="ctitle">
+<p>Banderes, Rituals I Fam</p>
+</div>
+<p>La pista del contracte porta a un temple vell. Els yaoguai no actuen
+per simple malícia: algú els promet un món on els monstres menuts ja no
+hauran d'amagar-se. El preu és obrir la porta a una fam molt més
+gran.</p>
+</div>
+<article class="mission">
+<div class="mhead">
+<div class="mbar">
+<p>Missió 4</p>
+</div>
+<div class="mhc">
+<div class="mtype">
+<p>Ritual - Objectius múltiples</p>
+</div>
+<div class="mtitle">
+<p>El Temple dels Yokais</p>
+</div>
+</div>
+</div>
+<div class="maptop">
+<span>Temple de les Sis Llums</span><span>24" x 24" - Kitchen
+Table</span>
+</div>
+<p><img class="map" src="campaigns/lluna-mossegada/assets/maps/mission-04.svg" alt="Mapa de la missió 4"></p>
+<div class="mapleg">
+<p><span class="li"><span class="sw"
+style="border-color:#9b6bd6"></span>Ritual</span><span class="li"><span
+class="sw" style="border-color:#65b88a"></span>Llums</span><span
+class="li"><span class="sw"
+style="border-color:#d35a45"></span>Enemics</span></p>
+</div>
+<div class="mbody">
+<div class="quote">
+El Sacerdote parla a través de sis flames verdes. Cada flama projecta
+una ombra diferent, i una d'elles és massa gran per a pertànyer a cap
+cos present.<cite>El Temple dels Yokais</cite>
+</div>
+<p>Els herois han d'interrompre el ritual abans que el Enjambre de
+Yokais es forme completament.</p>
+<div class="rbox">
+<div class="rtitle">
+<p>Regles de missió</p>
+</div>
+<ul>
+<li><strong>Enemics inicials:</strong> Sacerdote (140 pts) + 3 Guerreros
+només si voleu dificultat alta.</li>
+<li><strong>Objectiu principal:</strong> apagar o purificar 3 de les 6
+làmpares amb una interacció en contacte.</li>
+<li><strong>Ritual creixent:</strong> al final de la ronda 4, si no hi
+ha 3 làmpares purificades, entra el Enjambre de Yokais pel centre.</li>
+<li><strong>Objectiu d'IA:</strong> el Sacerdote es manté a 3" de
+l'Altar; els guerrers defenen la làmpares no purificades.</li>
+<li><strong>Recompensa:</strong> 1 XP; si eviten que aparega el
+Enjambre, guanyen +1g i una pista sobre el General.</li>
+</ul>
+</div>
+<div class="terrain">
+<section id="terreny-3" class="box">
+<h4>Terreny</h4>
+<ul>
+<li>Pagoda: bloquejador + impassable.</li>
+<li>Cercle ritual: terreny difícil narratiu; no afecta si preferiu joc
+més net.</li>
+<li>Tombes i altar: cobertura.</li>
+</ul>
+</section>
+<section id="herois-2" class="box scale">
+<h4>3-4 herois</h4>
+<ul>
+<li>3 herois: inclou 3 Guerreros des del principi.</li>
+<li>4 herois: el Enjambre entra en ronda 4 encara que només falte 1
+làmpada.</li>
+</ul>
+</section>
+<section id="opcional" class="box print">
+<h4>Opcional</h4>
+<ul>
+<li>Imprimir 3 tòtems millora l'escena.</li>
+<li>Alternativa: usa L1-L3 com a tòtems yaoguai.</li>
+</ul>
+</section>
+</div>
+</div>
+</article>
+<article class="mission">
+<div class="mhead">
+<div class="mbar">
+<p>Missió 5</p>
+</div>
+<div class="mhc">
+<div class="mtype">
+<p>Defensa de zona</p>
+</div>
+<div class="mtitle">
+<p>El General de les Banderes Trencades</p>
+</div>
+</div>
+</div>
+<div class="maptop">
+<span>Campament yaoguai de la Lluna</span><span>24" x 24"</span>
+</div>
+<p><img class="map" src="campaigns/lluna-mossegada/assets/maps/mission-05.svg" alt="Mapa de la missió 5"></p>
+<div class="mapleg">
+<p><span class="li"><span class="sw"
+style="border-color:#d35a45"></span>General i guàrdies</span><span
+class="li"><span class="sw" style="border-color:#c8a44a"></span>Bandera
+objectiu</span></p>
+</div>
+<div class="mbody">
+<div class="quote">
+El General Yaoguai no sembla content de vore'ls. Tampoc sembla content
+de tindre yaoguai al seu voltant. "Jo no vaig obrir la porta", gruny.
+"Jo només impedisc que altres la tanquen."<cite>Campament de
+guerra</cite>
+</div>
+<p>Els herois ataquen el campament per trencar la bandera de comandament
+i impedir l'assalt al poble dels gats.</p>
+<div class="rbox">
+<div class="rtitle">
+<p>Regles de missió</p>
+</div>
+<ul>
+<li><strong>Enemics inicials:</strong> General Yaoguai (110 pts) + 3
+Guerreros (15 pts). Total 125 pts.</li>
+<li><strong>Objectiu principal:</strong> destruir o capturar la Bandera
+amb una interacció en contacte. Cerdito pot fer-ho amb Str; Wukong amb
+Dex, si voleu usar chequeig narratiu.</li>
+<li><strong>Guàrdia d'honor:</strong> si el General cau abans que la
+Bandera siga capturada, entren 3 Arqueros per una vora aleatòria.</li>
+<li><strong>Objectiu d'IA:</strong> el General defensa el Tron i carrega
+contra el heroi que toque la Bandera.</li>
+<li><strong>Recompensa:</strong> 1 XP i suport del
+<code>Clan Guardian</code> en la Missió 6 si sobreviuen els dos herois.
+Si encara no l'heu recreat en l'app de Quest, useu-lo només com a ajuda
+narrativa fora de taula.</li>
+</ul>
+</div>
+<div class="terrain">
+<section id="terreny-4" class="box">
+<h4>Terreny</h4>
+<ul>
+<li>Tron i taules: cobertura.</li>
+<li>Làmpares: marquen entrades del campament.</li>
+<li>Cofres: tokens de descobriment.</li>
+</ul>
+</section>
+<section id="herois-3" class="box scale">
+<h4>3-4 herois</h4>
+<ul>
+<li>3 herois: afig 3 Arqueros inicials.</li>
+<li>4 herois: afig 3 Sabuesos en ronda 2.</li>
+</ul>
+</section>
+</div>
+</div>
+</article>
+<article class="mission">
+<div class="mhead">
+<div class="mbar">
+<p>Missió 6</p>
+</div>
+<div class="mhc">
+<div class="mtype">
+<p>Boss físic - Pont</p>
+</div>
+<div class="mtitle">
+<p>El Carnisser del Pont Roig</p>
+</div>
+</div>
+</div>
+<div class="maptop">
+<span>Pas del Riu Estret</span><span>24" x 24"</span>
+</div>
+<p><img class="map" src="campaigns/lluna-mossegada/assets/maps/mission-06.svg" alt="Mapa de la missió 6"></p>
+<div class="mapleg">
+<p><span class="li"><span class="sw"
+style="border-color:#d35a45;background:rgba(159,48,40,.35)"></span>Pont</span><span
+class="li"><span class="sw"
+style="border-color:#65b88a;background:rgba(45,107,83,.45)"></span>Riba/bosc</span></p>
+</div>
+<div class="mbody">
+<div class="quote">
+El Carnisser Yaoguai bloqueja el pont amb una arma massa gran i un
+somriure massa xicotet. "Peatge", diu. Cerdito sospira. "Sempre és
+peatge."<cite>El Pont Roig</cite>
+</div>
+<p>Els herois no necessiten matar el Carnisser: només han d'obrir-se pas
+i arribar a la Porta del Pas.</p>
+<div class="rbox">
+<div class="rtitle">
+<p>Regles de missió</p>
+</div>
+<ul>
+<li><strong>Enemic inicial:</strong> Carnicero Yaoguai (180 pts). Sense
+suport inicial.</li>
+<li><strong>Objectiu principal:</strong> els dos herois han d'acabar una
+ronda a 3" de la Porta del Pas.</li>
+<li><strong>Pont estret:</strong> el pont és el camí principal. Les
+ribes compten com a terreny difícil i cobertura.</li>
+<li><strong>Atordir, no matar:</strong> quan el Carnisser haja rebut la
+meitat de les ferides que el deixarien fora de combat, queda desorientat
+fins al final de la ronda. Els herois poden travessar sense provocar la
+seua persecució eixa ronda. Regla narrativa opcional per fer la missió
+més amable.</li>
+<li><strong>Objectiu d'IA:</strong> el Carnisser es queda al pont i
+ataca el heroi més pròxim.</li>
+<li><strong>Recompensa:</strong> 1 XP; si revelen Cordes, en la Missió 8
+poden moure una làmpada 3" una vegada.</li>
+</ul>
+</div>
+<div class="terrain">
+<section id="terreny-5" class="box">
+<h4>Terreny</h4>
+<ul>
+<li>Pont: terreny lliure però estret.</li>
+<li>Ribes: cobertura + difícil.</li>
+<li>Riu: impassable excepte pel pont.</li>
+</ul>
+</section>
+<section id="herois-4" class="box scale">
+<h4>3-4 herois</h4>
+<ul>
+<li>3 herois: afig 3 Guerreros en ronda 3.</li>
+<li>4 herois: afig 3 Arqueros en la riba nord.</li>
+</ul>
+</section>
+<section id="escenografia-2" class="box print">
+<h4>Escenografia</h4>
+<ul>
+<li>Opcional: pont imprés.</li>
+<li>Alternativa: cartó roig, tela o dos llibres amb un pas entre
+ells.</li>
+</ul>
+</section>
+</div>
+</div>
+</article>
+</section>
+<div class="villain">
+<div class="rank">
+<p>Gran enemic final</p>
+</div>
+<div class="name">
+<p>El Jefe Oni de la Boca Llarga</p>
+</div>
+<p>No és un enemic equilibrat per a 190 punts d'herois. És una
+catàstrofe amb cames. Les missions finals no pretenen que Wukong i
+Cerdito el derroten en duel net, sinó que el tanquen, l'enganyen o el
+deixen prou feble perquè els Gats de Jade puguen mantindre el
+segell.</p>
+<div class="stats">
+<p><span class="pill">395 pts</span><span
+class="pill">Tough(18)</span><span class="pill">Regeneration</span><span
+class="pill">Heavy Great Weapon A12 AP(4)</span><span class="pill">Final
+d'objectiu</span></p>
+</div>
+</div>
+<section class="chapter">
+<div class="banner violet">
+<div class="smallcap">
+<p>Capítol III - La Porta de l'Oni</p>
+</div>
+<div class="ctitle">
+<p>Tres Segells Contra Una Boca</p>
+</div>
+<p>La vall sencera tremola. Els gats samurais preparen una defensa
+desesperada mentre l'Abat Bakeneko revela la veritat: la pagoda no és
+només un temple. És un pany. I algú ja ha ficat la clau al revés.</p>
+</div>
+<article class="mission">
+<div class="mhead">
+<div class="mbar">
+<p>Missió 7</p>
+</div>
+<div class="mhc">
+<div class="mtype">
+<p>Segells - Preparació final</p>
+</div>
+<div class="mtitle">
+<p>Els Tres Segells</p>
+</div>
+</div>
+</div>
+<div class="maptop">
+<span>Pati interior de la Pagoda</span><span>24" x 24"</span>
+</div>
+<p><img class="map" src="campaigns/lluna-mossegada/assets/maps/mission-07.svg" alt="Mapa de la missió 7"></p>
+<div class="mapleg">
+<p><span class="li"><span class="sw"
+style="border-color:#c8a44a;background:rgba(200,164,74,.30)"></span>Segells</span><span
+class="li"><span class="sw" style="border-color:#9b6bd6"></span>Pagoda
+portal</span></p>
+</div>
+<div class="mbody">
+<div class="quote">
+L'Abat Bakeneko dibuixa tres cercles en la pols. "Un segell per al cos,
+un per a la fam, un per al nom. Si només en tanqueu dos, reseu perquè
+l'Oni no recorde com es diu."<cite>Abans de la nit final</cite>
+</div>
+<p>Els herois preparen el tancament final activant tres segells al
+voltant de la pagoda.</p>
+<div class="rbox">
+<div class="rtitle">
+<p>Regles de missió</p>
+</div>
+<ul>
+<li><strong>Enemics inicials:</strong> Enjambre de Yokais (80 pts) + 3
+Guerreros (15 pts). Si el Nezumi va escapar en M3, pot substituir els
+Guerreros.</li>
+<li><strong>Objectiu principal:</strong> activar 3 Segells amb
+interaccions en contacte.</li>
+<li><strong>Pressió espiritual:</strong> al final de cada ronda després
+de la primera, entra 1 unitat menuda disponible per una vora aleatòria
+si encara queden segells sense activar.</li>
+<li><strong>Objectiu d'IA:</strong> els enemics defenen el segell
+inactiu més pròxim.</li>
+<li><strong>Recompensa:</strong> cada segell activat dona un avantatge
+en M8. Amb 3 segells, el Jefe Oni comença adormit fins al final de la
+ronda 1.</li>
+</ul>
+</div>
+<div class="terrain">
+<section id="terreny-6" class="box">
+<h4>Terreny</h4>
+<ul>
+<li>Pagoda: bloquejador + impassable.</li>
+<li>Tombes: cobertura.</li>
+<li>Llums: punts de canalització; sense efecte mecànic si no voleu
+complicar.</li>
+</ul>
+</section>
+<section id="herois-5" class="box scale">
+<h4>3-4 herois</h4>
+<ul>
+<li>3 herois: afig 3 Arqueros inicials.</li>
+<li>4 herois: el reforç de ronda pot ser Sabuesos en lloc de
+Guerreros.</li>
+</ul>
+</section>
+<section id="opcional-1" class="box print">
+<h4>Opcional</h4>
+<ul>
+<li>Imprimir 3 monòlits per als segells.</li>
+<li>Alternativa: cofres, tombes o tokens numerats.</li>
+</ul>
+</section>
+</div>
+</div>
+</article>
+<article class="mission">
+<div class="mhead">
+<div class="mbar">
+<p>Missió 8</p>
+</div>
+<div class="mhc">
+<div class="mtype">
+<p>Final - Tancar el portal</p>
+</div>
+<div class="mtitle">
+<p>El Despertar de l'Oni</p>
+</div>
+</div>
+</div>
+<div class="maptop">
+<span>La Porta Oberta</span><span>24" x 24"</span>
+</div>
+<p><img class="map" src="campaigns/lluna-mossegada/assets/maps/mission-08.svg" alt="Mapa de la missió 8"></p>
+<div class="mapleg">
+<p><span class="li"><span class="sw"
+style="border-color:#d35a45"></span>Oni</span><span class="li"><span
+class="sw" style="border-color:#c8a44a"></span>Segells
+finals</span><span class="li"><span class="sw"
+style="border-color:#9b6bd6"></span>Portal</span></p>
+</div>
+<div class="mbody">
+<div class="quote">
+L'Oni obri un ull. La vall sencera sembla fer-se més xicoteta. Wukong
+somriu amb massa dents. Cerdito agafa l'arma amb les dos mans i murmura:
+"La pròxima vegada triem un pelegrinatge amb platja."<cite>Final de la
+Lluna Mossegada</cite>
+</div>
+<p>Esta no és una lluita justa. Els herois guanyen tancant la porta, no
+necessàriament matant el Jefe Oni.</p>
+<div class="rbox">
+<div class="rtitle">
+<p>Regles de missió</p>
+</div>
+<ul>
+<li><strong>Enemics inicials:</strong> Jefe Oni (395 pts) al portal. Si
+és massa dur, comença inactiu fins que un heroi active el primer segell
+o fins al final de la ronda 1.</li>
+<li><strong>Suport gat:</strong> si els herois van salvar el poble o
+capturaren la Bandera, desplega 1 aliat del Clan dels Gats de Jade
+recreat en l'app de Quest a la zona sud. Recomanat:
+<code>Clan Guardian</code>. Si voleu mantindre 2 herois estrictes o
+encara no l'heu recreat, useu-lo només com a marcador narratiu que
+distrau l'Oni una ronda.</li>
+<li><strong>Objectiu principal:</strong> activar els 3 Segells finals.
+Cada activació requereix contacte i una acció d'interacció.</li>
+<li><strong>Avantatges de M7:</strong> per cada segell activat en M7,
+tria un benefici: retardar l'Oni 1 ronda, cancel·lar una onada, o
+permetre repetir una interacció fallada.</li>
+<li><strong>Onades:</strong> al final de la ronda 2 i cada 2 rondes,
+entra 1 unitat menuda disponible per una vora aleatòria. No faces entrar
+reforços si l'Oni ja està dominant la partida.</li>
+<li><strong>Objectiu d'IA:</strong> l'Oni persegueix el heroi més pròxim
+a un Segell actiu. Els yaoguai intenten bloquejar el Segell no activat
+més pròxim.</li>
+<li><strong>Victòria:</strong> si s'activen els 3 Segells, la porta es
+tanca al final de la ronda. L'Oni és arrossegat dins encara que continue
+viu.</li>
+<li><strong>Derrota amable:</strong> si els dos herois cauen, no moren:
+desperten en la pagoda, salvats pels gats, però l'Oni deixa una cicatriu
+en la vall.</li>
+</ul>
+<div class="rbar">
+<p><span class="pill">Final d'objectiu</span><span class="pill">No
+combat just de punts</span><span class="pill">Recompensa: final
+heroic</span></p>
+</div>
+</div>
+<div class="terrain">
+<section id="terreny-7" class="box">
+<h4>Terreny</h4>
+<ul>
+<li>Pagoda i portal: bloquejador + impassable.</li>
+<li>Llums: cobertura menuda i focus narratiu.</li>
+<li>Racons boscosos: cobertura.</li>
+</ul>
+</section>
+<section id="herois-6" class="box scale">
+<h4>3-4 herois</h4>
+<ul>
+<li>3 herois: usa reforços normals.</li>
+<li>4 herois: afig General Yaoguai o Sacerdote com a guardià del portal
+si voleu final molt dur.</li>
+</ul>
+</section>
+<section id="opcional-2" class="box print">
+<h4>Opcional</h4>
+<ul>
+<li>Portal imprés i 3 monòlits.</li>
+<li>Alternativa: pagoda + altar HeroQuest + tokens de paper.</li>
+</ul>
+</section>
+</div>
+</div>
+</article>
+</section>
+<section id="finals-possibles" class="ending">
+<h3>Finals possibles</h3>
+<p><strong>Final lluminós:</strong> la porta es tanca, el Clan de la
+Lluna Mossegada fuig i els gats de jade conviden Wukong i Cerdito a un
+banquet on ningú deixa Cerdito prop de la cuina sense supervisió.</p>
+<p><strong>Final agredolç:</strong> l'Oni queda tancat, però una de les
+seues dents cau al món. Pot convertir-se en relíquia, maledicció o ganxo
+per a una segona campanya.</p>
+<p><strong>Final còmic:</strong> Wukong convenç els yaoguai supervivents
+que l'Oni els anava a cobrar lloguer. El clan es dissol per desacord
+administratiu.</p>
+</section>
+<section id="crèdits-dimatge" class="panel">
+<h3>Crèdits d'imatge</h3>
+<div class="cols credits">
+<section id="sun-wukong" class="box">
+<h4>Sun Wukong</h4>
+<ul>
+<li><strong>Fitxer:</strong> Xiyou.PNG.</li>
+<li><strong>Font:</strong> <a
+href="https://commons.wikimedia.org/wiki/File:Xiyou.PNG">Wikimedia
+Commons</a>.</li>
+<li><strong>Llicència:</strong> domini públic.</li>
+</ul>
+</section>
+<section id="cerdito-zhu-bajie" class="box">
+<h4>Cerdito / Zhu Bajie</h4>
+<ul>
+<li><strong>Fitxer:</strong> Xiyou2.PNG.</li>
+<li><strong>Font:</strong> <a
+href="https://commons.wikimedia.org/wiki/File:Xiyou2.PNG">Wikimedia
+Commons</a>.</li>
+<li><strong>Llicència:</strong> domini públic.</li>
+</ul>
+</section>
+<section id="tripitaka-tang-seng" class="box">
+<h4>Tripitaka / Tang Seng</h4>
+<ul>
+<li><strong>Fitxer:</strong> Xyj-tang seng.jpg.</li>
+<li><strong>Font:</strong> <a
+href="https://commons.wikimedia.org/wiki/File:Xyj-tang_seng.jpg">Wikimedia
+Commons</a>.</li>
+<li><strong>Llicència:</strong> domini públic.</li>
+</ul>
+</section>
+<section id="làmina-de-viatge" class="box">
+<h4>Làmina de viatge</h4>
+<ul>
+<li><strong>Fitxer:</strong> Xuanzang - Xiyou Zhenquan.</li>
+<li><strong>Font:</strong> <a
+href="https://commons.wikimedia.org/wiki/File:Xuanzang_-_Xiyou_Zhenquan_(A_Complete_Narrative_of_Travels_in_the_West).jpg">Wikimedia
+Commons</a>.</li>
+<li><strong>Llicència:</strong> domini públic.</li>
+</ul>
+</section>
+</div>
+</section>
+<footer>
+<p>Campanya narrativa no oficial per a OPR Age of Fantasy: Quest -
+OnePageRules és propietat dels seus autors - Document casolà en valencià
+per a joc familiar</p>
+</footer>
+</div></body></html>

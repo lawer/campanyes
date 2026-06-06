@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" role="img" aria-label="Mapa missió 5 Vel Fosc">
+<rect width="600" height="600" fill="#05050b"/><rect x="45" y="45" width="510" height="510" fill="#10101f" stroke="#8264ff" stroke-width="4"/>
+<path d="M80 130C190 170 205 55 310 120S455 140 530 80M90 470C200 390 290 510 405 420S510 440 545 355" fill="none" stroke="#3b2b5c" stroke-width="28" stroke-linecap="round"/>
+<g fill="#ffd166" font-size="22" font-family="Arial" text-anchor="middle"><circle cx="150" cy="170" r="22"/><text x="150" y="178" fill="#111">P1</text><circle cx="430" cy="185" r="22"/><text x="430" y="193" fill="#111">P2</text><circle cx="310" cy="410" r="22"/><text x="310" y="418" fill="#111">P3</text></g>
+<g fill="#ff2b3d" font-size="18" font-family="Arial" text-anchor="middle"><circle cx="220" cy="300" r="18"/><text x="220" y="306" fill="#fff">B</text><circle cx="470" cy="350" r="18"/><text x="470" y="356" fill="#fff">B</text><circle cx="330" cy="145" r="18"/><text x="330" y="151" fill="#fff">B</text></g>
+<ellipse cx="300" cy="525" rx="70" ry="28" fill="#32d8ff"/><text x="300" y="532" text-anchor="middle" fill="#06111f" font-size="20">Portal</text>
+<text x="300" y="590" text-anchor="middle" fill="#aab4c9" font-size="18">Reveleu capolls P1-P3 i escorteu Will al portal</text>
+</svg>

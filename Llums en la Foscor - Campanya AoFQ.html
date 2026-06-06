@@ -1,0 +1,1206 @@
+<!DOCTYPE html>
+<html lang="ca-valencia">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Llums en la Foscor - Arc 1 - Campanya AoFQ</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&family=Roboto+Slab:wght@400;600;700&display=swap');
+:root{
+  --bg:#05060d;--bg2:#0b1020;--panel:#121827;--panel2:#171f33;
+  --red:#ff2b3d;--red2:#9f1525;--cyan:#32d8ff;--blue:#405cff;
+  --amber:#ffd166;--green:#62e6a5;--text:#eef3ff;--muted:#aab4c9;
+  --soft:#d7def2;--line:rgba(120,150,210,.28);--shadow:rgba(0,0,0,.55);
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,Arial,sans-serif;font-size:16px;line-height:1.7}
+body:before{content:'';position:fixed;inset:0;pointer-events:none;z-index:-2;background:radial-gradient(circle at 50% -10%,rgba(255,43,61,.28),transparent 32%),radial-gradient(circle at 86% 12%,rgba(50,216,255,.18),transparent 32%),linear-gradient(180deg,#05060d 0%,#0b1020 46%,#05060d 100%)}
+body:after{content:'';position:fixed;inset:0;pointer-events:none;z-index:-1;opacity:.26;background:linear-gradient(transparent 95%,rgba(50,216,255,.22) 96%),linear-gradient(90deg,transparent 95%,rgba(255,43,61,.16) 96%);background-size:44px 44px}
+.wrap{max-width:1080px;margin:0 auto;padding:28px 18px 56px}
+p{margin:.45rem 0 0}a{color:var(--cyan)}code{background:rgba(50,216,255,.1);border:1px solid rgba(50,216,255,.18);border-radius:4px;padding:1px 5px;color:#c9f6ff}
+.cover{position:relative;overflow:hidden;min-height:520px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:70px 28px;border:1px solid rgba(255,43,61,.45);background:radial-gradient(circle at 50% 35%,rgba(255,43,61,.20),transparent 26%),linear-gradient(145deg,rgba(16,23,45,.92),rgba(5,6,13,.98) 58%,rgba(32,8,18,.94));box-shadow:0 28px 80px var(--shadow),inset 0 0 80px rgba(255,43,61,.08)}
+.cover:before{content:'01101100 01101001 01100111 01101000 01110100 01110011';position:absolute;left:24px;right:24px;bottom:18px;color:rgba(50,216,255,.16);font-family:Roboto Slab,serif;font-size:12px;letter-spacing:4px;white-space:nowrap;overflow:hidden}.cover:after{content:'HAWKINS';position:absolute;top:18px;right:22px;color:rgba(255,255,255,.07);font-family:Bebas Neue,sans-serif;font-size:86px;letter-spacing:8px;line-height:1}
+.label,.smallcap,.rank,.mtype,.mbar,.pill,.tag{font-family:Bebas Neue,Inter,sans-serif;text-transform:uppercase;letter-spacing:2.2px}.label{color:var(--cyan);font-size:18px;text-shadow:0 0 18px rgba(50,216,255,.55)}.label p,.subtitle p,.intro p,.smallcap p,.rank p,.name p,.desc p{margin:0}
+h1{font-family:Bebas Neue,Inter,sans-serif;font-size:clamp(62px,13vw,132px);line-height:.86;margin:18px 0 12px;color:#fff;letter-spacing:3px;text-transform:uppercase;text-shadow:0 0 8px #fff,0 0 24px var(--red),0 0 58px var(--red2),0 8px 0 #21040a}.subtitle{font-weight:800;color:var(--amber);font-size:clamp(15px,2.5vw,21px);text-transform:uppercase;letter-spacing:2px}.intro{max-width:780px;margin-top:24px;color:var(--soft);font-family:Roboto Slab,Georgia,serif;font-size:18px;background:rgba(5,6,13,.55);border:1px solid rgba(255,255,255,.08);padding:18px 22px;box-shadow:0 14px 34px rgba(0,0,0,.28)}
+.tags{margin-top:24px}.tags p,.stats p{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin:0}.tag,.pill{display:inline-flex;align-items:center;border:1px solid rgba(50,216,255,.34);background:rgba(50,216,255,.08);color:#dff9ff;border-radius:999px;padding:5px 10px;font-size:14px;line-height:1}.tag{border-color:rgba(255,43,61,.42);background:rgba(255,43,61,.10);color:#ffdbe0}
+.sh{text-align:center;margin:54px 0 20px}.sh h2{font-family:Bebas Neue,Inter,sans-serif;font-size:clamp(34px,7vw,62px);letter-spacing:2px;line-height:.95;color:#fff;text-transform:uppercase;text-shadow:0 0 20px rgba(50,216,255,.45)}.smallcap{color:var(--red);font-size:17px}.rule{border:0;height:2px;max-width:560px;margin:0 auto 28px;background:linear-gradient(90deg,transparent,var(--cyan),var(--red),var(--cyan),transparent);box-shadow:0 0 18px rgba(255,43,61,.5)}
+.grid,.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}.card,.panel,.mission,.villain,.ending{border:1px solid var(--line);background:linear-gradient(160deg,rgba(23,31,51,.96),rgba(9,12,24,.98));box-shadow:0 18px 48px rgba(0,0,0,.34)}.card{position:relative;padding:22px;border-top:3px solid var(--red)}.card:after{content:'';position:absolute;inset:auto 0 0;height:3px;background:linear-gradient(90deg,var(--red),var(--cyan));opacity:.9}.rank{color:var(--cyan);font-size:15px}.name{font-family:Bebas Neue,Inter,sans-serif;color:#fff;font-size:34px;letter-spacing:1px;line-height:1;margin:4px 0 10px}.desc{color:var(--muted);font-family:Roboto Slab,Georgia,serif;font-size:15px}.stats{margin-top:16px}.stats p{justify-content:flex-start}
+.art{display:block;width:100%;height:clamp(230px,36vw,390px);object-fit:cover;margin:22px 0;border:1px solid rgba(120,150,210,.28);background:#05060d;box-shadow:0 20px 50px rgba(0,0,0,.28);filter:saturate(.86) contrast(1.08) brightness(.82)}.art.compact{height:clamp(190px,28vw,320px);margin:14px 0}.art-card{padding:0;overflow:hidden}.art-card p{margin:0}.art-card img{display:block;width:100%}
+.portrait{display:block;width:100%;height:230px;object-fit:cover;object-position:top center;margin:4px 0 14px;border:1px solid rgba(255,43,61,.28);background:#05060d;filter:saturate(.92) contrast(1.05)}.box p:has(.portrait){margin:0}
+.panel{padding:26px;margin:26px 0}.panel h3,.rtitle{font-family:Bebas Neue,Inter,sans-serif;color:#fff;text-transform:uppercase;letter-spacing:2px;font-size:30px;line-height:1;margin:0 0 16px;text-shadow:0 0 18px rgba(255,43,61,.42)}.panel h3:before,.rtitle:before{content:'▣ ';color:var(--red)}.box{border:1px solid rgba(120,150,210,.22);background:rgba(5,9,18,.58);padding:16px}.box h4{font-family:Bebas Neue,Inter,sans-serif;color:var(--amber);font-size:22px;letter-spacing:1.5px;margin:0 0 8px;text-transform:uppercase}.box ul,.rbox ul{margin:0;padding:0;list-style:none}.box li,.rbox li{position:relative;padding:7px 0 7px 20px;color:var(--soft);border-bottom:1px solid rgba(120,150,210,.12)}.box li:last-child,.rbox li:last-child{border-bottom:0}.box li:before,.rbox li:before{content:'>';position:absolute;left:0;color:var(--cyan);font-weight:800}.box strong,.rbox strong{color:#fff}.scale{border-left:4px solid var(--cyan)!important}.print{border-left:4px solid var(--red)!important}.ai{border-left:4px solid var(--amber)!important}
+.chapter{margin:60px 0}.banner{position:relative;overflow:hidden;padding:30px 26px;margin-bottom:22px;border:1px solid rgba(50,216,255,.32);background:radial-gradient(circle at 88% 30%,rgba(50,216,255,.14),transparent 36%),linear-gradient(135deg,rgba(18,35,64,.9),rgba(5,6,13,.6))}.banner:after{content:'RUN';position:absolute;right:18px;bottom:-22px;font-family:Bebas Neue,sans-serif;font-size:118px;line-height:1;color:rgba(50,216,255,.08)}.banner.red{border-color:rgba(255,43,61,.38);background:radial-gradient(circle at 88% 30%,rgba(255,43,61,.18),transparent 36%),linear-gradient(135deg,rgba(58,10,23,.88),rgba(5,6,13,.62))}.banner.red:after{content:'LAB';color:rgba(255,43,61,.09)}.banner.violet{border-color:rgba(130,100,255,.42);background:radial-gradient(circle at 88% 30%,rgba(130,100,255,.20),transparent 36%),linear-gradient(135deg,rgba(34,22,68,.88),rgba(5,6,13,.7))}.banner.violet:after{content:'VOID';color:rgba(130,100,255,.10)}.ctitle{font-family:Bebas Neue,Inter,sans-serif;color:#fff;font-size:clamp(40px,8vw,72px);line-height:.95;letter-spacing:2px;text-shadow:0 0 22px rgba(255,43,61,.45)}
+.mission{margin:24px 0 34px;overflow:hidden}.mhead{display:flex;background:linear-gradient(90deg,rgba(255,43,61,.18),rgba(50,216,255,.06))}.mbar{width:54px;display:flex;align-items:center;justify-content:center;writing-mode:vertical-rl;padding:12px 0;background:linear-gradient(180deg,var(--red2),rgba(50,216,255,.28));color:#fff;font-size:15px;border-right:1px solid rgba(255,255,255,.1)}.mhc{flex:1;padding:18px 20px;border-bottom:1px solid rgba(120,150,210,.18)}.mtype{color:var(--cyan);font-size:15px}.mtitle{font-family:Bebas Neue,Inter,sans-serif;color:#fff;font-size:38px;line-height:1;letter-spacing:1px}.mbody{padding:22px}.quote{position:relative;margin:0 0 18px;padding:16px 18px 16px 22px;color:#fff;background:linear-gradient(90deg,rgba(255,43,61,.16),rgba(50,216,255,.06));border-left:4px solid var(--red);font-family:Roboto Slab,Georgia,serif;font-size:16px}.quote cite{display:block;margin-top:10px;color:var(--cyan);font-family:Bebas Neue,Inter,sans-serif;font-style:normal;font-size:16px;letter-spacing:2px;text-transform:uppercase}.rbox{border:1px solid rgba(255,43,61,.34);background:rgba(6,8,18,.78);padding:18px;margin-top:16px}.rbar{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.terrain{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:14px}.terrain .box{border-left:4px solid var(--green)}
+.maptop{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;padding:9px 14px;background:rgba(5,9,18,.8);border-top:1px solid rgba(120,150,210,.22);border-bottom:1px solid rgba(120,150,210,.22);color:var(--amber);font-family:Bebas Neue,Inter,sans-serif;text-transform:uppercase;letter-spacing:2px;font-size:15px}.map{display:block;width:100%;background:#05060d;border-bottom:1px solid rgba(120,150,210,.22)}
+.mission p:has(.map){margin:0}
+.villain{position:relative;overflow:hidden;padding:30px;margin:44px 0;border-color:rgba(130,100,255,.42);background:radial-gradient(circle at 85% 18%,rgba(130,100,255,.24),transparent 34%),linear-gradient(135deg,rgba(42,10,38,.82),rgba(6,8,18,.98))}.villain:after{content:'MIND FLAYER';position:absolute;right:16px;top:6px;color:rgba(255,255,255,.06);font-family:Bebas Neue,sans-serif;font-size:76px;letter-spacing:5px}.villain .name{font-size:54px;color:#fff;text-shadow:0 0 18px rgba(130,100,255,.8),0 0 42px rgba(255,43,61,.35)}.villain p{max-width:780px;color:var(--soft)}.ending{text-align:center;padding:34px;margin:42px 0;background:radial-gradient(circle at 50% 0%,rgba(255,43,61,.15),transparent 42%),linear-gradient(160deg,rgba(17,26,48,.9),rgba(6,8,18,.98))}.ending h3{font-family:Bebas Neue,Inter,sans-serif;font-size:46px;letter-spacing:2px;line-height:1;color:#fff;text-shadow:0 0 22px rgba(255,43,61,.5)}
+@media print{body{background:#fff;color:#111}.wrap{max-width:none}.cover,.card,.panel,.mission,.villain,.ending{box-shadow:none;break-inside:avoid}.cover{break-after:page}}
+@media(max-width:680px){.wrap{padding:12px}.cover{min-height:430px;padding:48px 16px}.cover:after{font-size:54px}.intro{font-size:16px;padding:14px}.mbar{width:40px}.mbody{padding:16px}.panel{padding:18px}.mission{margin-left:-4px;margin-right:-4px}.mtitle{font-size:31px}}
+</style>
+</head>
+<body><main class="wrap">
+<!--
+Primer arc d'una campanya casolana d'ús privat inspirada en Stranger Things.
+El contingut editable viu en campaigns/stranger-things/partials/.
+No requereix assets propis: els mapes són esquemes narratius de taula.
+-->
+<header class="cover">
+<div class="label">
+<p>Age of Fantasy: Quest - Campanya narrativa casolana - Arc 1</p>
+</div>
+<h1 id="llums-en-la-foscor">Llums en la Foscor</h1>
+<div class="subtitle">
+<p>La desaparició de Will - primer arc fantàstic per a 2-4 herois</p>
+</div>
+<div class="intro">
+<p>Hawkins torna a olorar a pluja, metall i cables cremats, però esta
+versió juga la part fantàstica: un poble de frontera, una torre
+d'alquimistes, boscos encantats i una ombra darrere del vel. Will ha
+desaparegut, les llums parpellegen amb missatges impossibles i alguna
+cosa respira darrere de les parets. Este primer arc està pensat per a
+gent nova: poques miniatures, escenografia reutilitzable, missions
+curtes i perfils creats en l'app oficial d'Age of Fantasy: Quest com a
+reskins.</p>
+</div>
+<div class="tags">
+<p><span class="tag">Arc 1</span> <span class="tag">2-4 herois</span>
+<span class="tag">Age of Fantasy: Quest</span> <span
+class="tag">Fantasia fosca</span> <span class="tag">Reskins d'app</span>
+<span class="tag">6 missions</span></p>
+</div>
+</header>
+<figure>
+<img src="campaigns/stranger-things/assets/art/tower-night.jpg"
+class="art"
+alt="Torre nocturna com a referència visual per a Hawkins i la torre arcana" />
+<figcaption aria-hidden="true">Torre nocturna com a referència visual
+per a Hawkins i la torre arcana</figcaption>
+</figure>
+<section>
+<div class="sh">
+<div class="smallcap">
+<p>Els protagonistes</p>
+</div>
+<h2 id="la-colla-de-hawkins">La Colla De Hawkins</h2>
+</div>
+<hr class="rule">
+<figure>
+<img src="campaigns/stranger-things/assets/art/abandoned-house.jpg"
+class="art compact"
+alt="Casa abandonada com a ambient per a la colla de Hawkins" />
+<figcaption aria-hidden="true">Casa abandonada com a ambient per a la
+colla de Hawkins</figcaption>
+</figure>
+<div class="grid">
+<div class="card">
+<div class="rank">
+<p>Reskin AoFQ - Explorador jove</p>
+</div>
+<div class="name">
+<p>Mike, Dustin o Lucas</p>
+</div>
+<div class="desc">
+<p>Representa la colla. En l'app oficial crea'l com un heroi lleuger o
+aventurer barat: poca defensa, moviment normal i bon ús d'interaccions.
+No ha de guanyar combats: ha de trobar pistes, activar llums i
+sobreviure.</p>
+</div>
+<div class="stats">
+<p><span class="pill">Baix combat</span> <span
+class="pill">Interaccions</span> <span class="pill">Pistes</span> <span
+class="pill">Treball en equip</span></p>
+</div>
+</div>
+<div class="card">
+<div class="rank">
+<p>Reskin AoFQ - Vident psíquica</p>
+</div>
+<div class="name">
+<p>Eleven</p>
+</div>
+<div class="desc">
+<p>La força més poderosa del grup i també la més vulnerable. En l'app
+crea-la com una heroïna amb màgia, poder espiritual o atac especial. Les
+seues regles són les de l'app; el nom Eleven i els poders psíquics són
+només el reskin narratiu.</p>
+</div>
+<div class="stats">
+<p><span class="pill">Màgia</span> <span class="pill">Voluntat</span>
+<span class="pill">Risc d'esgotament</span> <span class="pill">Clau del
+final</span></p>
+</div>
+</div>
+<div class="card">
+<div class="rank">
+<p>Reskin AoFQ - Guardià adult</p>
+</div>
+<div class="name">
+<p>Hopper, Joyce, Steve o Nancy</p>
+</div>
+<div class="desc">
+<p>El personatge que aguanta el centre, protegeix els menuts i fa front
+a cultistes, bèsties o portes tancades. En l'app crea'l com un heroi de
+cos a cos o defensor amb millor defensa que la colla.</p>
+</div>
+<div class="stats">
+<p><span class="pill">Combat</span> <span class="pill">Protecció</span>
+<span class="pill">Coratge</span> <span
+class="pill">Improvisació</span></p>
+</div>
+</div>
+</div>
+</section>
+<section id="referència-ràpida-de-campanya" class="panel">
+<h3>Referència ràpida de campanya</h3>
+<div class="cols">
+<section id="taula-i-escala" class="box">
+<h4>Taula i escala</h4>
+<ul>
+<li><strong>Sistema base:</strong>
+<code>Age of Fantasy: Quest</code>.</li>
+<li><strong>Taula:</strong> 24" x 24".</li>
+<li><strong>Format:</strong> missions curtes de 35-50 minuts.</li>
+<li><strong>Tons:</strong> investigació, persecució, fantasia fosca i
+terror amable.</li>
+<li><strong>Estructura:</strong> este document és l'Arc 1 d'una
+temporada més llarga.</li>
+<li><strong>Derrota:</strong> captura, separació o pèrdua de temps; no
+mort definitiva.</li>
+</ul>
+</section>
+<section id="perfils-opr" class="box">
+<h4>Perfils OPR</h4>
+<ul>
+<li>Usa perfils creats en l'app oficial
+d'<code>Age of Fantasy: Quest</code>.</li>
+<li>Manteniu estadístiques, armes, habilitats i punts exactes de
+l'app.</li>
+<li>Els noms de Stranger Things són rols narratius, no perfils
+oficials.</li>
+<li>Eleven pot representar-se com a heroïna amb màgia, poders
+espirituals o atac especial.</li>
+<li><code>Star Quest</code> o <code>Grimdark Future</code> només són
+alternatives futures si voleu una versió més moderna i de
+laboratori.</li>
+</ul>
+</section>
+<section id="recursos-de-campanya" class="box">
+<h4>Recursos de campanya</h4>
+<ul>
+<li><strong>Pistes:</strong> ajuden a evitar reforços o obrir
+camins.</li>
+<li><strong>Estrés:</strong> marca quan Eleven o un heroi força massa la
+situació; no canvia estadístiques oficials.</li>
+<li><strong>Llums:</strong> objectius d'interacció per comunicar-se amb
+el Vel Fosc.</li>
+<li><strong>Portals:</strong> zones perilloses; entrar-hi sempre ha de
+ser una decisió important.</li>
+<li><strong>Fils oberts:</strong> marques que passen a l'Arc 2 si
+decidiu continuar.</li>
+</ul>
+</section>
+<section id="full-de-campanya" class="box">
+<h4>Full de campanya</h4>
+<ul>
+<li>Will localitzat.</li>
+<li>Joyce creguda pels altres adults.</li>
+<li>Guàrdies de la torre despistats.</li>
+<li>Porta arcana localitzada.</li>
+<li>Eleven esgotada.</li>
+<li>Demogorgon ferit.</li>
+<li>Ombra vista darrere del Vel.</li>
+</ul>
+</section>
+</div>
+</section>
+<section id="enfocament-fantasia-abans-que-laboratori" class="panel">
+<h3>Enfocament: fantasia abans que laboratori</h3>
+<div class="cols">
+<section id="versió-principal" class="box">
+<h4>Versió principal</h4>
+<ul>
+<li><code>Age of Fantasy: Quest</code> és el sistema base.</li>
+<li>Hawkins és un poble fantàstic de frontera.</li>
+<li>El laboratori és una torre d'alquimistes o una orde arcana.</li>
+<li>Els agents són guàrdies, cultistes o soldats d'una orde
+secreta.</li>
+<li>El Món del Revés és el Vel Fosc, un pla corromput darrere del
+món.</li>
+</ul>
+</section>
+<section id="què-és-només-reskin" class="box scale">
+<h4>Què és només reskin</h4>
+<ul>
+<li>Pistola o escopeta: arc curt, ballesta o arma de tir de l'app.</li>
+<li>Poders d'Eleven: màgia, miracle o habilitat especial de l'app.</li>
+<li>Demogosset: bèstia ràpida o criatura menor.</li>
+<li>Demogorgon: monstre, ogre, dimoni o boss de l'app.</li>
+<li>Ment Flayer: presència narrativa, no perfil de combat.</li>
+</ul>
+</section>
+<section id="quan-passar-a-stargrimdark" class="box print">
+<h4>Quan passar a Star/Grimdark</h4>
+<ul>
+<li>Passeu a <code>Star Quest</code>/<code>Grimdark</code> només si
+voleu que pistoles, soldats i laboratori siguen el centre.</li>
+<li>Si preferiu Eleven com a vident, cultistes, boscos maleïts i
+monstres del Vel, <code>Age of Fantasy: Quest</code> és millor.</li>
+<li>Per a crear enemics fantàstics és més fàcil trobar bèsties, dimonis,
+cultistes i bosses equivalents.</li>
+<li>La decisió actual recomanada és: <strong>mantindre Fantasy
+Quest</strong>.</li>
+</ul>
+</section>
+</div>
+</section>
+<section id="com-continuar-després-de-larc-1" class="panel">
+<h3>Com continuar després de l'Arc 1</h3>
+<p>Este arc no ha de resoldre tot Hawkins. Ha de respondre tres
+preguntes: on és Will, què amaga la torre i què hi ha a l'altra banda.
+El final pot salvar Will i tancar una esquerda menuda, però la Porta
+principal, el Ment Flayer i les conseqüències dels poders d'Eleven
+queden com a material per a l'Arc 2.</p>
+<div class="cols">
+<section id="marques-que-evolucionen" class="box">
+<h4>Marques que evolucionen</h4>
+<ul>
+<li><strong>Will rescatat:</strong> comença l'Arc 2 amb informació del
+Vel Fosc.</li>
+<li><strong>Eleven esgotada:</strong> l'Arc 2 comença amb menys poder
+narratiu o una escena de recuperació.</li>
+<li><strong>Demogorgon ferit:</strong> torna més tard amb cicatrius o
+por a les trampes.</li>
+<li><strong>Guàrdies despistats:</strong> la torre tarda més a
+reaccionar en la següent campanya.</li>
+</ul>
+</section>
+<section id="si-voleu-parar-ací" class="box scale">
+<h4>Si voleu parar ací</h4>
+<ul>
+<li>Juga l'epíleg com una victòria parcial.</li>
+<li>Hawkins queda tranquil unes setmanes.</li>
+<li>Les pistes no resoltes són només ambient.</li>
+<li>No cal preparar més fins que la taula demane continuar.</li>
+</ul>
+</section>
+<section id="si-voleu-arc-2" class="box print">
+<h4>Si voleu Arc 2</h4>
+<ul>
+<li>Mantín el full de campanya.</li>
+<li>Tria 2 fils oberts com a problemes principals.</li>
+<li>Puja l'amenaça: més torre arcana, més possessió i més Vel Fosc.</li>
+<li>Eleven, Will o un adult protector haurien d'evolucionar amb una
+regla narrativa nova.</li>
+</ul>
+</section>
+</div>
+</section>
+<section id="regles-narratives-opcionals" class="panel">
+<h3>Regles narratives opcionals</h3>
+<div class="cols">
+<section id="llums-que-parlen" class="box">
+<h4>Llums que parlen</h4>
+<ul>
+<li>Un heroi en contacte amb una paret, llum, cristall o ràdio pot
+gastar una interacció per buscar missatges.</li>
+<li>Amb èxit narratiu, guanya 1 pista o revela un objectiu ocult.</li>
+<li>Si falla en una escena tensa, augmenta l'estrés o atrau una
+patrulla.</li>
+</ul>
+</section>
+<section id="estrés-deleven" class="box scale">
+<h4>Estrés d'Eleven</h4>
+<ul>
+<li>Quan Eleven resol una acció psíquica decisiva, marca 1 estrés.</li>
+<li>Amb 3 estrés, queda esgotada narrativament fins al final de la ronda
+següent.</li>
+<li>Un amic en contacte pot gastar una interacció per ajudar-la i
+retirar 1 estrés.</li>
+<li>Esta regla no modifica punts ni estadístiques de l'app; només limita
+decisions narratives.</li>
+</ul>
+</section>
+<section id="el-vel-fosc" class="box print">
+<h4>El Vel Fosc</h4>
+<ul>
+<li>Les zones contaminades són terreny difícil i cobertura.</li>
+<li>Al final de cada ronda dins del Vel Fosc, tira o decideix si apareix
+una amenaça menuda.</li>
+<li>Si hi ha xiquets jugant, usa reforços només quan la partida vaja
+massa fàcil.</li>
+</ul>
+</section>
+</div>
+</section>
+<section id="herois-creats-en-lapp-oficial" class="panel">
+<h3>Herois creats en l'app oficial</h3>
+<p>Estos són els perfils que heu de crear en l'app oficial
+d'<code>Age of Fantasy: Quest</code>. No són estadístiques casolanes:
+són reskins narratius de perfils reals de l'app.</p>
+<p><strong>Valoració de sistema:</strong> per a este arc convé més
+<code>Age of Fantasy: Quest</code> que <code>Star Quest</code>, perquè
+la campanya vol fantasia fosca. Els herois encaixen com exploradors,
+guardians i vidents; els enemics encaixen com cultistes, bèsties i
+monstres. <code>Star Quest</code> seria millor per a una versió més
+fidel a soldats, pistoles i laboratori modern.</p>
+<div class="cols">
+<section id="mike---100-pts" class="box">
+<h4>Mike - 100 pts</h4>
+<figure>
+<img src="campaigns/stranger-things/assets/art/series/mike-wheeler.png"
+class="portrait" alt="Mike Wheeler" />
+<figcaption aria-hidden="true">Mike Wheeler</figcaption>
+</figure>
+<ul>
+<li><strong>Facció:</strong> Human Empire.</li>
+<li><strong>Hero Type:</strong> Aspiring Champion.</li>
+<li><strong>Class:</strong> Ranger.</li>
+<li><strong>Stats:</strong> Qua 4+, Def 6+, Tou 9, Pow 3, Str 5+, Dex
+5+, Wil 6+.</li>
+<li><strong>Armes:</strong> Hand Weapon (A3), Crossbow (24", A2,
+Rending).</li>
+<li><strong>Regles:</strong> Ranger's Precision, Hold the Line,
+Tough(9).</li>
+<li><strong>Hero Skills:</strong> Dread Attack (Dex), Hunting Beast
+(Str).</li>
+<li><strong>Reskin:</strong> líder de la colla, tir precís,
+llanterna-trampa o arc curt.</li>
+</ul>
+</section>
+<section id="hopper---90-pts" class="box scale">
+<h4>Hopper - 90 pts</h4>
+<figure>
+<img src="campaigns/stranger-things/assets/art/series/hopper.png"
+class="portrait" alt="Jim Hopper" />
+<figcaption aria-hidden="true">Jim Hopper</figcaption>
+</figure>
+<ul>
+<li><strong>Facció:</strong> Human Empire.</li>
+<li><strong>Hero Type:</strong> Aspiring Battle Master.</li>
+<li><strong>Class:</strong> Fighter.</li>
+<li><strong>Stats:</strong> Qua 4+, Def 6+, Tou 9, Pow 4, Str 4+, Dex
+6+, Wil 6+.</li>
+<li><strong>Armes:</strong> Heavy Hand Weapon (A3, AP(1)).</li>
+<li><strong>Regles:</strong> Fighting Might, Defense(1), Hold the Line,
+Tough(9).</li>
+<li><strong>Hero Skills:</strong> Combat Superiority (Str).</li>
+<li><strong>Reskin:</strong> protector adult, porra gran, destral, pala
+pesada o bat reforçat.</li>
+</ul>
+</section>
+<section id="eleven---120-pts" class="box print">
+<h4>Eleven - 120 pts</h4>
+<figure>
+<img src="campaigns/stranger-things/assets/art/series/eleven.png"
+class="portrait" alt="Eleven" />
+<figcaption aria-hidden="true">Eleven</figcaption>
+</figure>
+<ul>
+<li><strong>Facció:</strong> Human Empire.</li>
+<li><strong>Hero Type:</strong> Aspiring Champion.</li>
+<li><strong>Class:</strong> Sorcerer.</li>
+<li><strong>Stats:</strong> Qua 5+, Def 6+, Tou 9, Pow 3, Str 5+, Dex
+6+, Wil 5+.</li>
+<li><strong>Armes:</strong> Hand Weapon (A3).</li>
+<li><strong>Regles:</strong> Sorcerous Bolts, Caster(1), Hold the Line,
+Mystic Warding, Tough(9).</li>
+<li><strong>Hero Skills:</strong> Distant Spell (Wil), Tides of Chaos
+(Str).</li>
+<li><strong>Reskin:</strong> vident psíquica, colps mentals, barrera
+psíquica i poder inestable.</li>
+</ul>
+</section>
+</div>
+</section>
+<section id="ordre-dentrada-dels-herois" class="panel">
+<h3>Ordre d'entrada dels herois</h3>
+<div class="cols">
+<section id="m1-m2-duo-tutorial" class="box">
+<h4>M1-M2: Duo tutorial</h4>
+<ul>
+<li><strong>Mike + Hopper:</strong> 190 pts.</li>
+<li>Apreneu moviment, cobertura, tir, combat i interaccions.</li>
+<li>Eleven encara és un objectiu narratiu o està fora de taula.</li>
+<li>Les missions han d'evitar combats llargs: guanyar és interactuar i
+escapar.</li>
+</ul>
+</section>
+<section id="m3-m6-grup-complet" class="box scale">
+<h4>M3-M6: Grup complet</h4>
+<ul>
+<li><strong>Mike + Hopper + Eleven:</strong> 310 pts.</li>
+<li>Afegiu màgia/poders quan ja coneixeu el torn bàsic.</li>
+<li>Eleven no ha de resoldre-ho tot: protegir-la és part del repte.</li>
+<li>Les onades enemigues poden pujar, però el final continua sent
+d'objectiu.</li>
+</ul>
+</section>
+<section id="kitchen-table" class="box print">
+<h4>Kitchen Table</h4>
+<ul>
+<li>Les distàncies es juguen a la meitat.</li>
+<li>La Crossbow de Mike de 24" funciona com 12" a taula.</li>
+<li>Els encanteris de 9" funcionen com 4.5".</li>
+<li>Els efectes de 6" funcionen com 3".</li>
+</ul>
+</section>
+</div>
+</section>
+<section id="roster-enemic-fantàstic" class="panel">
+<h3>Roster enemic fantàstic</h3>
+<figure>
+<img src="campaigns/stranger-things/assets/art/ruin.jpg"
+class="art compact"
+alt="Ruïna fosca com a ambient per a les criatures del Vel Fosc" />
+<figcaption aria-hidden="true">Ruïna fosca com a ambient per a les
+criatures del Vel Fosc</figcaption>
+</figure>
+<div class="cols">
+<section id="humans-de-la-torre" class="box">
+<h4>Humans de la torre</h4>
+<ul>
+<li><strong>Guàrdies de l'orde:</strong> soldats humans de baix
+cost.</li>
+<li><strong>Acòlits o cultistes:</strong> tropa barata, perfecta per
+reforços.</li>
+<li><strong>Savi alquimista:</strong> marcador narratiu; no sol
+lluitar.</li>
+</ul>
+</section>
+<section id="criatures-del-vel-fosc" class="box">
+<h4>Criatures del Vel Fosc</h4>
+<ul>
+<li><strong>Demogossets:</strong> bèsties ràpides de baix cost, sense
+tir.</li>
+<li><strong>Demogorgon:</strong> monstre o boss de 120-180 pts; no cal
+matar-lo per guanyar.</li>
+<li><strong>Ment Flayer:</strong> presència narrativa, portal o hazard.
+No és duel just.</li>
+</ul>
+</section>
+<section id="com-triar-perfils-en-lapp" class="box scale">
+<h4>Com triar perfils en l'app</h4>
+<ul>
+<li>Busca unitats que ja existisquen i canvia només el nom visual.</li>
+<li>Per a guàrdies, prioritza tropa senzilla i barata.</li>
+<li>Per a bèsties, prioritza moviment i cos a cos.</li>
+<li>Per al Demogorgon, tria un boss que faça por però puga evitar-se amb
+objectius.</li>
+</ul>
+</section>
+</div>
+</section>
+<section id="escenografia-reutilitzable" class="panel">
+<h3>Escenografia reutilitzable</h3>
+<figure>
+<img src="campaigns/stranger-things/assets/art/abandoned-room.jpg"
+class="art compact"
+alt="Interior abandonat com a referència d&#39;escenografia modular" />
+<figcaption aria-hidden="true">Interior abandonat com a referència
+d'escenografia modular</figcaption>
+</figure>
+<div class="cols">
+<section id="kit-mínim-per-a-tot-larc-1" class="box">
+<h4>Kit mínim per a tot l'Arc 1</h4>
+<ul>
+<li>6 parets, llibres o peces llargues per fer
+habitacions/passadissos.</li>
+<li>6 peces de cobertura: taules, caixes, sofà, roques o taquilles.</li>
+<li>6 tokens de llum numerats L1-L6.</li>
+<li>6 tokens de pista/capoll numerats P1-P6.</li>
+<li>1 token gran de portal/esquerda.</li>
+</ul>
+</section>
+<section id="reutilització-per-missions" class="box">
+<h4>Reutilització per missions</h4>
+<ul>
+<li><strong>M1 Casa:</strong> parets + sofà/taula + llums.</li>
+<li><strong>M2 Bosc:</strong> les mateixes peces com arbres/roques.</li>
+<li><strong>M3 Torre:</strong> parets + taules + terminals arcans.</li>
+<li><strong>M4 Sala comunal:</strong> parets llargues +
+taquilles/taules.</li>
+<li><strong>M5-M6 Vel Fosc:</strong> mateixa taula amb tela/paper fosc i
+cordills.</li>
+</ul>
+</section>
+<section id="què-imprimir" class="box print">
+<h4>Què imprimir</h4>
+<ul>
+<li>Els mapes SVG ja estan inclosos en el document.</li>
+<li>No cal imprimir escenografia 3D.</li>
+<li>Si voleu imprimir alguna cosa, prioritzeu tokens: llums, pistes,
+terminals, capolls i portal.</li>
+<li>Per començar, paper retallat amb números és suficient.</li>
+</ul>
+</section>
+</div>
+</section>
+<section id="tutorial-per-a-gent-nova" class="panel">
+<h3>Tutorial per a gent nova</h3>
+<p>La campanya està pensada perquè la primera sessió no siga una classe
+llarga. La millor manera d'aprendre és jugar M1 amb només dos herois i
+pocs enemics. Afegiu Eleven i monstres més perillosos quan ja controleu
+moviment, atac, defensa i interaccions.</p>
+<div class="cols">
+<section id="abans-de-m1" class="box">
+<h4>Abans de M1</h4>
+<ul>
+<li>Creeu 2 herois en l'app oficial.</li>
+<li>Creeu 1 perfil d'enemic humà barat.</li>
+<li>Prepareu 6 tokens de llum i 3 peces de cobertura.</li>
+<li>Llegiu només moviment, atac, defensa i interaccions.</li>
+</ul>
+</section>
+<section id="ordre-duna-activació" class="box scale">
+<h4>Ordre d'una activació</h4>
+<ul>
+<li>Tria una miniatura.</li>
+<li>Decideix si vol moure, atacar, interactuar o protegir.</li>
+<li>Mesura abans de moure.</li>
+<li>Tira només quan la regla oficial ho demane.</li>
+<li>Marca objectius completats i passa a la següent activació.</li>
+</ul>
+</section>
+<section id="quan-introduir-més-coses" class="box print">
+<h4>Quan introduir més coses</h4>
+<ul>
+<li><strong>M1:</strong> moviment, cobertura i interaccions.</li>
+<li><strong>M2:</strong> terreny difícil i objectius ocults.</li>
+<li><strong>M3:</strong> portes, terminals i reforços.</li>
+<li><strong>M4:</strong> boss que no cal matar.</li>
+<li><strong>M5:</strong> escortar un civil.</li>
+<li><strong>M6:</strong> final d'objectiu amb pressió per onades.</li>
+</ul>
+</section>
+</div>
+</section>
+<section id="preparació-descenari-per-sessió" class="panel">
+<h3>Preparació d'escenari per sessió</h3>
+<div class="cols">
+<section id="temps-estimat" class="box">
+<h4>Temps estimat</h4>
+<ul>
+<li><strong>Abans de la sessió 1:</strong> 30-45 minuts per crear
+perfils i tokens.</li>
+<li><strong>Cada missió:</strong> 10-15 minuts per muntar la taula si
+useu el kit mínim.</li>
+<li><strong>Recollida:</strong> 5 minuts si guardeu tokens en bosses
+separades.</li>
+</ul>
+</section>
+<section id="bosses-recomanades" class="box scale">
+<h4>Bosses recomanades</h4>
+<ul>
+<li>Bossa <code>Llums</code>: L1-L6.</li>
+<li>Bossa <code>Pistes</code>: P1-P6.</li>
+<li>Bossa <code>Torre</code>: terminals, portes, targetes.</li>
+<li>Bossa <code>Vel Fosc</code>: portal, vinyes, capolls.</li>
+</ul>
+</section>
+<section id="taula-base-reutilitzable" class="box print">
+<h4>Taula base reutilitzable</h4>
+<ul>
+<li>Manteniu sempre una zona sud d'entrada dels herois.</li>
+<li>Manteniu sempre una zona nord de perill/eixida.</li>
+<li>Canvieu només el significat de les peces: sofà, roca, taquilla o
+consola.</li>
+<li>Els mapes indiquen posicions aproximades, no mil·límetres
+exactes.</li>
+</ul>
+</section>
+</div>
+</section>
+<section class="chapter">
+<div class="banner">
+<div class="smallcap">
+<p>Capítol I - La Desaparició</p>
+</div>
+<div class="ctitle">
+<p>Quan Les Llums Contestaren</p>
+</div>
+<p>Will ha desaparegut de camí a casa. La policia busca en el bosc,
+Joyce escolta veus en les parets i la colla sap que alguna cosa no
+encaixa.</p>
+</div>
+<article class="mission">
+<div class="mhead">
+<div class="mbar">
+<p>Missió 1</p>
+</div>
+<div class="mhc">
+<div class="mtype">
+<p>Investigació - Casa encantada</p>
+</div>
+<div class="mtitle">
+<p>La Casa de Joyce</p>
+</div>
+</div>
+</div>
+<div class="maptop">
+<span>Casa de Joyce</span><span>24" x 24" - Tutorial
+d'interaccions</span>
+</div>
+<p><img class="map" src="campaigns/stranger-things/assets/maps/mission-01.svg" alt="Mapa de la missió 1"></p>
+<div class="mbody">
+<div class="quote">
+Les llums de Nadal parpellegen sense ritme. Joyce assenyala l'alfabet
+pintat a la paret. "No estic boja", diu. I llavors una bombeta escriu:
+CORRE.<cite>Primera nit</cite>
+</div>
+<p>Els herois han de protegir Joyce i descobrir el primer missatge de
+Will abans que els guàrdies de la torre arriben.</p>
+<div class="rbox">
+<div class="rtitle">
+<p>Regles de missió</p>
+</div>
+<ul>
+<li><strong>Enemics inicials:</strong> 3 guàrdies de l'orde en la vora
+nord.</li>
+<li><strong>Herois:</strong> juga amb Mike + Hopper (190 pts). Eleven
+encara no participa.</li>
+<li><strong>Objectiu principal:</strong> activar 3 llums de Nadal amb
+interaccions en contacte.</li>
+<li><strong>Objectiu secundari:</strong> Joyce no pot ser
+capturada.</li>
+<li><strong>Alarma:</strong> al final de la ronda 3 entren 3 guàrdies
+més si no hi ha 2 llums activades.</li>
+<li><strong>Victòria:</strong> amb 3 llums activades, Will envia una
+pista cap al bosc.</li>
+<li><strong>Recompensa:</strong> 1 XP i marca
+<code>Will localitzat parcialment</code>.</li>
+</ul>
+<div class="rbar">
+<p><span class="pill">190 pts</span><span
+class="pill">Investigació</span><span class="pill">Casa
+tancada</span><span class="pill">4-5 rondes</span></p>
+</div>
+</div>
+<div class="terrain">
+<section id="terreny" class="box">
+<h4>Terreny</h4>
+<ul>
+<li>Sofà, taula i parets: cobertura.</li>
+<li>Llums: objectius.</li>
+<li>Porta principal i cuina: entrades enemigues.</li>
+</ul>
+</section>
+<section id="dificultat" class="box scale">
+<h4>Dificultat</h4>
+<ul>
+<li>Més fàcil: els reforços entren en ronda 4.</li>
+<li>Més difícil: un demogosset apareix quan s'activa la tercera
+llum.</li>
+</ul>
+</section>
+</div>
+</div>
+</article>
+<article class="mission">
+<div class="mhead">
+<div class="mbar">
+<p>Missió 2</p>
+</div>
+<div class="mhc">
+<div class="mtype">
+<p>Rastreig - Persecució</p>
+</div>
+<div class="mtitle">
+<p>El Bosc de Mirkwood</p>
+</div>
+</div>
+</div>
+<div class="maptop">
+<span>Bosc de Mirkwood</span><span>24" x 24" - Rastre i terreny
+difícil</span>
+</div>
+<p><img class="map" src="campaigns/stranger-things/assets/maps/mission-02.svg" alt="Mapa de la missió 2"></p>
+<div class="mbody">
+<div class="quote">
+La bicicleta de Will està tombada entre fulles humides. No hi ha sang.
+Només una marca negra en l'aire, com si algú haguera obert una porta i
+l'haguera tancada massa ràpid.<cite>El camí vell</cite>
+</div>
+<p>Els herois busquen la bicicleta, el rastre i una esquerda cap al Vel
+Fosc.</p>
+<div class="rbox">
+<div class="rtitle">
+<p>Regles de missió</p>
+</div>
+<ul>
+<li><strong>Enemics inicials:</strong> 3 demogossets o bèsties
+ràpides.</li>
+<li><strong>Herois:</strong> juga amb Mike + Hopper (190 pts). Eleven
+encara és pista narrativa.</li>
+<li><strong>Objectiu principal:</strong> revelar 3 tokens de pista en el
+bosc.</li>
+<li><strong>Boira:</strong> la línia de visió més enllà de 9" dona
+cobertura al defensor.</li>
+<li><strong>Rastre viu:</strong> cada pista revelada permet moure
+immediatament un heroi 3".</li>
+<li><strong>Victòria:</strong> amb 3 pistes, troben l'entrada inestable
+al Vel Fosc.</li>
+<li><strong>Recompensa:</strong> 1 XP; si cap heroi cau, marca
+<code>Soldats despistats</code>.</li>
+</ul>
+<div class="rbar">
+<p><span class="pill">190 pts</span><span class="pill">Bosc</span><span
+class="pill">Rastre</span><span class="pill">Demogossets</span></p>
+</div>
+</div>
+<div class="terrain">
+<section id="terreny-1" class="box">
+<h4>Terreny</h4>
+<ul>
+<li>Arbres: cobertura i terreny difícil.</li>
+<li>Camí: terreny lliure.</li>
+<li>Bicicleta: token central; revelar-la dona +1 pista automàtica.</li>
+</ul>
+</section>
+<section id="dificultat-1" class="box scale">
+<h4>Dificultat</h4>
+<ul>
+<li>Més fàcil: només 2 demogossets inicials.</li>
+<li>Més difícil: reforç d'1 demogosset al final de cada ronda després de
+la segona.</li>
+</ul>
+</section>
+</div>
+</div>
+</article>
+</section>
+<section class="chapter">
+<div class="banner red">
+<div class="smallcap">
+<p>Capítol II - La Torre Arcana</p>
+</div>
+<div class="ctitle">
+<p>Portes Tancades I Cristalls Encesos</p>
+</div>
+<p>Les pistes apunten a la torre arcana de Hawkins. Darrere dels murs no
+hi ha només secrets d'alquimistes: hi ha una ferida oberta en el
+món.</p>
+</div>
+<article class="mission">
+<div class="mhead">
+<div class="mbar">
+<p>Missió 3</p>
+</div>
+<div class="mhc">
+<div class="mtype">
+<p>Infiltració - Fuga</p>
+</div>
+<div class="mtitle">
+<p>Fugida de la Torre</p>
+</div>
+</div>
+</div>
+<div class="maptop">
+<span>Torre arcana de Hawkins</span><span>24" x 24" - Portes i
+cristalls</span>
+</div>
+<p><img class="map" src="campaigns/stranger-things/assets/maps/mission-03.svg" alt="Mapa de la missió 3"></p>
+<div class="mbody">
+<div class="quote">
+Eleven recorda portes blanques, runes en la pell i un crit darrere d'un
+cristall. Ara les alarmes tornen a sonar, però esta vegada no pensa
+quedar-se.<cite>La torre arcana de Hawkins</cite>
+</div>
+<p>Els herois entren a la torre per trobar proves i traure Eleven abans
+que els alquimistes tanquen el complex.</p>
+<div class="rbox">
+<div class="rtitle">
+<p>Regles de missió</p>
+</div>
+<ul>
+<li><strong>Enemics inicials:</strong> 3 guàrdies + 1 alquimista
+marcador.</li>
+<li><strong>Herois:</strong> entra Eleven. Juga amb Mike + Hopper +
+Eleven (310 pts).</li>
+<li><strong>Objectiu principal:</strong> activar 2 cristalls de registre
+i escapar per la vora sud.</li>
+<li><strong>Claus arcanes:</strong> un heroi pot gastar una interacció
+en un alquimista capturat o cristall per obrir una porta.</li>
+<li><strong>Alarma:</strong> després del primer terminal, entren 3
+guàrdies per una vora aleatòria.</li>
+<li><strong>Eleven:</strong> pot obrir una porta sense targeta, però
+marca 1 estrés.</li>
+<li><strong>Recompensa:</strong> 1 XP i marca
+<code>Porta arcana localitzada</code>.</li>
+</ul>
+<div class="rbar">
+<p><span class="pill">310 pts</span><span class="pill">Torre</span><span
+class="pill">Cristalls</span><span class="pill">Fuga</span></p>
+</div>
+</div>
+<div class="terrain">
+<section id="terreny-2" class="box">
+<h4>Terreny</h4>
+<ul>
+<li>Portes: bloquegen fins que s'obrin.</li>
+<li>Cristalls de registre: objectius.</li>
+<li>Taules metàl·liques: cobertura.</li>
+</ul>
+</section>
+<section id="dificultat-2" class="box scale">
+<h4>Dificultat</h4>
+<ul>
+<li>Més fàcil: només cal 1 terminal.</li>
+<li>Més difícil: les portes es tornen a bloquejar al final de la ronda
+4.</li>
+</ul>
+</section>
+</div>
+</div>
+</article>
+<article class="mission">
+<div class="mhead">
+<div class="mbar">
+<p>Missió 4</p>
+</div>
+<div class="mhc">
+<div class="mtype">
+<p>Defensa - Institut</p>
+</div>
+<div class="mtitle">
+<p>L'Institut de Hawkins</p>
+</div>
+</div>
+</div>
+<div class="maptop">
+<span>Sala comunal de Hawkins</span><span>24" x 24" - Boss i
+trampes</span>
+</div>
+<p><img class="map" src="campaigns/stranger-things/assets/maps/mission-04.svg" alt="Mapa de la missió 4"></p>
+<div class="mbody">
+<div class="quote">
+Steve alça el bat amb claus. Nancy comprova la llanterna. Les taquilles
+tremolen una a una, com si alguna cosa passara corrent per dins de les
+parets.<cite>Nit a l'institut</cite>
+</div>
+<p>La colla atrau el Demogorgon a la sala comunal per fer-lo sagnar i
+guanyar temps.</p>
+<div class="rbox">
+<div class="rtitle">
+<p>Regles de missió</p>
+</div>
+<ul>
+<li><strong>Enemic inicial:</strong> Demogorgon o boss equivalent.</li>
+<li><strong>Herois:</strong> Mike + Hopper + Eleven (310 pts).</li>
+<li><strong>Objectiu principal:</strong> activar 3 trampes abans
+d'escapar per la porta sud.</li>
+<li><strong>Trampes:</strong> oli, llums i filferro; cada trampa
+activada fa que el Demogorgon perda una acció o quede desorientat una
+ronda.</li>
+<li><strong>No cal matar-lo:</strong> si el Demogorgon rep prou dany o
+activa 2 trampes, marca <code>Demogorgon ferit</code>.</li>
+<li><strong>Recompensa:</strong> 1 XP; amb 3 trampes activades, Eleven
+comença M6 amb 1 estrés menys.</li>
+</ul>
+<div class="rbar">
+<p><span class="pill">310 pts</span><span class="pill">Boss</span><span
+class="pill">Trampes</span><span class="pill">Escapar</span></p>
+</div>
+</div>
+<div class="terrain">
+<section id="terreny-3" class="box">
+<h4>Terreny</h4>
+<ul>
+<li>Taquilles, bancs i taules: cobertura.</li>
+<li>Sala central: zona oberta perillosa.</li>
+<li>Trampes: 3 tokens separats.</li>
+</ul>
+</section>
+<section id="dificultat-3" class="box scale">
+<h4>Dificultat</h4>
+<ul>
+<li>Més fàcil: el Demogorgon comença lluny.</li>
+<li>Més difícil: entra 1 demogosset quan s'activa cada trampa.</li>
+</ul>
+</section>
+</div>
+</div>
+</article>
+</section>
+<div class="villain">
+<div class="rank">
+<p>Amenaça darrere de la temporada</p>
+</div>
+<div class="name">
+<p>El Ment Flayer</p>
+</div>
+<p>En este primer arc no és encara un enemic present del tot. És una
+ombra que pensa a través de monstres, por i portes obertes. El final va
+de tallar una connexió menuda i traure Will amb vida, no de derrotar
+definitivament allò que hi ha darrere.</p>
+<div class="stats">
+<p><span class="pill">Fil d'Arc 2</span><span
+class="pill">Portal</span><span class="pill">Onades</span><span
+class="pill">No combat just</span></p>
+</div>
+</div>
+<section class="chapter">
+<div class="banner violet">
+<div class="smallcap">
+<p>Capítol III - El Vel Fosc</p>
+</div>
+<div class="ctitle">
+<p>Respirar A L'Altra Banda</p>
+</div>
+<p>Una esquerda està oberta. Will encara pot tornar, però el Demogorgon
+ja coneix el camí cap a casa i la Porta principal continua esperant a la
+torre.</p>
+</div>
+<article class="mission">
+<div class="mhead">
+<div class="mbar">
+<p>Missió 5</p>
+</div>
+<div class="mhc">
+<div class="mtype">
+<p>Rescat - Vel Fosc</p>
+</div>
+<div class="mtitle">
+<p>Rescat al Vel Fosc</p>
+</div>
+</div>
+</div>
+<div class="maptop">
+<span>El Vel Fosc</span><span>24" x 24" - Rescat i escorta</span>
+</div>
+<p><img class="map" src="campaigns/stranger-things/assets/maps/mission-05.svg" alt="Mapa de la missió 5"></p>
+<div class="mbody">
+<div class="quote">
+Tot és Hawkins, però mort. Les parets respiren, les arrels pengen com
+venes i una veu menuda crida des d'algun lloc impossible.<cite>El Vel
+Fosc</cite>
+</div>
+<p>Els herois entren al Vel Fosc per trobar Will i portar-lo fins al
+portal.</p>
+<div class="rbox">
+<div class="rtitle">
+<p>Regles de missió</p>
+</div>
+<ul>
+<li><strong>Enemics inicials:</strong> 3 demogossets.</li>
+<li><strong>Herois:</strong> Mike + Hopper + Eleven (310 pts).</li>
+<li><strong>Objectiu principal:</strong> trobar Will entre 3 capolls i
+escortar-lo al portal.</li>
+<li><strong>Capolls:</strong> cada token pot revelar Will, un civil o
+una amenaça.</li>
+<li><strong>Aire tòxic:</strong> al final de cada ronda, un heroi que no
+estiga prop d'un amic guanya 1 estrés narratiu.</li>
+<li><strong>Will:</strong> és un marcador civil; un heroi en contacte
+pot guiar-lo 3" amb una interacció.</li>
+<li><strong>Recompensa:</strong> 1 XP i marca
+<code>Will rescatat</code>.</li>
+</ul>
+<div class="rbar">
+<p><span class="pill">310 pts</span><span
+class="pill">Rescat</span><span class="pill">Capolls</span><span
+class="pill">Vel Fosc</span></p>
+</div>
+</div>
+<div class="terrain">
+<section id="terreny-4" class="box">
+<h4>Terreny</h4>
+<ul>
+<li>Vinyes: terreny difícil.</li>
+<li>Capolls: objectius.</li>
+<li>Portal: zona d'eixida.</li>
+</ul>
+</section>
+<section id="dificultat-4" class="box scale">
+<h4>Dificultat</h4>
+<ul>
+<li>Més fàcil: Will sempre està en el segon capoll revelat.</li>
+<li>Més difícil: el Demogorgon apareix quan Will és revelat.</li>
+</ul>
+</section>
+</div>
+</div>
+</article>
+<article class="mission">
+<div class="mhead">
+<div class="mbar">
+<p>Missió 6</p>
+</div>
+<div class="mhc">
+<div class="mtype">
+<p>Final d'arc - Segellar l'esquerda</p>
+</div>
+<div class="mtitle">
+<p>Segellar l'Esquerda</p>
+</div>
+</div>
+</div>
+<div class="maptop">
+<span>Esquerda del Vel</span><span>24" x 24" - Final d'objectiu</span>
+</div>
+<p><img class="map" src="campaigns/stranger-things/assets/maps/mission-06.svg" alt="Mapa de la missió 6"></p>
+<div class="mbody">
+<div class="quote">
+Eleven mira l'esquerda i l'esquerda la mira a ella. Darrere, la colla
+només pot aguantar la línia un poc més. Les llums esclaten una darrere
+d'altra.<cite>Final del primer arc</cite>
+</div>
+<p>Els herois han de protegir Eleven mentre segella una esquerda del Vel
+Fosc. Açò pot salvar Will i tallar el pas del Demogorgon, però no
+destrueix la Porta principal de la torre.</p>
+<div class="rbox">
+<div class="rtitle">
+<p>Regles de missió</p>
+</div>
+<ul>
+<li><strong>Enemics inicials:</strong> 3 demogossets. Si el Demogorgon
+no va quedar ferit, també apareix com a boss llunyà.</li>
+<li><strong>Herois:</strong> Mike + Hopper + Eleven (310 pts).</li>
+<li><strong>Objectiu principal:</strong> Eleven ha de completar 3
+interaccions psíquiques en contacte amb l'esquerda.</li>
+<li><strong>Protegir Eleven:</strong> si un enemic acaba en contacte amb
+ella, perd la pròxima interacció psíquica preparada.</li>
+<li><strong>Avantatges:</strong> cada marca positiva de campanya pot
+cancel·lar una onada, repetir una interacció o retirar 1 estrés.</li>
+<li><strong>Onades:</strong> al final de la ronda 2 i cada 2 rondes,
+entra una unitat menuda si la partida encara està controlada.</li>
+<li><strong>Victòria:</strong> amb 3 interaccions, l'esquerda es tanca i
+les criatures cauen o fugen. Marca <code>Will rescatat</code> si el vau
+traure en M5.</li>
+<li><strong>Cost de victòria:</strong> si Eleven acaba amb 3 estrés,
+marca <code>Eleven esgotada</code> per a l'Arc 2.</li>
+<li><strong>Derrota amable:</strong> si fallen, Will torna igualment amb
+ajuda dels adults, però l'esquerda queda oberta. L'Arc 2 comença amb
+Hawkins ja contaminat.</li>
+</ul>
+<div class="rbar">
+<p><span class="pill">310 pts</span><span class="pill">Final d'Arc
+1</span><span class="pill">Eleven</span><span class="pill">Arc 2
+possible</span></p>
+</div>
+</div>
+<div class="terrain">
+<section id="terreny-5" class="box">
+<h4>Terreny</h4>
+<ul>
+<li>Esquerda: objectiu central.</li>
+<li>Consoles i runes: cobertura.</li>
+<li>Ombres del Ment Flayer: zones de perill narratiu.</li>
+</ul>
+</section>
+<section id="dificultat-5" class="box scale">
+<h4>Dificultat</h4>
+<ul>
+<li>Més fàcil: l'esquerda requereix 2 interaccions.</li>
+<li>Més difícil: el Ment Flayer cancel·la el primer avantatge de
+campanya usat.</li>
+</ul>
+</section>
+</div>
+</div>
+</article>
+</section>
+<section id="finals-de-larc-1" class="ending">
+<h3>Finals de l'Arc 1</h3>
+<p><strong>Final lluminós:</strong> Will torna a casa, l'esquerda queda
+segellada i Hawkins passa uns dies fingint que tot era una maledicció
+menor. Per a l'Arc 2, la torre encara conserva la Porta principal.</p>
+<p><strong>Final agredolç:</strong> Will torna, però Eleven queda
+esgotada o el Demogorgon escapa ferit. Per a l'Arc 2, algú de Hawkins
+comença a tindre malsons del Vel Fosc.</p>
+<p><strong>Final fosc:</strong> l'esquerda no es tanca del tot. Will
+sobreviu, però porta una ombra dins. L'Arc 2 comença amb possessió,
+desaparicions noves o la torre tapant proves.</p>
+</section>
+<section id="ganxos-per-a-larc-2" class="panel">
+<h3>Ganxos per a l'Arc 2</h3>
+<div class="cols">
+<section id="la-torre-contraataca" class="box">
+<h4>La torre contraataca</h4>
+<ul>
+<li>Brenner o els alquimistes recuperen proves.</li>
+<li>Els guàrdies ja no subestimen els herois.</li>
+<li>Eleven ha de decidir si fuig o torna a entrar.</li>
+</ul>
+</section>
+<section id="will-no-ha-tornat-sol" class="box scale">
+<h4>Will no ha tornat sol</h4>
+<ul>
+<li>Will sent veus o dibuixa túnels.</li>
+<li>Una ombra reacciona quan les llums s'apaguen.</li>
+<li>La colla ha de protegir-lo sense saber si és perillós.</li>
+</ul>
+</section>
+<section id="la-porta-principal" class="box print">
+<h4>La Porta principal</h4>
+<ul>
+<li>L'esquerda de l'Arc 1 era només una fuga.</li>
+<li>La torre conserva el problema real.</li>
+<li>L'Arc 2 pot anar de possessió, túnels i tancar la Porta de
+veritat.</li>
+</ul>
+</section>
+</div>
+</section>
+<section id="nota-dús-privat" class="panel">
+<h3>Nota d'ús privat</h3>
+<p>Esta és una campanya casolana no oficial inspirada en
+<code>Stranger Things</code> per a ús privat.
+<code>Stranger Things</code> pertany als seus titulars.
+<code>OnePageRules</code> i <code>Age of Fantasy: Quest</code> pertanyen
+als seus autors.</p>
+</section>
+<section id="crèdits-dimatge-reals" class="panel">
+<h3>Crèdits d'imatge reals</h3>
+<div class="cols credits">
+<section id="personatges-de-la-sèrie" class="box">
+<h4>Personatges de la sèrie</h4>
+<ul>
+<li><strong>Fitxers locals:</strong> <code>mike-wheeler.png</code>,
+<code>hopper.png</code>, <code>eleven.png</code>.</li>
+<li><strong>Font:</strong> Wikipedia en anglès, pàgines de Mike Wheeler,
+Jim Hopper i Eleven.</li>
+<li><strong>Ús:</strong> material visual de referència per a ús personal
+de campanya.</li>
+</ul>
+</section>
+<section id="torre-nocturna" class="box">
+<h4>Torre nocturna</h4>
+<ul>
+<li><strong>Fitxer local:</strong> <code>tower-night.jpg</code>.</li>
+<li><strong>Font:</strong> Wikimedia Commons,
+<code>Burg Vianden bei Nacht.jpg</code>.</li>
+<li><strong>Autor:</strong> martinroell.</li>
+<li><strong>Llicència:</strong> CC BY-SA 2.0.</li>
+</ul>
+</section>
+<section id="casa-abandonada" class="box">
+<h4>Casa abandonada</h4>
+<ul>
+<li><strong>Fitxer local:</strong>
+<code>abandoned-house.jpg</code>.</li>
+<li><strong>Font:</strong> Wikimedia Commons,
+<code>Urban exploring, abandoned house (1) - Dec 2008.jpg</code>.</li>
+<li><strong>Autor:</strong> Huib Laurens.</li>
+<li><strong>Llicència:</strong> CC BY-SA 2.0.</li>
+</ul>
+</section>
+<section id="interior-abandonat" class="box">
+<h4>Interior abandonat</h4>
+<ul>
+<li><strong>Fitxer local:</strong> <code>abandoned-room.jpg</code>.</li>
+<li><strong>Font:</strong> Wikimedia Commons,
+<code>Living room no more (8635429874).jpg</code>.</li>
+<li><strong>Autor:</strong> Erwin Soo.</li>
+<li><strong>Llicència:</strong> CC BY 2.0.</li>
+</ul>
+</section>
+<section id="ruïna" class="box">
+<h4>Ruïna</h4>
+<ul>
+<li><strong>Fitxer local:</strong> <code>ruin.jpg</code>.</li>
+<li><strong>Font:</strong> Wikimedia Commons,
+<code>Time and ruin (12720079533).jpg</code>.</li>
+<li><strong>Autor:</strong> Carlos Ebert.</li>
+<li><strong>Llicència:</strong> CC BY 2.0.</li>
+</ul>
+</section>
+</div>
+</section>
+</main></body></html>

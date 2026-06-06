@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" role="img" aria-label="Mapa missió 6 esquerda del Vel">
+<rect width="600" height="600" fill="#05060d"/><rect x="45" y="45" width="510" height="510" fill="#111827" stroke="#ff2b3d" stroke-width="4"/>
+<ellipse cx="300" cy="250" rx="95" ry="65" fill="#32184f" stroke="#8264ff" stroke-width="6"/><text x="300" y="258" text-anchor="middle" fill="#fff" font-size="26">Esquerda</text>
+<g fill="#475569"><rect x="110" y="140" width="80" height="55"/><rect x="410" y="140" width="80" height="55"/><rect x="105" y="395" width="95" height="45"/><rect x="400" y="395" width="95" height="45"/></g>
+<g fill="#ffd166" font-size="22" font-family="Arial" text-anchor="middle"><circle cx="190" cy="285" r="20"/><text x="190" y="293" fill="#111">S1</text><circle cx="300" cy="385" r="20"/><text x="300" y="393" fill="#111">S2</text><circle cx="410" cy="285" r="20"/><text x="410" y="293" fill="#111">S3</text></g>
+<g fill="#ff2b3d" font-size="18" font-family="Arial" text-anchor="middle"><rect x="70" y="60" width="95" height="32"/><text x="118" y="82" fill="#fff">Onada</text><rect x="435" y="60" width="95" height="32"/><text x="483" y="82" fill="#fff">Onada</text></g>
+<rect x="245" y="520" width="110" height="35" fill="#62e6a5"/><text x="300" y="545" text-anchor="middle" fill="#04110b" font-size="18">Herois</text>
+<text x="300" y="590" text-anchor="middle" fill="#aab4c9" font-size="18">Protegiu Eleven mentre activa S1-S3 i segella l'esquerda</text>
+</svg>

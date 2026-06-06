@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" role="img" aria-label="Mapa missió 4 sala comunal">
+<rect width="600" height="600" fill="#090b12"/><rect x="45" y="45" width="510" height="510" fill="#141827" stroke="#ffd166" stroke-width="4"/>
+<rect x="135" y="120" width="330" height="310" fill="#182033" stroke="#94a3b8" stroke-width="4"/>
+<g fill="#475569"><rect x="155" y="145" width="90" height="35"/><rect x="355" y="145" width="90" height="35"/><rect x="155" y="370" width="90" height="35"/><rect x="355" y="370" width="90" height="35"/></g>
+<g fill="#ffd166" font-size="22" font-family="Arial" text-anchor="middle"><circle cx="175" cy="275" r="20"/><text x="175" y="283" fill="#111">T1</text><circle cx="300" cy="405" r="20"/><text x="300" y="413" fill="#111">T2</text><circle cx="425" cy="275" r="20"/><text x="425" y="283" fill="#111">T3</text></g>
+<circle cx="300" cy="250" r="34" fill="#ff2b3d"/><text x="300" y="258" text-anchor="middle" fill="#fff" font-size="22">Boss</text>
+<rect x="245" y="520" width="110" height="35" fill="#62e6a5"/><text x="300" y="545" text-anchor="middle" fill="#04110b" font-size="18">Eixida</text>
+<text x="300" y="590" text-anchor="middle" fill="#aab4c9" font-size="18">Activeu trampes T1-T3 i escapeu pel sud</text>
+</svg>

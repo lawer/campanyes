@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" role="img" aria-label="Mapa missió 1 casa de Joyce">
+<rect width="600" height="600" fill="#08101f"/>
+<rect x="45" y="45" width="510" height="510" fill="#111827" stroke="#32d8ff" stroke-width="4"/>
+<path d="M80 160H520M250 160V520M80 360H520" stroke="#5b6b8f" stroke-width="10"/>
+<rect x="80" y="160" width="170" height="200" fill="none" stroke="#94a3b8" stroke-width="3"/><rect x="250" y="160" width="270" height="200" fill="none" stroke="#94a3b8" stroke-width="3"/><rect x="80" y="360" width="440" height="160" fill="none" stroke="#94a3b8" stroke-width="3"/>
+<rect x="110" y="400" width="80" height="38" fill="#475569"/><text x="150" y="424" text-anchor="middle" fill="#fff" font-size="18">Sofà</text>
+<rect x="340" y="405" width="80" height="50" fill="#475569"/><text x="380" y="436" text-anchor="middle" fill="#fff" font-size="18">Taula</text>
+<g fill="#ffd166" font-size="22" font-family="Arial" text-anchor="middle"><circle cx="120" cy="120" r="18"/><text x="120" y="128" fill="#111">L1</text><circle cx="300" cy="120" r="18"/><text x="300" y="128" fill="#111">L2</text><circle cx="480" cy="120" r="18"/><text x="480" y="128" fill="#111">L3</text></g>
+<rect x="240" y="520" width="120" height="35" fill="#62e6a5"/><text x="300" y="545" text-anchor="middle" fill="#04110b" font-size="20">Herois</text>
+<rect x="240" y="45" width="120" height="35" fill="#ff2b3d"/><text x="300" y="70" text-anchor="middle" fill="#fff" font-size="20">Guàrdies</text>
+<text x="300" y="590" text-anchor="middle" fill="#aab4c9" font-size="18">24&quot; x 24&quot; · casa modular amb 3 llums</text>
+</svg>
