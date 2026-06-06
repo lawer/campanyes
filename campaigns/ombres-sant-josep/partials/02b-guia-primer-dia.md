@@ -3,6 +3,13 @@
 
 Esta campanya assumeix que no heu jugat mai a Pulp Alley. No cal llegir tot el manual abans de començar. Per al primer episodi només necessiteu moure, investigar pistes, resoldre perills i entendre què passa quan algú falla.
 
+<div class="scene-art setup">
+<figure>
+<img src="campaigns/ombres-sant-josep/assets/bicicleta-abandonada-setup.png" alt="Guia visual de preparació de l'episodi 1 amb cinc bicicletes, bicicleta abandonada, cova, tanca, guarda, gos i pistes">
+<figcaption>Preparació visual de l'episodi 1: colla amb bicicletes, tanca, cova, guarda, gos i pistes</figcaption>
+</figure>
+</div>
+
 ::: {.cols}
 ::: {.box}
 #### Prepareu només açò

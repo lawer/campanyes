@@ -26,4 +26,12 @@ Sobreviviu, però la criatura travessa. La temporada 2 comença amb animals desa
 
 Campanya fan-made per a ús personal, inspirada en misteri juvenil dels anys 80 i adaptada a Pulp Alley 2E. Pulp Alley és propietat dels seus autors. La campanya no reprodueix regles completes: cal el manual oficial per jugar.
 :::
+
+::: {.box .scale}
+#### Làmines noves de campanya
+
+- **Fitxers:** bicicleta-abandonada-ambient.png, bicicleta-abandonada-setup.png i radio-portal-ambient.png.
+- **Font:** generades amb eina d'imatge IA per a este document.
+- **Ús:** ambientació i ajuda visual del primer episodi.
+:::
 :::

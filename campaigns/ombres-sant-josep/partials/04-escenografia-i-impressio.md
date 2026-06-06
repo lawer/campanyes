@@ -1,6 +1,13 @@
 ::: {.panel tag="section"}
 ### Escenografia mínima
 
+<div class="scene-art">
+<figure>
+<img src="campaigns/ombres-sant-josep/assets/radio-portal-ambient.png" alt="Fàbrica abandonada amb ràdio casolana, antena, cristalls negres, bicicletes, arrels i un portal violeta">
+<figcaption>Referència visual: ràdio impossible, antena, cristalls negres, portal i fàbrica abandonada</figcaption>
+</figure>
+</div>
+
 ::: {.cols}
 ::: {.box}
 #### Imprimir miniatures

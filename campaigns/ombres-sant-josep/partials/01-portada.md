@@ -25,3 +25,10 @@ Esta campanya substitueix Hawkins per La Vall d'Uixó. Manté el sabor de colla 
 
 No necessiteu exèrcits ni herois carregats d'equip. Una colla de 4-5 xiquets, unes bicicletes, dos adults sospitosos i cinc criatures són suficients per a jugar tota la temporada.
 :::
+
+<div class="scene-art">
+<figure>
+<img src="campaigns/ombres-sant-josep/assets/bicicleta-abandonada-ambient.png" alt="Colla de xiquets amb bicicletes davant de les Coves de Sant Josep, una bicicleta abandonada i llums estranyes dins de la cova">
+<figcaption>Ambient inicial: la bicicleta abandonada, la tanca, la cova i les llums impossibles</figcaption>
+</figure>
+</div>
