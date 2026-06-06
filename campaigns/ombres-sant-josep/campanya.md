@@ -10,9 +10,9 @@ El contingut editable viu en campaigns/ombres-sant-josep/partials/.
 
 {{ include:campaigns/ombres-sant-josep/partials/01-portada.md }}
 
-{{ include:campaigns/ombres-sant-josep/partials/02-pulp-alley-i-to.md }}
-
 {{ include:campaigns/ombres-sant-josep/partials/02b-guia-primer-dia.md }}
+
+{{ include:campaigns/ombres-sant-josep/partials/02-pulp-alley-i-to.md }}
 
 {{ include:campaigns/ombres-sant-josep/partials/03-protagonistes.md }}
 

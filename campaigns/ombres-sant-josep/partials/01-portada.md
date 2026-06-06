@@ -21,9 +21,11 @@ Durant setmanes, la gent de La Vall parla de llums estranyes prop de les Coves d
 ::: {.panel tag="section"}
 ### Premissa
 
-Esta campanya substitueix Hawkins per La Vall d'Uixó. Manté el sabor de colla de xiquets, bicicletes, misteri, ràdios casolanes i criatures de l'altre costat, però amb llocs reconeixibles: les Coves de Sant Josep, la Font de Garrut, camins de muntanya, una fàbrica abandonada i una escola de barri.
+Esta és una història de colla. No comença amb monstres ni amb armes. Comença amb una bicicleta que no hauria d'estar allí, una roda que encara gira, fang negre als pedals i una sensació molt clara: els adults no vos contaran tota la veritat.
 
-No necessiteu exèrcits ni herois carregats d'equip. Una colla de 4-5 xiquets, unes bicicletes, dos adults sospitosos i cinc criatures són suficients per a jugar tota la temporada.
+Jugareu a poc a poc. Primer aprendreu a moure les miniatures, mirar pistes i decidir què fa cada xiquet. Després vindran les ràdios, els túnels, les criatures i el portal. Si una regla no queda clara, feu la decisió que mantinga la història en marxa i continueu.
+
+Tot passa prop de casa: les Coves de Sant Josep, la Font de Garrut, camins de muntanya, una fàbrica abandonada i una escola de barri. Amb 4-5 xiquets, unes bicicletes, alguns adults sospitosos i unes quantes ombres teniu prou per jugar tota la temporada.
 :::
 
 <div class="scene-art">

@@ -1,20 +1,20 @@
 ::: {.panel tag="section"}
-### Com jugar-ho en Pulp Alley
+### Quan ja esteu jugant: com encaixa en Pulp Alley
 
-La campanya està pensada com a **Pulp Alley cooperatiu**. Cada jugador controla un xiquet o xiqueta. Si jugueu menys persones, repartiu la colla entre els jugadors. El director de joc pot portar amenaces, pistes i rellotges d'escena; si voleu jugar sense director, feu que les amenaces actuen com NPCs.
+Penseu en Pulp Alley com una manera de decidir què passa quan la història es posa tensa. Cada jugador controla un xiquet o xiqueta. Si sou menys persones, repartiu la colla. Si hi ha una persona fent de narrador, pot portar el guarda, les criatures i les sorpreses. Si no, feu que les amenaces actuen de la forma més clara: s'acosten, bloquegen el camí o protegeixen la pista important.
 
-La colla funciona com una sola **league** de 10 slots. Per mantindre el to de xiquets normals, usem la perk **Mastermind**: no hi ha Leader de nivell 4. El Líder de la colla és un Sidekick gratuït que fa de Leader durant els escenaris, i la resta són Allies o Followers. Això fa una colla vulnerable, ràpida i centrada en plot points.
+La part tècnica ve després: la colla funciona com una sola `league`. Això només vol dir que tots van junts. Per mantindre el to de xiquets normals, el Líder no és un heroi fort: és el que anima, organitza i ajuda els altres a no perdre els nervis.
 
 ::: {.cols}
 ::: {.box}
-#### Estructura d'un episodi
+#### Cada episodi té
 
-- Taula recomanada: 3' x 3'.
-- Duració: 6 torns.
-- Plot points: 1 major i 4 menors.
-- Desplegament: segons l'episodi.
-- Recompenses: 5 cartes de Reward.
-- Opcional: 1 spoiler si voleu més sorpresa.
+- Una taula de 3' x 3'.
+- Sis torns per resoldre el misteri.
+- Una pista principal i quatre pistes menudes.
+- Una forma concreta d'entrar en escena.
+- Recompenses si useu les cartes.
+- Un spoiler opcional si voleu una sorpresa més.
 :::
 
 ::: {.box .scale}
@@ -29,10 +29,10 @@ La colla funciona com una sola **league** de 10 slots. Per mantindre el to de xi
 ::: {.box .print}
 #### Regla d'or
 
-- Usa les regles normals de Pulp Alley per moviments, perills, challenges, plot points i combats.
-- Les regles d'esta campanya només expliquen escena, pistes i conseqüències.
-- Si una escena es complica massa per a un xiquet, converteix combat en persecució.
-- Les armes dels xiquets són simbòliques: llanternes, pedres, walkie-talkies, motxilles i bicicletes.
+- Useu les regles de Pulp Alley quan necessiteu daus.
+- Useu esta campanya per saber què significa cada pista i cada fallada.
+- Si una escena es fa massa dura, convertiu-la en persecució, pèrdua de temps o separació.
+- Les "armes" dels xiquets són llanternes, pedres, walkie-talkies, motxilles i bicicletes.
 :::
 :::
 :::
@@ -42,32 +42,31 @@ La colla funciona com una sola **league** de 10 slots. Per mantindre el to de xi
 
 ::: {.cols}
 ::: {.box}
-#### Horror suau
+#### Por suau
 
-- Les criatures i el portal són **horrific**.
-- Useu Horror només quan aparega una criatura o una escena molt forta.
-- Si no teniu Horror Deck, una fallada causa una condició narrativa: espantat, separat, bloquejat o veu estranya.
-- L'efecte dura fins al final del torn o fins que un company faça una acció d'ajuda.
+- Les criatures i el portal fan por.
+- Useu regles d'Horror només en moments forts.
+- Si no teniu eixa baralla, feu-ho narratiu: espantat, separat, bloquejat o sent una veu.
+- Un company pot ajudar-lo a recuperar-se.
 :::
 
 ::: {.box .scale}
-#### NPCs
+#### Adults i criatures
 
-- Els NPC no juguen cartes ni poden ser Director.
-- Activen després dels personatges.
-- Primer activen els NPC en contacte; després els altres aleatòriament.
-- Si poden, ataquen el personatge més proper.
-- Si no poden atacar, avancen cap al plot point major o fan soroll.
+- Actuen després de la colla.
+- Si estan al costat d'un xiquet, reaccionen primer.
+- El guarda pregunta, bloqueja o persegueix.
+- Les criatures s'acosten a qui està més prop.
+- Si ningú està prop, van cap a la pista principal o fan soroll.
 :::
 
 ::: {.box .print}
-#### Bicicletes com muntures
+#### Bicicletes
 
-- Tracteu-les com una mount **Single-Rider**.
-- Avantatge principal: moure fins a 16".
-- No permeten accions mentre es va muntat.
-- Caure de la bicicleta és un peril.
-- Una bicicleta solta es queda quieta i pot convertir-se en plot point.
+- Una bicicleta permet moure fins a 16".
+- Mentre vas muntat, no pots investigar bé.
+- Travessar terreny difícil ràpid pot fer-te caure.
+- Una bicicleta abandonada és sempre una pista o un problema.
 :::
 :::
 :::

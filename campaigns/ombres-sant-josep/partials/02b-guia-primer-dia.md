@@ -1,7 +1,9 @@
 ::: {.panel tag="section"}
 ### Guia per al primer dia
 
-Esta campanya assumeix que no heu jugat mai a Pulp Alley. No cal llegir tot el manual abans de començar. Per al primer episodi només necessiteu moure, investigar pistes, resoldre perills i entendre què passa quan algú falla.
+No cal llegir tot el manual abans de començar. La primera partida és una escena d'aprenentatge: la colla arriba a les coves, veu la bicicleta abandonada i intenta entendre què ha passat.
+
+Hui només heu de practicar quatre coses: moure un xiquet, acostar-vos a una pista, tirar daus quan hi ha perill i contar què passa si la tirada ix malament.
 
 <div class="scene-art setup">
 <figure>
@@ -12,36 +14,37 @@ Esta campanya assumeix que no heu jugat mai a Pulp Alley. No cal llegir tot el m
 
 ::: {.cols}
 ::: {.box}
-#### Prepareu només açò
+#### Poseu damunt la taula
 
-- Les 5 fitxes de la colla.
-- 5 marcadors de pista: P1, P2, P3, P4 i Major.
-- 5 bicicletes o marcadors de bicicleta.
-- 6-8 peces de terreny: arbres, tanca, camí, entrada de cova i roques.
+- La colla: 4 o 5 xiquets amb bicicleta.
+- La bicicleta abandonada.
+- Quatre pistes menudes: fang, tela, gos i una cosa estranya prop de la reixa.
+- Una pista gran: el túnel ocult.
+- Arbres, roques, una tanca, l'entrada de la cova i un camí.
 - Daus d6, d8, d10 i d12.
-- Baralla Fortune. Si encara no la teniu, useu cartes normals només per traure números i reptes senzills.
+- Cartes Fortune si les teniu. Si no, useu cartes normals o ignoreu-les en esta primera escena.
 :::
 
 ::: {.box .scale}
-#### Regles mínimes
+#### Regles que sí necessiteu
 
-- Cada dau que trau 4+ és un èxit.
-- Un personatge activa una vegada per torn.
-- En activar, pot moure fins a 12".
-- Si mou més de 6", no pot investigar.
-- Investigar una pista és una acció.
-- Abans d'investigar una pista, sempre hi ha un peril.
+- Quan tireu daus, cada resultat de 4 o més és un èxit.
+- Cada xiquet juga una vegada per torn.
+- Pot caminar fins a 12".
+- Si corre més de 6", arriba lluny, però no pot mirar pistes amb calma.
+- Per mirar una pista, primer ha d'arribar fins allí.
+- Abans d'agafar una pista, sempre passa alguna cosa perillosa o incòmoda.
 :::
 
 ::: {.box .print}
-#### Ignoreu al principi
+#### Deixeu-ho per a més avant
 
-- Experiència i reputació fins acabar l'episodi 1.
-- Assets avançats.
-- Secret societies.
-- Vehicles normals.
-- Bursts.
-- Horror Deck complet si no el teniu.
+- Experiència, reputació i millores.
+- Regles avançades de cartes i assets.
+- Societats secretes.
+- Vehicles que no siguen bicicletes.
+- Baralles grans.
+- Horror complet. De moment, la por és una complicació narrativa.
 :::
 :::
 :::
@@ -49,59 +52,60 @@ Esta campanya assumeix que no heu jugat mai a Pulp Alley. No cal llegir tot el m
 ::: {.panel tag="section"}
 ### La seqüència que heu de repetir
 
-Poseu esta llista al costat de la taula. És suficient per jugar el primer episodi.
+Poseu esta llista al costat de la taula. Cada torn, trieu un xiquet i seguiu estos passos.
 
 ::: {.cols}
 ::: {.box}
-#### 1. Trieu qui activa
+#### 1. Trieu qui fa alguna cosa
 
-En cooperatiu, trieu el personatge que tinga més sentit. Si voleu usar el Director com diu el manual, el Director decideix quin jugador activa. Per a la primera partida, no vos compliqueu.
+Pregunteu: qui està més prop de la pista?, qui pot ajudar?, qui està en perill? Trieu eixe personatge. En la primera partida no cal discutir torns perfectes: trieu el que faça avançar l'escena.
 :::
 
 ::: {.box .scale}
-#### 2. Mou
+#### 2. Mou la miniatura
 
 - A peu: fins a 12".
 - Amb bicicleta: fins a 16".
-- Si mou més de 6", no pot fer accions.
-- Si toca una zona perillosa, resol un peril.
+- Si mou més de 6", no pot investigar eixe torn.
+- Si travessa fang, roques, tanca o zona estranya, tireu per veure si hi ha problema.
 :::
 
 ::: {.box .print}
-#### 3. Fes una acció
+#### 3. Conta què intenta
 
-- Investigar una pista.
-- Amagar-se.
+- Mirar una pista.
+- Amagar-se darrere d'un arbre o una tanca.
 - Ajudar un company.
-- Parlar amb un adult.
-- Atacar només si és inevitable.
+- Parlar amb el guarda.
+- Fugir amb la bicicleta.
+- Enfrontar-se a algú només si no hi ha cap altra opció.
 :::
 :::
 :::
 
 ::: {.panel tag="section"}
-### Plot points sense embolics
+### Pistes sense embolics
 
-En esta campanya, un plot point és una pista important. La bicicleta, una nota, una porta, un cristall o una ràdio són plot points.
+En Pulp Alley, un `plot point` és una pista important. En esta campanya li direm **pista** quasi sempre. Pot ser una bicicleta, una nota, una porta, un cristall, una ràdio o una persona que sap més del que diu.
 
 ::: {.cols}
 ::: {.box}
-#### Per investigar una pista
+#### Per mirar una pista
 
-- El personatge ha d'arribar fins al marcador.
-- No pot haver mogut més de 6" eixe torn.
-- Primer resol un peril.
-- Si supera el peril, intenta la pista.
-- Si supera la pista, agafa una Reward card.
+- Arriba fins a la pista.
+- Si ha corregut massa, espera al torn següent.
+- Abans de mirar-la, resol el perill: fang, gos, guarda, soroll o por.
+- Si supera el perill, intenta entendre la pista.
+- Si ho aconsegueix, la colla descobreix una cosa nova.
 :::
 
 ::: {.box .scale}
 #### Si falleu
 
-- Si falleu un peril, el personatge rep hits i acaba l'activació.
-- Si falleu la pista, no rep hits.
-- Els èxits parcials poden quedar acumulats com Long Action.
-- Un altre company pot acabar la pista després.
+- Una fallada no ha de parar la partida.
+- Pot aparéixer el guarda, bordar el gos o caure una llanterna.
+- El xiquet pot quedar separat, espantat o perdre temps.
+- Si la pista queda a mitges, un altre company pot acabar-la després.
 :::
 
 ::: {.box .print}

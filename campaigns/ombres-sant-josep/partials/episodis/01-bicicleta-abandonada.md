@@ -7,44 +7,43 @@ Un company de classe no torna a casa després d'una excursió prop de les Coves 
 
 ::: {.cols}
 ::: {.box}
-#### Escenari Pulp Alley
+#### Què ha de passar
 
-- **Base:** The Trail of Clues.
-- **Players/League:** 1 league cooperativa.
-- **Plot points:** 1 major + 4 menors.
-- **Deployment:** Corners 12".
-- **Turn limit:** 6.
-- **Rewards:** 5 Reward cards.
-- **Spoiler opcional:** Red Herring.
+- La colla entra a escena des de les cantonades.
+- Teniu 6 torns per entendre què ha passat.
+- Hi ha 4 pistes menudes i una pista gran.
+- Primer busqueu pistes fàcils: bicicleta, fang, tela i gos.
+- Quan la colla entenga prou coses, reveleu el túnel ocult.
+- Si useu cartes, prepareu 5 recompenses.
 :::
 
 ::: {.box .scale}
-#### Plot points
+#### Pistes
 
-- **Major:** túnel ocult darrere de la reixa.
-- **Menor:** bicicleta abandonada.
-- **Menor:** petjades de fang negre.
-- **Menor:** tros de tela enganxat.
-- **Menor:** gos que gruny al bosc.
+- **Pista gran:** túnel ocult darrere de la reixa.
+- **Pista:** bicicleta abandonada.
+- **Pista:** petjades de fang negre.
+- **Pista:** tros de tela enganxat.
+- **Pista:** gos que gruny al bosc.
 :::
 
 ::: {.box .print}
 #### Amenaces
 
-- 1 gos estrany com Level 1 Animal NPC.
-- 1 guarda municipal com Level 1 Brawler NPC.
-- Una ombra no combat: només causa Horror si algú s'acosta al túnel.
+- El gos no és un monstre: borda, espanta i pot fer caure algú.
+- El guarda municipal no vol fer mal: vol que els xiquets se'n vagen.
+- L'ombra prop del túnel no es combat. Només fa por i anuncia que hi ha alguna cosa darrere.
 :::
 :::
 
 ::: {.box}
 #### Tutorial pas a pas
 
-- **Torn 1:** activeu només la colla. Moveu cap a la bicicleta i les petjades. No feu aparéixer cap criatura encara.
-- **Primera pista:** useu la bicicleta com primer plot point. Expliqueu peril, challenge i Reward card amb calma.
-- **Torn 2:** entra el guarda. No ataca; pregunta què feu allí i bloqueja un camí.
-- **Primer problema:** si algú falla, no el deixeu fora de joc. Feu que perda temps, cride l'atenció o quede separat.
-- **Final:** quan resolgueu dues pistes menors, reveleu el túnel ocult com plot point major.
+- **Torn 1:** només juga la colla. Que s'acosten a la bicicleta i a les petjades. Encara no cal cap criatura.
+- **Primera pista:** comenceu per la bicicleta. Abans de mirar-la, feu passar un problema senzill: fang, soroll o una roda que cau.
+- **Torn 2:** entra el guarda. No ataca. Pregunta què feu allí i tapa un camí.
+- **Primer problema real:** si algú falla, no el deixeu fora de joc. Feu que perda temps, cride l'atenció o quede separat uns centímetres.
+- **Final de l'escena:** quan resolgueu dues pistes menudes, mostreu el túnel ocult darrere de la reixa.
 :::
 
 ::: {.box .scale}
