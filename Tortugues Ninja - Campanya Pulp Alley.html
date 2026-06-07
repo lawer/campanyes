@@ -1,0 +1,1092 @@
+<!DOCTYPE html>
+<html lang="ca-valencia">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tortugues Ninja - Campanya Pulp Alley</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&family=Roboto+Slab:wght@400;600;700&display=swap');
+:root{
+  --bg:#05060d;--bg2:#0b1020;--panel:#121827;--panel2:#171f33;
+  --red:#ff2b3d;--red2:#9f1525;--cyan:#32d8ff;--blue:#405cff;
+  --amber:#ffd166;--green:#62e6a5;--text:#eef3ff;--muted:#aab4c9;
+  --soft:#d7def2;--line:rgba(120,150,210,.28);--shadow:rgba(0,0,0,.55);
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,Arial,sans-serif;font-size:16px;line-height:1.7}
+body:before{content:'';position:fixed;inset:0;pointer-events:none;z-index:-2;background:radial-gradient(circle at 50% -10%,rgba(255,43,61,.28),transparent 32%),radial-gradient(circle at 86% 12%,rgba(50,216,255,.18),transparent 32%),linear-gradient(180deg,#05060d 0%,#0b1020 46%,#05060d 100%)}
+body:after{content:'';position:fixed;inset:0;pointer-events:none;z-index:-1;opacity:.26;background:linear-gradient(transparent 95%,rgba(50,216,255,.22) 96%),linear-gradient(90deg,transparent 95%,rgba(255,43,61,.16) 96%);background-size:44px 44px}
+.wrap{max-width:1080px;margin:0 auto;padding:28px 18px 56px}
+p{margin:.45rem 0 0}a{color:var(--cyan)}code{background:rgba(50,216,255,.1);border:1px solid rgba(50,216,255,.18);border-radius:4px;padding:1px 5px;color:#c9f6ff}
+.cover{position:relative;overflow:hidden;min-height:520px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:70px 28px;border:1px solid rgba(255,43,61,.45);background:radial-gradient(circle at 50% 35%,rgba(255,43,61,.20),transparent 26%),linear-gradient(145deg,rgba(16,23,45,.92),rgba(5,6,13,.98) 58%,rgba(32,8,18,.94));box-shadow:0 28px 80px var(--shadow),inset 0 0 80px rgba(255,43,61,.08)}
+.cover:before{content:'01101100 01101001 01100111 01101000 01110100 01110011';position:absolute;left:24px;right:24px;bottom:18px;color:rgba(50,216,255,.16);font-family:Roboto Slab,serif;font-size:12px;letter-spacing:4px;white-space:nowrap;overflow:hidden}.cover:after{content:'HAWKINS';position:absolute;top:18px;right:22px;color:rgba(255,255,255,.07);font-family:Bebas Neue,sans-serif;font-size:86px;letter-spacing:8px;line-height:1}
+.label,.smallcap,.rank,.mtype,.mbar,.pill,.tag{font-family:Bebas Neue,Inter,sans-serif;text-transform:uppercase;letter-spacing:2.2px}.label{color:var(--cyan);font-size:18px;text-shadow:0 0 18px rgba(50,216,255,.55)}.label p,.subtitle p,.intro p,.smallcap p,.rank p,.name p,.desc p{margin:0}
+h1{font-family:Bebas Neue,Inter,sans-serif;font-size:clamp(62px,13vw,132px);line-height:.86;margin:18px 0 12px;color:#fff;letter-spacing:3px;text-transform:uppercase;text-shadow:0 0 8px #fff,0 0 24px var(--red),0 0 58px var(--red2),0 8px 0 #21040a}.subtitle{font-weight:800;color:var(--amber);font-size:clamp(15px,2.5vw,21px);text-transform:uppercase;letter-spacing:2px}.intro{max-width:780px;margin-top:24px;color:var(--soft);font-family:Roboto Slab,Georgia,serif;font-size:18px;background:rgba(5,6,13,.55);border:1px solid rgba(255,255,255,.08);padding:18px 22px;box-shadow:0 14px 34px rgba(0,0,0,.28)}
+.tags{margin-top:24px}.tags p,.stats p{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin:0}.tag,.pill{display:inline-flex;align-items:center;border:1px solid rgba(50,216,255,.34);background:rgba(50,216,255,.08);color:#dff9ff;border-radius:999px;padding:5px 10px;font-size:14px;line-height:1}.tag{border-color:rgba(255,43,61,.42);background:rgba(255,43,61,.10);color:#ffdbe0}
+.sh{text-align:center;margin:54px 0 20px}.sh h2{font-family:Bebas Neue,Inter,sans-serif;font-size:clamp(34px,7vw,62px);letter-spacing:2px;line-height:.95;color:#fff;text-transform:uppercase;text-shadow:0 0 20px rgba(50,216,255,.45)}.smallcap{color:var(--red);font-size:17px}.rule{border:0;height:2px;max-width:560px;margin:0 auto 28px;background:linear-gradient(90deg,transparent,var(--cyan),var(--red),var(--cyan),transparent);box-shadow:0 0 18px rgba(255,43,61,.5)}
+.grid,.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}.card,.panel,.mission,.villain,.ending{border:1px solid var(--line);background:linear-gradient(160deg,rgba(23,31,51,.96),rgba(9,12,24,.98));box-shadow:0 18px 48px rgba(0,0,0,.34)}.card{position:relative;padding:22px;border-top:3px solid var(--red)}.card:after{content:'';position:absolute;inset:auto 0 0;height:3px;background:linear-gradient(90deg,var(--red),var(--cyan));opacity:.9}.rank{color:var(--cyan);font-size:15px}.name{font-family:Bebas Neue,Inter,sans-serif;color:#fff;font-size:34px;letter-spacing:1px;line-height:1;margin:4px 0 10px}.desc{color:var(--muted);font-family:Roboto Slab,Georgia,serif;font-size:15px}.stats{margin-top:16px}.stats p{justify-content:flex-start}
+.art{display:block;width:100%;height:clamp(230px,36vw,390px);object-fit:cover;margin:22px 0;border:1px solid rgba(120,150,210,.28);background:#05060d;box-shadow:0 20px 50px rgba(0,0,0,.28);filter:saturate(.86) contrast(1.08) brightness(.82)}.art.compact{height:clamp(190px,28vw,320px);margin:14px 0}.art-card{padding:0;overflow:hidden}.art-card p{margin:0}.art-card img{display:block;width:100%}.scene-art{margin:22px 0;border:1px solid rgba(120,150,210,.28);background:#05060d;box-shadow:0 20px 50px rgba(0,0,0,.28);overflow:hidden}.scene-art figure{margin:0}.scene-art figcaption{padding:7px 12px;font-family:Bebas Neue,Inter,sans-serif;text-transform:uppercase;letter-spacing:2px;font-size:15px;color:var(--muted);background:rgba(5,6,13,.68)}.scene-art img{display:block;width:100%;max-height:430px;object-fit:cover;filter:saturate(.88) contrast(1.06) brightness(.86)}.scene-art.setup img{max-height:none;object-fit:contain;background:#05060d}
+.portrait{display:block;width:100%;height:230px;object-fit:cover;object-position:top center;margin:4px 0 14px;border:1px solid rgba(255,43,61,.28);background:#05060d;filter:saturate(.92) contrast(1.05)}.box p:has(.portrait){margin:0}
+.panel{padding:26px;margin:26px 0}.panel h3,.rtitle{font-family:Bebas Neue,Inter,sans-serif;color:#fff;text-transform:uppercase;letter-spacing:2px;font-size:30px;line-height:1;margin:0 0 16px;text-shadow:0 0 18px rgba(255,43,61,.42)}.panel h3:before,.rtitle:before{content:'▣ ';color:var(--red)}.box{border:1px solid rgba(120,150,210,.22);background:rgba(5,9,18,.58);padding:16px}.box h4{font-family:Bebas Neue,Inter,sans-serif;color:var(--amber);font-size:22px;letter-spacing:1.5px;margin:0 0 8px;text-transform:uppercase}.box ul,.rbox ul{margin:0;padding:0;list-style:none}.box li,.rbox li{position:relative;padding:7px 0 7px 20px;color:var(--soft);border-bottom:1px solid rgba(120,150,210,.12)}.box li:last-child,.rbox li:last-child{border-bottom:0}.box li:before,.rbox li:before{content:'>';position:absolute;left:0;color:var(--cyan);font-weight:800}.box strong,.rbox strong{color:#fff}.scale{border-left:4px solid var(--cyan)!important}.print{border-left:4px solid var(--red)!important}.ai{border-left:4px solid var(--amber)!important}
+.chapter{margin:60px 0}.banner{position:relative;overflow:hidden;padding:30px 26px;margin-bottom:22px;border:1px solid rgba(50,216,255,.32);background:radial-gradient(circle at 88% 30%,rgba(50,216,255,.14),transparent 36%),linear-gradient(135deg,rgba(18,35,64,.9),rgba(5,6,13,.6))}.banner:after{content:'RUN';position:absolute;right:18px;bottom:-22px;font-family:Bebas Neue,sans-serif;font-size:118px;line-height:1;color:rgba(50,216,255,.08)}.banner.red{border-color:rgba(255,43,61,.38);background:radial-gradient(circle at 88% 30%,rgba(255,43,61,.18),transparent 36%),linear-gradient(135deg,rgba(58,10,23,.88),rgba(5,6,13,.62))}.banner.red:after{content:'LAB';color:rgba(255,43,61,.09)}.banner.violet{border-color:rgba(130,100,255,.42);background:radial-gradient(circle at 88% 30%,rgba(130,100,255,.20),transparent 36%),linear-gradient(135deg,rgba(34,22,68,.88),rgba(5,6,13,.7))}.banner.violet:after{content:'VOID';color:rgba(130,100,255,.10)}.ctitle{font-family:Bebas Neue,Inter,sans-serif;color:#fff;font-size:clamp(40px,8vw,72px);line-height:.95;letter-spacing:2px;text-shadow:0 0 22px rgba(255,43,61,.45)}
+.mission{margin:24px 0 34px;overflow:hidden}.mhead{display:flex;background:linear-gradient(90deg,rgba(255,43,61,.18),rgba(50,216,255,.06))}.mbar{width:54px;display:flex;align-items:center;justify-content:center;writing-mode:vertical-rl;padding:12px 0;background:linear-gradient(180deg,var(--red2),rgba(50,216,255,.28));color:#fff;font-size:15px;border-right:1px solid rgba(255,255,255,.1)}.mhc{flex:1;padding:18px 20px;border-bottom:1px solid rgba(120,150,210,.18)}.mtype{color:var(--cyan);font-size:15px}.mtitle{font-family:Bebas Neue,Inter,sans-serif;color:#fff;font-size:38px;line-height:1;letter-spacing:1px}.mbody{padding:22px}.quote{position:relative;margin:0 0 18px;padding:16px 18px 16px 22px;color:#fff;background:linear-gradient(90deg,rgba(255,43,61,.16),rgba(50,216,255,.06));border-left:4px solid var(--red);font-family:Roboto Slab,Georgia,serif;font-size:16px}.quote cite{display:block;margin-top:10px;color:var(--cyan);font-family:Bebas Neue,Inter,sans-serif;font-style:normal;font-size:16px;letter-spacing:2px;text-transform:uppercase}.rbox{border:1px solid rgba(255,43,61,.34);background:rgba(6,8,18,.78);padding:18px;margin-top:16px}.rbar{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.terrain{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:14px}.terrain .box{border-left:4px solid var(--green)}
+.maptop{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;padding:9px 14px;background:rgba(5,9,18,.8);border-top:1px solid rgba(120,150,210,.22);border-bottom:1px solid rgba(120,150,210,.22);color:var(--amber);font-family:Bebas Neue,Inter,sans-serif;text-transform:uppercase;letter-spacing:2px;font-size:15px}.map{display:block;width:100%;background:#05060d;border-bottom:1px solid rgba(120,150,210,.22)}
+.mission p:has(.map){margin:0}
+.villain{position:relative;overflow:hidden;padding:30px;margin:44px 0;border-color:rgba(130,100,255,.42);background:radial-gradient(circle at 85% 18%,rgba(130,100,255,.24),transparent 34%),linear-gradient(135deg,rgba(42,10,38,.82),rgba(6,8,18,.98))}.villain:after{content:'MIND FLAYER';position:absolute;right:16px;top:6px;color:rgba(255,255,255,.06);font-family:Bebas Neue,sans-serif;font-size:76px;letter-spacing:5px}.villain .name{font-size:54px;color:#fff;text-shadow:0 0 18px rgba(130,100,255,.8),0 0 42px rgba(255,43,61,.35)}.villain p{max-width:780px;color:var(--soft)}.ending{text-align:center;padding:34px;margin:42px 0;background:radial-gradient(circle at 50% 0%,rgba(255,43,61,.15),transparent 42%),linear-gradient(160deg,rgba(17,26,48,.9),rgba(6,8,18,.98))}.ending h3{font-family:Bebas Neue,Inter,sans-serif;font-size:46px;letter-spacing:2px;line-height:1;color:#fff;text-shadow:0 0 22px rgba(255,43,61,.5)}
+@media print{body{background:#fff;color:#111}.wrap{max-width:none}.cover,.card,.panel,.mission,.villain,.ending{box-shadow:none;break-inside:avoid}.cover{break-after:page}}
+@media(max-width:680px){.wrap{padding:12px}.cover{min-height:430px;padding:48px 16px}.cover:after{font-size:54px}.intro{font-size:16px;padding:14px}.mbar{width:40px}.mbody{padding:16px}.panel{padding:18px}.mission{margin-left:-4px;margin-right:-4px}.mtitle{font-size:31px}}
+</style>
+</head>
+<body><main class="wrap">
+<!--
+Traducció al valencià de la campanya TMNT per a Pulp Alley a partir del PDF
+NinjaTurtlesPA_Expansion.pdf proporcionat localment per l'usuari.
+Les cartes de perfil i taules gràfiques del PDF original s'han de consultar al PDF.
+-->
+<header class="cover">
+<div class="label">
+<p>Pulp Alley - TMNT - Traducció al valencià</p>
+</div>
+<h1 id="tortugues-ninja">Tortugues Ninja</h1>
+<div class="subtitle">
+<p>Campanya en tres actes: mutagen, màquina i Kraang</p>
+</div>
+<div class="intro">
+<p>Benvinguts a Nova York, casa de les Tortugues Ninja Adolescents
+Mutants: Leonardo, Raphael, Donatello i Michelangelo. Els quatre germans
+lluiten una batalla constant contra amenaces de l'espai exterior, el
+malvat Clan del Peu i el seu líder Shredder.</p>
+</div>
+<div class="tags">
+<p><span class="tag">Pulp Alley</span> <span class="tag">TMNT</span>
+<span class="tag">3 actes</span> <span class="tag">9 escenaris</span>
+<span class="tag">Mutagen</span> <span class="tag">Kraang</span></p>
+</div>
+</header>
+<section id="introducció" class="panel">
+<h3>Introducció</h3>
+<p>La campanya TMNT està pensada per jugar-se amb totes les regles i
+personatges d'este llibre. És possible jugar-la amb una altra lliga
+pròpia, però llavors ja no serà una campanya TMNT pura.</p>
+<p>Abans d'arribar a la campanya, el PDF original inclou personatges i
+bandes noves. Estes bandes i personatges s'usen durant la campanya TMNT,
+però també poden entrar en altres partides de Pulp Alley.</p>
+</section>
+<section id="què-necessiteu" class="panel">
+<h3>Què necessiteu</h3>
+<div class="cols">
+<section id="material-de-joc" class="box">
+<h4>Material de joc</h4>
+<ul>
+<li>El reglament de Pulp Alley.</li>
+<li>Pulp Leagues.</li>
+<li>Baralla Fortune.</li>
+<li>Cartes de personatge TMNT incloses al PDF original.</li>
+<li>Daus i cinta mètrica.</li>
+<li>Miniatures per representar les tortugues, aliats i enemics.</li>
+<li>Terreny per a una zona d'uns <strong>3' x 3'</strong>.</li>
+<li>Un oponent.</li>
+</ul>
+</section>
+<section id="marcadors-especials" class="box scale">
+<h4>Marcadors especials</h4>
+<p>Alguns escenaris inclouen terreny especial, criatures mutants o
+alienígenes. Necessitareu marcadors, comptadors o miniatures per
+representar-los a la taula.</p>
+</section>
+<section id="estructura" class="box print">
+<h4>Estructura</h4>
+<p>La campanya es divideix en tres actes, com un episodi, còmic o
+pel·lícula de les Tortugues Ninja. En els actes I i III, els escenaris
+es juguen en ordre. En l'acte II, el resultat d'alguns escenaris
+decideix quin escenari es juga després.</p>
+</section>
+</div>
+</section>
+<section id="les-tortugues" class="panel">
+<h3>Les Tortugues</h3>
+<p>La primera i més important banda de la campanya són les Tortugues
+Ninja: Leonardo, Raphael, Donatello i Michelangelo.</p>
+<div class="cols">
+<section id="els-quatre-germans" class="box">
+<h4>Els quatre germans</h4>
+<ul>
+<li><strong>Leonardo:</strong> el líder.</li>
+<li><strong>Raphael:</strong> la força.</li>
+<li><strong>Donatello:</strong> l'inventor.</li>
+<li><strong>Michelangelo:</strong> el col·lega.</li>
+</ul>
+</section>
+<section id="perk-de-rerefons" class="box scale">
+<h4>Perk de rerefons</h4>
+<p>Les Tortugues tenen la perk de rerefons <strong>League of
+Legends</strong>.</p>
+<ul>
+<li><strong>Slots:</strong> 10.</li>
+<li><strong>Descripció:</strong> la lliga inclou 4 Sidekicks. Un
+Sidekick fa el paper de Leader: Leonardo.</li>
+</ul>
+</section>
+<section id="cartes-de-perfil" class="box print">
+<h4>Cartes de perfil</h4>
+<p>Les cartes exactes dels quatre germans estan al PDF original. Per
+jugar, convé copiar-les o imprimir-les.</p>
+</section>
+</div>
+</section>
+<section id="el-clan-del-peu" class="panel">
+<h3>El Clan del Peu</h3>
+<p>L'arxienemic de les tortugues és el poderós Shredder i el seu Clan
+del Peu.</p>
+<div class="cols">
+<section id="banda" class="box">
+<h4>Banda</h4>
+<ul>
+<li>Shredder.</li>
+<li>Bebop.</li>
+<li>Rocksteady.</li>
+<li>3 soldats ninja.</li>
+<li>2 grups de Mousers.</li>
+</ul>
+</section>
+<section id="perk-de-rerefons-1" class="box scale">
+<h4>Perk de rerefons</h4>
+<p>El Clan del Peu, amb Shredder com a líder, té <strong>Company of
+Heroes</strong>.</p>
+<ul>
+<li><strong>Slots:</strong> 2.</li>
+<li><strong>Descripció:</strong> la lliga pot incloure un segon
+Sidekick. Este Sidekick també costa 3 slots.</li>
+</ul>
+</section>
+<section id="notes" class="box print">
+<h4>Notes</h4>
+<p>Shredder és un senyor de la guerra japonés amb aliats poderosos, com
+Bebop el porc senglar mutant i Rocksteady el rinoceront mutant. Les
+seues cartes exactes estan al PDF original.</p>
+</section>
+</div>
+</section>
+<section id="campanya" class="panel">
+<h3>Campanya</h3>
+<p>Les Tortugues han descobert que el Clan del Peu està reunint grans
+quantitats de llot morat per fabricar mutagen. Els quatre germans han
+d'impedir-ho. Si Shredder aconsegueix prou llot, podrà crear un exèrcit
+de soldats mutants. Un exèrcit de Bebops i Rocksteadys no és precisament
+el que necessita la gent de Nova York.</p>
+</section>
+<section id="plot-points-de-pizza" class="panel">
+<h3>Plot points de pizza</h3>
+<p>Les Tortugues estimen la pizza, especialment Mikey. Algunes partides
+tenen plot points de pizza.</p>
+<div class="cols">
+<section id="com-funcionen" class="box">
+<h4>Com funcionen</h4>
+<ul>
+<li>Compten com a plot points normals per a totes les bandes.</li>
+<li>Les Tortugues reben la recompensa normal.</li>
+<li>A més, guanyen una porció de pizza si controlen el plot point de
+pizza.</li>
+<li>Amb 4 porcions, poden gastar-les per fer <strong>1 reroll</strong>
+en qualsevol partida.</li>
+<li>Poden acumular porcions per més rerolls: 8 porcions donen 2 rerolls,
+etc.</li>
+</ul>
+</section>
+<section id="si-mikey-controla-la-pizza" class="box scale">
+<h4>Si Mikey controla la pizza</h4>
+<p>Tireu 1d6:</p>
+<ul>
+<li><strong>1-3:</strong> les Tortugues guanyen 1 porció.</li>
+<li><strong>4-6:</strong> les Tortugues guanyen 2 porcions.</li>
+</ul>
+<p>Màxim: 1 reroll gastat per partida.</p>
+</section>
+<section id="missatges-misteriosos" class="box print">
+<h4>Missatges misteriosos</h4>
+<p>Mentre continua la carrera pel llot morat, les Tortugues reben
+missatges estranys i misteriosos. Amb ordinadors extraviats i l'ajuda
+d'April O'Neil, descobreixen que Shredder no està recollint mutagen
+només per a ell.</p>
+</section>
+</div>
+</section>
+<section id="mr.-k-april-i-baxter" class="panel">
+<h3>Mr. K, April i Baxter</h3>
+<div class="cols">
+<section id="mr.-k" class="box">
+<h4>Mr. K</h4>
+<p>El misteriós Mr. K controla cada moviment del Clan del Peu. Sap coses
+sobre Leonardo, Donatello, Raphael, Michelangelo i fins i tot el mestre
+Splinter. És un nou vilà perillós? Algú que fins i tot el poderós
+Shredder tem?</p>
+</section>
+<section id="april-oneil" class="box scale">
+<h4>April O'Neil</h4>
+<p>April serà un plot point, sovint major, en alguns escenaris. Segons
+el resultat, les Tortugues o el Clan del Peu podran usar April en la
+seua banda. La seua carta de perfil està al final del PDF original.</p>
+</section>
+<section id="baxter-stockman" class="box print">
+<h4>Baxter Stockman</h4>
+<p>El Clan del Peu comença amb 2 Sidekicks: Bebop i Rocksteady. Quan
+comença l'Acte II, el Clan del Peu pot arribar a triar entre 3
+Sidekicks: Bebop, Rocksteady i el Dr. Stockman. Alguns resultats
+permeten tindre els 3.</p>
+</section>
+</div>
+</section>
+<section id="marcadors-de-claveguera" class="panel">
+<h3>Marcadors de claveguera</h3>
+<p>Les Tortugues viuen a les clavegueres de Nova York amb el mestre
+Splinter. El Clan del Peu tampoc és alié a moure's per les clavegueres
+per vigilar els carrers sense ser vist.</p>
+<div class="cols">
+<section id="quan-susen" class="box">
+<h4>Quan s'usen</h4>
+<p>Si un escenari té la regla especial <strong>Sewer markers</strong>,
+cada jugador pot col·locar 2 marcadors de claveguera a la taula.</p>
+</section>
+<section id="collocació" class="box scale">
+<h4>Col·locació</h4>
+<ul>
+<li>Cap marcador pot estar a menys de 8" d'un altre marcador de
+claveguera.</li>
+<li>Els jugadors alternen la col·locació.</li>
+</ul>
+</section>
+<section id="moviment" class="box print">
+<h4>Moviment</h4>
+<ul>
+<li>Un model pot entrar en un marcador si acaba el moviment sobre ell i
+no està en contacte base amb un enemic.</li>
+<li>No pot disparar en el torn en què entra a la claveguera.</li>
+<li>En la següent activació, pot eixir per qualsevol marcador
+lliure.</li>
+<li>Un marcador és lliure si no hi ha cap model en contacte amb
+ell.</li>
+</ul>
+</section>
+</div>
+</section>
+<section id="ambientacions-alternatives" class="panel">
+<h3>Ambientacions alternatives</h3>
+<p>El PDF proposa usar esta estructura amb altres bandes.</p>
+<div class="cols">
+<section id="gotham-city" class="box">
+<h4>Gotham City</h4>
+<p>Batman, Robin, Batgirl i Nightwing persegueixen el Joker i els seus
+sequaços. El Joker ha aconseguit una gran quantitat de químics ACE i vol
+usar-los en un pla terrible. Els marcadors de pizza poden convertir-se
+en pistes: amb 4 pistes, la Bat-família guanya 1 reroll.</p>
+</section>
+<section id="harry-potter" class="box scale">
+<h4>Harry Potter</h4>
+<p>Draco Malfoy intenta introduir materials màgics de broma a Hogwarts.
+Harry i els seus amics han d'impedir-ho mentre descobreixen que
+Qui-tu-saps intenta controlar Hogwarts a través de Draco. Les
+clavegueres poden ser escales màgiques; les pizzes, llibres o proves
+O.W.L.S.</p>
+</section>
+<section id="spy-fi-i-ciència-ficció" class="box print">
+<h4>Spy-Fi i ciència-ficció</h4>
+<p>En Spy-Fi, el superespia 008 descobreix que un magnat rus del petroli
+recull un oli estrany per a una màquina del judici final. En
+ciència-ficció, un grup de renegats lluita contra un senyor de la guerra
+controlat per un amo alienígena. Les clavegueres poden ser entrades
+secretes o portals.</p>
+</section>
+</div>
+</section>
+<section id="acte-i-mutagen" class="panel">
+<h3>Acte I: Mutagen</h3>
+<p>En l'Acte I tot gira al voltant del mutagen. El Clan del Peu
+necessita recollir-lo i les Tortugues han d'impedir-ho.</p>
+<div class="cols">
+<section id="plot-points-de-mutagen" class="box">
+<h4>Plot points de mutagen</h4>
+<ul>
+<li>Si les Tortugues controlen un plot point de mutagen, compta com un
+plot point normal amb recompensa normal.</li>
+<li>Han arribat abans que el Clan del Peu.</li>
+</ul>
+</section>
+<section id="si-el-clan-del-peu-controla-mutagen" class="box scale">
+<h4>Si el Clan del Peu controla mutagen</h4>
+<ul>
+<li>Rep la recompensa normal.</li>
+<li>A més, tira per unitats de mutagen.</li>
+<li><strong>Plot point major:</strong> +1d12 unitats.</li>
+<li><strong>Plot point menor:</strong> +1d10 unitats.</li>
+</ul>
+</section>
+<section id="pas-a-lacte-ii" class="box print">
+<h4>Pas a l'Acte II</h4>
+<p>Els escenaris de l'Acte I solen jugar-se en ordre. Si el Clan del Peu
+aconsegueix més de <strong>35 unitats de mutagen</strong>, comenceu
+automàticament l'Acte II. Si les Tortugues recullen els 5 missatges
+misteriosos de Mr. K, obtindran una bonificació en l'Acte III.</p>
+</section>
+</div>
+</section>
+<section id="escenari-1-caos-al-port" class="panel">
+<h2>Escenari 1: Caos al port</h2>
+<p>El Clan del Peu va darrere d'un carregament de mutagen trobat als
+molls de Nova York. Les Tortugues han d'aturar-lo entre contenidors,
+grues i materials industrials.</p>
+<div class="cols">
+<section id="regles-especials" class="box">
+<h4>Regles especials</h4>
+<ul>
+<li>Marcadors de claveguera.</li>
+<li>Plot points de pizza.</li>
+<li>Plot points de mutagen.</li>
+</ul>
+</section>
+<section id="plot-points" class="box scale">
+<h4>Plot points</h4>
+<ul>
+<li><strong>Carregament gran de mutagen:</strong> plot point major al
+centre. És extremadament perillós perquè un recipient està danyat i el
+mutagen sense refinar s'escampa.</li>
+<li><strong>Pizza:</strong> plot point normal, amb porcions per a les
+Tortugues.</li>
+<li><strong>2 carregaments menuts:</strong> un col·locat pel Clan del
+Peu i un per les Tortugues.</li>
+<li><strong>Ordinador:</strong> tauleta del Clan del Peu amb un correu
+misteriós de Mr. K donant ordres a Shredder.</li>
+</ul>
+</section>
+<section id="perills-comuns" class="box print">
+<h4>Perills comuns</h4>
+<p>Piles de barrils, barres metàl·liques, cadenes de grua i trampes
+oblidades per Bebop i Rocksteady.</p>
+</section>
+</div>
+<section id="preparació" class="box">
+<h4>Preparació</h4>
+<ul>
+<li>Taula de <strong>3' x 3'</strong>.</li>
+<li>Col·loqueu de 7 a 12 peces de terreny: 1d6+6.</li>
+<li>Els contenidors haurien d'estar sobretot al centre.</li>
+<li>El plot point major va al centre.</li>
+<li>Els jugadors alternen els altres 4 marcadors; cap a menys de 6" d'un
+altre marcador o de la vora.</li>
+<li>Cada jugador col·loca 2 marcadors de claveguera, cap a menys de 8"
+d'un altre.</li>
+<li>Desplegament en vores oposades, a 6" de la pròpia vora i a més de 6"
+de plot points o enemics.</li>
+<li>Límit: 6 torns. Després arriba la policia.</li>
+</ul>
+</section>
+<section id="recompenses-i-després" class="box scale">
+<h4>Recompenses i després</h4>
+<p>El Clan del Peu guanya unitats de mutagen pels plot points de mutagen
+que controle. Si arriba a 35 o més, comença l'Acte II. Qui controle el
+plot point major serà el defensor en el següent escenari.</p>
+</section>
+</section>
+<section id="escenari-2-obriu-lo" class="panel">
+<h2>Escenari 2: Obriu-lo!</h2>
+<p>La carrera continua. El gran carregament està dins d'un contenidor
+tancat. Una banda el controla, però encara ha d'obrir-lo.</p>
+<div class="cols">
+<section id="regles-especials-1" class="box">
+<h4>Regles especials</h4>
+<ul>
+<li>Marcadors de claveguera.</li>
+<li>Plot points de pizza.</li>
+<li>Plot points de mutagen.</li>
+</ul>
+</section>
+<section id="plot-points-1" class="box scale">
+<h4>Plot points</h4>
+<ul>
+<li><strong>Carregament gran:</strong> plot point major.</li>
+<li><strong>Ordinador:</strong> tauleta protegida. Abans d'intentar-lo,
+cal fer 2 èxits amb Cunning.</li>
+<li><strong>Pizza.</strong></li>
+<li><strong>2 carregaments menuts de mutagen.</strong></li>
+</ul>
+</section>
+<section id="major-especial" class="box print">
+<h4>Major especial</h4>
+<p>Només el líder defensor pot completar/controlar el plot point major.
+Ha de completar <strong>tres challenges aleatoris</strong> en el mateix
+plot point, com a mínim en 3 accions i 3 torns diferents.</p>
+</section>
+</div>
+<section id="preparació-1" class="box">
+<h4>Preparació</h4>
+<ul>
+<li>Taula de <strong>3' x 3'</strong>.</li>
+<li>7 a 12 peces de terreny, preferiblement prop dels molls de
+l'escenari 1.</li>
+<li>Plot point major al centre.</li>
+<li>Si ningú controlava el major en l'escenari 1, qui té iniciativa tria
+atacant o defensor.</li>
+<li>El defensor desplega a 6" del major, però no a 6" d'altres plot
+points.</li>
+<li>L'atacant desplega a 6" de qualsevol vora, però no a 6" d'un plot
+point.</li>
+<li>Límit: 6 torns.</li>
+</ul>
+</section>
+<section id="recompenses-i-després-1" class="box scale">
+<h4>Recompenses i després</h4>
+<p>El Clan del Peu guanya mutagen pels plot points controlats. Si el
+major queda sense controlar al final, l'atacant rep la recompensa. April
+O'Neil ha trobat notícies sobre el mutagen i tots dos bàndols volen la
+informació.</p>
+</section>
+</section>
+<section id="escenari-3-linforme-doneil" class="panel">
+<h2>Escenari 3: L'informe d'O'Neil</h2>
+<p>April O'Neil ha seguit la carrera del mutagen per la ciutat i ha
+trobat una informació crucial. El Clan del Peu també ho sap.</p>
+<div class="cols">
+<section id="regles-especials-2" class="box">
+<h4>Regles especials</h4>
+<ul>
+<li>Marcadors de claveguera.</li>
+<li>Plot points de pizza.</li>
+<li>Plot points de mutagen.</li>
+</ul>
+</section>
+<section id="plot-points-2" class="box scale">
+<h4>Plot points</h4>
+<ul>
+<li><strong>April O'Neil:</strong> plot point major. Intentar-lo és
+extremadament perillós; de nit no distingeix ninjas de Tortugues
+Ninja.</li>
+<li><strong>Furgoneta de Channel 6:</strong> plot point. Si està a 12"
+d'April, intentar-lo és extremadament perillós. Al final de cada torn es
+mou 6" cap a April.</li>
+<li><strong>Pizza.</strong></li>
+<li><strong>2 carregaments menuts de mutagen.</strong></li>
+</ul>
+</section>
+<section id="perills-comuns-1" class="box print">
+<h4>Perills comuns</h4>
+<p>Cotxes accidentats, obres, corredors de carrer massa ràpids i
+contenidors amb animals dins.</p>
+</section>
+</div>
+<section id="preparació-2" class="box">
+<h4>Preparació</h4>
+<ul>
+<li>Taula de <strong>3' x 3'</strong>.</li>
+<li>7 a 12 peces de terreny.</li>
+<li>April comença al centre.</li>
+<li>Els altres 4 marcadors es col·loquen alternant; cap a menys de 6"
+d'un altre marcador o de la vora.</li>
+<li>Desplegament altern: els jugadors col·loquen un personatge cada
+vegada. Cap pot desplegar a 6" d'un plot point o enemic.</li>
+<li>Límit: 6 torns. Després arriba Channel 6.</li>
+</ul>
+</section>
+<section id="recompenses-i-després-2" class="box scale">
+<h4>Recompenses i després</h4>
+<p>Qui controle April podrà afegir-la en el següent escenari. April ha
+descobert que un gran carregament arriba a Nova York per ordre d'un
+misteriós Mr. K.</p>
+</section>
+</section>
+<section id="escenari-4-transport-de-mutagen" class="panel">
+<h2>Escenari 4: Transport de mutagen</h2>
+<p>El transport de mutagen entra a la ciutat. April guia tots dos
+bàndols al lloc per on arribarà. Podran les Tortugues apoderar-se del
+camió abans que Shredder?</p>
+<div class="cols">
+<section id="regles-especials-3" class="box">
+<h4>Regles especials</h4>
+<ul>
+<li>Plot points de pizza.</li>
+<li>Plot points de mutagen.</li>
+</ul>
+</section>
+<section id="plot-points-3" class="box scale">
+<h4>Plot points</h4>
+<ul>
+<li><strong>Camió de mutagen:</strong> plot point major. Es mou per la
+taula i no s'atura. Intentar-lo és extremadament perillós en un radi de
+3".</li>
+<li><strong>Cons de trànsit:</strong> plot point. Poden usar-se per
+bloquejar o canviar el camí del camió.</li>
+<li><strong>Ordinador:</strong> tauleta amb correu de Mr. K; cal hacking
+amb 2 èxits de Cunning i és molt segura.</li>
+<li><strong>Pizza.</strong></li>
+<li><strong>Carregaments menuts de mutagen.</strong></li>
+</ul>
+</section>
+<section id="moviment-del-camió" class="box print">
+<h4>Moviment del camió</h4>
+<p>El camió entra al torn 1 després que tots els models hagen activat.
+Mou 6" seguint la carretera i marques. Si toca escenografia, s'estavella
+i s'atura. Models en contacte o al camí reben un atac de Brawl de 3d12 i
+només poden usar Dodge.</p>
+</section>
+</div>
+<section id="preparació-3" class="box">
+<h4>Preparació</h4>
+<ul>
+<li>Taula de <strong>3' x 3'</strong> amb una intersecció en T.</li>
+<li>4 a 9 peces de terreny: 1d6+3.</li>
+<li>El camió entra per una vora de carretera.</li>
+<li>Els altres 4 marcadors es col·loquen com normalment.</li>
+<li>Desplegament altern de personatges, sense estar a 6" de plot points,
+enemics o la vora d'entrada del camió.</li>
+<li>Límit: 6 torns o fins que el camió ix/queda accidentat.</li>
+</ul>
+</section>
+<section id="recompenses-i-després-3" class="box scale">
+<h4>Recompenses i després</h4>
+<p>El Clan del Peu guanya mutagen pels plot points controlats. L'Acte II
+comença igualment, encara que el Clan no tinga 35 unitats: la màquina de
+mutagen serà extremadament perillosa.</p>
+</section>
+</section>
+<section id="acte-ii-la-màquina" class="panel">
+<h3>Acte II: La màquina</h3>
+<p>A diferència de l'Acte I, l'Acte II comença amb <strong>La màquina de
+mutagen</strong> i continua amb <strong>El dilema</strong>. El resultat
+d'El dilema decideix quin escenari ve després. <strong>Slash!!</strong>
+sempre es jugarà, però pot canviar segons els resultats previs.</p>
+</section>
+<section id="plot-points-comuns-de-lacte-ii" class="panel">
+<h3>Plot points comuns de l'Acte II</h3>
+<div class="cols">
+<section id="ordinador-amb-trampa" class="box">
+<h4>Ordinador amb trampa</h4>
+<p>Shredder ha posat trampes als seus dispositius després de diversos
+hackejos.</p>
+<ul>
+<li>Primer calen 2 èxits amb Cunning.</li>
+<li>Intentar-lo és extremadament perillós.</li>
+</ul>
+</section>
+<section id="residus-de-mutagen" class="box scale">
+<h4>Residus de mutagen</h4>
+<p>El mutagen recollit en l'Acte I es refina i deixa residus per la
+ciutat. Si un personatge acaba un escenari amb residus de mutagen, pot
+tirar 1d6:</p>
+<ul>
+<li><strong>1:</strong> malaltia; falla automàticament les tirades de
+recuperació del següent escenari.</li>
+<li><strong>2:</strong> enganxós; no pot córrer en el següent
+escenari.</li>
+<li><strong>3:</strong> sense efecte.</li>
+<li><strong>4:</strong> mutació curativa; passa la primera recuperació
+del següent escenari.</li>
+<li><strong>5:</strong> mutació cerebral; passa el primer challenge 2
+del següent escenari.</li>
+<li><strong>6:</strong> poder mutant; una habilitat aleatòria puja un
+tipus de dau en el següent escenari.</li>
+</ul>
+</section>
+<section id="missatges-de-mr.-k" class="box print">
+<h4>Missatges de Mr. K</h4>
+<p>En l'Acte I es podien aconseguir 3 missatges. En l'Acte II es poden
+aconseguir 2 més, i pot haver-hi oportunitats extra si es juga Rescat o
+Lluites. Si les Tortugues aconsegueixen els 5 missatges, reben una
+bonificació en l'Acte III.</p>
+</section>
+</div>
+</section>
+<section id="escenari-5-la-màquina-de-mutagen" class="panel">
+<h2>Escenari 5: La màquina de mutagen</h2>
+<p>El mutagen ha de destil·lar-se i preparar-se per als plans de
+Shredder. El Clan del Peu busca les peces de la màquina i, sobretot,
+Baxter Stockman. Les Tortugues volen impedir-ho.</p>
+<div class="cols">
+<section id="regles-especials-4" class="box">
+<h4>Regles especials</h4>
+<ul>
+<li>Plot points de pizza.</li>
+<li>Ordinador amb trampa.</li>
+<li><strong>Search:</strong> quan es captura un plot point, el jugador
+col·loca immediatament un marcador no descobert.</li>
+<li>El major no pot col·locar-se fins que la lliga controle dos altres
+plot points.</li>
+</ul>
+</section>
+<section id="plot-points-4" class="box scale">
+<h4>Plot points</h4>
+<ul>
+<li><strong>3 peces de la màquina de mutagen:</strong> plot points.</li>
+<li><strong>Ordinador amb trampa.</strong></li>
+<li><strong>Baxter Stockman:</strong> plot point major. Intentar-lo és
+extremadament perillós; esquiveu tornavisos i tentacles de mosca.</li>
+</ul>
+</section>
+<section id="preparació-4" class="box print">
+<h4>Preparació</h4>
+<ul>
+<li>Taula de <strong>3' x 3'</strong>.</li>
+<li>7 a 12 peces de terreny.</li>
+<li>Cada jugador col·loca només un marcador menor al principi.</li>
+<li>El primer marcador ha d'estar a 12" d'una cantonada; el segon a 12"
+de la cantonada oposada.</li>
+<li>Desplegament en cantonades oposades, a 12" de la pròpia cantonada i
+a més de 6" de plot points.</li>
+<li>Límit: 6 torns.</li>
+</ul>
+</section>
+</div>
+<section id="recompenses-i-després-4" class="box">
+<h4>Recompenses i després</h4>
+<p>Si el Clan del Peu guanya, pot triar Sidekick entre Bebop o
+Rocksteady. Si guanyen les Tortugues, elles trien quin Sidekick tindrà
+el Clan. Shredder té la màquina quasi funcionant, però April ha
+aparegut.</p>
+</section>
+</section>
+<section id="escenari-6-el-dilema" class="panel">
+<h2>Escenari 6: El dilema</h2>
+<p>Shredder té Baxter Stockman treballant en la màquina, però April
+O'Neil ha sigut capturada mentre investigava. Les Tortugues han de
+triar: salvar April o impedir que la màquina s'engegue.</p>
+<div class="cols">
+<section id="dilema" class="box">
+<h4>Dilema</h4>
+<p>Hi ha 2 plot points majors. Cada jugador tria en secret quin vol
+intentar. El que no trie no estarà disponible per a ell.</p>
+<ul>
+<li><strong>April O'Neil:</strong> plot point major. Intentar-lo és
+extremadament perillós.</li>
+<li><strong>Màquina de mutagen:</strong> plot point major. Productes
+químics volàtils la fan extremadament perillosa.</li>
+</ul>
+</section>
+<section id="altres-plot-points" class="box scale">
+<h4>Altres plot points</h4>
+<ul>
+<li>Pizza.</li>
+<li>1 prova que Shredder muta humans en híbrids home/bèstia.</li>
+<li>Mestre Splinter com a plot point.</li>
+<li>Ordinador amb trampa.</li>
+<li>Residus de mutagen.</li>
+</ul>
+</section>
+<section id="preparació-5" class="box print">
+<h4>Preparació</h4>
+<ul>
+<li>Taula de <strong>3' x 3'</strong>, preferiblement laboratori.</li>
+<li>7 a 12 peces de terreny.</li>
+<li>Els dos majors es col·loquen al centre, a 6" o menys entre
+ells.</li>
+<li>Els altres 4 marcadors es col·loquen normalment.</li>
+<li>Desplegament en vores oposades, a 6" de la vora i a més de 6" de
+plot points o enemics.</li>
+<li>Límit: 6 torns. Després la màquina comença a refinar el llot
+morat.</li>
+</ul>
+</section>
+</div>
+<section id="després-del-dilema" class="box">
+<h4>Després del dilema</h4>
+<ul>
+<li>Si el Clan del Peu controla la màquina, el següent escenari és
+<strong>Slash!</strong></li>
+<li>Si el Clan del Peu no controla cap major, el següent és
+<strong>Lluites</strong>, amb el Clan com a defensor.</li>
+<li>Si les Tortugues controlen la màquina, alguna cosa va terriblement
+malament perquè Mikey deixa caure pizza dins. Tireu 1d6 en la taula de
+mal funcionament del PDF original; pot provocar canvi de cossos,
+ferides, fum, o permetre també salvar April.</li>
+<li>Si el Clan controla April, el següent escenari és
+<strong>Rescat</strong>, amb el Clan com a captor.</li>
+</ul>
+</section>
+</section>
+<section id="escenari-7.1-rescat" class="panel">
+<h2>Escenari 7.1: Rescat</h2>
+<p>Els ninjas del Clan del Peu han capturat April O'Neil. Shredder vol
+acabar amb ella d'una vegada per totes. Les Tortugues intenten salvar la
+seua amiga.</p>
+<div class="cols">
+<section id="regles-especials-5" class="box">
+<h4>Regles especials</h4>
+<ul>
+<li>Marcadors de claveguera.</li>
+<li>April O'Neil és el plot point major.</li>
+<li>Tireu 1d6 per saber com Shredder vol eliminar April:
+<ul>
+<li><strong>1-2:</strong> raig làser; el perill compta com un Burst de
+3".</li>
+<li><strong>3-4:</strong> bany de llot sense refinar; extremadament
+perillós.</li>
+<li><strong>5:</strong> mort japonesa d'aigua; l'àrea a 6" és
+perillosa.</li>
+<li><strong>6:</strong> Shredder ho farà ell mateix; sense regla
+especial.</li>
+</ul></li>
+</ul>
+</section>
+<section id="altres-plot-points-1" class="box scale">
+<h4>Altres plot points</h4>
+<ul>
+<li>2 residus de mutagen.</li>
+<li>Dron de seguretat: extremadament perillós; si es falla, el
+personatge és llançat 2d6" en direcció aleatòria.</li>
+<li>Mestre Splinter: l'àrea a 6" és extremadament perillosa; si es
+completa abans del torn 4, podeu sumar o restar 1 torn a la duració de
+l'escenari.</li>
+</ul>
+</section>
+<section id="preparació-6" class="box print">
+<h4>Preparació</h4>
+<ul>
+<li>Taula de <strong>3' x 3'</strong> al cau de Shredder: temple,
+edifici, jardí de monestir, etc.</li>
+<li>7 a 12 peces de terreny.</li>
+<li>April al centre.</li>
+<li>Els altres marcadors es col·loquen normalment.</li>
+<li>Desplegament per vores, a 3" de la pròpia vora i a més de 6" de plot
+points o enemics.</li>
+<li>Límit: 6 torns.</li>
+</ul>
+</section>
+</div>
+<section id="recompenses-i-després-5" class="box">
+<h4>Recompenses i després</h4>
+<p>Si les Tortugues controlen April, el Clan serà defensor en
+<strong>Lluites</strong>, April ajudarà a derrotar Shredder i les
+Tortugues triaran 2 Sidekicks per al Clan. Si el Clan controla April,
+les Tortugues seran defensores i podran triar 2 dels 3 Sidekicks.</p>
+</section>
+</section>
+<section id="escenari-7.2-lluites" class="panel">
+<h2>Escenari 7.2: Lluites</h2>
+<p>La trampa de Splinter s'ha activat. La captura d'April era una
+maniobra per atrapar Leonardo. O potser la trampa ix malament i Shredder
+queda aïllat.</p>
+<div class="cols">
+<section id="regles-especials-6" class="box">
+<h4>Regles especials</h4>
+<ul>
+<li>Marcadors de claveguera.</li>
+<li>Plot points de pizza.</li>
+<li>Residus de mutagen.</li>
+<li>Els plot points es col·loquen després del desplegament.</li>
+</ul>
+</section>
+<section id="plot-points-5" class="box scale">
+<h4>Plot points</h4>
+<ul>
+<li><strong>Líder defensor:</strong> plot point major. Shredder o
+Leonardo queda aïllat. Si queda Down, un altre personatge pot intentar
+capturar-lo com un plot point normal.</li>
+<li><strong>Pizza.</strong></li>
+<li><strong>2 residus de mutagen.</strong></li>
+<li><strong>Prova de Mr. K:</strong> evidència sobre què o qui és Mr. K;
+compta com a missatge de Mr. K.</li>
+</ul>
+</section>
+<section id="preparació-7" class="box print">
+<h4>Preparació</h4>
+<ul>
+<li>Taula de <strong>3' x 3'</strong> dins del cau de Shredder.</li>
+<li>7 a 12 peces de terreny.</li>
+<li>Primer es desplega el líder defensor a 6" d'una cantonada.</li>
+<li>La resta de la seua lliga desplega a 12" de la cantonada
+oposada.</li>
+<li>Els atacants despleguen a 12", però no a menys d'1" del líder
+enemic.</li>
+<li>Límit: 6 torns.</li>
+</ul>
+</section>
+</div>
+<section id="recompenses-i-després-6" class="box">
+<h4>Recompenses i després</h4>
+<p>Si el líder defensor evita quedar KO o capturat al final, rep la
+recompensa del major. Si no, la rep l'atacant. Al final, Stockman ha
+creat un mutant: <strong>Slash</strong> arriba.</p>
+</section>
+</section>
+<section id="escenari-7.3-slash" class="panel">
+<h2>Escenari 7.3: Slash!!</h2>
+<p>Slash ha sigut creat pel llot. Però, a més, un portal està a punt
+d'obrir-se al carrer. Slash protegeix el portal amb fúria.</p>
+<div class="cols">
+<section id="slash" class="box">
+<h4>Slash</h4>
+<ul>
+<li>Slash és el plot point major.</li>
+<li>Activa al final de cada seqüència d'acció, després de tots.</li>
+<li>Ataca sempre el personatge més proper al portal.</li>
+<li>Si el seu objectiu està a 12" del portal, carrega.</li>
+<li>Si no, dispara.</li>
+<li>No es mou excepte per carregar a un objectiu a 12" del portal.</li>
+</ul>
+</section>
+<section id="aparells-del-portal" class="box scale">
+<h4>Aparells del portal</h4>
+<p>Per obrir el portal, les tres màquines han d'activar-se en el mateix
+torn:</p>
+<ul>
+<li><strong>Màquina de mutagen:</strong> 2 èxits amb Might o
+Finesse.</li>
+<li><strong>Diafragma dimensional:</strong> 2 èxits amb Finesse o
+Cunning.</li>
+<li><strong>Generador de potència:</strong> 2 èxits amb Cunning o
+Might.</li>
+</ul>
+<p>Si no s'activen les tres en el mateix torn, es reinicien al
+començament del següent.</p>
+</section>
+<section id="preparació-8" class="box print">
+<h4>Preparació</h4>
+<ul>
+<li>Taula de <strong>3' x 3'</strong>.</li>
+<li>Portal en una cantonada.</li>
+<li>Slash a 3" directament davant del portal.</li>
+<li>Les màquines a 12" de Slash i a més de 6" entre elles.</li>
+<li>Els jugadors despleguen en les altres tres cantonades, a 6" de la
+pròpia cantonada.</li>
+<li>Límit: 6 torns. Si ningú travessa el portal, l'escenari es
+repeteix.</li>
+</ul>
+</section>
+</div>
+<section id="recompenses-i-després-7" class="box">
+<h4>Recompenses i després</h4>
+<p>La lliga victoriosa pot incloure April en el següent escenari. Si un
+personatge acaba amb recompensa +1 Gear, +1 Contact o +1 Backup, el
+bonus d'habilitat també passa al següent escenari. Si algú deixa KO a
+Slash, guanya +1 XP; si no, els tres personatges que obriren el portal
+roben recompenses.</p>
+</section>
+</section>
+<section id="acte-iii-kraang" class="panel">
+<h3>Acte III: KRAANG!!</h3>
+<p>El misteriós Mr. K és l'amo de la guerra alienígena
+<strong>Kraang</strong>. Ha controlat Slash per impedir que les
+Tortugues arriben a la seua nau: el <strong>Technodrome</strong>.</p>
+<p>El Clan del Peu ha comés un error terrible. El misteriós Mr. K, que
+finançava els plans de Shredder, és en realitat un ésser d'una altra
+dimensió. Les Tortugues i el Clan del Peu han entrat a la nau mare de
+Kraang. Ara tots han d'evitar que el Technodrome arribe a la Terra.</p>
+</section>
+<section id="problemes-alienígenes" class="panel">
+<h3>Problemes alienígenes</h3>
+<p>Els dos escenaris finals poden ser molt difícils.</p>
+<div class="cols">
+<section id="visió-interdimensional" class="box">
+<h4>Visió interdimensional</h4>
+<p>Si un escenari acaba en desastre total, podeu considerar que era una
+visió interdimensional implantada per Kraang per advertir què passarà si
+fracassen. Repetiu l'escenari amb el coneixement obtingut.</p>
+</section>
+<section id="un-planeta-un-tamashii" class="box scale">
+<h4>Un planeta, un tamashii</h4>
+<p>És molt Pulp Alley que dues lligues enemigues s'ajuden de tant en
+tant. Shredder i les Tortugues poden decidir no molestar-se massa fins
+derrotar Kraang. No és una regla: és un acord d'honor.</p>
+</section>
+<section id="beneficis-terrenals" class="box print">
+<h4>Beneficis terrenals</h4>
+<ul>
+<li>Si les Tortugues han trobat 4 missatges secrets de Mr. K, April
+s'uneix a elles per a la resta de la campanya.</li>
+<li>Els rerolls de pizza no gastats poden usar-se en Technodrome.</li>
+<li>Si el Clan del Peu s'ha centrat en la màquina, ha aconseguit 35
+unitats de mutagen en l'Acte I i va triar la màquina en El dilema,
+tindrà els 3 Sidekicks disponibles. Un d'ells baixa el dau de Health un
+tipus.</li>
+</ul>
+</section>
+</div>
+</section>
+<section id="escenari-8-technodrome" class="panel">
+<h2>Escenari 8: Technodrome</h2>
+<p>Kraang dona la benvinguda a Shredder. Ha usat el Clan del Peu per
+portar-li mutagen i, de passada, unes Tortugues per bullir. La nau
+comença a desintegrar-se per travessar el portal cap a la Terra. L'única
+opció és arribar al panell de control.</p>
+<div class="cols">
+<section id="plot-point-major" class="box">
+<h4>Plot point major</h4>
+<p><strong>Panell de control:</strong> està protegit pels tentacles de
+Kraang. Per completar-lo cal superar un challenge amb <strong>3
+èxits</strong> amb Might, Cunning o Finesse. Intentar-lo és
+extremadament perillós.</p>
+</section>
+<section id="esdeveniments-programats" class="box scale">
+<h4>Esdeveniments programats</h4>
+<ul>
+<li><strong>Torn 1:</strong> fragments metàl·lics volen per l'aire. Tots
+els dispars pateixen -1D fins al final.</li>
+<li><strong>Torn 2:</strong> minions robòtics protegeixen Kraang. L'àrea
+a 18" de Kraang és perillosa.</li>
+<li><strong>Torn 3:</strong> grans trossos del Technodrome se separen.
+Col·loqueu 10 peces flotants; l'àrea a 18" de Kraang és extremadament
+perillosa.</li>
+<li><strong>Torn 4:</strong> la capa exterior es desmunta ràpidament.
+Els personatges que continuen a terra han d'intentar pujar a una peça
+flotant o queden fora de joc.</li>
+<li><strong>Torn 5:</strong> algunes peces desapareixen i reapareixen a
+Nova York. Personatges sobre peces que exploten han de superar un perill
+aleatori o queden fora.</li>
+</ul>
+</section>
+<section id="preparació-9" class="box print">
+<h4>Preparació</h4>
+<ul>
+<li>Taula de <strong>3' x 3'</strong> com a nau de ciència-ficció.</li>
+<li>Es col·loquen 11 peces flotants al torn 3: una de 3" sota Kraang i
+deu de 2".</li>
+<li>Només hi ha un plot point: el panell de control.</li>
+<li>Els jugadors trien una de tres zones de desplegament.</li>
+<li>Personatges a més de 24" de Kraang.</li>
+<li>Qui no travessà el portal en l'escenari anterior no desplega fins al
+torn 2.</li>
+</ul>
+</section>
+</div>
+<section id="final-de-lescenari" class="box">
+<h4>Final de l'escenari</h4>
+<p>L'escenari acaba immediatament si es completa el challenge del
+panell. Si no, al final de 6 torns Kraang obri el portal i el
+Technodrome entra en la dimensió de la Terra.</p>
+</section>
+</section>
+<section id="escenari-9-cowabunga" class="panel">
+<h2>Escenari 9: Cowabunga!</h2>
+<p>El portal a la dimensió de Kraang està a punt de tancar-se. Les
+Tortugues han de tornar a la Terra, però Slash ha entrat pel portal sota
+el control mental de Kraang.</p>
+<div class="cols">
+<section id="regles-especials-7" class="box">
+<h4>Regles especials</h4>
+<ul>
+<li>Marcadors de claveguera.</li>
+<li>Plot points de pizza.</li>
+<li>Plot points de mutagen.</li>
+</ul>
+</section>
+<section id="portal" class="box scale">
+<h4>Portal</h4>
+<p>Hi ha 2 plot points principals: el portal per tornar a la Terra i
+Kraang.</p>
+<p>El portal es torna inestable:</p>
+<ul>
+<li><strong>Torn 1:</strong> intentar-lo és extremadament perillós.</li>
+<li><strong>Torn 2:</strong> Slash travessa el portal i el
+protegeix.</li>
+<li><strong>Torn 3:</strong> l'àrea a 6" del portal és perillosa.</li>
+<li><strong>Torn 4:</strong> Kraang comença a tancar-lo; al començament
+de cada torn, amb 5+ en 1d6 el portal es tanca i qui no haja passat
+queda atrapat.</li>
+</ul>
+</section>
+<section id="kraang-i-slash" class="box print">
+<h4>Kraang i Slash</h4>
+<ul>
+<li><strong>Kraang:</strong> plot point. Intentar-lo és extremadament
+perillós. Si cau, Slash deixa de protegir el portal i torna a Nova
+York.</li>
+<li><strong>Slash:</strong> usa el perfil del PDF original. Activa al
+final de cada seqüència. Ataca el personatge més proper al portal,
+carrega si està a 12", i només es mou per carregar prop del portal. Com
+que va quedar ferit, el seu dau de Health baixa un tipus.</li>
+</ul>
+</section>
+</div>
+<section id="preparació-10" class="box">
+<h4>Preparació</h4>
+<ul>
+<li>Taula de <strong>3' x 3'</strong> al Technodrome trencat.</li>
+<li>El portal es posa al centre d'una vora.</li>
+<li>Kraang es posa al centre de la taula.</li>
+<li>Cada jugador desplega en una de les dues cantonades oposades al
+portal, a 6" de la cantonada.</li>
+<li>Límit: 6 torns, però el portal pot tancar-se abans a partir del torn
+4.</li>
+</ul>
+</section>
+<section id="recompenses" class="box scale">
+<h4>Recompenses</h4>
+<p>Es recullen recompenses normals per Kraang. Quan un personatge fereix
+Slash, rep una Reward card aleatòria. Es poden guanyar fins a 4
+recompenses així. Després, passeu al final de campanya.</p>
+</section>
+</section>
+<section id="el-final" class="ending">
+<h3>El final</h3>
+<p>Amb un soroll enorme, les Tortugues cauen sobre una torre d'aigua al
+terrat d'un edifici de Nova York. No queda clar què ha passat amb
+Shredder i el Clan del Peu. Han eixit del Technodrome? Tornarà Kraang? I
+què passarà amb Slash?</p>
+<p>Per ara, la pau torna a Nova York. La gent mai sabrà que una amenaça
+alienígena ha estat a punt de destruir la seua existència.</p>
+<p>"Cowabunga!", diu Mikey, una mica cansat. "És hora de pizza,
+germans!"</p>
+<p>I les Tortugues tornen a les clavegueres per descansar i menjar un
+muntó de pizzes extra picants de pepperoni.</p>
+</section>
+<section id="recompenses-finals" class="panel">
+<h3>Recompenses finals</h3>
+<p>Cada lliga que completa la campanya TMNT rep, si voleu usar-la en
+altres partides:</p>
+<div class="cols">
+<section id="recompensa-de-campanya" class="box">
+<h4>Recompensa de campanya</h4>
+<ul>
+<li>+15 Reputation.</li>
+<li>+3 XP.</li>
+<li>+1 Contact.</li>
+<li>+1 Gear.</li>
+<li>+1 Backup.</li>
+<li>+1 Tip.</li>
+</ul>
+</section>
+<section id="panell-de-control-de-kraang" class="box scale">
+<h4>Panell de control de Kraang</h4>
+<p>Si un personatge va completar el plot point del panell de control,
+part dels poders mentals de Kraang l'han impregnat.</p>
+<ul>
+<li>La lliga rep +5 Reputation.</li>
+<li>El personatge guanya l'habilitat <strong>Mindblast</strong>.</li>
+</ul>
+</section>
+<section id="personatges-descenari" class="box print">
+<h4>Personatges d'escenari</h4>
+<p>El PDF original inclou cartes per a April O'Neil, Slash i Baxter
+Stockman. Les cartes exactes s'han de consultar al PDF perquè apareixen
+com a perfils gràfics.</p>
+</section>
+</div>
+</section>
+<section id="personatges-addicionals" class="panel">
+<h3>Personatges addicionals</h3>
+<div class="cols">
+<section id="april-oneil-1" class="box">
+<h4>April O'Neil</h4>
+<p>La millor reportera de Channel 6. És amiga de les Tortugues i del
+mestre Splinter. A vegades pot veure's obligada a ajudar el Clan del Peu
+contra la seua voluntat.</p>
+</section>
+<section id="slash-1" class="box scale">
+<h4>Slash</h4>
+<p>Antiga tortuga mascota de Raphael, ara convertida en un mutant
+agressiu i brutal. És una versió fosca dels quatre germans, però pot
+arribar a vore la llum i convertir-se en antiheroi.</p>
+</section>
+<section id="baxter-stockman-1" class="box print">
+<h4>Baxter Stockman</h4>
+<p>Científic convertit en mosca mutant. Té una ment brillant i desviada.
+Va crear els robots Mouser, una plaga de Nova York. Pot ser Sidekick del
+Clan del Peu.</p>
+</section>
+</div>
+</section>
+<section id="crèdits" class="panel">
+<h3>Crèdits</h3>
+<p>Traducció al valencià per a ús personal a partir del PDF
+<code>NinjaTurtlesPA_Expansion.pdf</code> proporcionat localment. El PDF
+original acredita Niels Jochems, Davids Phipps i el grup de playtesters
+indicat en el document. Pulp Alley i TMNT pertanyen als seus titulars
+respectius. Per jugar cal el reglament oficial de Pulp Alley i les
+cartes/perfils del PDF original.</p>
+</section>
+</main></body></html>

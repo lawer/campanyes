@@ -34,4 +34,13 @@ Primer arc d'una campanya casolana inspirada en `Stranger Things`: la desaparici
 [Obrir campanya](Llums%20en%20la%20Foscor%20-%20Campanya%20AoFQ.html){.button}
 
 :::
+
+::: {.campaign-card}
+## Tortugues Ninja
+
+Traducció al valencià de la campanya `TMNT` per a `Pulp Alley`: mutagen, Clan del Peu, Shredder, Slash i Kraang en tres actes.
+
+[Obrir campanya](Tortugues%20Ninja%20-%20Campanya%20Pulp%20Alley.html){.button}
+
+:::
 :::
