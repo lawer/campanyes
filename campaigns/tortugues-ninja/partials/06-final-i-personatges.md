@@ -72,4 +72,9 @@ Científic convertit en mosca mutant. Té una ment brillant i desviada. Va crear
 ### Crèdits
 
 Traducció al valencià per a ús personal a partir del PDF `NinjaTurtlesPA_Expansion.pdf` proporcionat localment. El PDF original acredita Niels Jochems, Davids Phipps i el grup de playtesters indicat en el document. Pulp Alley i TMNT pertanyen als seus titulars respectius. Per jugar cal el reglament oficial de Pulp Alley i les cartes/perfils del PDF original.
+
+Imatges incorporades per donar ambientació visual a una còpia d'ús personal i intern:
+
+- Logotip `Teenage Mutant Ninja Turtles 2022 franchise logo`, Wikimedia Commons. Commons el marca com a text/logo simple de domini públic, amb possible restricció de marca.
+- Foto `C2E2 2015 - Teenage Mutant Ninja Turtles`, Wikimedia Commons, autor GabboT, llicència CC BY-SA 2.0.
 :::

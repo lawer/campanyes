@@ -3,6 +3,8 @@
 Pulp Alley - TMNT - Traducció al valencià
 :::
 
+<img class="brand-logo" src="campaigns/tortugues-ninja/assets/tmnt-franchise-logo.png" alt="Teenage Mutant Ninja Turtles">
+
 # Tortugues Ninja
 
 ::: {.subtitle}
@@ -17,6 +19,13 @@ Benvinguts a Nova York, casa de les Tortugues Ninja Adolescents Mutants: Leonard
 [Pulp Alley]{.tag} [TMNT]{.tag} [3 actes]{.tag} [9 escenaris]{.tag} [Mutagen]{.tag} [Kraang]{.tag}
 :::
 </header>
+
+::: {.scene-art}
+<figure>
+<img src="campaigns/tortugues-ninja/assets/tmnt-c2e2-cosplay.jpg" alt="Cosplay de les quatre Tortugues Ninja en una convenció">
+<figcaption>Quatre màscares, quatre maneres de ficar-se en problemes.</figcaption>
+</figure>
+:::
 
 ::: {.panel tag="section"}
 ### Introducció

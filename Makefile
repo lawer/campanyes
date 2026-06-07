@@ -29,7 +29,7 @@ ombres: expanded
 	pandoc "$(OMBRES_EXPANDED)" --from markdown-smart+raw_html+fenced_divs+bracketed_spans --to html5 --lua-filter filters/tag-divs.lua --template templates/stranger-things.html --standalone -o "$(OMBRES_HTML)"
 
 tortugues: expanded
-	pandoc "$(TORTUGUES_EXPANDED)" --from markdown-smart+raw_html+fenced_divs+bracketed_spans --to html5 --lua-filter filters/tag-divs.lua --template templates/stranger-things.html --standalone -o "$(TORTUGUES_HTML)"
+	pandoc "$(TORTUGUES_EXPANDED)" --from markdown-smart+raw_html+fenced_divs+bracketed_spans --to html5 --lua-filter filters/tag-divs.lua --template templates/tortugues-ninja.html --standalone -o "$(TORTUGUES_HTML)"
 
 validate: html
 	xmllint --html --noout "$(INDEX_HTML)"
