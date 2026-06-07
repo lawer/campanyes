@@ -34,13 +34,4 @@ Primer arc d'una campanya casolana inspirada en `Stranger Things`: la desaparici
 [Obrir campanya](Llums%20en%20la%20Foscor%20-%20Campanya%20AoFQ.html){.button}
 
 :::
-
-::: {.campaign-card}
-## Ecos del Del Revés
-
-Campanya cooperativa de `Pulp Alley` inspirada en una estructura pulp de tres actes: substància estranya, màquina del laboratori, dilema de rescat i final al Del Revés.
-
-[Obrir campanya](Ecos%20del%20Del%20Reves%20-%20Campanya%20Pulp%20Alley.html){.button}
-
-:::
 :::
