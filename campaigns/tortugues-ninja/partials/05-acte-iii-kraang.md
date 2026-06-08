@@ -7,7 +7,7 @@ El Clan del Peu ha comés un error terrible. El misteriós Mr. K, que finançava
 
 ::: {.scene-art}
 <figure>
-<img src="campaigns/tortugues-ninja/assets/tmnt-shellraiser.jpg" alt="Estructura interior de l'atracció TMNT Shellraiser amb llums verds">
+<img src="campaigns/tortugues-ninja/assets/tmnt-mutant-mayhem-poster.jpg" alt="Pòster oficial de Teenage Mutant Ninja Turtles Mutant Mayhem">
 <figcaption>Llums verdes, rails impossibles i la sensació que la realitat s'està trencant.</figcaption>
 </figure>
 :::

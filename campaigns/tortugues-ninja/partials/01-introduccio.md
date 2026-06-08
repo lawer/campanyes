@@ -22,7 +22,7 @@ Benvinguts a Nova York, casa de les Tortugues Ninja Adolescents Mutants: Leonard
 
 ::: {.scene-art}
 <figure>
-<img src="campaigns/tortugues-ninja/assets/tmnt-bronze-sculptures.jpg" alt="Escultures de les quatre Tortugues Ninja">
+<img src="campaigns/tortugues-ninja/assets/tmnt-1987-series-poster.jpg" alt="Pòster oficial de la sèrie Teenage Mutant Ninja Turtles de 1987">
 <figcaption>Quatre germans, una ciutat enorme i massa mutagen solt.</figcaption>
 </figure>
 :::
@@ -37,11 +37,22 @@ Benvinguts a Nova York, casa de les Tortugues Ninja Adolescents Mutants: Leonard
 :::
 :::
 
-::: {.scene-art}
-<figure>
-<img src="campaigns/tortugues-ninja/assets/tmnt-book-wondercon.jpg" alt="Llibre il·lustrat de Teenage Mutant Ninja Turtles en una parada de WonderCon">
-<figcaption>El to és de còmic d'aventures: ràpid, colorit i ple de problemes.</figcaption>
-</figure>
+::: {.panel tag="section"}
+### Sèries i pel·lícules
+
+::: {.cols}
+::: {.box .art-card}
+<img src="campaigns/tortugues-ninja/assets/tmnt-1987-series-poster.jpg" alt="Pòster de la sèrie Teenage Mutant Ninja Turtles de 1987">
+:::
+
+::: {.box .art-card}
+<img src="campaigns/tortugues-ninja/assets/tmnt-2014-film-poster.jpg" alt="Pòster de la pel·lícula Teenage Mutant Ninja Turtles de 2014">
+:::
+
+::: {.box .art-card}
+<img src="campaigns/tortugues-ninja/assets/tmnt-mutant-mayhem-poster.jpg" alt="Pòster de la pel·lícula Teenage Mutant Ninja Turtles Mutant Mayhem">
+:::
+:::
 :::
 
 ::: {.panel tag="section"}

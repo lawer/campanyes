@@ -5,7 +5,7 @@ A diferència de l'Acte I, l'Acte II comença amb **La màquina de mutagen** i c
 
 ::: {.scene-art}
 <figure>
-<img src="campaigns/tortugues-ninja/assets/tmnt-shredder-mutant-masher.jpg" alt="Atracció Shredder's Mutant Masher amb tancs verds de mutagen">
+<img src="campaigns/tortugues-ninja/assets/tmnt-2014-film-poster.jpg" alt="Pòster oficial de la pel·lícula Teenage Mutant Ninja Turtles de 2014">
 <figcaption>Shredder no vol només guanyar: vol construir alguna cosa que faça por.</figcaption>
 </figure>
 :::
