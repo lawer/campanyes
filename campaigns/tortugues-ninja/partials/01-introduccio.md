@@ -22,13 +22,13 @@ Benvinguts a Nova York, casa de les Tortugues Ninja Adolescents Mutants: Leonard
 
 ::: {.scene-art}
 <figure>
-<img src="campaigns/tortugues-ninja/assets/tmnt-1987-series-poster.jpg" alt="Pòster oficial de la sèrie Teenage Mutant Ninja Turtles de 1987">
+<img src="campaigns/tortugues-ninja/assets/tmnt-ai-cover.png" alt="Il·lustració pròpia de portada amb ciutat nocturna, mutagen i ombres d'herois">
 <figcaption>Quatre germans, una ciutat enorme i massa mutagen solt.</figcaption>
 </figure>
 :::
 
 ::: {.panel tag="section"}
-### Imatges d'ambientació
+### Imatges d'ambientació pròpies
 
 ::: {.logo-grid}
 <div class="logo-tile"><img src="campaigns/tortugues-ninja/assets/tmnt-2012-logo.png" alt="Logo TMNT 2012"></div>
@@ -38,19 +38,23 @@ Benvinguts a Nova York, casa de les Tortugues Ninja Adolescents Mutants: Leonard
 :::
 
 ::: {.panel tag="section"}
-### Sèries i pel·lícules
+### Escenes de campanya
 
 ::: {.cols}
 ::: {.box .art-card}
-<img src="campaigns/tortugues-ninja/assets/tmnt-1987-series-poster.jpg" alt="Pòster de la sèrie Teenage Mutant Ninja Turtles de 1987">
+<img src="campaigns/tortugues-ninja/assets/tmnt-ai-docks-mutagen.png" alt="Il·lustració pròpia del port amb contenidors i mutagen">
 :::
 
 ::: {.box .art-card}
-<img src="campaigns/tortugues-ninja/assets/tmnt-2014-film-poster.jpg" alt="Pòster de la pel·lícula Teenage Mutant Ninja Turtles de 2014">
+<img src="campaigns/tortugues-ninja/assets/tmnt-ai-mutagen-machine.png" alt="Il·lustració pròpia d'una màquina de mutagen en un laboratori subterrani">
 :::
 
 ::: {.box .art-card}
-<img src="campaigns/tortugues-ninja/assets/tmnt-mutant-mayhem-poster.jpg" alt="Pòster de la pel·lícula Teenage Mutant Ninja Turtles Mutant Mayhem">
+<img src="campaigns/tortugues-ninja/assets/tmnt-ai-alien-portal.png" alt="Il·lustració pròpia d'una nau alienígena amb portal dimensional">
+:::
+
+::: {.box .art-card}
+<img src="campaigns/tortugues-ninja/assets/tmnt-ai-cover.png" alt="Il·lustració pròpia de portada de la campanya">
 :::
 :::
 :::

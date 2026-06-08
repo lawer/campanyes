@@ -7,7 +7,7 @@ El Clan del Peu ha comés un error terrible. El misteriós Mr. K, que finançava
 
 ::: {.scene-art}
 <figure>
-<img src="campaigns/tortugues-ninja/assets/tmnt-mutant-mayhem-poster.jpg" alt="Pòster oficial de Teenage Mutant Ninja Turtles Mutant Mayhem">
+<img src="campaigns/tortugues-ninja/assets/tmnt-ai-alien-portal.png" alt="Il·lustració pròpia d'una nau alienígena amb portal dimensional">
 <figcaption>Llums verdes, rails impossibles i la sensació que la realitat s'està trencant.</figcaption>
 </figure>
 :::

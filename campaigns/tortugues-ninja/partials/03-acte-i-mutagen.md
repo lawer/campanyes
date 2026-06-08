@@ -5,7 +5,7 @@ En l'Acte I tot gira al voltant del mutagen. El Clan del Peu necessita recollir-
 
 ::: {.scene-art}
 <figure>
-<img src="campaigns/tortugues-ninja/assets/tmnt-1987-series-poster.jpg" alt="Pòster oficial de la sèrie Teenage Mutant Ninja Turtles de 1987">
+<img src="campaigns/tortugues-ninja/assets/tmnt-ai-docks-mutagen.png" alt="Il·lustració pròpia del port amb contenidors i mutagen">
 <figcaption>La ciutat és gran, però les Tortugues sempre troben el camí cap al problema.</figcaption>
 </figure>
 :::
@@ -42,7 +42,7 @@ El Clan del Peu va darrere d'un carregament de mutagen trobat als molls de Nova 
 
 ::: {.scene-art}
 <figure>
-<img src="campaigns/tortugues-ninja/assets/tmnt-mutant-mayhem-poster.jpg" alt="Pòster oficial de Teenage Mutant Ninja Turtles Mutant Mayhem">
+<img src="campaigns/tortugues-ninja/assets/tmnt-ai-docks-mutagen.png" alt="Il·lustració pròpia del port nocturn amb canisters de mutagen">
 <figcaption>Quan el mutagen cau en males mans, la persecució pot acabar travessant mitja ciutat.</figcaption>
 </figure>
 :::

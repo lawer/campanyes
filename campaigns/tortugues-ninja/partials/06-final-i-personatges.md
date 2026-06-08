@@ -75,7 +75,7 @@ Traducció al valencià per a ús personal a partir del PDF `NinjaTurtlesPA_Expa
 
 Imatges incorporades per donar ambientació visual a una còpia d'ús personal i intern:
 
-- Pòsters oficials `Teenage Mutant Ninja Turtles (1987)`, `Teenage Mutant Ninja Turtles (2014)` i `Teenage Mutant Ninja Turtles: Mutant Mayhem`, Paramount Pictures.
+- Il·lustracions pròpies generades amb IA per a la portada, el port amb mutagen, la màquina de mutagen i el final alienígena.
 - Logotip `Teenage Mutant Ninja Turtles 2022 franchise logo`, Wikimedia Commons. Commons el marca com a text/logo simple de domini públic, amb possible restricció de marca.
 - Logotips `TMNT 2012 Logo` i `Teenage Mutant Ninja Turtles Mutant Mayhem Logo`, Wikimedia Commons.
 :::
