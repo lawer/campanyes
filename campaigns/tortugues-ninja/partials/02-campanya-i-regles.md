@@ -1,40 +1,86 @@
 ::: {.panel tag="section"}
 ### Campanya
 
-Les Tortugues han descobert que el Clan del Peu està reunint grans quantitats de llot morat per fabricar mutagen. Els quatre germans han d'impedir-ho. Si Shredder aconsegueix prou llot, podrà crear un exèrcit de soldats mutants. Un exèrcit de Bebops i Rocksteadys no és precisament el que necessita la gent de Nova York.
+El Clan del Peu no està robant qualsevol cosa. Està reunint llot mutagen per fabricar soldats mutants i obrir una porta que ningú hauria d'obrir. Les Tortugues no necessiten saber-ho tot al principi: només necessiten seguir el rastre verd, salvar qui puguen i arribar al final abans que la ciutat canvie per sempre.
 :::
 
 ::: {.panel tag="section"}
-### Plot points de pizza
+### Full de control
 
-Les Tortugues estimen la pizza, especialment Mikey. Algunes partides tenen plot points de pizza.
+Useu este resum després de cada partida. Amb una llibreta ja n'hi ha prou.
 
 ::: {.cols}
 ::: {.box}
-#### Com funcionen
+#### Anoteu sempre
 
-- Compten com a plot points normals per a totes les bandes.
-- Les Tortugues reben la recompensa normal.
-- A més, guanyen una porció de pizza si controlen el plot point de pizza.
-- Amb 4 porcions, poden gastar-les per fer **1 reroll** en qualsevol partida.
-- Poden acumular porcions per més rerolls: 8 porcions donen 2 rerolls, etc.
+- Escenari jugat.
+- Qui ha guanyat.
+- Qui serà defensor si l'escenari ho indica.
+- Porcions de pizza acumulades.
+- Unitats de mutagen del Clan del Peu.
+- Missatges de Mr. K trobats.
 :::
 
 ::: {.box .scale}
-#### Si Mikey controla la pizza
+#### Llindars importants
 
-Tireu 1d6:
+- **4 porcions de pizza:** 1 reroll per a les Tortugues.
+- **35 unitats de mutagen:** el Clan força l'Acte II.
+- **4 missatges de Mr. K:** April ajuda en l'Acte III.
+- **5 missatges de Mr. K:** les Tortugues arriben al final amb avantatge complet.
+:::
 
-- **1-3:** les Tortugues guanyen 1 porció.
-- **4-6:** les Tortugues guanyen 2 porcions.
+::: {.box .print}
+#### Després de cada partida
+
+- Doneu recompenses normals.
+- Apunteu efectes que passen al següent escenari.
+- Llegiu només la secció "després" de l'escenari acabat.
+- Prepareu el següent escenari que indique la campanya.
+:::
+:::
+:::
+
+::: {.panel tag="section"}
+### Regles recurrents
+
+Estes són les regles que apareixen moltes vegades. Quan isquen en un escenari, torneu ací.
+
+::: {.cols}
+::: {.box}
+#### Pizza
+
+Les pizzes són plot points normals, però també donen energia a les Tortugues.
+
+- Si les Tortugues controlen pizza, guanyen la recompensa normal i 1 porció.
+- Si Mikey la controla, tireu 1d6.
+- **1-3:** guanyen 1 porció.
+- **4-6:** guanyen 2 porcions.
+- Amb 4 porcions, poden gastar 1 reroll.
 
 Màxim: 1 reroll gastat per partida.
 :::
 
 ::: {.box .print}
-#### Missatges misteriosos
+#### Missatges de Mr. K
 
-Mentre continua la carrera pel llot morat, les Tortugues reben missatges estranys i misteriosos. Amb ordinadors extraviats i l'ajuda d'April O'Neil, descobreixen que Shredder no està recollint mutagen només per a ell.
+Els missatges són pistes. No cal explicar-ho tot quan apareixen: són correus, codis, tauletes o proves que algú està dirigint Shredder.
+
+- En l'Acte I es poden trobar 3.
+- En l'Acte II se'n poden trobar 2 més.
+- Si n'aconseguiu prou, l'Acte III serà menys brutal.
+:::
+
+::: {.box .scale}
+#### Mutagen
+
+El mutagen és el rellotge de la campanya.
+
+- Si les Tortugues controlen mutagen, reben la recompensa normal.
+- Si el Clan del Peu el controla, també suma unitats.
+- Plot point major: +1d12 unitats.
+- Plot point menor: +1d10 unitats.
+- Quan el Clan supera 35 unitats, l'Acte II pot començar abans.
 :::
 :::
 :::
@@ -46,19 +92,19 @@ Mentre continua la carrera pel llot morat, les Tortugues reben missatges estrany
 ::: {.box}
 #### Mr. K
 
-El misteriós Mr. K controla cada moviment del Clan del Peu. Sap coses sobre Leonardo, Donatello, Raphael, Michelangelo i fins i tot el mestre Splinter. És un nou vilà perillós? Algú que fins i tot el poderós Shredder tem?
+El misteriós Mr. K controla cada moviment del Clan del Peu. Sap massa coses sobre les Tortugues i fins i tot Shredder pareix obeir-lo amb mala cara. No reveleu qui és massa prompte: deixeu que els missatges facen créixer la sospita.
 :::
 
 ::: {.box .scale}
 #### April O'Neil
 
-April serà un plot point, sovint major, en alguns escenaris. Segons el resultat, les Tortugues o el Clan del Peu podran usar April en la seua banda. La seua carta de perfil està al final del PDF original.
+April és informació i urgència. Quan apareix com a plot point, no és només una recompensa: és una persona enmig del caos. Segons el resultat, pot ajudar les Tortugues o quedar sota pressió del Clan del Peu. La seua carta de perfil està al PDF original.
 :::
 
 ::: {.box .print}
 #### Baxter Stockman
 
-El Clan del Peu comença amb 2 Sidekicks: Bebop i Rocksteady. Quan comença l'Acte II, el Clan del Peu pot arribar a triar entre 3 Sidekicks: Bebop, Rocksteady i el Dr. Stockman. Alguns resultats permeten tindre els 3.
+Baxter fa que la campanya deixe de ser un robatori i es convertisca en ciència perillosa. Quan comença l'Acte II, el Clan pot triar entre Bebop, Rocksteady i el Dr. Stockman. Alguns resultats permeten tindre els 3.
 :::
 :::
 :::
@@ -72,7 +118,7 @@ Les Tortugues viuen a les clavegueres de Nova York amb el mestre Splinter. El Cl
 ::: {.box}
 #### Quan s'usen
 
-Si un escenari té la regla especial **Sewer markers**, cada jugador pot col·locar 2 marcadors de claveguera a la taula.
+Si un escenari té **marcadors de claveguera**, cada jugador col·loca 2 marcadors. Són entrades secretes, tapes al carrer, túnels de manteniment o passos amagats.
 :::
 
 ::: {.box .scale}
@@ -89,32 +135,6 @@ Si un escenari té la regla especial **Sewer markers**, cada jugador pot col·lo
 - No pot disparar en el torn en què entra a la claveguera.
 - En la següent activació, pot eixir per qualsevol marcador lliure.
 - Un marcador és lliure si no hi ha cap model en contacte amb ell.
-:::
-:::
-:::
-
-::: {.panel tag="section"}
-### Ambientacions alternatives
-
-El PDF proposa usar esta estructura amb altres bandes.
-
-::: {.cols}
-::: {.box}
-#### Gotham City
-
-Batman, Robin, Batgirl i Nightwing persegueixen el Joker i els seus sequaços. El Joker ha aconseguit una gran quantitat de químics ACE i vol usar-los en un pla terrible. Els marcadors de pizza poden convertir-se en pistes: amb 4 pistes, la Bat-família guanya 1 reroll.
-:::
-
-::: {.box .scale}
-#### Harry Potter
-
-Draco Malfoy intenta introduir materials màgics de broma a Hogwarts. Harry i els seus amics han d'impedir-ho mentre descobreixen que Qui-tu-saps intenta controlar Hogwarts a través de Draco. Les clavegueres poden ser escales màgiques; les pizzes, llibres o proves O.W.L.S.
-:::
-
-::: {.box .print}
-#### Spy-Fi i ciència-ficció
-
-En Spy-Fi, el superespia 008 descobreix que un magnat rus del petroli recull un oli estrany per a una màquina del judici final. En ciència-ficció, un grup de renegats lluita contra un senyor de la guerra controlat per un amo alienígena. Les clavegueres poden ser entrades secretes o portals.
 :::
 :::
 :::

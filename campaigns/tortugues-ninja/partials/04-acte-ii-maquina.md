@@ -1,7 +1,7 @@
 ::: {.panel tag="section"}
 ### Acte II: La màquina
 
-A diferència de l'Acte I, l'Acte II comença amb **La màquina de mutagen** i continua amb **El dilema**. El resultat d'El dilema decideix quin escenari ve després. **Slash!!** sempre es jugarà, però pot canviar segons els resultats previs.
+A diferència de l'Acte I, l'Acte II ja no és una persecució de bidons. Ara el mutagen entra en una màquina i cada decisió té conseqüències. L'acte comença amb **La màquina de mutagen**, continua amb **El dilema** i després pot obrir camins diferents abans de **Slash!!**.
 
 ::: {.scene-art}
 <figure>
@@ -50,6 +50,10 @@ En l'Acte I es podien aconseguir 3 missatges. En l'Acte II es poden aconseguir 2
 
 El mutagen ha de destil·lar-se i preparar-se per als plans de Shredder. El Clan del Peu busca les peces de la màquina i, sobretot, Baxter Stockman. Les Tortugues volen impedir-ho.
 
+::: {.quote}
+El laboratori no apareix en cap plànol de la ciutat. Hi ha tubs que travessen parets, vidres vibrants i un motor que respira com si estiguera viu. Baxter Stockman somriu perquè, per fi, algú ha portat prou mutagen per provar la seua màquina.
+:::
+
 ::: {.cols}
 ::: {.box}
 #### Regles especials
@@ -92,6 +96,10 @@ Si el Clan del Peu guanya, pot triar Sidekick entre Bebop o Rocksteady. Si guany
 
 Shredder té Baxter Stockman treballant en la màquina, però April O'Neil ha sigut capturada mentre investigava. Les Tortugues han de triar: salvar April o impedir que la màquina s'engegue.
 
+::: {.quote}
+Dos crits arriben alhora. En una sala, April colpeja una porta metàl·lica demanant ajuda. En l'altra, la màquina comença a omplir-se de llot verd. Les Tortugues poden córrer cap a una veu o cap al motor, però no poden estar en dos llocs a la vegada.
+:::
+
 ::: {.cols}
 ::: {.box}
 #### Dilema
@@ -120,14 +128,14 @@ Hi ha 2 plot points majors. Cada jugador tria en secret quin vol intentar. El qu
 - Els dos majors es col·loquen al centre, a 6" o menys entre ells.
 - Els altres 4 marcadors es col·loquen normalment.
 - Desplegament en vores oposades, a 6" de la vora i a més de 6" de plot points o enemics.
-- Límit: 6 torns. Després la màquina comença a refinar el llot morat.
+- Límit: 6 torns. Després la màquina comença a refinar el llot verd.
 :::
 :::
 
 ::: {.box}
 #### Després del dilema
 
-- Si el Clan del Peu controla la màquina, el següent escenari és **Slash!**
+- Si el Clan del Peu controla la màquina, el següent escenari és **Slash!!**
 - Si el Clan del Peu no controla cap major, el següent és **Lluites**, amb el Clan com a defensor.
 - Si les Tortugues controlen la màquina, alguna cosa va terriblement malament perquè Mikey deixa caure pizza dins. Tireu 1d6 en la taula de mal funcionament del PDF original; pot provocar canvi de cossos, ferides, fum, o permetre també salvar April.
 - Si el Clan controla April, el següent escenari és **Rescat**, amb el Clan com a captor.
@@ -138,6 +146,10 @@ Hi ha 2 plot points majors. Cada jugador tria en secret quin vol intentar. El qu
 ## Escenari 7.1: Rescat
 
 Els ninjas del Clan del Peu han capturat April O'Neil. Shredder vol acabar amb ella d'una vegada per totes. Les Tortugues intenten salvar la seua amiga.
+
+::: {.quote}
+April està lligada sota una llum blanca, envoltada d'aparells que no haurien d'existir fora d'un malson. Shredder no té pressa. Vol que les Tortugues entren, vol que s'arrisquen i vol que cada segon pese.
+:::
 
 ::: {.cols}
 ::: {.box}
@@ -184,6 +196,10 @@ Si les Tortugues controlen April, el Clan serà defensor en **Lluites**, April a
 
 La trampa de Splinter s'ha activat. La captura d'April era una maniobra per atrapar Leonardo. O potser la trampa ix malament i Shredder queda aïllat.
 
+::: {.quote}
+Tot es tanca massa ràpid: portes, reixes, llums, fum. Quan el soroll baixa, un líder ha quedat separat de la resta. La resta de la banda només pot mirar a través de l'ombra i córrer.
+:::
+
 ::: {.cols}
 ::: {.box}
 #### Regles especials
@@ -226,6 +242,10 @@ Si el líder defensor evita quedar KO o capturat al final, rep la recompensa del
 ## Escenari 7.3: Slash!!
 
 Slash ha sigut creat pel llot. Però, a més, un portal està a punt d'obrir-se al carrer. Slash protegeix el portal amb fúria.
+
+::: {.quote}
+El portal no s'obri amb un esclat, sinó amb un gemec. L'aire es doblega. Els fanals tremolen. Davant de la llum apareix Slash: closca, urpes i una ràbia que no pareix del tot seua.
+:::
 
 ::: {.cols}
 ::: {.box}

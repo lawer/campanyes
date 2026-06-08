@@ -1,7 +1,7 @@
 ::: {.panel tag="section"}
 ### Acte I: Mutagen
 
-En l'Acte I tot gira al voltant del mutagen. El Clan del Peu necessita recollir-lo i les Tortugues han d'impedir-ho.
+En l'Acte I tot gira al voltant del mutagen. El Clan del Peu necessita recollir-lo i les Tortugues han d'impedir-ho. Encara no sabeu quin és el pla complet: només veieu bidons, ordres encriptades i ninjas que no volen deixar testimonis.
 
 ::: {.scene-art}
 <figure>
@@ -30,7 +30,7 @@ En l'Acte I tot gira al voltant del mutagen. El Clan del Peu necessita recollir-
 ::: {.box .print}
 #### Pas a l'Acte II
 
-Els escenaris de l'Acte I solen jugar-se en ordre. Si el Clan del Peu aconsegueix més de **35 unitats de mutagen**, comenceu automàticament l'Acte II. Si les Tortugues recullen els 5 missatges misteriosos de Mr. K, obtindran una bonificació en l'Acte III.
+Els escenaris de l'Acte I es juguen en ordre. Si el Clan del Peu supera **35 unitats de mutagen**, passeu a l'Acte II encara que queden escenaris pendents. Si les Tortugues troben missatges de Mr. K, guardeu-los: seran importants en l'Acte III.
 :::
 :::
 :::
@@ -39,6 +39,10 @@ Els escenaris de l'Acte I solen jugar-se en ordre. Si el Clan del Peu aconseguei
 ## Escenari 1: Caos al port
 
 El Clan del Peu va darrere d'un carregament de mutagen trobat als molls de Nova York. Les Tortugues han d'aturar-lo entre contenidors, grues i materials industrials.
+
+::: {.quote}
+Els molls fan olor de sal, oli i metall calent. Entre dos contenidors, un bidó trencat deixa escapar una llum verda que es reflecteix en els bassals. A l'altra banda del port, unes ombres amb màscara ja carreguen caixes en silenci.
+:::
 
 ::: {.scene-art}
 <figure>
@@ -77,7 +81,7 @@ Piles de barrils, barres metàl·liques, cadenes de grua i trampes oblidades per
 
 - Taula de **3' x 3'**.
 - Col·loqueu de 7 a 12 peces de terreny: 1d6+6.
-- Els contenidors haurien d'estar sobretot al centre.
+- Poseu contenidors, caixes o edificis baixos sobretot al centre, deixant alguns passadissos estrets.
 - El plot point major va al centre.
 - Els jugadors alternen els altres 4 marcadors; cap a menys de 6" d'un altre marcador o de la vora.
 - Cada jugador col·loca 2 marcadors de claveguera, cap a menys de 8" d'un altre.
@@ -96,6 +100,10 @@ El Clan del Peu guanya unitats de mutagen pels plot points de mutagen que contro
 ## Escenari 2: Obriu-lo!
 
 La carrera continua. El gran carregament està dins d'un contenidor tancat. Una banda el controla, però encara ha d'obrir-lo.
+
+::: {.quote}
+El contenidor està abonyegat, tacat de verd i tancat amb més cadenes de les necessàries. Dins se sent un bombolleig suau. Fora, tots volen la mateixa cosa: obrir-lo abans que arribe l'altre bàndol.
+:::
 
 ::: {.cols}
 ::: {.box}
@@ -118,7 +126,7 @@ La carrera continua. El gran carregament està dins d'un contenidor tancat. Una 
 ::: {.box .print}
 #### Major especial
 
-Només el líder defensor pot completar/controlar el plot point major. Ha de completar **tres challenges aleatoris** en el mateix plot point, com a mínim en 3 accions i 3 torns diferents.
+Només el líder defensor pot completar/controlar el plot point major. Ha de superar **tres challenges aleatoris** en el mateix plot point. Feu-los en 3 accions diferents i, com a mínim, en 3 torns diferents. Això representa tallar cadenes, forçar panys i estabilitzar el contenidor.
 :::
 :::
 
@@ -145,6 +153,10 @@ El Clan del Peu guanya mutagen pels plot points controlats. Si el major queda se
 ## Escenari 3: L'informe d'O'Neil
 
 April O'Neil ha seguit la carrera del mutagen per la ciutat i ha trobat una informació crucial. El Clan del Peu també ho sap.
+
+::: {.quote}
+April ha gravat massa. Té imatges dels bidons, una matrícula borrosa i un nom repetit en diversos missatges: Mr. K. Ara corre pels carrers amb el micròfon en una mà i el telèfon en l'altra, mentre Channel 6 intenta trobar-la abans que ho faça el Clan.
+:::
 
 ::: {.cols}
 ::: {.box}
@@ -194,6 +206,10 @@ Qui controle April podrà afegir-la en el següent escenari. April ha descobert 
 
 El transport de mutagen entra a la ciutat. April guia tots dos bàndols al lloc per on arribarà. Podran les Tortugues apoderar-se del camió abans que Shredder?
 
+::: {.quote}
+Un camió sense matrícula entra per l'avinguda. No redueix la velocitat, no encén intermitents i la caixa metàl·lica vibra amb llum verda. El conductor no mira a ningú. El carregament és massa valuós per aturar-se.
+:::
+
 ::: {.cols}
 ::: {.box}
 #### Regles especials
@@ -215,7 +231,7 @@ El transport de mutagen entra a la ciutat. April guia tots dos bàndols al lloc 
 ::: {.box .print}
 #### Moviment del camió
 
-El camió entra al torn 1 després que tots els models hagen activat. Mou 6" seguint la carretera i marques. Si toca escenografia, s'estavella i s'atura. Models en contacte o al camí reben un atac de Brawl de 3d12 i només poden usar Dodge.
+El camió entra al torn 1 després que tots els models hagen activat. Mou 6" seguint la carretera marcada. Si toca escenografia, s'estavella i s'atura. Qualsevol model en contacte o en el camí rep un atac de Brawl de 3d12 i només pot usar Dodge.
 :::
 :::
 

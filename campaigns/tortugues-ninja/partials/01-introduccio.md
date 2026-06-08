@@ -62,46 +62,77 @@ Benvinguts a Nova York, casa de les Tortugues Ninja Adolescents Mutants: Leonard
 ::: {.panel tag="section"}
 ### Introducció
 
-La campanya TMNT està pensada per jugar-se amb totes les regles i personatges d'este llibre. És possible jugar-la amb una altra lliga pròpia, però llavors ja no serà una campanya TMNT pura.
+Esta campanya comença amb una escena molt senzilla: és de nit, la ciutat està mullada per la pluja i algú està movent bidons de mutagen pels molls. Les Tortugues arriben tard, el Clan del Peu ja està allí i ningú sap encara qui és **Mr. K**.
 
-Abans d'arribar a la campanya, el PDF original inclou personatges i bandes noves. Estes bandes i personatges s'usen durant la campanya TMNT, però també poden entrar en altres partides de Pulp Alley.
+No cal entendre tota la campanya abans de començar. Llegiu només el resum, prepareu l'Escenari 1 i deixeu que la història es desplegue partida a partida. Cada escenari diu què cal posar a la taula, quines regles especials entren i què passa després.
 :::
 
 ::: {.panel tag="section"}
-### Què necessiteu
+### Abans de la primera partida
 
 ::: {.cols}
 ::: {.box}
-#### Material de joc
+#### Llegiu només açò
 
-- El reglament de Pulp Alley.
-- Pulp Leagues.
-- Baralla Fortune.
-- Cartes de personatge TMNT incloses al PDF original.
-- Daus i cinta mètrica.
-- Miniatures per representar les tortugues, aliats i enemics.
-- Terreny per a una zona d'uns **3' x 3'**.
-- Un oponent.
+- Una banda són les Tortugues.
+- L'altra banda és el Clan del Peu.
+- El Clan vol reunir mutagen.
+- Les Tortugues volen impedir-ho.
+- Mr. K està darrere de tot, però encara no sabeu qui és.
 :::
 
 ::: {.box .scale}
-#### Marcadors especials
+#### Prepareu només açò
 
-Alguns escenaris inclouen terreny especial, criatures mutants o alienígenes. Necessitareu marcadors, comptadors o miniatures per representar-los a la taula.
+- Taula de **3' x 3'**.
+- 7 a 12 peces de terreny urbà.
+- 5 marcadors de plot point.
+- 4 marcadors de claveguera.
+- Alguns comptadors de pizza i mutagen.
+- Daus, cinta mètrica i un oponent.
+- Cartes/perfils del PDF original.
 :::
 
 ::: {.box .print}
-#### Estructura
+#### No vos avanceu
 
-La campanya es divideix en tres actes, com un episodi, còmic o pel·lícula de les Tortugues Ninja. En els actes I i III, els escenaris es juguen en ordre. En l'acte II, el resultat d'alguns escenaris decideix quin escenari es juga després.
+No prepareu tots els escenaris de colp. Per a començar, feu només **Caos al port**. Quan acabeu, anoteu qui ha guanyat, quantes porcions de pizza queden, quant mutagen té el Clan i si s'ha trobat algun missatge de Mr. K.
 :::
 :::
 :::
 
 ::: {.panel tag="section"}
-### Les Tortugues
+### Regles que cal tindre a mà
 
-La primera i més important banda de la campanya són les Tortugues Ninja: Leonardo, Raphael, Donatello i Michelangelo.
+::: {.cols}
+::: {.box}
+#### Llibres
+
+- Reglament de **Pulp Alley**.
+- **Pulp Leagues**.
+- Esta campanya oberta en pantalla o impresa.
+:::
+
+::: {.box .scale}
+#### Cartes
+
+- Cartes/perfils del PDF original.
+- Baralla Fortune.
+- Si no teniu Fortune, useu una baralla normal com a substitut acordat per al grup.
+:::
+
+::: {.box .print}
+#### Miniatures
+
+Useu les miniatures exactes si les teniu. Si no, useu substituts clars: quatre herois diferenciats, Shredder, dos mutants grans, ninjas, robots menuts i marcadors per a April, Baxter, Slash i Kraang.
+:::
+:::
+:::
+
+::: {.panel tag="section"}
+### Repartiment
+
+Els perfils exactes estan al PDF original. Esta versió serveix per recordar qui és qui, què espera la història de cada banda i quina regla de rerefons cal usar.
 
 ::: {.cols}
 ::: {.box}
@@ -111,54 +142,54 @@ La primera i més important banda de la campanya són les Tortugues Ninja: Leona
 - **Raphael:** la força.
 - **Donatello:** l'inventor.
 - **Michelangelo:** el col·lega.
+- Rerefons: **League of Legends**.
+- La lliga inclou 4 Sidekicks; Leonardo fa el paper de Leader.
 :::
 
 ::: {.box .scale}
-#### Perk de rerefons
+#### El Clan del Peu
 
-Les Tortugues tenen la perk de rerefons **League of Legends**.
-
-- **Slots:** 10.
-- **Descripció:** la lliga inclou 4 Sidekicks. Un Sidekick fa el paper de Leader: Leonardo.
+- **Shredder:** el pla.
+- **Bebop i Rocksteady:** el múscul.
+- **Ninjas:** pressió i control.
+- **Mousers:** molèstia constant.
+- Rerefons: **Company of Heroes**.
+- El Clan pot incloure un segon Sidekick.
 :::
 
 ::: {.box .print}
-#### Cartes de perfil
+#### Aliats i sorpreses
 
-Les cartes exactes dels quatre germans estan al PDF original. Per jugar, convé copiar-les o imprimir-les.
+- **April:** informació, rescat i conseqüències.
+- **Baxter:** ciència perillosa.
+- **Slash:** una tortuga convertida en problema.
+- **Kraang:** el final que ningú espera.
 :::
 :::
 :::
 
 ::: {.panel tag="section"}
-### El Clan del Peu
+### Estructura de la història
 
-L'arxienemic de les tortugues és el poderós Shredder i el seu Clan del Peu.
+La campanya es divideix en tres actes. Penseu en cada acte com un episodi llarg:
 
 ::: {.cols}
 ::: {.box}
-#### Banda
+#### Acte I: Mutagen
 
-- Shredder.
-- Bebop.
-- Rocksteady.
-- 3 soldats ninja.
-- 2 grups de Mousers.
+El Clan del Peu busca bidons i carregaments. Les Tortugues encara només veuen la superfície del pla.
 :::
 
 ::: {.box .scale}
-#### Perk de rerefons
+#### Acte II: La màquina
 
-El Clan del Peu, amb Shredder com a líder, té **Company of Heroes**.
-
-- **Slots:** 2.
-- **Descripció:** la lliga pot incloure un segon Sidekick. Este Sidekick també costa 3 slots.
+El mutagen ja no és només mercaderia. Shredder el transforma en alguna cosa pitjor.
 :::
 
 ::: {.box .print}
-#### Notes
+#### Acte III: Kraang
 
-Shredder és un senyor de la guerra japonés amb aliats poderosos, com Bebop el porc senglar mutant i Rocksteady el rinoceront mutant. Les seues cartes exactes estan al PDF original.
+Mr. K deixa de ser una ombra. La campanya salta de Nova York a una amenaça alienígena.
 :::
 :::
 :::

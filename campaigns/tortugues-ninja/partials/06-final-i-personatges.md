@@ -11,6 +11,38 @@ I les Tortugues tornen a les clavegueres per descansar i menjar un muntó de piz
 :::
 
 ::: {.panel tag="section"}
+### Després de jugar
+
+La campanya acaba, però la taula pot quedar amb moltes preguntes obertes. Useu-les només si voleu continuar.
+
+::: {.cols}
+::: {.box}
+#### Si voleu epíleg
+
+- Qui explica la història a April?
+- Què queda del laboratori de Baxter?
+- On ha anat Shredder?
+- Slash torna com a enemic o com a aliat incòmode?
+:::
+
+::: {.box .scale}
+#### Si voleu una seqüela
+
+- Mr. K no estava sol.
+- El mutagen ha contaminat altres barris.
+- Un nou clan intenta robar la tecnologia.
+- April publica massa informació i algú la segueix.
+:::
+
+::: {.box .print}
+#### Si voleu tancar-la
+
+Acabeu amb una escena curta: pizza, bromes, cansament i una notícia de fons que ningú escolta massa. És suficient. No totes les campanyes necessiten una segona part.
+:::
+:::
+:::
+
+::: {.panel tag="section"}
 ### Recompenses finals
 
 Cada lliga que completa la campanya TMNT rep, si voleu usar-la en altres partides:

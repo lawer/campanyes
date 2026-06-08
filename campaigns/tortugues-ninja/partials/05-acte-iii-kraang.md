@@ -1,7 +1,7 @@
 ::: {.panel tag="section"}
 ### Acte III: KRAANG!!
 
-El misteriós Mr. K és l'amo de la guerra alienígena **Kraang**. Ha controlat Slash per impedir que les Tortugues arriben a la seua nau: el **Technodrome**.
+El misteriós Mr. K és l'amo de la guerra alienígena **Kraang**. Ja no hi ha correus estranys ni ordres indirectes: ara hi ha una nau, un portal i una veu que vol travessar a la Terra.
 
 El Clan del Peu ha comés un error terrible. El misteriós Mr. K, que finançava els plans de Shredder, és en realitat un ésser d'una altra dimensió. Les Tortugues i el Clan del Peu han entrat a la nau mare de Kraang. Ara tots han d'evitar que el Technodrome arribe a la Terra.
 
@@ -46,6 +46,10 @@ Si un escenari acaba en desastre total, podeu considerar que era una visió inte
 
 Kraang dona la benvinguda a Shredder. Ha usat el Clan del Peu per portar-li mutagen i, de passada, unes Tortugues per bullir. La nau comença a desintegrar-se per travessar el portal cap a la Terra. L'única opció és arribar al panell de control.
 
+::: {.quote}
+El Technodrome no és un lloc: és una màquina enorme que pensa en veu alta. Els passadissos es mouen, el terra es trenca i, al centre de tot, un panell de control parpelleja com l'única eixida possible.
+:::
+
 ::: {.cols}
 ::: {.box}
 #### Plot point major
@@ -86,6 +90,10 @@ L'escenari acaba immediatament si es completa el challenge del panell. Si no, al
 ## Escenari 9: Cowabunga!
 
 El portal a la dimensió de Kraang està a punt de tancar-se. Les Tortugues han de tornar a la Terra, però Slash ha entrat pel portal sota el control mental de Kraang.
+
+::: {.quote}
+Nova York es veu a l'altra banda del portal com si fora un reflex dins d'un bassal. Està tan prop que quasi es pot olorar la pizza. Però Kraang no vol presoners que tornen a casa, i Slash encara bloqueja el camí.
+:::
 
 ::: {.cols}
 ::: {.box}
