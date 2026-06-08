@@ -3,6 +3,13 @@
 
 En l'Acte I tot gira al voltant del mutagen. El Clan del Peu necessita recollir-lo i les Tortugues han d'impedir-ho.
 
+::: {.scene-art}
+<figure>
+<img src="campaigns/tortugues-ninja/assets/tmnt-turtle-van-front.jpg" alt="Furgoneta de les Tortugues Ninja">
+<figcaption>La ciutat és gran, però les Tortugues sempre troben el camí cap al problema.</figcaption>
+</figure>
+:::
+
 ::: {.cols}
 ::: {.box}
 #### Plot points de mutagen
@@ -32,6 +39,13 @@ Els escenaris de l'Acte I solen jugar-se en ordre. Si el Clan del Peu aconseguei
 ## Escenari 1: Caos al port
 
 El Clan del Peu va darrere d'un carregament de mutagen trobat als molls de Nova York. Les Tortugues han d'aturar-lo entre contenidors, grues i materials industrials.
+
+::: {.scene-art}
+<figure>
+<img src="campaigns/tortugues-ninja/assets/tmnt-monster-truck.jpg" alt="Monster truck de Teenage Mutant Ninja Turtles">
+<figcaption>Quan el mutagen cau en males mans, la persecució pot acabar travessant mitja ciutat.</figcaption>
+</figure>
+:::
 
 ::: {.cols}
 ::: {.box}

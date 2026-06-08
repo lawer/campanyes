@@ -22,8 +22,25 @@ Benvinguts a Nova York, casa de les Tortugues Ninja Adolescents Mutants: Leonard
 
 ::: {.scene-art}
 <figure>
-<img src="campaigns/tortugues-ninja/assets/tmnt-c2e2-cosplay.jpg" alt="Cosplay de les quatre Tortugues Ninja en una convenció">
-<figcaption>Quatre màscares, quatre maneres de ficar-se en problemes.</figcaption>
+<img src="campaigns/tortugues-ninja/assets/tmnt-bronze-sculptures.jpg" alt="Escultures de les quatre Tortugues Ninja">
+<figcaption>Quatre germans, una ciutat enorme i massa mutagen solt.</figcaption>
+</figure>
+:::
+
+::: {.panel tag="section"}
+### Imatges d'ambientació
+
+::: {.logo-grid}
+<div class="logo-tile"><img src="campaigns/tortugues-ninja/assets/tmnt-2012-logo.png" alt="Logo TMNT 2012"></div>
+<div class="logo-tile"><img src="campaigns/tortugues-ninja/assets/tmnt-mutant-mayhem-logo.png" alt="Logo Teenage Mutant Ninja Turtles Mutant Mayhem"></div>
+<div class="logo-tile"><img src="campaigns/tortugues-ninja/assets/tmnt-franchise-logo.png" alt="Logo Teenage Mutant Ninja Turtles"></div>
+:::
+:::
+
+::: {.scene-art}
+<figure>
+<img src="campaigns/tortugues-ninja/assets/tmnt-book-wondercon.jpg" alt="Llibre il·lustrat de Teenage Mutant Ninja Turtles en una parada de WonderCon">
+<figcaption>El to és de còmic d'aventures: ràpid, colorit i ple de problemes.</figcaption>
 </figure>
 :::
 

@@ -76,5 +76,11 @@ Traducció al valencià per a ús personal a partir del PDF `NinjaTurtlesPA_Expa
 Imatges incorporades per donar ambientació visual a una còpia d'ús personal i intern:
 
 - Logotip `Teenage Mutant Ninja Turtles 2022 franchise logo`, Wikimedia Commons. Commons el marca com a text/logo simple de domini públic, amb possible restricció de marca.
-- Foto `C2E2 2015 - Teenage Mutant Ninja Turtles`, Wikimedia Commons, autor GabboT, llicència CC BY-SA 2.0.
+- Logotips `TMNT 2012 Logo` i `Teenage Mutant Ninja Turtles Mutant Mayhem Logo`, Wikimedia Commons.
+- Foto `HK TST 100 Canton Road TheToyHouse lift lobby exhibits Playmates Toys Turtles bronze sculptures standing Dec-2012`, Wikimedia Commons, autor Lsapbonipp, llicència CC BY-SA 3.0.
+- Foto `WonderCon 2015 - TMNT book`, Wikimedia Commons, autor William Tung, llicència CC BY-SA 2.0.
+- Foto `Turtle Van - Power-Con 2013 (front)`, Wikimedia Commons, autor Pop Culture Geek, llicència CC BY 2.0.
+- Foto `Teenage Mutant Ninja Turtle Monster Truck`, Wikimedia Commons, autor Mike Kalasnik, llicència CC BY-SA 2.0.
+- Foto `Shredder's Mutant Masher 1`, Wikimedia Commons, autor CoasterForce, llicència CC BY-SA 4.0.
+- Foto `TMNT Shellraiser 1`, Wikimedia Commons, autor Bdutta74, llicència CC BY-SA 4.0.
 :::

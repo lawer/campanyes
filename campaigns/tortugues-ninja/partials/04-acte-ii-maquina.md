@@ -2,6 +2,13 @@
 ### Acte II: La màquina
 
 A diferència de l'Acte I, l'Acte II comença amb **La màquina de mutagen** i continua amb **El dilema**. El resultat d'El dilema decideix quin escenari ve després. **Slash!!** sempre es jugarà, però pot canviar segons els resultats previs.
+
+::: {.scene-art}
+<figure>
+<img src="campaigns/tortugues-ninja/assets/tmnt-shredder-mutant-masher.jpg" alt="Atracció Shredder's Mutant Masher amb tancs verds de mutagen">
+<figcaption>Shredder no vol només guanyar: vol construir alguna cosa que faça por.</figcaption>
+</figure>
+:::
 :::
 
 ::: {.panel tag="section"}

@@ -4,6 +4,13 @@
 El misteriós Mr. K és l'amo de la guerra alienígena **Kraang**. Ha controlat Slash per impedir que les Tortugues arriben a la seua nau: el **Technodrome**.
 
 El Clan del Peu ha comés un error terrible. El misteriós Mr. K, que finançava els plans de Shredder, és en realitat un ésser d'una altra dimensió. Les Tortugues i el Clan del Peu han entrat a la nau mare de Kraang. Ara tots han d'evitar que el Technodrome arribe a la Terra.
+
+::: {.scene-art}
+<figure>
+<img src="campaigns/tortugues-ninja/assets/tmnt-shellraiser.jpg" alt="Estructura interior de l'atracció TMNT Shellraiser amb llums verds">
+<figcaption>Llums verdes, rails impossibles i la sensació que la realitat s'està trencant.</figcaption>
+</figure>
+:::
 :::
 
 ::: {.panel tag="section"}
