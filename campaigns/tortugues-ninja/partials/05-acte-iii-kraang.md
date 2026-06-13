@@ -80,7 +80,9 @@ El Technodrome no és un lloc: és una màquina enorme que pensa en veu alta. El
 :::
 
 ::: {.box}
-#### Final de l'escenari
+#### Recompenses i final de l'escenari
+
+Abans de començar, aparteu la carta de recompensa de +1 XP; aquesta només es guanya si es completa el panell de control. Quan un personatge arribe a la plataforma de Kraang (o "Wanderer's platform"), podrà robar a l'atzar una de les altres 4 cartes de recompensa restants.
 
 L'escenari acaba immediatament si es completa el challenge del panell. Si no, al final de 6 torns Kraang obri el portal i el Technodrome entra en la dimensió de la Terra.
 :::

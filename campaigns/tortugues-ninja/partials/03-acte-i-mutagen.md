@@ -170,7 +170,7 @@ April ha gravat massa. Té imatges dels bidons, una matrícula borrosa i un nom 
 ::: {.box .scale}
 #### Plot points
 
-- **April O'Neil:** plot point major. Intentar-lo és extremadament perillós; de nit no distingeix ninjas de Tortugues Ninja.
+- **April O'Neil:** plot point major. Intentar-lo és extremadament perillós; de nit no distingeix ninjas de Tortugues Ninja. A més, si falles la tirada del perill o del challenge, April es mou 1d6" en una direcció aleatòria.
 - **Furgoneta de Channel 6:** plot point. Si està a 12" d'April, intentar-lo és extremadament perillós. Al final de cada torn es mou 6" cap a April.
 - **Pizza.**
 - **2 carregaments menuts de mutagen.**
@@ -249,6 +249,6 @@ El camió entra al torn 1 després que tots els models hagen activat. Mou 6" seg
 ::: {.box .scale}
 #### Recompenses i després
 
-El Clan del Peu guanya mutagen pels plot points controlats. L'Acte II comença igualment, encara que el Clan no tinga 35 unitats: la màquina de mutagen serà extremadament perillosa.
+El Clan del Peu guanya mutagen pels plot points controlats. Especialment, si el Clan controla el camió de mutagen, tira 1d12 per a guanyar unitats de mutagen; si trau un 12 exacte, pot tornar a tirar i sumar el resultat. L'Acte II comença igualment, encara que el Clan no tinga 35 unitats: la màquina de mutagen serà extremadament perillosa.
 :::
 :::
