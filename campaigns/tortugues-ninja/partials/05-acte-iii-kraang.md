@@ -44,6 +44,14 @@ Si un escenari acaba en desastre total, podeu considerar que era una visió inte
 ::: {.panel tag="section"}
 ## Escenari 8: Technodrome
 
+<div class="maptop"><span>Technodrome</span><span>24&quot; x 24&quot; - plataformes flotants</span></div>
+<img class="map" src="campaigns/tortugues-ninja/assets/maps/escenari-08.svg" alt="Mapa de l'escenari 8">
+
+::: {.box .print}
+#### Nota d'adaptació 24" x 24"
+El Technodrome original necessita més distància al voltant de Kraang. En aquesta versió compacta, desplegueu en les zones marcades i manteniu els personatges a **més de 12" de Kraang** sempre que siga possible.
+:::
+
 Kraang dona la benvinguda a Shredder. Ha usat el Clan del Peu per portar-li mutagen i, de passada, unes Tortugues per bullir. La nau comença a desintegrar-se per travessar el portal cap a la Terra. L'única opció és arribar al panell de control.
 
 ::: {.quote}
@@ -70,11 +78,11 @@ El Technodrome no és un lloc: és una màquina enorme que pensa en veu alta. El
 ::: {.box .print}
 #### Preparació
 
-- Taula de **3' x 3'** com a nau de ciència-ficció.
+- Taula màxima de **2' x 2'** (24" x 24") com a nau de ciència-ficció.
 - Es col·loquen 11 peces flotants al torn 3: una de 3" sota Kraang i deu de 2".
 - Només hi ha un plot point: el panell de control.
 - Els jugadors trien una de tres zones de desplegament.
-- Personatges a més de 24" de Kraang.
+- Personatges a més de 12" de Kraang sempre que siga possible.
 - Qui no travessà el portal en l'escenari anterior no desplega fins al torn 2.
 :::
 :::
@@ -90,6 +98,14 @@ L'escenari acaba immediatament si es completa el challenge del panell. Si no, al
 
 ::: {.panel tag="section"}
 ## Escenari 9: Cowabunga!
+
+<div class="maptop"><span>Cowabunga!</span><span>24&quot; x 24&quot; - portal, Kraang i Slash</span></div>
+<img class="map" src="campaigns/tortugues-ninja/assets/maps/escenari-09.svg" alt="Mapa de l'escenari 9">
+
+::: {.box .print}
+#### Nota d'adaptació 24" x 24"
+El portal queda al nord i les dues cantonades de desplegament al sud per aprofitar tota la diagonal de 24" x 24". Si Slash bloqueja massa prompte el portal, comenceu-lo 2" més lluny del centre.
+:::
 
 El portal a la dimensió de Kraang està a punt de tancar-se. Les Tortugues han de tornar a la Terra, però Slash ha entrat pel portal sota el control mental de Kraang.
 
@@ -130,7 +146,7 @@ El portal es torna inestable:
 ::: {.box}
 #### Preparació
 
-- Taula de **3' x 3'** al Technodrome trencat.
+- Taula màxima de **2' x 2'** (24" x 24") al Technodrome trencat.
 - El portal es posa al centre d'una vora.
 - Kraang es posa al centre de la taula.
 - Cada jugador desplega en una de les dues cantonades oposades al portal, a 6" de la cantonada.

@@ -11,6 +11,8 @@ no siga necessari tindre el PDF a mà.
 
 {{ include:campaigns/tortugues-ninja/partials/01-introduccio.md }}
 
+{{ include:campaigns/tortugues-ninja/partials/00-tutorial.md }}
+
 {{ include:campaigns/tortugues-ninja/partials/01b-cartes-tortugues.md }}
 
 {{ include:campaigns/tortugues-ninja/partials/01c-cartes-footclan.md }}

@@ -9,6 +9,19 @@ Repositori de campanyes narratives per a jocs d'escaramussa, aventura i investig
 
 ::: {.campaign-grid}
 ::: {.campaign-card}
+## Tortugues Ninja AoFQ
+
+Adaptació cooperativa per a `Age of Fantasy: Quest` de la campanya TMNT: mutagen, dilemes, Slash, Kraang i events narratius sense tocar les normes base d'AoFQ.
+
+[Obrir campanya](Tortugues%20Ninja%20-%20Campanya%20AoFQ.html){.button}
+
+:::
+:::
+
+## Antigues
+
+::: {.campaign-grid}
+::: {.campaign-card}
 ## El Pelegrinatge de la Lluna Mossegada
 
 Una campanya en valencià per a Sun Wukong, Cerdito i el mestre Tripitaka.

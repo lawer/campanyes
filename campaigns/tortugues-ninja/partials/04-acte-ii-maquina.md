@@ -48,6 +48,14 @@ En l'Acte I es podien aconseguir 3 missatges. En l'Acte II es poden aconseguir 2
 ::: {.panel tag="section"}
 ## Escenari 5: La màquina de mutagen
 
+<div class="maptop"><span>La màquina de mutagen</span><span>24&quot; x 24&quot; - laboratori i search</span></div>
+<img class="map" src="campaigns/tortugues-ninja/assets/maps/escenari-05.svg" alt="Mapa de l'escenari 5">
+
+::: {.box .print}
+#### Nota d'adaptació 24" x 24"
+El laboratori s'ha redibuixat com a sala compacta de 24" x 24". Per no saturar la mesa, comenceu amb poques peces de cobertura i afegiu els marcadors de `Search` en espais lliures.
+:::
+
 El mutagen ha de destil·lar-se i preparar-se per als plans de Shredder. El Clan del Peu busca les peces de la màquina i, sobretot, Baxter Stockman. Les Tortugues volen impedir-ho.
 
 ::: {.quote}
@@ -75,7 +83,7 @@ El laboratori no apareix en cap plànol de la ciutat. Hi ha tubs que travessen p
 ::: {.box .print}
 #### Preparació
 
-- Taula de **3' x 3'**.
+- Taula màxima de **2' x 2'** (24" x 24").
 - 7 a 12 peces de terreny.
 - Cada jugador col·loca només un marcador menor al principi.
 - El primer marcador ha d'estar a 12" d'una cantonada; el segon a 12" de la cantonada oposada.
@@ -93,6 +101,14 @@ Si el Clan del Peu guanya, pot triar Sidekick entre Bebop o Rocksteady. Si guany
 
 ::: {.panel tag="section"}
 ## Escenari 6: El dilema
+
+<div class="maptop"><span>El dilema</span><span>24&quot; x 24&quot; - dos majors al centre</span></div>
+<img class="map" src="campaigns/tortugues-ninja/assets/maps/escenari-06.svg" alt="Mapa de l'escenari 6">
+
+::: {.box .print}
+#### Nota d'adaptació 24" x 24"
+Les dues sales del dilema queden més pròximes que en una taula gran. Manteniu els dos majors al centre i a 6" o menys entre ells, i reserveu les vores només per al desplegament.
+:::
 
 Shredder té Baxter Stockman treballant en la màquina, però April O'Neil ha sigut capturada mentre investigava. Les Tortugues han de triar: salvar April o impedir que la màquina s'engegue.
 
@@ -123,7 +139,7 @@ Hi ha 2 plot points majors. Cada jugador tria en secret quin vol intentar. El qu
 ::: {.box .print}
 #### Preparació
 
-- Taula de **3' x 3'**, preferiblement laboratori.
+- Taula màxima de **2' x 2'** (24" x 24"), preferiblement laboratori.
 - 7 a 12 peces de terreny.
 - Els dos majors es col·loquen al centre, a 6" o menys entre ells.
 - Els altres 4 marcadors es col·loquen normalment.
@@ -144,6 +160,14 @@ Hi ha 2 plot points majors. Cada jugador tria en secret quin vol intentar. El qu
 
 ::: {.panel tag="section"}
 ## Escenari 7.1: Rescat
+
+<div class="maptop"><span>Rescat</span><span>24&quot; x 24&quot; - cau de Shredder</span></div>
+<img class="map" src="campaigns/tortugues-ninja/assets/maps/escenari-07-1.svg" alt="Mapa de l'escenari 7.1">
+
+::: {.box .print}
+#### Nota d'adaptació 24" x 24"
+La presó d'April queda al centre i els pilars/paranys fan de cobertura compacta. Si la zona central bloqueja massa el pas, retireu un pilar abans del torn 1.
+:::
 
 Els ninjas del Clan del Peu han capturat April O'Neil. Shredder vol acabar amb ella d'una vegada per totes. Les Tortugues intenten salvar la seua amiga.
 
@@ -175,7 +199,7 @@ April està lligada sota una llum blanca, envoltada d'aparells que no haurien d'
 ::: {.box .print}
 #### Preparació
 
-- Taula de **3' x 3'** al cau de Shredder: temple, edifici, jardí de monestir, etc.
+- Taula màxima de **2' x 2'** (24" x 24") al cau de Shredder: temple, edifici, jardí de monestir, etc.
 - 7 a 12 peces de terreny.
 - April al centre.
 - Els altres marcadors es col·loquen normalment.
@@ -193,6 +217,14 @@ Si les Tortugues controlen April, el Clan serà defensor en **Lluites**, April a
 
 ::: {.panel tag="section"}
 ## Escenari 7.2: Lluites
+
+<div class="maptop"><span>Lluites</span><span>24&quot; x 24&quot; - emboscada al cau</span></div>
+<img class="map" src="campaigns/tortugues-ninja/assets/maps/escenari-07-2.svg" alt="Mapa de l'escenari 7.2">
+
+::: {.box .print}
+#### Nota d'adaptació 24" x 24"
+El líder defensor, la seua lliga i els atacants conserven cantonades separades, però amb menys recorregut. Manteniu les restriccions de 6" i 12"; si dues zones es trepitgen, desplaceu el grup afectat cap a la vora més pròxima.
+:::
 
 La trampa de Splinter s'ha activat. La captura d'April era una maniobra per atrapar Leonardo. O potser la trampa ix malament i Shredder queda aïllat.
 
@@ -222,7 +254,7 @@ Tot es tanca massa ràpid: portes, reixes, llums, fum. Quan el soroll baixa, un 
 ::: {.box .print}
 #### Preparació
 
-- Taula de **3' x 3'** dins del cau de Shredder.
+- Taula màxima de **2' x 2'** (24" x 24") dins del cau de Shredder.
 - 7 a 12 peces de terreny.
 - Primer es desplega el líder defensor a 6" d'una cantonada.
 - La resta de la seua lliga desplega a 12" de la cantonada oposada.
@@ -240,6 +272,14 @@ Si el líder defensor evita quedar KO o capturat al final, rep la recompensa del
 
 ::: {.panel tag="section"}
 ## Escenari 7.3: Slash!!
+
+<div class="maptop"><span>Slash!!</span><span>24&quot; x 24&quot; - portal i tres màquines</span></div>
+<img class="map" src="campaigns/tortugues-ninja/assets/maps/escenari-07-3.svg" alt="Mapa de l'escenari 7.3">
+
+::: {.box .print}
+#### Nota d'adaptació 24" x 24"
+El portal, Slash i les tres màquines s'han redistribuït perquè el repte simultani siga possible en 24" x 24". Si no caben exactament a 12" de Slash, poseu-les tan prop d'aquesta distància com siga possible i sempre a més de 6" entre elles.
+:::
 
 Slash ha sigut creat pel llot. Però, a més, un portal està a punt d'obrir-se al carrer. Slash protegeix el portal amb fúria.
 
@@ -274,7 +314,7 @@ Si no s'activen les tres en el mateix torn, es reinicien al començament del seg
 ::: {.box .print}
 #### Preparació
 
-- Taula de **3' x 3'**.
+- Taula màxima de **2' x 2'** (24" x 24").
 - Portal en una cantonada.
 - Slash a 3" directament davant del portal.
 - Les màquines a 12" de Slash i a més de 6" entre elles.

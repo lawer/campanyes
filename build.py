@@ -38,6 +38,7 @@ def main() -> int:
     expand_file("campaigns/stranger-things/campanya.md", ".build/stranger-things.expanded.md")
     expand_file("campaigns/ombres-sant-josep/campanya.md", ".build/ombres-sant-josep.expanded.md")
     expand_file("campaigns/tortugues-ninja/campanya.md", ".build/tortugues-ninja.expanded.md")
+    expand_file("campaigns/tortugues-ninja-aofq/campanya.md", ".build/tortugues-ninja-aofq.expanded.md")
     return 0
 
 

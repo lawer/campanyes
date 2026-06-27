@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 720" role="img" aria-label="Mapa missio 7.3 Slash">
+<defs><pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse"><path d="M80 0H0V80" fill="none" stroke="#9cff4a" stroke-opacity=".12"/></pattern><style>text{font-family:Arial,sans-serif;font-weight:700}.t{font-size:18px}.s{font-size:13px}.zoneH{fill:#2fb8ff;fill-opacity:.14;stroke:#2fb8ff;stroke-width:4;stroke-dasharray:12 8}.zoneE{fill:#ff3b35;fill-opacity:.14;stroke:#ff3b35;stroke-width:4;stroke-dasharray:12 8}.obj{fill:#9d65ff;stroke:#fff;stroke-width:4}.boss{fill:#43d66f;stroke:#fff;stroke-width:4}.mach{fill:#ffb329;stroke:#fff;stroke-width:3}.rubble{fill:#4b3320;stroke:#c49a54;stroke-width:2}</style></defs>
+<rect width="720" height="720" fill="#07120c"/><rect x="40" y="40" width="640" height="640" fill="#12131c" stroke="#43d66f" stroke-width="4"/><rect x="40" y="40" width="640" height="640" fill="url(#grid)"/>
+<rect x="510" y="510" width="170" height="170" class="zoneH"/><text x="595" y="602" fill="#8fd8ff" class="s" text-anchor="middle">Herois</text><rect x="40" y="510" width="170" height="170" class="zoneE"/><rect x="510" y="40" width="170" height="170" class="zoneE"/>
+<circle cx="110" cy="110" r="36" class="obj"/><text x="110" y="166" fill="#d6c4ff" class="s" text-anchor="middle">Portal</text>
+<circle cx="190" cy="190" r="32" class="boss"/><text x="190" y="238" fill="#fff" class="s" text-anchor="middle">Slash</text>
+<circle cx="360" cy="170" r="22" class="mach"/><text x="360" y="205" fill="#ffdd91" class="s" text-anchor="middle">Mutagen</text>
+<circle cx="510" cy="360" r="22" class="mach"/><text x="510" y="395" fill="#ffdd91" class="s" text-anchor="middle">Diafragma</text>
+<circle cx="260" cy="495" r="22" class="mach"/><text x="260" y="530" fill="#ffdd91" class="s" text-anchor="middle">Generador</text>
+<rect x="340" y="330" width="90" height="42" class="rubble"/><rect x="170" y="410" width="90" height="42" class="rubble"/><rect x="500" y="210" width="90" height="42" class="rubble"/>
+<path d="M190 190L360 170M190 190L510 360M190 190L260 495" stroke="#ffb329" stroke-width="3" stroke-dasharray="10 8" opacity=".65"/>
+<text x="360" y="706" fill="#d5e8c8" class="s" text-anchor="middle">24&quot; x 24&quot; - carrer destrossat: portal, Slash i tres maquines</text></svg>

@@ -38,6 +38,14 @@ Els escenaris de l'Acte I es juguen en ordre. Si el Clan del Peu supera **35 uni
 ::: {.panel tag="section"}
 ## Escenari 1: Caos al port
 
+<div class="maptop"><span>Caos al port</span><span>24&quot; x 24&quot; - contenidors i mutagen</span></div>
+<img class="map" src="campaigns/tortugues-ninja/assets/maps/escenari-01.svg" alt="Mapa de l'escenari 1">
+
+::: {.box .print}
+#### Nota d'adaptació 24" x 24"
+Aquest escenari estava plantejat per a una taula més gran. El mapa redistribueix contenidors, clavegueres i plot points perquè tot quede dins de 24" x 24"; manteniu les distàncies de 6" i reduïu només la quantitat de terreny si la taula queda massa densa.
+:::
+
 El Clan del Peu va darrere d'un carregament de mutagen trobat als molls de Nova York. Les Tortugues han d'aturar-lo entre contenidors, grues i materials industrials.
 
 ::: {.quote}
@@ -79,7 +87,7 @@ Piles de barrils, barres metàl·liques, cadenes de grua i trampes oblidades per
 ::: {.box}
 #### Preparació
 
-- Taula de **3' x 3'**.
+- Taula màxima de **2' x 2'** (24" x 24").
 - Col·loqueu de 7 a 12 peces de terreny: 1d6+6.
 - Poseu contenidors, caixes o edificis baixos sobretot al centre, deixant alguns passadissos estrets.
 - El plot point major va al centre.
@@ -98,6 +106,14 @@ El Clan del Peu guanya unitats de mutagen pels plot points de mutagen que contro
 
 ::: {.panel tag="section"}
 ## Escenari 2: Obriu-lo!
+
+<div class="maptop"><span>Obriu-lo!</span><span>24&quot; x 24&quot; - assalt al contenidor</span></div>
+<img class="map" src="campaigns/tortugues-ninja/assets/maps/escenari-02.svg" alt="Mapa de l'escenari 2">
+
+::: {.box .print}
+#### Nota d'adaptació 24" x 24"
+El contenidor central i les zones d'atac/defensa s'han compactat per jugar en 24" x 24". Si el defensor queda massa tancat, retireu una peça de cobertura del centre abans de començar.
+:::
 
 La carrera continua. El gran carregament està dins d'un contenidor tancat. Una banda el controla, però encara ha d'obrir-lo.
 
@@ -133,7 +149,7 @@ Només el líder defensor pot completar/controlar el plot point major. Ha de sup
 ::: {.box}
 #### Preparació
 
-- Taula de **3' x 3'**.
+- Taula màxima de **2' x 2'** (24" x 24").
 - 7 a 12 peces de terreny, preferiblement prop dels molls de l'escenari 1.
 - Plot point major al centre.
 - Si ningú controlava el major en l'escenari 1, qui té iniciativa tria atacant o defensor.
@@ -151,6 +167,14 @@ El Clan del Peu guanya mutagen pels plot points controlats. Si el major queda se
 
 ::: {.panel tag="section"}
 ## Escenari 3: L'informe d'O'Neil
+
+<div class="maptop"><span>L'informe d'O'Neil</span><span>24&quot; x 24&quot; - desplegament altern</span></div>
+<img class="map" src="campaigns/tortugues-ninja/assets/maps/escenari-03.svg" alt="Mapa de l'escenari 3">
+
+::: {.box .print}
+#### Nota d'adaptació 24" x 24"
+Els blocs d'edificis i la furgoneta s'han apropat per mantindre carrers estrets sense superar 24" x 24". En desplegament altern, sigueu estrictes amb no començar a 6" de plot points o enemics.
+:::
 
 April O'Neil ha seguit la carrera del mutagen per la ciutat i ha trobat una informació crucial. El Clan del Peu també ho sap.
 
@@ -186,7 +210,7 @@ Cotxes accidentats, obres, corredors de carrer massa ràpids i contenidors amb a
 ::: {.box}
 #### Preparació
 
-- Taula de **3' x 3'**.
+- Taula màxima de **2' x 2'** (24" x 24").
 - 7 a 12 peces de terreny.
 - April comença al centre.
 - Els altres 4 marcadors es col·loquen alternant; cap a menys de 6" d'un altre marcador o de la vora.
@@ -203,6 +227,14 @@ Qui controle April podrà afegir-la en el següent escenari. April ha descobert 
 
 ::: {.panel tag="section"}
 ## Escenari 4: Transport de mutagen
+
+<div class="maptop"><span>Transport de mutagen</span><span>24&quot; x 24&quot; - intersecció en T</span></div>
+<img class="map" src="campaigns/tortugues-ninja/assets/maps/escenari-04.svg" alt="Mapa de l'escenari 4">
+
+::: {.box .print}
+#### Nota d'adaptació 24" x 24"
+La intersecció en T està comprimida perquè el camió tinga una ruta clara dins de 24" x 24". Si voleu una persecució més llarga, feu que el camió necessite eixir per una segona vora de carretera abans d'abandonar la taula.
+:::
 
 El transport de mutagen entra a la ciutat. April guia tots dos bàndols al lloc per on arribarà. Podran les Tortugues apoderar-se del camió abans que Shredder?
 
@@ -238,7 +270,7 @@ El camió entra al torn 1 després que tots els models hagen activat. Mou 6" seg
 ::: {.box}
 #### Preparació
 
-- Taula de **3' x 3'** amb una intersecció en T.
+- Taula màxima de **2' x 2'** (24" x 24") amb una intersecció en T.
 - 4 a 9 peces de terreny: 1d6+3.
 - El camió entra per una vora de carretera.
 - Els altres 4 marcadors es col·loquen com normalment.

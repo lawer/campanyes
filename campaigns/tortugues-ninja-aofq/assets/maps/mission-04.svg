@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 720" role="img" aria-label="Mapa missio 4 Transport de Mutagen">
+<defs><pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse"><path d="M80 0H0V80" fill="none" stroke="#9cff4a" stroke-opacity=".12"/></pattern><style>text{font-family:Arial,sans-serif;font-weight:700}.t{font-size:18px}.s{font-size:13px}.zoneH{fill:#2fb8ff;fill-opacity:.14;stroke:#2fb8ff;stroke-width:4;stroke-dasharray:12 8}.zoneE{fill:#ff3b35;fill-opacity:.14;stroke:#ff3b35;stroke-width:4;stroke-dasharray:12 8}.obj{fill:#9cff4a;stroke:#fff;stroke-width:4}.sec{fill:#ffb329;stroke:#fff;stroke-width:3}.road{fill:#34383d}.blk{fill:#101820;stroke:#888;stroke-width:3}.truck{fill:#9cff4a;stroke:#fff;stroke-width:4}.cone{fill:#ff8b1f;stroke:#fff;stroke-width:2}</style></defs>
+<rect width="720" height="720" fill="#07120c"/><rect x="40" y="40" width="640" height="640" fill="#182027" stroke="#43d66f" stroke-width="4"/><rect x="40" y="40" width="640" height="640" fill="url(#grid)"/>
+<rect x="300" y="40" width="120" height="640" class="road"/><rect x="40" y="300" width="640" height="120" class="road"/>
+<rect x="60" y="60" width="130" height="130" class="zoneH"/><text x="125" y="132" fill="#8fd8ff" class="s" text-anchor="middle">Herois</text><rect x="530" y="530" width="130" height="130" class="zoneE"/><text x="595" y="602" fill="#ff9b92" class="s" text-anchor="middle">Clan</text>
+<rect x="95" y="455" width="150" height="90" class="blk"/><rect x="475" y="115" width="120" height="95" class="blk"/><rect x="470" y="455" width="120" height="80" class="blk"/>
+<rect x="315" y="70" width="90" height="55" rx="6" class="truck"/><text x="360" y="105" fill="#07120c" class="s" text-anchor="middle">Camio R1</text><path d="M360 130V610" stroke="#9cff4a" stroke-width="6" stroke-dasharray="12 10"/>
+<circle cx="360" cy="360" r="28" class="obj"/><text x="360" y="400" fill="#fff" class="s" text-anchor="middle">Ruta / bloqueig</text>
+<polygon points="270,295 288,330 252,330" class="cone"/><text x="270" y="350" fill="#ffdd91" class="s" text-anchor="middle">Cons</text>
+<circle cx="555" cy="300" r="18" class="sec"/><text x="555" y="334" fill="#ffdd91" class="s" text-anchor="middle">Ordinador</text>
+<circle cx="205" cy="305" r="18" class="sec"/><text x="205" y="338" fill="#ffdd91" class="s" text-anchor="middle">Pizza</text>
+<circle cx="500" cy="580" r="16" class="sec"/><text x="500" y="612" fill="#ffdd91" class="s" text-anchor="middle">Mutagen menor</text>
+<text x="360" y="706" fill="#d5e8c8" class="s" text-anchor="middle">24&quot; x 24&quot; - cruilla en T: carretera, cons, cotxes i edificis baixos</text></svg>

@@ -1,0 +1,1414 @@
+<!DOCTYPE html>
+<html lang="ca-valencia">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tortugues Ninja - Campanya AoFQ</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Inter:wght@400;500;600;700;800;900&family=Roboto+Slab:wght@400;600;700&display=swap');
+:root{
+  --bg:#07120c;--bg2:#102318;--panel:#13281c;--panel2:#1a3424;
+  --shell:#43d66f;--shell2:#0b8f43;--mutagen:#9cff4a;--pizza:#ffb329;
+  --mask:#f04d31;--leo:#2fb8ff;--don:#9d65ff;--raph:#ff3b35;--mikey:#ff8b1f;
+  --kraang:#ff67b8;--foot:#1d1825;--text:#f2ffe9;--soft:#d5e8c8;--muted:#9eb99b;
+  --line:rgba(156,255,74,.28);--shadow:rgba(0,0,0,.55);
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,Arial,sans-serif;font-size:16px;line-height:1.7}
+body:before{content:'';position:fixed;inset:0;pointer-events:none;z-index:-2;background:radial-gradient(circle at 15% 8%,rgba(156,255,74,.22),transparent 28%),radial-gradient(circle at 88% 10%,rgba(255,103,184,.18),transparent 28%),radial-gradient(circle at 50% 100%,rgba(255,179,41,.16),transparent 34%),linear-gradient(180deg,#07120c 0%,#102318 44%,#07120c 100%)}
+body:after{content:'';position:fixed;inset:0;pointer-events:none;z-index:-1;opacity:.24;background:radial-gradient(circle,rgba(156,255,74,.28) 1px,transparent 1.6px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:14px 14px,76px 76px;mix-blend-mode:screen}
+.wrap{max-width:1080px;margin:0 auto;padding:28px 18px 56px}p{margin:.45rem 0 0}a{color:var(--mutagen)}code{background:rgba(156,255,74,.12);border:1px solid rgba(156,255,74,.22);border-radius:4px;padding:1px 5px;color:#ddffc9}
+.cover{position:relative;overflow:hidden;min-height:520px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:72px 28px;border:4px solid #101a12;border-radius:4px;background:radial-gradient(circle at 50% 35%,rgba(156,255,74,.30),transparent 25%),radial-gradient(circle at 76% 18%,rgba(255,103,184,.20),transparent 25%),linear-gradient(145deg,rgba(16,44,25,.96),rgba(5,14,10,.98) 55%,rgba(38,18,8,.94));box-shadow:0 28px 80px var(--shadow),inset 0 0 0 2px rgba(255,255,255,.06),inset 0 0 90px rgba(156,255,74,.10)}
+.cover:before{content:'COWABUNGA  ·  MUTAGEN  ·  PIZZA  ·  CLAN DEL PEU  ·  KRAANG';position:absolute;left:0;right:0;bottom:0;padding:9px 16px;background:repeating-linear-gradient(135deg,#111 0 12px,#ffb329 12px 24px);color:#07120c;font-family:Bangers,Inter,sans-serif;font-size:20px;letter-spacing:2px;text-shadow:0 1px 0 rgba(255,255,255,.45);white-space:nowrap;overflow:hidden}.cover:after{content:'NYC';position:absolute;top:8px;right:18px;color:rgba(255,255,255,.08);font-family:Bangers,sans-serif;font-size:112px;letter-spacing:7px;line-height:1;transform:rotate(-5deg)}
+.brand-logo{display:block;width:min(760px,92%);height:auto;margin:0 auto 18px;filter:drop-shadow(6px 6px 0 #050505) drop-shadow(0 0 24px rgba(156,255,74,.42))}.label,.smallcap,.rank,.mtype,.mbar,.pill,.tag{font-family:Bangers,Inter,sans-serif;text-transform:uppercase;letter-spacing:2px}.label{color:var(--pizza);font-size:22px;text-shadow:3px 3px 0 #0b0b0b,0 0 20px rgba(255,179,41,.45)}.label p,.subtitle p,.intro p,.smallcap p,.rank p,.name p,.desc p{margin:0}
+h1{font-family:Bangers,Inter,sans-serif;font-size:clamp(62px,13vw,142px);line-height:.82;margin:18px 0 12px;color:var(--mutagen);letter-spacing:3px;text-transform:uppercase;-webkit-text-stroke:2px #0b0b0b;text-shadow:5px 5px 0 #0b0b0b,9px 9px 0 var(--shell2),0 0 38px rgba(156,255,74,.48)}.subtitle{font-weight:900;color:#fff;font-size:clamp(16px,2.7vw,24px);text-transform:uppercase;letter-spacing:2px;text-shadow:3px 3px 0 #0b0b0b}.intro{max-width:780px;margin-top:24px;color:var(--soft);font-family:Roboto Slab,Georgia,serif;font-size:18px;background:rgba(4,10,7,.70);border:2px solid rgba(156,255,74,.28);padding:18px 22px;box-shadow:8px 8px 0 rgba(0,0,0,.38)}
+.tags{margin-top:24px}.tags p,.stats p{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin:0}.tag,.pill{display:inline-flex;align-items:center;border:2px solid rgba(16,16,16,.85);background:var(--shell2);color:#fff;border-radius:999px;padding:5px 11px;font-size:18px;line-height:1;box-shadow:3px 3px 0 #080808}.tag:nth-child(2n),.pill:nth-child(2n){background:var(--pizza);color:#211300}.tag:nth-child(3n),.pill:nth-child(3n){background:var(--don);color:#fff}
+.sh{text-align:center;margin:54px 0 20px}.sh h2{font-family:Bangers,Inter,sans-serif;font-size:clamp(36px,7vw,70px);letter-spacing:2px;line-height:.95;color:#fff;text-transform:uppercase;text-shadow:4px 4px 0 #0b0b0b,0 0 20px rgba(156,255,74,.35)}.smallcap{color:var(--pizza);font-size:19px}.rule{border:0;height:4px;max-width:600px;margin:0 auto 28px;background:linear-gradient(90deg,transparent,var(--leo),var(--raph),var(--mikey),var(--don),transparent);box-shadow:0 0 18px rgba(156,255,74,.45)}
+.grid,.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}.card,.panel,.mission,.villain,.ending{border:2px solid var(--line);background:linear-gradient(160deg,rgba(26,52,36,.96),rgba(7,18,12,.98));box-shadow:9px 9px 0 rgba(0,0,0,.30),0 18px 48px rgba(0,0,0,.26)}.card{position:relative;padding:22px;border-top:6px solid var(--shell)}.card:after{content:'';position:absolute;inset:auto 0 0;height:5px;background:linear-gradient(90deg,var(--leo),var(--raph),var(--mikey),var(--don));opacity:.95}.rank{color:var(--pizza);font-size:17px}.name{font-family:Bangers,Inter,sans-serif;color:#fff;font-size:38px;letter-spacing:1.5px;line-height:1;margin:4px 0 10px;text-shadow:3px 3px 0 #090909}.desc{color:var(--muted);font-family:Roboto Slab,Georgia,serif;font-size:15px}.stats{margin-top:16px}.stats p{justify-content:flex-start}
+.art{display:block;width:100%;height:clamp(230px,36vw,390px);object-fit:cover;margin:22px 0;border:2px solid rgba(156,255,74,.28);background:#07120c;box-shadow:8px 8px 0 rgba(0,0,0,.32);filter:saturate(1.08) contrast(1.08)}.art.compact{height:clamp(190px,28vw,320px);margin:14px 0}.art-card{padding:0;overflow:hidden}.art-card p{margin:0}.art-card img{display:block;width:100%}.logo-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:18px}.logo-tile{display:flex;align-items:center;justify-content:center;min-height:150px;padding:18px;border:2px solid rgba(156,255,74,.24);background:radial-gradient(circle at 50% 30%,rgba(156,255,74,.12),transparent 56%),rgba(4,12,7,.72);box-shadow:6px 6px 0 rgba(0,0,0,.28)}.logo-tile img{display:block;max-width:100%;max-height:116px;object-fit:contain;filter:drop-shadow(4px 4px 0 #050505)}.scene-art{margin:22px 0;border:2px solid rgba(156,255,74,.28);background:#07120c;box-shadow:8px 8px 0 rgba(0,0,0,.32);overflow:hidden}.scene-art figure{margin:0}.scene-art figcaption{padding:8px 12px;font-family:Bangers,Inter,sans-serif;text-transform:uppercase;letter-spacing:2px;font-size:18px;color:var(--pizza);background:rgba(4,10,7,.82)}.scene-art img{display:block;width:100%;max-height:430px;object-fit:cover;filter:saturate(1.05) contrast(1.08)}.scene-art.setup img{max-height:none;object-fit:contain;background:#07120c}.portrait{display:block;width:100%;height:230px;object-fit:cover;object-position:top center;margin:4px 0 14px;border:2px solid rgba(156,255,74,.30);background:#07120c;filter:saturate(1.08) contrast(1.06)}.box p:has(.portrait){margin:0}
+.panel{padding:26px;margin:26px 0}.panel h3,.rtitle{font-family:Bangers,Inter,sans-serif;color:#fff;text-transform:uppercase;letter-spacing:2px;font-size:34px;line-height:1;margin:0 0 16px;text-shadow:3px 3px 0 #070707}.panel h3:before,.rtitle:before{content:'▰ ';color:var(--mutagen)}.box{border:2px solid rgba(156,255,74,.22);background:rgba(5,17,10,.62);padding:16px}.box h4{font-family:Bangers,Inter,sans-serif;color:var(--pizza);font-size:24px;letter-spacing:1.5px;margin:0 0 8px;text-transform:uppercase;text-shadow:2px 2px 0 #070707}.box ul,.rbox ul{margin:0;padding:0;list-style:none}.box li,.rbox li{position:relative;padding:7px 0 7px 22px;color:var(--soft);border-bottom:1px solid rgba(156,255,74,.12)}.box li:last-child,.rbox li:last-child{border-bottom:0}.box li:before,.rbox li:before{content:'>';position:absolute;left:0;color:var(--mutagen);font-weight:900}.box strong,.rbox strong{color:#fff}.scale{border-left:6px solid var(--leo)!important}.print{border-left:6px solid var(--mikey)!important}.ai{border-left:6px solid var(--kraang)!important}
+.chapter{margin:60px 0}.banner{position:relative;overflow:hidden;padding:30px 26px;margin-bottom:22px;border:2px solid rgba(156,255,74,.32);background:radial-gradient(circle at 88% 30%,rgba(156,255,74,.16),transparent 36%),linear-gradient(135deg,rgba(18,60,28,.9),rgba(5,14,10,.66))}.banner:after{content:'SEWER';position:absolute;right:16px;bottom:-22px;font-family:Bangers,sans-serif;font-size:118px;line-height:1;color:rgba(156,255,74,.10);letter-spacing:5px}.banner.red{border-color:rgba(255,59,53,.42);background:radial-gradient(circle at 88% 30%,rgba(255,59,53,.18),transparent 36%),linear-gradient(135deg,rgba(58,14,12,.88),rgba(5,14,10,.66))}.banner.red:after{content:'FOOT';color:rgba(255,59,53,.10)}.banner.violet{border-color:rgba(255,103,184,.42);background:radial-gradient(circle at 88% 30%,rgba(255,103,184,.22),transparent 36%),linear-gradient(135deg,rgba(55,21,65,.88),rgba(5,14,10,.72))}.banner.violet:after{content:'KRAANG';color:rgba(255,103,184,.12)}.ctitle{font-family:Bangers,Inter,sans-serif;color:#fff;font-size:clamp(42px,8vw,78px);line-height:.95;letter-spacing:2px;text-shadow:4px 4px 0 #090909}
+.mission{margin:24px 0 34px;overflow:hidden}.mhead{display:flex;background:linear-gradient(90deg,rgba(156,255,74,.18),rgba(255,179,41,.10))}.mbar{width:54px;display:flex;align-items:center;justify-content:center;writing-mode:vertical-rl;padding:12px 0;background:linear-gradient(180deg,var(--shell2),rgba(255,179,41,.85));color:#07120c;font-size:18px;border-right:2px solid rgba(0,0,0,.42)}.mhc{flex:1;padding:18px 20px;border-bottom:1px solid rgba(156,255,74,.18)}.mtype{color:var(--pizza);font-size:17px}.mtitle{font-family:Bangers,Inter,sans-serif;color:#fff;font-size:40px;line-height:1;letter-spacing:1px;text-shadow:3px 3px 0 #070707}.mbody{padding:22px}.quote{position:relative;margin:0 0 18px;padding:16px 18px 16px 22px;color:#fff;background:linear-gradient(90deg,rgba(255,179,41,.18),rgba(156,255,74,.07));border-left:6px solid var(--pizza);font-family:Roboto Slab,Georgia,serif;font-size:16px}.quote cite{display:block;margin-top:10px;color:var(--mutagen);font-family:Bangers,Inter,sans-serif;font-style:normal;font-size:18px;letter-spacing:2px;text-transform:uppercase}.rbox{border:2px solid rgba(255,179,41,.36);background:rgba(4,12,7,.80);padding:18px;margin-top:16px}.rbar{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.terrain{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:14px}.terrain .box{border-left:6px solid var(--shell)}
+.maptop{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;padding:9px 14px;background:rgba(4,12,7,.86);border-top:1px solid rgba(156,255,74,.22);border-bottom:1px solid rgba(156,255,74,.22);color:var(--pizza);font-family:Bangers,Inter,sans-serif;text-transform:uppercase;letter-spacing:2px;font-size:17px}.map{display:block;width:100%;background:#07120c;border-bottom:1px solid rgba(156,255,74,.22)}.mission p:has(.map),.panel p:has(.map){margin:0}
+.villain{position:relative;overflow:hidden;padding:30px;margin:44px 0;border-color:rgba(255,103,184,.44);background:radial-gradient(circle at 85% 18%,rgba(255,103,184,.25),transparent 34%),linear-gradient(135deg,rgba(48,16,60,.84),rgba(5,14,10,.98))}.villain:after{content:'SHREDDER';position:absolute;right:16px;top:6px;color:rgba(255,255,255,.07);font-family:Bangers,sans-serif;font-size:82px;letter-spacing:5px}.villain .name{font-size:58px;color:#fff;text-shadow:4px 4px 0 #090909,0 0 28px rgba(255,103,184,.65)}.villain p{max-width:780px;color:var(--soft)}.ending{text-align:center;padding:34px;margin:42px 0;background:radial-gradient(circle at 50% 0%,rgba(156,255,74,.18),transparent 42%),linear-gradient(160deg,rgba(18,60,28,.9),rgba(5,14,10,.98))}.ending h3{font-family:Bangers,Inter,sans-serif;font-size:50px;letter-spacing:2px;line-height:1;color:#fff;text-shadow:4px 4px 0 #090909,0 0 22px rgba(156,255,74,.45)}
+@media print{body{background:#fff;color:#111}.wrap{max-width:none}.cover,.card,.panel,.mission,.villain,.ending{box-shadow:none;break-inside:avoid}.cover{break-after:page}}
+@media(max-width:680px){.wrap{padding:12px}.cover{min-height:430px;padding:48px 16px 54px}.cover:after{font-size:62px}.brand-logo{width:96%;margin-bottom:12px}.intro{font-size:16px;padding:14px}.mbar{width:40px}.mbody{padding:16px}.panel{padding:18px}.mission{margin-left:-4px;margin-right:-4px}.mtitle{font-size:33px}h1{-webkit-text-stroke:1px #0b0b0b}}
+</style>
+</head>
+<body><main class="wrap">
+<!--
+Campanya cooperativa per a Age of Fantasy: Quest basada en una estructura
+narrativa TMNT, escrita per poder-se llegir i jugar de manera autonoma.
+El contingut editable viu en campaigns/tortugues-ninja-aofq/partials/.
+Per generar el document final: make tortugues-aofq
+-->
+<div class="cover">
+<div class="label">
+<p>Age of Fantasy: Quest</p>
+</div>
+<h1 id="tortugues-ninja">Tortugues Ninja</h1>
+<div class="subtitle">
+<p>Campanya cooperativa en tres actes</p>
+</div>
+<div class="intro">
+<p>El Clan del Peu arreplega mutagen per tota Nova York. Les Tortugues
+intenten tallar la cadena abans que Shredder construisca un exèrcit
+mutant, però darrere de les ordres apareix una veu nova: Mr. K.</p>
+</div>
+<div class="tags">
+<p><span class="tag">AoFQ</span> <span class="tag">Cooperatiu vs
+IA</span> <span class="tag">3 actes</span> <span class="tag">9
+missions</span> <span class="tag">Events narratius</span></p>
+</div>
+</div>
+<section id="de-què-va-esta-campanya" class="panel">
+<h3>De què va esta campanya</h3>
+<p>Nova York està plena de sorolls normals: trànsit, sirenes, persianes
+metàl.liques i repartidors de pizza. Però esta nit hi ha un altre so
+sota la ciutat: el pas silenciós del Clan del Peu. Shredder ha ordenat
+recuperar bidons de mutagen, una substància porpra capaç de convertir
+qualsevol criatura en una arma vivent.</p>
+<p>Les Tortugues comencen perseguint carregaments al port, però prompte
+descobreixen que el Clan no treballa només per Shredder. Els ordinadors
+interceptats parlen d'un tal <strong>Mr. K</strong>, algú que sap massa
+coses sobre mutagen, portals i tecnologia impossible. La campanya passa
+de persecucions urbanes a laboratoris ocults, i acaba en una nau
+dimensional que intenta obrir-se pas fins a la Terra.</p>
+<p>No cal conéixer cap altra versio d'esta campanya. Tot el que fa falta
+per seguir la història, preparar la taula i saber què intenta cada
+bàndol està explicat ací. Si una regla d'esta campanya sembla contradir
+<code>AoFQ</code>, mana sempre el manual oficial.</p>
+</section>
+<section id="com-llegir-i-jugar" class="panel">
+<h3>Com llegir i jugar</h3>
+<div class="cols">
+<section id="ordre-de-joc" class="box">
+<h4>Ordre de joc</h4>
+<ul>
+<li>Llegiu la introduccio de l'acte.</li>
+<li>Jugueu la missio indicada.</li>
+<li>Apliqueu el final de missio i anoteu els rellotges.</li>
+<li>Llegiu la continuacio narrativa.</li>
+<li>Passeu a la següent missio o branca.</li>
+</ul>
+</section>
+<section id="qui-controla-què" class="box">
+<h4>Qui controla què</h4>
+<ul>
+<li>Els jugadors controlen les Tortugues o els herois equivalents.</li>
+<li>El Clan del Peu i els robots actuen amb IA simple.</li>
+<li>April, Splinter, Baxter, Slash i Kraang poden ser objectius, aliats
+narratius o amenaces segons la missio.</li>
+<li>Cap personatge narratiu necessita perfil si la missio no ho
+demana.</li>
+</ul>
+</section>
+<section id="què-cal-tindre" class="box">
+<h4>Què cal tindre</h4>
+<ul>
+<li>Taula de <strong>24" x 24"</strong>.</li>
+<li>Marcadors per a mutagen, pizza, ordinadors, April, portal i
+màquines.</li>
+<li>Escenografia urbana: contenidors, cotxes, caixes, edificis baixos i
+laboratori.</li>
+<li>Perfils OPR equivalents per als herois i enemics que decidiu
+usar.</li>
+</ul>
+</section>
+</div>
+</section>
+<section id="protagonistes-i-equivalents-opr" class="panel">
+<h3>Protagonistes i equivalents OPR</h3>
+<div class="cols">
+<section id="herois" class="box">
+<h4>Herois</h4>
+<ul>
+<li>Leonardo: heroi de cos a cos equilibrat, lider narratiu.</li>
+<li>Raphael: heroi de cos a cos agressiu.</li>
+<li>Donatello: heroi tecnic amb bona Destresa (Dex) o Voluntat
+(Wil).</li>
+<li>Michelangelo: heroi mobil, ideal per objectius i pizza.</li>
+<li>Si jugueu amb 2 herois, trieu dos germans i tracteu els altres com a
+suport narratiu fora de taula.</li>
+</ul>
+</section>
+<section id="enemics-recurrents" class="box">
+<h4>Enemics recurrents</h4>
+<ul>
+<li>Ninjas del Peu: tropes de cos a cos o infiltracio.</li>
+<li>Mousers: enemics febles i rapids.</li>
+<li>Bebop i Rocksteady: brutots o elites resistents.</li>
+<li>Baxter Stockman: enemic tecnic o objectiu protegit.</li>
+<li>Slash: cap errant amb IA simple.</li>
+<li>Kraang: cap i objectiu final amb events per ronda.</li>
+</ul>
+</section>
+<section id="regla-de-perfils" class="box">
+<h4>Regla de perfils</h4>
+<p>Useu perfils existents de l'app o de les llistes OPR com a
+equivalents. Esta campanya no crea perfils, punts, armes ni habilitats
+noves. Si un nom TMNT no té equivalent evident, trieu el perfil oficial
+que millor represente la funcio a la taula i anoteu-lo abans de començar
+la missio.</p>
+</section>
+</div>
+</section>
+<section id="referencia-rapida-de-campanya" class="panel">
+<h3>Referencia rapida de campanya</h3>
+<div class="cols">
+<section id="format-de-missio" class="box">
+<h4>Format de missio</h4>
+<ul>
+<li>Taula recomanada: <strong>24" x 24"</strong> per jugar en format de
+taula reduida.</li>
+<li>Si useu una taula de 4' x 4', dobleu les distancies d'escenari.</li>
+<li>Duracio normal: 5-6 rondes.</li>
+<li>Les interaccions son accions d'habilitat normals
+d'<code>AoFQ</code>.</li>
+</ul>
+</section>
+<section id="marcadors-comuns" class="box">
+<h4>Marcadors comuns</h4>
+<ul>
+<li><strong>Mutagen:</strong> bidons, caixes o tolls porpra. El Clan
+intenta evacuar-los.</li>
+<li><strong>Pizza:</strong> objectius de moral i humor; no són
+necessaris per guanyar.</li>
+<li><strong>Ordinador:</strong> tauletes, terminals o portàtils del Clan
+amb missatges de Mr. K.</li>
+<li><strong>April:</strong> civil important. Protegir-la sol donar
+informació o ajuda narrativa.</li>
+<li><strong>Màquina:</strong> aparells que s'activen amb interaccions
+d'habilitat.</li>
+<li><strong>Portal:</strong> objectiu final de fugida o entrada a una
+altra dimensio.</li>
+</ul>
+</section>
+<section id="ia-simple" class="box">
+<h4>IA simple</h4>
+<ul>
+<li>Si pot atacar un heroi, ataca.</li>
+<li>Si no pot atacar, avanca cap a l'objectiu d'IA de la missio.</li>
+<li>Si hi ha un marcador d'alarma, mutagen, April, portal o maquina,
+l'enemic mes proper el tracta com a objectiu d'IA.</li>
+<li>En empat, trieu l'opcio que cree mes pressio sense trencar la
+missio.</li>
+</ul>
+</section>
+<section id="reforcos" class="box">
+<h4>Reforcos</h4>
+<ul>
+<li>Useu les regles oficials d'alerta (alertness)
+d'<code>AoFQ</code>.</li>
+<li>Quan una missio diga "desplega reforcos", desplegueu una onada del
+valor que corresponga a la dificultat triada.</li>
+<li>Si jugueu amb xiquets o primera partida, retardeu els reforcos una
+ronda.</li>
+</ul>
+</section>
+</div>
+</section>
+<section id="rellotges-de-campanya" class="panel">
+<h3>Rellotges de campanya</h3>
+<div class="cols">
+<section id="mutagen-del-clan" class="box">
+<h4>Mutagen del Clan</h4>
+<p>Comenceu amb <strong>0 mutagen</strong>. Quan el Clan del Peu
+controla o evacua un marcador de mutagen, puja el rellotge:</p>
+<ul>
+<li>Mutagen menor: +1.</li>
+<li>Mutagen gran o camio: +2.</li>
+<li>Si arriba a <strong>6</strong>, l'Acte II comenca igualment i la
+Maquina de Mutagen inicia amb un event narratiu desfavorable.</li>
+</ul>
+</section>
+<section id="missatges-de-mr.-k" class="box">
+<h4>Missatges de Mr. K</h4>
+<p>Hi ha <strong>5 missatges</strong> possibles. Les Tortugues els
+aconsegueixen completant ordinadors, proves o pistes marcades. Amb
+<strong>4 o mes missatges</strong> abans de Technodrome, April
+descodifica la veu de Mr. K i els herois comencen l'Acte III amb una
+pista clara sobre el panell de control.</p>
+</section>
+<section id="pizza" class="box">
+<h4>Pizza</h4>
+<p>La pizza no canvia les regles base. Cada pizza recuperada dona una
+nota narrativa de moral. Si en teniu <strong>4</strong>, abans d'una
+missio podeu convertir-les en un avantatge suau acordat a taula: una
+pista extra, desplegament 3" millor o cancel.lar un event narratiu
+menor. No modifica perfils ni tirades oficials.</p>
+</section>
+</div>
+</section>
+<section id="events-narratius" class="panel">
+<h3>Events narratius</h3>
+<p>Els events d'esta campanya estan inspirats en el format de campanyes
+narratives <code>AoFQ</code>: apareixen abans d'una missio, entre
+missions o al començament d'una ronda concreta. S'han escrit per crear
+ritme i consequencies, no per substituir normes.</p>
+<p>Quan un event demane un test de Força (Str), Destresa (Dex) o
+Voluntat (Wil), useu una accio o test normal d'<code>AoFQ</code> amb
+l'heroi indicat. Les consequencies afecten preparacio, reforcos, posicio
+de marcadors o ficcio de la missio següent.</p>
+</section>
+<section id="si-no-sabeu-com-interpretar-una-situació" class="panel">
+<h3>Si no sabeu com interpretar una situació</h3>
+<div class="cols">
+<section id="prioritat-narrativa" class="box">
+<h4>Prioritat narrativa</h4>
+<ul>
+<li>Si una decisio protegeix April o civils, és coherent que done
+informació.</li>
+<li>Si una decisio deixa mutagen en mans del Clan, el rellotge de
+mutagen puja.</li>
+<li>Si una decisio fa molt soroll, puja l'alerta o entren reforcos.</li>
+<li>Si una escena queda massa difícil, convertiu la derrota en captura,
+fugida o pèrdua d'un objectiu secundari.</li>
+</ul>
+</section>
+<section id="com-parlar-dels-objectius" class="box">
+<h4>Com parlar dels objectius</h4>
+<p>Expliqueu sempre què representa cada interaccio abans de tirar: obrir
+un contenidor, calmar April, hackejar un terminal, arrossegar un bidó,
+bloquejar un camio, activar una màquina o forçar un portal. Això fa que
+la missio siga una escena narrativa i no només una llista de
+marcadors.</p>
+</section>
+<section id="escala-de-dificultat" class="box">
+<h4>Escala de dificultat</h4>
+<p>Per a una primera partida, useu menys enemics inicials i retardeu
+reforcos una ronda. Per a una partida més dura, feu que els objectius
+del Clan siguen també objectius d'IA i que una onada entre quan els
+herois completen un objectiu principal.</p>
+</section>
+</div>
+</section>
+<section id="preparacio-de-cada-missio" class="panel">
+<h3>Preparacio de cada missio</h3>
+<div class="cols">
+<section id="enemics-inicials" class="box">
+<h4>Enemics inicials</h4>
+<p>Quan una missio diga "Enemics suggerits", trieu una combinacio que
+s'ajuste a la dificultat de la vostra taula. Per a 2 herois, comenceu
+amb una onada menuda: ninjas o Mousers i, com a molt, un elite. Per a
+3-4 herois, afegiu un segon grup o un mutant gran.</p>
+</section>
+<section id="reforcos-1" class="box">
+<h4>Reforcos</h4>
+<p>Els reforcos representen el Clan entrant per clavegueres, carrerons,
+portes de laboratori o passarel.les del Technodrome. Si no hi ha punt
+indicat, entren per la vora més propera a l'objectiu que vol protegir el
+Clan.</p>
+</section>
+<section id="controlar-i-evacuar" class="box">
+<h4>Controlar i evacuar</h4>
+<p>Un objectiu està <strong>controlat</strong> si al final de la ronda
+hi ha almenys un heroi a 3" i cap enemic a 3". Un objectiu està
+<strong>evacuat</strong> quan la missio diu que ha arribat a una zona
+segura, ha eixit per una vora o ha sigut retirat de la taula després
+d'una interaccio.</p>
+</section>
+<section id="civils-i-aliats" class="box">
+<h4>Civils i aliats</h4>
+<p>April, Splinter i altres aliats narratius no bloquegen moviment ni
+línia de visio llevat que ho acordeu. Si un enemic arriba a 1" d'un
+civil, considereu-lo capturat, amenaçat o obligat a moure's, segons
+l'escena.</p>
+</section>
+</div>
+</section>
+<section id="herois-en-army-forge-i-cartes-imprimibles" class="panel">
+<h3>Herois en Army Forge i cartes imprimibles</h3>
+<p>Estes cartes no substitueixen Army Forge. La llista d'Army Forge és
+la font de veritat per a punts, perfil, armes i progressió. Les cartes
+només són un resum de taula per tindre les quatre Tortugues davant
+durant la missió.</p>
+<p>Per començar la campanya sense regles casolanes, crea els quatre
+herois amb el mateix perfil base:</p>
+<ul>
+<li><strong>Facció:</strong> Elfs Foscos (<code>Dark Elves</code>)</li>
+<li><strong>Perfil:</strong> Campió Aspirant
+(<code>Aspiring Champion</code>)</li>
+<li><strong>Classe:</strong> Lluitador (<code>Fighter</code>)</li>
+<li><strong>Nivell:</strong> 1</li>
+<li><strong>Punts:</strong> 100</li>
+<li><strong>Arma:</strong> Arma de mà (<code>Hand Weapon</code>) A3</li>
+</ul>
+<p>La katana, el sai, el bo i els nunchakus són representació narrativa
+de la mateixa arma d'Army Forge. Si després voleu personalitzar-los,
+feu-ho amb opcions oficials d'Army Forge i actualitzeu estes cartes
+perquè continuen sent un resum fidel.</p>
+<style>
+.aofq-card-sheet {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(63mm, 1fr));
+  gap: 10px;
+  align-items: start;
+  margin-top: 18px;
+}
+.aofq-card {
+  width: 63mm;
+  min-height: 88mm;
+  break-inside: avoid;
+  page-break-inside: avoid;
+  border: 1px solid rgba(216,184,90,.55);
+  background: linear-gradient(180deg, #f5efd9 0%, #e3d19b 100%);
+  color: #14100a;
+  font-family: Arial, sans-serif;
+  font-size: 8pt;
+  line-height: 1.25;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 22px rgba(0,0,0,.32);
+  overflow: hidden;
+}
+.aofq-card * { box-sizing: border-box; }
+.aofq-card__top {
+  display: grid;
+  grid-template-columns: 25mm 1fr;
+  gap: 2.5mm;
+  padding: 3mm;
+  background: linear-gradient(135deg, #14100a, #243316);
+  color: #f7edc4;
+}
+.aofq-card__portrait {
+  width: 25mm;
+  height: 25mm;
+  border: 1px solid #d8b85a;
+  object-fit: cover;
+  background: #111;
+}
+.aofq-card__name {
+  font-family: Cinzel, Georgia, serif;
+  font-size: 12pt;
+  line-height: 1;
+  color: #d8b85a;
+  margin: 0 0 2mm;
+}
+.aofq-card__sub {
+  font-size: 7pt;
+  text-transform: uppercase;
+  letter-spacing: .4px;
+  color: #d9d2ad;
+}
+.aofq-card__body { padding: 3mm; flex: 1; }
+.aofq-card__army {
+  border: 1px solid #7c6a32;
+  background: rgba(255,255,255,.38);
+  padding: 1.8mm;
+  margin-bottom: 2mm;
+}
+.aofq-card__army strong,
+.aofq-card__role strong,
+.aofq-card__equipment strong { color: #251a08; }
+.aofq-card__stats {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2mm;
+  table-layout: fixed;
+}
+.aofq-card__stats th {
+  background: #2f3f20;
+  color: #f7edc4;
+  font-size: 6.6pt;
+  padding: 1.2mm .7mm;
+  border: 1px solid #1a230f;
+}
+.aofq-card__stats td {
+  text-align: center;
+  font-weight: 700;
+  padding: 1.2mm .7mm;
+  border: 1px solid #9a8747;
+  background: rgba(255,255,255,.45);
+}
+.aofq-card__equipment,
+.aofq-card__role {
+  border-top: 1px solid #9a8747;
+  padding-top: 1.7mm;
+  margin-top: 1.7mm;
+}
+.aofq-card__foot {
+  margin-top: auto;
+  padding: 2mm 3mm;
+  background: #14100a;
+  color: #f7edc4;
+  display: flex;
+  justify-content: space-between;
+  gap: 2mm;
+  font-size: 7pt;
+}
+@media print {
+  .aofq-card-sheet { grid-template-columns: repeat(2, 63mm); gap: 5mm; }
+  .aofq-card { box-shadow: none; border-color: #111; }
+}
+</style>
+
+<div class="aofq-card-sheet">
+  <article class="aofq-card">
+    <div class="aofq-card__top">
+      <img class="aofq-card__portrait" src="campaigns/tortugues-ninja/assets/leo_card_1781392847482.png" alt="Leonardo">
+      <div>
+        <h4 class="aofq-card__name">Leonardo</h4>
+        <div class="aofq-card__sub">Nivell 1 · Lluitador (Fighter)</div>
+      </div>
+    </div>
+    <div class="aofq-card__body">
+      <div class="aofq-card__army"><strong>Army Forge:</strong> Elfs Foscos (Dark Elves) · Campió Aspirant (Aspiring Champion)</div>
+      <table class="aofq-card__stats">
+        <tr><th>Qualitat (Qua)</th><th>Defensa (Def)</th><th>Resistència (Tou)</th><th>Poder (Pow)</th></tr>
+        <tr><td>4+</td><td>6+</td><td>9</td><td>4</td></tr>
+      </table>
+      <table class="aofq-card__stats">
+        <tr><th>Força (Str)</th><th>Destresa (Dex)</th><th>Voluntat (Wil)</th></tr>
+        <tr><td>4+</td><td>6+</td><td>6+</td></tr>
+      </table>
+      <div class="aofq-card__equipment"><strong>Arma:</strong> Arma de mà (Hand Weapon) A3 · representada com a katanes.</div>
+      <div class="aofq-card__role"><strong>Ús narratiu:</strong> líder equilibrat, manté la línia i coordina objectius.</div>
+    </div>
+    <div class="aofq-card__foot"><span>100 punts</span><span>Heroi</span></div>
+  </article>
+
+  <article class="aofq-card">
+    <div class="aofq-card__top">
+      <img class="aofq-card__portrait" src="campaigns/tortugues-ninja/assets/raph_card_v2_1781393114567.png" alt="Raphael">
+      <div>
+        <h4 class="aofq-card__name">Raphael</h4>
+        <div class="aofq-card__sub">Nivell 1 · Lluitador (Fighter)</div>
+      </div>
+    </div>
+    <div class="aofq-card__body">
+      <div class="aofq-card__army"><strong>Army Forge:</strong> Elfs Foscos (Dark Elves) · Campió Aspirant (Aspiring Champion)</div>
+      <table class="aofq-card__stats">
+        <tr><th>Qualitat (Qua)</th><th>Defensa (Def)</th><th>Resistència (Tou)</th><th>Poder (Pow)</th></tr>
+        <tr><td>4+</td><td>6+</td><td>9</td><td>4</td></tr>
+      </table>
+      <table class="aofq-card__stats">
+        <tr><th>Força (Str)</th><th>Destresa (Dex)</th><th>Voluntat (Wil)</th></tr>
+        <tr><td>4+</td><td>6+</td><td>6+</td></tr>
+      </table>
+      <div class="aofq-card__equipment"><strong>Arma:</strong> Arma de mà (Hand Weapon) A3 · representada com a sai.</div>
+      <div class="aofq-card__role"><strong>Ús narratiu:</strong> pressió frontal, protegeix companys i aguanta el centre.</div>
+    </div>
+    <div class="aofq-card__foot"><span>100 punts</span><span>Heroi</span></div>
+  </article>
+
+  <article class="aofq-card">
+    <div class="aofq-card__top">
+      <img class="aofq-card__portrait" src="campaigns/tortugues-ninja/assets/donnie_card_1781392828118.png" alt="Donatello">
+      <div>
+        <h4 class="aofq-card__name">Donatello</h4>
+        <div class="aofq-card__sub">Nivell 1 · Lluitador (Fighter)</div>
+      </div>
+    </div>
+    <div class="aofq-card__body">
+      <div class="aofq-card__army"><strong>Army Forge:</strong> Elfs Foscos (Dark Elves) · Campió Aspirant (Aspiring Champion)</div>
+      <table class="aofq-card__stats">
+        <tr><th>Qualitat (Qua)</th><th>Defensa (Def)</th><th>Resistència (Tou)</th><th>Poder (Pow)</th></tr>
+        <tr><td>4+</td><td>6+</td><td>9</td><td>4</td></tr>
+      </table>
+      <table class="aofq-card__stats">
+        <tr><th>Força (Str)</th><th>Destresa (Dex)</th><th>Voluntat (Wil)</th></tr>
+        <tr><td>4+</td><td>6+</td><td>6+</td></tr>
+      </table>
+      <div class="aofq-card__equipment"><strong>Arma:</strong> Arma de mà (Hand Weapon) A3 · representada com a bo.</div>
+      <div class="aofq-card__role"><strong>Ús narratiu:</strong> terminals, màquines, pistes i decisions tècniques.</div>
+    </div>
+    <div class="aofq-card__foot"><span>100 punts</span><span>Heroi</span></div>
+  </article>
+
+  <article class="aofq-card">
+    <div class="aofq-card__top">
+      <img class="aofq-card__portrait" src="campaigns/tortugues-ninja/assets/mikey_card_v2_1781393104775.png" alt="Michelangelo">
+      <div>
+        <h4 class="aofq-card__name">Michelangelo</h4>
+        <div class="aofq-card__sub">Nivell 1 · Lluitador (Fighter)</div>
+      </div>
+    </div>
+    <div class="aofq-card__body">
+      <div class="aofq-card__army"><strong>Army Forge:</strong> Elfs Foscos (Dark Elves) · Campió Aspirant (Aspiring Champion)</div>
+      <table class="aofq-card__stats">
+        <tr><th>Qualitat (Qua)</th><th>Defensa (Def)</th><th>Resistència (Tou)</th><th>Poder (Pow)</th></tr>
+        <tr><td>4+</td><td>6+</td><td>9</td><td>4</td></tr>
+      </table>
+      <table class="aofq-card__stats">
+        <tr><th>Força (Str)</th><th>Destresa (Dex)</th><th>Voluntat (Wil)</th></tr>
+        <tr><td>4+</td><td>6+</td><td>6+</td></tr>
+      </table>
+      <div class="aofq-card__equipment"><strong>Arma:</strong> Arma de mà (Hand Weapon) A3 · representada com a nunchakus.</div>
+      <div class="aofq-card__role"><strong>Ús narratiu:</strong> objectius ràpids, rescats, distraccions i pizza.</div>
+    </div>
+    <div class="aofq-card__foot"><span>100 punts</span><span>Heroi</span></div>
+  </article>
+</div>
+</section>
+<section class="chapter">
+<div class="banner">
+<div class="smallcap">
+<p>Acte I - Mutagen</p>
+</div>
+<div class="ctitle">
+<p>La carrera del llot porpra</p>
+</div>
+<p>Shredder ha posat el Clan del Peu a buscar bidons de mutagen per tota
+Nova York. Les Tortugues han de tallar la ruta de subministrament abans
+que el llot arribe a mans de Baxter Stockman. Al mateix temps, uns
+ordinadors extraviats deixen veure que Shredder rep ordres d'algú
+anomenat Mr. K.</p>
+</div>
+<article class="mission">
+<div class="mhead">
+<div class="mbar">
+<p>Missio 1</p>
+</div>
+<div class="mhc">
+<div class="mtype">
+<p>Recuperacio - molls</p>
+</div>
+<div class="mtitle">
+<p>Estrall al Port (Harbor Havoc)</p>
+</div>
+</div>
+</div>
+<div class="maptop">
+<span>Estrall al Port</span><span>24" x 24" - molls i contenidors</span>
+</div>
+<p><img class="map" src="campaigns/tortugues-ninja-aofq/assets/maps/mission-01.svg" alt="Mapa de la missió 1: desplegament al port, mutagen gran, mutagens menors, pizza i ordinador"></p>
+<div class="mbody">
+<div class="quote">
+Les grues del port grinyolen mentre els ninjas descarreguen caixes sense
+llum. Una de les lones cau i deixa veure un bidó porpra amb una fuita
+brillant.<cite>Arribada als molls</cite>
+</div>
+<div class="rbox">
+<div class="rtitle">
+<p>Regles de missio</p>
+</div>
+<ul>
+<li><strong>Història de fons:</strong> el Clan ha trobat un carregament
+gran de mutagen als molls. Les Tortugues han d'evitar que desaparega
+entre contenidors.</li>
+<li><strong>Camp de batalla / preparacio:</strong> port amb contenidors
+al centre, grues o cobertura pesada. Col.loqueu el Mutagen gran al
+centre, dos Mutagens menors a zones oposades, una Pizza i un Ordinador
+de Mr. K.</li>
+<li><strong>Enemics suggerits:</strong> ninjas del Peu, Mousers, Bebop o
+Rocksteady com a elite de suport.</li>
+<li><strong>Objectiu principal:</strong> un heroi en contacte amb el
+Mutagen gran gasta una interaccio de Força (Str) o Destresa (Dex) per
+assegurar-lo. Despres, tots els herois han d'acabar una ronda a 3" d'una
+zona segura.</li>
+<li><strong>Objectiu secundari:</strong> hackejar l'Ordinador amb
+Voluntat (Wil) o Destresa (Dex) per obtindre 1 missatge de Mr. K.</li>
+<li><strong>Final de missio i recompenses:</strong> l'objectiu principal
+dona XP normal de missio; el secundari dona +1 missatge. Cada Mutagen
+que quede en contacte amb un enemic al final suma +1 al rellotge del
+Clan; el Mutagen gran suma +2.</li>
+<li><strong>Desplegament:</strong> herois a una vora curta; sentinelles
+del Clan en dos quadrants propers al centre.</li>
+<li><strong>Regles especials:</strong> el Mutagen gran es considera
+perillos narrativament; si un heroi falla la interaccio, queda exposat i
+l'objectiu passa a ser objectiu d'IA fins al final de la ronda.</li>
+<li><strong>Event narratiu:</strong> si Mikey o l'heroi mes mobil
+recupera la Pizza abans de tocar el Mutagen gran, anoteu <strong>Pizza
++1</strong> i moveu un enemic 3" cap a ell: ha fet massa soroll
+celebrant-ho.</li>
+<li><strong>Continuacio:</strong> entre les caixes apareix una tauleta
+del Clan amb una ordre curta: "No obriu el carregament fins que Mr. K
+confirme la ruta". Shredder encara busca més mutagen i el següent
+carregament ja està tancat en un contenidor reforçat.</li>
+</ul>
+<div class="rbar">
+<p><span class="pill">Acte I</span><span class="pill">Mutagen +
+missatge</span><span class="pill">Duracio 6 rondes</span></p>
+</div>
+</div>
+</div>
+</article>
+<article class="mission">
+<div class="mhead">
+<div class="mbar">
+<p>Missio 2</p>
+</div>
+<div class="mhc">
+<div class="mtype">
+<p>Obertura - contenidor</p>
+</div>
+<div class="mtitle">
+<p>Obriu-lo! (Open it!)</p>
+</div>
+</div>
+</div>
+<div class="maptop">
+<span>Obriu-lo!</span><span>24" x 24" - contenidor central</span>
+</div>
+<p><img class="map" src="campaigns/tortugues-ninja-aofq/assets/maps/mission-02.svg" alt="Mapa de la missió 2: contenidor central, zones de desplegament, mutagens menors, pizza i ordinador protegit"></p>
+<div class="mbody">
+<div class="quote">
+El carregament esta tancat dins d'un contenidor amb segells del Clan.
+Donatello veu un teclat improvisat, Raphael veu una porta que podria
+rebentar, i Leonardo sap que el temps corre.<cite>El contenidor
+segellat</cite>
+</div>
+<div class="rbox">
+<div class="rtitle">
+<p>Regles de missio</p>
+</div>
+<ul>
+<li><strong>Història de fons:</strong> el Mutagen gran esta dins d'un
+contenidor. La pregunta no és on esta, sino qui aconseguira obrir-lo
+primer.</li>
+<li><strong>Camp de batalla / preparacio:</strong> contenidor al centre,
+dos Mutagens menors, Pizza i Ordinador protegit.</li>
+<li><strong>Enemics suggerits:</strong> ninjas del Peu, Mousers i un
+mutant gran si el Clan va sumar 2 o mes mutagen en la missio
+anterior.</li>
+<li><strong>Objectiu principal:</strong> obrir el contenidor amb
+<strong>3 interaccions acumulades</strong>. Cada interaccio pot ser
+Força (Str) per forçar, Destresa (Dex) per manipular o Voluntat (Wil)
+per coordinar el pla.</li>
+<li><strong>Objectiu secundari:</strong> l'Ordinador exigeix primer una
+interaccio de Destresa (Dex); si passa, una segona de Voluntat (Wil)
+dona 1 missatge de Mr. K.</li>
+<li><strong>Final de missio i recompenses:</strong> si els herois obrin
+el contenidor i evacuen el Mutagen, no puja el rellotge. Si no, el Clan
+suma +2 mutagen.</li>
+<li><strong>Desplegament:</strong> si els herois controlaren el Mutagen
+gran en Missio 1, despleguen a 6" del contenidor; si no, despleguen des
+d'una vora.</li>
+<li><strong>Regles especials:</strong> cada ronda que el contenidor
+continue tancat, un enemic lliure es mou cap a ell com a objectiu
+d'IA.</li>
+<li><strong>Event narratiu:</strong> abans de desplegar, trieu una
+aproximacio. Força (Str): poseu una cobertura extra al costat del
+contenidor. Destresa (Dex): un heroi pot moure 3" despres de desplegar.
+Voluntat (Wil): reduiu en 1 la primera pujada d'alerta (alertness).</li>
+<li><strong>Continuacio:</strong> quan el contenidor s'obri, queda clar
+que no és un robatori improvisat. El mutagen està etiquetat, inventariat
+i destinat a una màquina concreta. April O'Neil ha estat seguint les
+mateixes pistes i envia un missatge urgent a Donatello: té una exclusiva
+abans que el Clan la silencie.</li>
+</ul>
+<div class="rbar">
+<p><span class="pill">3 interaccions</span><span class="pill">Contenidor
+central</span><span class="pill">Mr. K +1</span></p>
+</div>
+</div>
+</div>
+</article>
+<article class="mission">
+<div class="mhead">
+<div class="mbar">
+<p>Missio 3</p>
+</div>
+<div class="mhc">
+<div class="mtype">
+<p>Informacio - persecucio</p>
+</div>
+<div class="mtitle">
+<p>L'informe d'O'Neil (O'Neil's Report)</p>
+</div>
+</div>
+</div>
+<div class="maptop">
+<span>L'informe d'O'Neil</span><span>24" x 24" - carrer nocturn</span>
+</div>
+<p><img class="map" src="campaigns/tortugues-ninja-aofq/assets/maps/mission-03.svg" alt="Mapa de la missió 3: April al centre, furgoneta de Channel 6, zones alternes i objectius secundaris"></p>
+<div class="mbody">
+<div class="quote">
+April O'Neil ha trobat una pista sobre el mutagen. El problema és que
+també l'ha trobada el Clan, i els focus de Channel 6 il.luminen massa el
+carrer.<cite>Una exclusiva perillosa</cite>
+</div>
+<div class="rbox">
+<div class="rtitle">
+<p>Regles de missio</p>
+</div>
+<ul>
+<li><strong>Història de fons:</strong> April porta informacio crítica
+sobre un transport de mutagen encarregat per Mr. K.</li>
+<li><strong>Camp de batalla / preparacio:</strong> carrer nocturn amb
+April al centre, una furgoneta de noticies, dos Mutagens menors i una
+Pizza.</li>
+<li><strong>Enemics suggerits:</strong> ninjas, Mousers i un elite del
+Clan.</li>
+<li><strong>Objectiu principal:</strong> arribar a April i gastar una
+interaccio de Voluntat (Wil) per convéncer-la o de Destresa (Dex) per
+traure-la de la zona. Despres, April ha d'acabar una ronda a 3" d'un
+heroi i a mes de 6" d'enemics.</li>
+<li><strong>Objectiu secundari:</strong> registrar la furgoneta de
+Channel 6 amb Destresa (Dex) per obtindre una pista addicional sobre Mr.
+K o el camio.</li>
+<li><strong>Final de missio i recompenses:</strong> si April ix segura,
+ajudarà en Transport de Mutagen (Mutagen Transport). Si no, el Clan
+coneix millor la ruta i comenca la Missio 4 amb +1 mutagen.</li>
+<li><strong>Desplegament:</strong> herois alternen desplegament amb
+enemics; ningú pot començar a 6" d'April.</li>
+<li><strong>Regles especials:</strong> al final de cada ronda, si April
+no esta en contacte amb cap heroi, mou-la 1D6" en una direccio aleatoria
+segura.</li>
+<li><strong>Event narratiu:</strong> si la furgoneta és investigada
+abans d'April, col.loqueu un marcador de càmera: el primer enemic que
+entre a 3" queda desviat cap a la càmera com a objectiu d'IA durant una
+activacio.</li>
+<li><strong>Continuacio:</strong> April mostra fotografies borroses d'un
+camio sense matrícula i un rebut signat amb una sola inicial: K. No sap
+qui és Mr. K, però sap quan entra el transport a la ciutat. El Clan
+també ho sap, i ja està desviant el trànsit.</li>
+</ul>
+<div class="rbar">
+<p><span class="pill">April</span><span
+class="pill">Furgoneta</span><span class="pill">Ruta del
+camio</span></p>
+</div>
+</div>
+</div>
+</article>
+<article class="mission">
+<div class="mhead">
+<div class="mbar">
+<p>Missio 4</p>
+</div>
+<div class="mhc">
+<div class="mtype">
+<p>Convoi - persecucio urbana</p>
+</div>
+<div class="mtitle">
+<p>Transport de Mutagen (Mutagen Transport)</p>
+</div>
+</div>
+</div>
+<div class="maptop">
+<span>Transport de Mutagen</span><span>24" x 24" - cruïlla en T</span>
+</div>
+<p><img class="map" src="campaigns/tortugues-ninja-aofq/assets/maps/mission-04.svg" alt="Mapa de la missió 4: carretera en T, ruta del camió, cons, ordinador, pizza i mutagen menor"></p>
+<div class="mbody">
+<div class="quote">
+Un camio entra a la ciutat sense frenar. Els cons de transit no són una
+obra: són l'única manera de canviar la ruta abans que el mutagen arribe
+a la màquina.<cite>La ruta de Mr. K</cite>
+</div>
+<div class="rbox">
+<div class="rtitle">
+<p>Regles de missio</p>
+</div>
+<ul>
+<li><strong>Història de fons:</strong> el carregament final arriba per
+carretera. Esta missio tanca l'Acte I encara que el rellotge de mutagen
+no haja arribat a 6.</li>
+<li><strong>Camp de batalla / preparacio:</strong> carrer amb cruilla en
+T. El camio entra al final de la ronda 1 per la carretera marcada. Poseu
+Pizza, cons de transit, Ordinador i un Mutagen menor.</li>
+<li><strong>Enemics suggerits:</strong> ninjas, Mousers,
+Bebop/Rocksteady si voleu pressio física.</li>
+<li><strong>Objectiu principal:</strong> detindre o desviar el camio. Un
+heroi pot gastar interaccio de Força (Str) per bloquejar, Destresa (Dex)
+per manipular cons o Voluntat (Wil) per coordinar April i el
+trànsit.</li>
+<li><strong>Objectiu secundari:</strong> hackejar l'Ordinador per
+obtindre 1 missatge de Mr. K.</li>
+<li><strong>Final de missio i recompenses:</strong> si el camio és
+detingut o desviat, el Clan suma només +1 mutagen; si escapa, suma +2.
+Passeu a l'Acte II.</li>
+<li><strong>Desplegament:</strong> herois i enemics alternen
+desplegament, però ningú pot començar a la carretera d'entrada del
+camio.</li>
+<li><strong>Regles especials:</strong> al final de cada ronda des de la
+1, el camio avanca 6" seguint la carretera. Si xoca amb un bloqueig
+complet, s'atura i es converteix en objectiu d'IA.</li>
+<li><strong>Event narratiu:</strong> al començament de les rondes 2-4,
+trieu un senyal del caos: sirenes, semafor trencat o conductors
+espantats. Moveu un marcador de trànsit 3"; si toca el camio, canvia
+lleugerament la ruta.</li>
+<li><strong>Continuacio:</strong> tant si el camio és detingut com si
+escapa, l'Acte I acaba ací. El mutagen recollit és suficient perquè
+Baxter Stockman comence a muntar alguna cosa. Les Tortugues han passat
+de perseguir bidons a buscar el lloc on el Clan pensa convertir-los en
+un exèrcit.</li>
+</ul>
+<div class="rbar">
+<p><span class="pill">Camio</span><span class="pill">Final Acte
+I</span><span class="pill">Mr. K +1</span></p>
+</div>
+</div>
+</div>
+</article>
+</section>
+<section class="chapter">
+<div class="banner red">
+<div class="smallcap">
+<p>Acte II - La Maquina</p>
+</div>
+<div class="ctitle">
+<p>El dilema de Baxter</p>
+</div>
+<p>El Clan del Peu ja no busca bidons: ara busca peces, experts i temps.
+Baxter Stockman prepara una màquina que pot convertir el mutagen en una
+arma. April ha anat massa lluny investigant i la veu de Mr. K sona cada
+vegada menys humana.</p>
+</div>
+<article class="mission">
+<div class="mhead">
+<div class="mbar">
+<p>Missio 5</p>
+</div>
+<div class="mhc">
+<div class="mtype">
+<p>Recerca - peces de maquina</p>
+</div>
+<div class="mtitle">
+<p>La Maquina de Mutagen (Mutagen Machine)</p>
+</div>
+</div>
+</div>
+<div class="maptop">
+<span>La Màquina de Mutagen</span><span>24" x 24" - taller i
+peces</span>
+</div>
+<p><img class="map" src="campaigns/tortugues-ninja-aofq/assets/maps/mission-05.svg" alt="Mapa de la missió 5: taller, zones de desplegament, Baxter, peces de màquina i ordinador"></p>
+<div class="mbody">
+<div class="quote">
+Baxter no s'amaga per por: s'amaga perquè treballa millor quan ningú
+interromp els seus experiments.<cite>Peces disperses</cite>
+</div>
+<div class="rbox">
+<div class="rtitle">
+<p>Regles de missio</p>
+</div>
+<ul>
+<li><strong>Història de fons:</strong> cal localitzar Baxter i les peces
+de la màquina abans que el Clan les reunisca.</li>
+<li><strong>Camp de batalla / preparacio:</strong> taller abandonat o
+magatzem amb dos marcadors visibles de Peces. La resta d'objectius
+entren quan es completen interaccions.</li>
+<li><strong>Enemics suggerits:</strong> Mousers, ninjas i Baxter com a
+marcador/cap protegit.</li>
+<li><strong>Objectiu principal:</strong> trobar Baxter. Despres que els
+herois completen dos objectius menors, col.loqueu Baxter a mes de 6" de
+qualsevol heroi. Un heroi en contacte pot gastar Voluntat (Wil) o
+Destresa (Dex) per tallar-li la fugida.</li>
+<li><strong>Objectiu secundari:</strong> recuperar 3 Peces de Maquina
+amb interaccions de Força (Str) o Destresa (Dex).</li>
+<li><strong>Final de missio i recompenses:</strong> si els herois
+controlen Baxter o 2+ peces, trien quin mutant gran acompanya el Clan en
+la següent missio. Si no, el Clan tria i comenca amb millor
+posicio.</li>
+<li><strong>Desplegament:</strong> herois en una cantonada; enemics en
+la cantonada oposada.</li>
+<li><strong>Regles especials:</strong> cada vegada que es completa una
+Peça, col.loqueu un nou marcador a mes de 6" d'herois i enemics.</li>
+<li><strong>Event narratiu:</strong> si el rellotge de mutagen va
+arribar a 6 en l'Acte I, el primer marcador de Peça és inestable: al
+completar-lo, desplegueu una onada menuda de Mousers o augmenteu
+l'alerta (alertness) en 2.</li>
+<li><strong>Continuacio:</strong> Baxter deixa enrere esquemes plens de
+gargots, noms de mutants i una paraula repetida: "portal". Les peces no
+només refinen mutagen; també preparen una obertura dimensional. April
+s'acosta massa al laboratori mentre intenta gravar proves.</li>
+</ul>
+<div class="rbar">
+<p><span class="pill">Baxter</span><span class="pill">Peces
+3</span><span class="pill">Branca del dilema</span></p>
+</div>
+</div>
+</div>
+</article>
+<article class="mission">
+<div class="mhead">
+<div class="mbar">
+<p>Missio 6</p>
+</div>
+<div class="mhc">
+<div class="mtype">
+<p>Doble objectiu</p>
+</div>
+<div class="mtitle">
+<p>El Dilema (The Dilemma)</p>
+</div>
+</div>
+</div>
+<div class="maptop">
+<span>El Dilema</span><span>24" x 24" - laboratori amb dos
+objectius</span>
+</div>
+<p><img class="map" src="campaigns/tortugues-ninja-aofq/assets/maps/mission-06.svg" alt="Mapa de la missió 6: laboratori, April, màquina de mutagen, evidència, Splinter i ordinador-trampa"></p>
+<div class="mbody">
+<div class="quote">
+April esta atrapada prop de la màquina. Si les Tortugues corren cap a
+ella, Baxter activa els injectors. Si corren cap a la màquina, April
+queda en mans del Clan.<cite>Dues urgencies</cite>
+</div>
+<div class="rbox">
+<div class="rtitle">
+<p>Regles de missio</p>
+</div>
+<ul>
+<li><strong>Història de fons:</strong> Shredder obliga els herois a
+triar entre salvar April o impedir l'activacio de la màquina.</li>
+<li><strong>Camp de batalla / preparacio:</strong> laboratori amb dos
+objectius principals al centre: April i Maquina de Mutagen. Afegiu
+Pizza, Evidencia, Mestre Splinter i Ordinador-trampa.</li>
+<li><strong>Enemics suggerits:</strong> ninjas, Mousers, un mutant gran
+i Baxter.</li>
+<li><strong>Objectiu principal:</strong> abans de la primera ronda,
+decidiu en secret quin objectiu prioritzaran els herois:
+<strong>April</strong> o <strong>Maquina</strong>. L'altre continua a la
+taula però només pot donar consequencies narratives, no objectiu
+principal.</li>
+<li><strong>Objectiu secundari:</strong> recuperar Evidencia o Ordinador
+per sumar 1 missatge de Mr. K.</li>
+<li><strong>Final de missio i recompenses:</strong> si el Clan domina la
+Maquina, aneu directament a <strong>Slash!!</strong>. Si April queda
+capturada, jugueu <strong>Rescat (Rescue)</strong>. Si cap objectiu del
+Clan queda ferm, jugueu <strong>Lluites (Struggles)</strong> amb el Clan
+desorganitzat.</li>
+<li><strong>Desplegament:</strong> vores oposades; els objectius
+principals no poden estar a mes de 6" l'un de l'altre.</li>
+<li><strong>Regles especials:</strong> l'Ordinador-trampa exigeix
+Destresa (Dex) i despres Voluntat (Wil); si falla, l'objectiu es
+converteix en objectiu d'IA fins al final de la ronda.</li>
+<li><strong>Event narratiu:</strong> si els herois salven April i
+apaguen parcialment la Maquina, Donatello interpreta els esquemes: en la
+propera missio podeu moure un marcador d'objectiu 3" abans de
+desplegar.</li>
+<li><strong>Continuacio:</strong> esta missio decideix el centre de
+l'Acte II. Si April cau en mans del Clan, la següent escena és un
+rescat. Si la màquina queda en mans de Baxter, la creació de Slash
+s'accelera. Si cap pla ix net, Shredder improvisa una emboscada per
+separar el lider de la resta.</li>
+</ul>
+<div class="rbar">
+<p><span class="pill">Branca</span><span class="pill">April o
+Maquina</span><span class="pill">Mr. K +1</span></p>
+</div>
+</div>
+</div>
+</article>
+<article class="mission">
+<div class="mhead">
+<div class="mbar">
+<p>Missio 7.1</p>
+</div>
+<div class="mhc">
+<div class="mtype">
+<p>Rescat</p>
+</div>
+<div class="mtitle">
+<p>Rescat (Rescue)</p>
+</div>
+</div>
+</div>
+<div class="maptop">
+<span>Rescat</span><span>24" x 24" - cau de Shredder</span>
+</div>
+<p><img class="map" src="campaigns/tortugues-ninja-aofq/assets/maps/mission-07-1.svg" alt="Mapa de la missió 7.1: cau, April capturada, trampa, Splinter i residus de mutagen"></p>
+<div class="mbody">
+<div class="quote">
+April esta en el cau de Shredder. La trampa és exagerada, teatral i molt
+del Clan del Peu. Això no la fa menys mortal.<cite>El cau</cite>
+</div>
+<div class="rbox">
+<div class="rtitle">
+<p>Regles de missio</p>
+</div>
+<ul>
+<li><strong>Història de fons:</strong> jugueu esta missio si April queda
+capturada en El Dilema (The Dilemma).</li>
+<li><strong>Camp de batalla / preparacio:</strong> cau, dojo o
+laboratori secret. April al centre, Splinter i dos residus de mutagen
+com a objectius secundaris.</li>
+<li><strong>Enemics suggerits:</strong> ninjas, un elite, Mousers i
+opcionalment Shredder com a amenaça narrativa.</li>
+<li><strong>Objectiu principal:</strong> alliberar April amb una
+interaccio de Destresa (Dex) o Voluntat (Wil) i escoltar-la fins a una
+zona segura.</li>
+<li><strong>Objectiu secundari:</strong> consultar Splinter abans de la
+ronda 4. Si es passa Voluntat (Wil), podeu allargar o reduir la missio
+una ronda.</li>
+<li><strong>Final de missio i recompenses:</strong> si April és salvada,
+ajuda en Lluites (Struggles) i els herois trien dos suports enemics per
+al Clan. Si no, els herois continuen a Lluites (Struggles) però el Clan
+prepara la trampa.</li>
+<li><strong>Desplegament:</strong> herois en una vora; sentinelles prop
+d'April però a mes de 3".</li>
+<li><strong>Regles especials:</strong> al començar, tireu 1D6 per la
+trampa d'April: 1-2 feix de llum, 3-4 bany de mutagen, 5 zona perillosa,
+6 Shredder intervé. Tracteu-ho com a descripcio de perill i posicio, no
+com a perfil nou.</li>
+<li><strong>Event narratiu:</strong> si April és salvada abans de la
+ronda 4, revela que Mr. K parla des de "l'altre costat"; afegiu 1
+missatge de Mr. K.</li>
+<li><strong>Continuacio:</strong> April no ha vist Mr. K, però ha sentit
+la seua veu eixint de pantalles apagades. Diu que Shredder no semblava
+satisfet, sinó pressionat. El Clan intenta convertir el rescat en una
+segona trampa abans que les Tortugues puguen reagrupar-se.</li>
+</ul>
+<div class="rbar">
+<p><span class="pill">Opcional per branca</span><span
+class="pill">April</span><span class="pill">Mr. K possible</span></p>
+</div>
+</div>
+</div>
+</article>
+<article class="mission">
+<div class="mhead">
+<div class="mbar">
+<p>Missio 7.2</p>
+</div>
+<div class="mhc">
+<div class="mtype">
+<p>Emboscada</p>
+</div>
+<div class="mtitle">
+<p>Lluites (Struggles)</p>
+</div>
+</div>
+</div>
+<div class="maptop">
+<span>Lluites</span><span>24" x 24" - emboscada al cau</span>
+</div>
+<p><img class="map" src="campaigns/tortugues-ninja-aofq/assets/maps/mission-07-2.svg" alt="Mapa de la missió 7.2: líder aïllat, resta d'herois, evidència de Mr. K, pizza i residus"></p>
+<div class="mbody">
+<div class="quote">
+La trampa separa el lider de la resta. Durant uns segons, ningú sap si
+Shredder ha atrapat Leonardo o si Shredder mateix ha quedat massa lluny
+dels seus.<cite>La trampa mal posada</cite>
+</div>
+<div class="rbox">
+<div class="rtitle">
+<p>Regles de missio</p>
+</div>
+<ul>
+<li><strong>Història de fons:</strong> jugueu esta missio quan el dilema
+deixa el Clan sense control clar, o despres de Rescat (Rescue).</li>
+<li><strong>Camp de batalla / preparacio:</strong> cau del Clan amb un
+Lider Aillat com a objectiu principal, Pizza, residus de mutagen i
+Evidencia de Mr. K.</li>
+<li><strong>Enemics suggerits:</strong> ninjas, elites i el mutant gran
+disponible.</li>
+<li><strong>Objectiu principal:</strong> protegir o rescatar el Lider
+Aillat. Si és Leonardo, els herois han de contactar-lo i gastar Voluntat
+(Wil); si és Shredder, han de mantindre'l ocupat fins al final.</li>
+<li><strong>Objectiu secundari:</strong> recuperar Evidencia de Mr. K
+amb Destresa (Dex) o Voluntat (Wil).</li>
+<li><strong>Final de missio i recompenses:</strong> si el Lider Aillat
+no acaba derrotat o capturat, el bàndol que l'ha protegit controla el
+ritme narratiu. En qualsevol cas, Baxter completa Slash al final.</li>
+<li><strong>Desplegament:</strong> Lider Aillat a 6" d'una cantonada; la
+resta d'herois en la cantonada oposada; enemics propers al lider però
+sense contacte inicial.</li>
+<li><strong>Regles especials:</strong> els objectius menors es
+col.loquen despres del desplegament per simular la confusio de la
+trampa.</li>
+<li><strong>Event narratiu:</strong> si es recupera l'Evidencia, sumeu 1
+missatge de Mr. K i en Slash!! els herois poden triar una maquina per
+activar-la 3" mes prop.</li>
+<li><strong>Continuacio:</strong> la trampa no resol res; només compra
+temps. En algun lloc proper, Baxter crida que "la prova ha funcionat".
+La paret tremola, la llum es torna porpra i una silueta enorme trenca el
+formigó des de l'altre costat.</li>
+</ul>
+<div class="rbar">
+<p><span class="pill">Opcional per branca</span><span class="pill">Lider
+aillat</span><span class="pill">Slash arriba</span></p>
+</div>
+</div>
+</div>
+</article>
+<article class="mission">
+<div class="mhead">
+<div class="mbar">
+<p>Missio 7.3</p>
+</div>
+<div class="mhc">
+<div class="mtype">
+<p>Cap i portal</p>
+</div>
+<div class="mtitle">
+<p>Slash!!</p>
+</div>
+</div>
+</div>
+<div class="maptop">
+<span>Slash!!</span><span>24" x 24" - portal i tres màquines</span>
+</div>
+<p><img class="map" src="campaigns/tortugues-ninja-aofq/assets/maps/mission-07-3.svg" alt="Mapa de la missió 7.3: portal, Slash, tres màquines, zones de desplegament i runa"></p>
+<div class="mbody">
+<div class="quote">
+La paret s'obri amb un colp verd. Slash entra com una resposta
+equivocada a tots els plans de Baxter, i darrere d'ell el portal comença
+a respirar.<cite>Mutacio descontrolada</cite>
+</div>
+<div class="rbox">
+<div class="rtitle">
+<p>Regles de missio</p>
+</div>
+<ul>
+<li><strong>Història de fons:</strong> esta missio sempre tanca l'Acte
+II.</li>
+<li><strong>Camp de batalla / preparacio:</strong> portal en una
+cantonada, Slash a 3" davant, tres maquines a uns 6" de Slash i
+separades entre elles.</li>
+<li><strong>Enemics suggerits:</strong> Slash com a cap/amenaca errant,
+ninjas i Mousers.</li>
+<li><strong>Objectiu principal:</strong> activar les tres maquines en la
+mateixa ronda amb interaccions: Mutagen amb Força (Str) o Destresa
+(Dex), Diafragma amb Destresa (Dex) o Voluntat (Wil), i Generador amb
+Voluntat (Wil) o Força (Str). El portal s'obri al començament de la
+ronda següent.</li>
+<li><strong>Objectiu secundari:</strong> calmar o ferir Slash. Si un
+heroi ho aconsegueix, Slash queda ferit per a Cowabunga.</li>
+<li><strong>Final de missio i recompenses:</strong> almenys un heroi ha
+de travessar el portal. Si ningú ho fa, repetiu la missio perquè la
+campanya necessita descobrir Mr. K.</li>
+<li><strong>Desplegament:</strong> herois en una de les tres cantonades
+lliures; enemics entren des de les altres.</li>
+<li><strong>Regles especials:</strong> Slash ataca el personatge mes
+prop del portal. Només es mou per carregar objectius dins de 12" del
+portal.</li>
+<li><strong>Events narratius per ronda:</strong> R2 el portal tremola i
+augmenta l'alerta (alertness); R3 una maquina es reinicia si no hi ha
+cap heroi a 3"; R4 la veu de Mr. K crida Slash i el fa girar cap al
+portal; R5 el portal comença a tancar-se.</li>
+<li><strong>Continuacio:</strong> quan el portal s'obri, l'aire fa olor
+de metall calent i pizza cremada. A l'altre costat no hi ha un amagatall
+del Clan, sinó una nau impossible. Mr. K es presenta per fi com Kraang,
+i el Technodrome ja ha començat a caure cap a la Terra.</li>
+</ul>
+<div class="rbar">
+<p><span class="pill">Final Acte II</span><span class="pill">Tres
+maquines</span><span class="pill">Portal</span></p>
+</div>
+</div>
+</div>
+</article>
+</section>
+<section class="chapter">
+<div class="banner violet">
+<div class="smallcap">
+<p>Acte III - Kraang</p>
+</div>
+<div class="ctitle">
+<p>El Technodrome</p>
+</div>
+<p>Mr. K no és un contacte del Clan ni un financer misterios. És Kraang.
+El Clan del Peu ha obert la porta a una nau viva que vol entrar en la
+dimensio de la Terra. Shredder pot esperar: primer cal evitar que el
+Technodrome aterre.</p>
+</div>
+<section id="beneficis-abans-del-final" class="panel">
+<h3>Beneficis abans del final</h3>
+<div class="cols">
+<section id="missatges-de-mr.-k-1" class="box">
+<h4>Missatges de Mr. K</h4>
+<p>Si les Tortugues han aconseguit <strong>4 o mes missatges</strong>,
+April identifica patrons en la transmissio. En Technodrome, el primer
+heroi que arribe al panell sap quin gest activar: la primera interaccio
+fallada no activa cap event narratiu extra.</p>
+</section>
+<section id="pizza-acumulada" class="box">
+<h4>Pizza acumulada</h4>
+<p>Les pizzes no gastades poden convertir-se en ajuda narrativa abans
+d'una de les dues missions finals: canviar una zona de desplegament 3",
+revelar un cami segur o ignorar un efecte ambiental menor d'una
+ronda.</p>
+</section>
+<section id="clan-del-peu" class="box">
+<h4>Clan del Peu</h4>
+<p>Si el Clan va dominar el mutagen i la Maquina, comenceu Technodrome
+amb un elite extra o amb Shredder present com a amenaça de fons. Si no,
+el Clan arriba desorganitzat i els reforcos s'endarrereixen una
+ronda.</p>
+</section>
+</div>
+</section>
+<article class="mission">
+<div class="mhead">
+<div class="mbar">
+<p>Missio 8</p>
+</div>
+<div class="mhc">
+<div class="mtype">
+<p>Final - nau dimensional</p>
+</div>
+<div class="mtitle">
+<p>El Technodrome</p>
+</div>
+</div>
+</div>
+<div class="maptop">
+<span>El Technodrome</span><span>24" x 24" - plataformes flotants</span>
+</div>
+<p><img class="map" src="campaigns/tortugues-ninja-aofq/assets/maps/mission-08.svg" alt="Mapa de la missió 8: Technodrome, zones de desplegament, Kraang, panell i lectures alienígenes"></p>
+<div class="mbody">
+<div class="quote">
+El Technodrome no vola: es desmunta a si mateix i cau cap a la Terra
+peça a peça. Kraang protegeix el panell amb tentacles, metall i una veu
+que sona dins del crani.<cite>La nau de Kraang</cite>
+</div>
+<div class="rbox">
+<div class="rtitle">
+<p>Regles de missio</p>
+</div>
+<ul>
+<li><strong>Història de fons:</strong> les Tortugues han entrat al
+Technodrome. L'única manera d'evitar la invasio és controlar el panell
+central.</li>
+<li><strong>Camp de batalla / preparacio:</strong> nau alienigena amb
+passarel.les, ferralla flotant i Kraang al centre. Un sol objectiu
+principal: Panell de Control.</li>
+<li><strong>Enemics suggerits:</strong> Kraang com a cap/objectiu,
+robots, ninjas dispersos o mutants perduts.</li>
+<li><strong>Objectiu principal:</strong> un heroi en contacte amb el
+Panell completa 3 interaccions acumulades de Força (Str), Destresa (Dex)
+o Voluntat (Wil). Quan la tercera passa, la missio acaba
+immediatament.</li>
+<li><strong>Objectiu secundari:</strong> cada heroi que arribe a una
+plataforma lateral pot recuperar una lectura alienigena. Si en recupereu
+2, el final de Cowabunga comença amb el portal visible.</li>
+<li><strong>Final de missio i recompenses:</strong> si el Panell és
+controlat, Kraang no aterra completament. Si s'acaba la ronda 6 sense
+controlar-lo, Cowabunga comença amb el portal ja inestable.</li>
+<li><strong>Desplegament:</strong> herois en zones separades a mes de
+12" de Kraang si la taula ho permet.</li>
+<li><strong>Regles especials:</strong> el Panell és objectiu d'IA per a
+Kraang i els seus robots.</li>
+<li><strong>Events narratius per ronda:</strong> R1 ferralla volant: el
+tir és menys fiable narrativament; R2 robots protegeixen Kraang i una
+onada entra; R3 poseu peces flotants com a camins; R4 qualsevol heroi en
+terra ha de pujar a una peça amb Destresa (Dex); R5 una peça desapareix
+i obliga a reposicionar-se; R6 el portal de la Terra s'obri
+violentament.</li>
+<li><strong>Continuacio:</strong> si el panell cau en mans dels herois,
+el Technodrome no pot aterrar completament. Però la nau no queda
+destruida: es trenca en fragments i deixa un portal de retorn cada
+vegada més menut. Kraang, furios, usa Slash com a guardià final.</li>
+</ul>
+<div class="rbar">
+<p><span class="pill">Kraang</span><span class="pill">Panell 3
+exits</span><span class="pill">Events per ronda</span></p>
+</div>
+</div>
+</div>
+</article>
+<article class="mission">
+<div class="mhead">
+<div class="mbar">
+<p>Missio 9</p>
+</div>
+<div class="mhc">
+<div class="mtype">
+<p>Escapada final</p>
+</div>
+<div class="mtitle">
+<p>Cowabunga!</p>
+</div>
+</div>
+</div>
+<div class="maptop">
+<span>Cowabunga!</span><span>24" x 24" - portal final</span>
+</div>
+<p><img class="map" src="campaigns/tortugues-ninja-aofq/assets/maps/mission-09.svg" alt="Mapa de la missió 9: portal cap a la Terra, Kraang, Slash i zones de desplegament"></p>
+<div class="mbody">
+<div class="quote">
+Nova York es veu a l'altra banda del portal. És tan prop que quasi es
+pot olorar la pizza. Slash bloqueja el cami i Kraang, furios, tanca la
+porta amb cada segon.<cite>Tornar a casa</cite>
+</div>
+<div class="rbox">
+<div class="rtitle">
+<p>Regles de missio</p>
+</div>
+<ul>
+<li><strong>Història de fons:</strong> el portal cap a la Terra es
+tanca. Les Tortugues han de travessar-lo abans que Kraang les deixe
+atrapades.</li>
+<li><strong>Camp de batalla / preparacio:</strong> portal al centre
+d'una vora, Kraang al centre de la taula i Slash entre portal i herois a
+partir de la ronda 2.</li>
+<li><strong>Enemics suggerits:</strong> Slash, Kraang com a objectiu
+perillós i robots o ninjas residuals.</li>
+<li><strong>Objectiu principal:</strong> cada heroi ha d'arribar al
+portal. Si almenys un heroi travessa i acaba la ronda fora de combat
+immediat, pot guiar els altres en la ficcio si arriben a 3" del portal
+abans del final.</li>
+<li><strong>Objectiu secundari:</strong> debilitar Kraang amb una
+interaccio de Voluntat (Wil) o un enfrontament narratiu. Si es completa,
+Slash deixa de protegir el portal.</li>
+<li><strong>Final de missio i recompenses:</strong> si almenys un heroi
+travessa, la campanya pot acabar amb les Tortugues tornant a Nova York.
+Si tots queden atrapats, repetiu la missio com a visio dimensional de
+Kraang.</li>
+<li><strong>Desplegament:</strong> herois en les dues cantonades
+oposades al portal.</li>
+<li><strong>Regles especials:</strong> Slash protegeix el portal i ataca
+el personatge mes proper a ell. Si va quedar ferit en Slash!!, comença
+amb una penalitzacio narrativa: la seua primera activacio és només
+moviment o intimidacio.</li>
+<li><strong>Events narratius per ronda:</strong> R1 el portal esclata
+amb llum; R2 Slash entra i bloqueja; R3 la zona a 6" del portal es torna
+perillosa; des de R4, al començament de cada ronda tireu 1D6: amb 5+, el
+portal comença a tancar-se i la missio acaba al final d'eixa ronda.</li>
+<li><strong>Continuacio:</strong> quan l'última Tortuga travessa el
+portal, el soroll del Technodrome desapareix de colp. Només queda el
+vent d'un terrat de Nova York, una torre d'aigua abonyegada i la
+pregunta de si Shredder, Slash o Kraang han caigut realment... o només
+han perdut esta ronda.</li>
+</ul>
+<div class="rbar">
+<p><span class="pill">Portal final</span><span
+class="pill">Slash</span><span class="pill">Fi de campanya</span></p>
+</div>
+</div>
+</div>
+</article>
+</section>
+<section id="final" class="ending">
+<h3>Final</h3>
+<p>Les Tortugues cauen sobre una torre d'aigua de Nova York. Ningú sap
+explicar per què hi ha ferralla alienigena en un terrat, per què
+Shredder ha desaparegut o per què Slash ha deixat una esquerda enorme en
+el paviment. La ciutat continua com si res, però les Tortugues saben que
+Kraang no oblidarà el cami cap a la Terra.</p>
+<p>Pizza. Despres preguntes.</p>
+</section>
+<section id="fils-oberts" class="panel">
+<h3>Fils oberts</h3>
+<div class="cols">
+<section id="shredder" class="box">
+<h4>Shredder</h4>
+<p>Si Shredder ha fugit del Technodrome, pot tornar culpant les
+Tortugues per haver arruinat el seu pacte amb Kraang. Si va quedar
+atrapat, el Clan del Peu pot fragmentar-se en grups que busquen
+rescatar-lo o ocupar el seu lloc.</p>
+</section>
+<section id="slash" class="box">
+<h4>Slash</h4>
+<p>Si Slash va quedar ferit però no derrotat, pot reaparéixer com una
+amenaça confusa: no necessàriament aliat de Kraang, però massa perillós
+per deixar-lo sol pels carrers. Si les Tortugues el calmaren, pot
+convertir-se en un aliat incòmode en una aventura posterior.</p>
+</section>
+<section id="kraang" class="box">
+<h4>Kraang</h4>
+<p>Kraang ha perdut l'entrada directa a la Terra, però no la ubicació.
+Els missatges de Mr. K poden haver deixat fragments de codi en
+ordinadors del Clan, televisions de Channel 6 o aparells de
+Donatello.</p>
+</section>
+</div>
+</section>
+<!--
+Taula interna de correspondencia per a revisio:
+- Harbor Havoc -> Missio 1: Estrall al Port
+- Open it! -> Missio 2: Obriu-lo!
+- O'Neil's Report -> Missio 3: L'informe d'O'Neil
+- Mutagen Transport -> Missio 4: Transport de Mutagen
+- Mutagen Machine -> Missio 5: La Maquina de Mutagen
+- The Dilemma -> Missio 6: El Dilema
+- Rescue -> Missio 7.1: Rescat
+- Struggles -> Missio 7.2: Lluites
+- Slash!! -> Missio 7.3: Slash!!
+- Technodrome -> Missio 8: El Technodrome
+- Cowabunga! -> Missio 9: Cowabunga!
+-->
+<p>:::</p>
+</main></body></html>

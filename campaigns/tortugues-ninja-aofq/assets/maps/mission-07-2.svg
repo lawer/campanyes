@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 720" role="img" aria-label="Mapa missio 7.2 Lluites">
+<defs><pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse"><path d="M80 0H0V80" fill="none" stroke="#9cff4a" stroke-opacity=".12"/></pattern><style>text{font-family:Arial,sans-serif;font-weight:700}.t{font-size:18px}.s{font-size:13px}.zoneH{fill:#2fb8ff;fill-opacity:.14;stroke:#2fb8ff;stroke-width:4;stroke-dasharray:12 8}.zoneE{fill:#ff3b35;fill-opacity:.14;stroke:#ff3b35;stroke-width:4;stroke-dasharray:12 8}.obj{fill:#9cff4a;stroke:#fff;stroke-width:4}.sec{fill:#ffb329;stroke:#fff;stroke-width:3}.wall{fill:#1d1825;stroke:#9d65ff;stroke-opacity:.5;stroke-width:3}.cov{fill:#4b3320;stroke:#c49a54;stroke-width:2}</style></defs>
+<rect width="720" height="720" fill="#07120c"/><rect x="40" y="40" width="640" height="640" fill="#100d17" stroke="#43d66f" stroke-width="4"/><rect x="40" y="40" width="640" height="640" fill="url(#grid)"/>
+<rect x="40" y="40" width="170" height="170" class="zoneE"/><text x="125" y="132" fill="#ff9b92" class="s" text-anchor="middle">Lider aillat</text>
+<rect x="510" y="510" width="170" height="170" class="zoneH"/><text x="595" y="602" fill="#8fd8ff" class="s" text-anchor="middle">Resta d'herois</text>
+<rect x="140" y="300" width="130" height="60" class="wall"/><rect x="450" y="300" width="130" height="60" class="wall"/><rect x="300" y="185" width="120" height="55" class="cov"/><rect x="300" y="480" width="120" height="55" class="cov"/>
+<circle cx="145" cy="145" r="30" class="obj"/><text x="145" y="190" fill="#fff" class="s" text-anchor="middle">Lider</text>
+<circle cx="360" cy="360" r="18" class="sec"/><text x="360" y="395" fill="#ffdd91" class="s" text-anchor="middle">Evidencia Mr. K</text>
+<circle cx="220" cy="520" r="18" class="sec"/><text x="220" y="555" fill="#ffdd91" class="s" text-anchor="middle">Pizza</text>
+<circle cx="520" cy="220" r="18" class="sec"/><text x="520" y="255" fill="#ffdd91" class="s" text-anchor="middle">Residus</text>
+<text x="360" y="706" fill="#d5e8c8" class="s" text-anchor="middle">24&quot; x 24&quot; - emboscada al cau: murs, cobertura i passos estrets</text></svg>

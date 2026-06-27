@@ -84,7 +84,7 @@ No cal entendre tota la campanya abans de començar. Llegiu només el resum, pre
 ::: {.box .scale}
 #### Prepareu només açò
 
-- Taula de **3' x 3'**.
+- Taula màxima de **2' x 2'** (24" x 24").
 - 7 a 12 peces de terreny urbà.
 - 5 marcadors de plot point.
 - 4 marcadors de claveguera.

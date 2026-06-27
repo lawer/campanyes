@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 720" role="img" aria-label="Mapa missio 1 Estrall al Port">
+<defs><pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse"><path d="M80 0H0V80" fill="none" stroke="#9cff4a" stroke-opacity=".12"/></pattern><style>text{font-family:Arial,sans-serif;font-weight:700}.t{font-size:18px}.s{font-size:13px}.zoneH{fill:#2fb8ff;fill-opacity:.15;stroke:#2fb8ff;stroke-width:4;stroke-dasharray:12 8}.zoneE{fill:#ff3b35;fill-opacity:.15;stroke:#ff3b35;stroke-width:4;stroke-dasharray:12 8}.obj{fill:#9cff4a;stroke:#fff;stroke-width:4}.sec{fill:#ffb329;stroke:#fff;stroke-width:3}.terr{fill:#263b50;stroke:#d9f5ff;stroke-width:3}.cov{fill:#6b4729;stroke:#c49a54;stroke-width:2}.road{fill:#192a35}</style></defs>
+<rect width="720" height="720" fill="#07120c"/><rect x="40" y="40" width="640" height="640" class="road" stroke="#43d66f" stroke-width="4"/><rect x="40" y="40" width="640" height="640" fill="url(#grid)"/>
+<rect x="40" y="40" width="640" height="120" class="zoneE"/><text x="360" y="112" fill="#ff9b92" class="t" text-anchor="middle">Clan del Peu - desplegament 6&quot;</text>
+<rect x="40" y="560" width="640" height="120" class="zoneH"/><text x="360" y="632" fill="#8fd8ff" class="t" text-anchor="middle">Herois - desplegament 6&quot;</text>
+<rect x="120" y="205" width="80" height="210" class="terr"/><text x="160" y="318" fill="#fff" class="s" text-anchor="middle" transform="rotate(-90 160 318)">Contenidor</text>
+<rect x="510" y="220" width="80" height="200" class="terr"/><text x="550" y="328" fill="#fff" class="s" text-anchor="middle" transform="rotate(-90 550 328)">Contenidor</text>
+<rect x="260" y="175" width="170" height="55" class="terr"/><text x="345" y="209" fill="#fff" class="s" text-anchor="middle">Contenidor</text>
+<rect x="240" y="460" width="62" height="44" class="cov"/><rect x="430" y="165" width="62" height="44" class="cov"/><rect x="330" y="510" width="72" height="32" class="cov"/>
+<circle cx="360" cy="360" r="28" class="obj"/><text x="360" y="400" fill="#fff" class="s" text-anchor="middle">Mutagen gran</text>
+<circle cx="170" cy="500" r="18" class="sec"/><text x="170" y="535" fill="#ffdd91" class="s" text-anchor="middle">Pizza</text>
+<circle cx="555" cy="180" r="18" class="sec"/><text x="555" y="215" fill="#ffdd91" class="s" text-anchor="middle">Ordinador</text>
+<circle cx="215" cy="275" r="16" class="sec"/><text x="215" y="305" fill="#ffdd91" class="s" text-anchor="middle">Mutagen menor</text>
+<circle cx="500" cy="505" r="16" class="sec"/><text x="500" y="535" fill="#ffdd91" class="s" text-anchor="middle">Mutagen menor</text>
+<text x="360" y="706" fill="#d5e8c8" class="s" text-anchor="middle">24&quot; x 24&quot; - molls: contenidors, caixes, grues i cobertura pesada</text></svg>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" role="img" aria-label="Mapa tutorial L'Última Pizza">
+<rect width="480" height="480" fill="#07120c"/>
+<defs>
+<pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse"><path d="M60 0H0V60" fill="none" stroke="#9cff4a" stroke-opacity=".14"/></pattern>
+<style>text{font-family:Arial,sans-serif;font-weight:700}.z{font-size:15px}.l{font-size:13px}.s{font-size:11px}.roof{fill:#243746;stroke:#83a1a7;stroke-width:3}.walk{fill:#8096a0;stroke:#c8d5d9;stroke-width:2}.zoneb{fill:#2fb8ff;fill-opacity:.16;stroke:#2fb8ff;stroke-width:3;stroke-dasharray:10 7}.zoner{fill:#ff3b35;fill-opacity:.16;stroke:#ff3b35;stroke-width:3;stroke-dasharray:10 7}.obj{fill:#ffb329;stroke:#fff;stroke-width:4}.crate{fill:#6b4729;stroke:#c49a54;stroke-width:2}</style>
+</defs>
+<rect x="30" y="30" width="420" height="420" fill="#102318" stroke="#43d66f" stroke-width="4"/>
+<rect x="30" y="30" width="420" height="420" fill="url(#grid)"/>
+<polygon points="30,30 150,30 30,150" class="zoneb"/><text x="72" y="70" fill="#8fd8ff" class="z" text-anchor="middle">TORTUGUES</text>
+<polygon points="450,450 330,450 450,330" class="zoner"/><text x="405" y="420" fill="#ff9b92" class="z" text-anchor="middle">PEU</text>
+<rect x="55" y="55" width="150" height="150" class="roof"/><rect x="275" y="55" width="150" height="150" class="roof"/><rect x="55" y="275" width="150" height="150" class="roof"/><rect x="275" y="275" width="150" height="150" class="roof"/>
+<text x="130" y="135" fill="#cfe8e9" class="l" text-anchor="middle">Terrat</text><text x="350" y="135" fill="#cfe8e9" class="l" text-anchor="middle">Terrat</text><text x="130" y="355" fill="#cfe8e9" class="l" text-anchor="middle">Terrat</text><text x="350" y="355" fill="#cfe8e9" class="l" text-anchor="middle">Terrat</text>
+<rect x="205" y="95" width="70" height="34" class="walk"/><rect x="95" y="205" width="34" height="70" class="walk"/><rect x="351" y="205" width="34" height="70" class="walk"/><rect x="205" y="351" width="70" height="34" class="walk"/>
+<rect x="205" y="225" width="70" height="30" class="walk"/><rect x="225" y="205" width="30" height="70" class="walk"/><text x="240" y="218" fill="#07120c" class="s" text-anchor="middle">Passarel.la</text>
+<circle cx="240" cy="240" r="20" class="obj"/><text x="240" y="246" fill="#1b1300" class="z" text-anchor="middle">PIZZA</text>
+<rect x="310" y="215" width="38" height="26" class="crate"/><rect x="132" y="238" width="38" height="26" class="crate"/>
+<text x="240" y="468" fill="#d5e8c8" class="l" text-anchor="middle">24&quot; x 24&quot; · tutorial · terrats i passarel.les</text>
+</svg>

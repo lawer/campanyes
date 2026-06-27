@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 720" role="img" aria-label="Mapa missio 7.1 Rescat">
+<defs><pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse"><path d="M80 0H0V80" fill="none" stroke="#9cff4a" stroke-opacity=".12"/></pattern><style>text{font-family:Arial,sans-serif;font-weight:700}.t{font-size:18px}.s{font-size:13px}.zoneH{fill:#2fb8ff;fill-opacity:.14;stroke:#2fb8ff;stroke-width:4;stroke-dasharray:12 8}.zoneE{fill:#ff3b35;fill-opacity:.14;stroke:#ff3b35;stroke-width:4;stroke-dasharray:12 8}.obj{fill:#2fb8ff;stroke:#fff;stroke-width:4}.sec{fill:#ffb329;stroke:#fff;stroke-width:3}.wall{fill:#1d1825;stroke:#9d65ff;stroke-opacity:.5;stroke-width:3}.mat{fill:#314322;stroke:#9cff4a;stroke-opacity:.4;stroke-width:2}</style></defs>
+<rect width="720" height="720" fill="#07120c"/><rect x="40" y="40" width="640" height="640" fill="#100d17" stroke="#43d66f" stroke-width="4"/><rect x="40" y="40" width="640" height="640" fill="url(#grid)"/>
+<rect x="40" y="560" width="640" height="120" class="zoneH"/><text x="360" y="632" fill="#8fd8ff" class="t" text-anchor="middle">Herois - entrada del cau</text>
+<rect x="250" y="130" width="220" height="85" class="zoneE"/><text x="360" y="180" fill="#ff9b92" class="s" text-anchor="middle">Sentries prop d'April</text>
+<rect x="90" y="120" width="120" height="320" class="wall"/><rect x="510" y="120" width="120" height="320" class="wall"/><rect x="260" y="470" width="200" height="50" class="mat"/>
+<circle cx="360" cy="330" r="32" class="obj"/><text x="360" y="377" fill="#fff" class="s" text-anchor="middle">April capturada</text>
+<circle cx="185" cy="500" r="18" class="sec"/><text x="185" y="535" fill="#ffdd91" class="s" text-anchor="middle">Splinter</text>
+<circle cx="535" cy="500" r="18" class="sec"/><text x="535" y="535" fill="#ffdd91" class="s" text-anchor="middle">Residus</text>
+<circle cx="360" cy="150" r="18" class="sec"/><text x="360" y="188" fill="#ffdd91" class="s" text-anchor="middle">Trampa</text>
+<text x="360" y="706" fill="#d5e8c8" class="s" text-anchor="middle">24&quot; x 24&quot; - cau: dojo, armes, terminals i trampa central</text></svg>

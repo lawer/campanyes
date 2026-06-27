@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 720" role="img" aria-label="Mapa missio 5 Maquina de Mutagen">
+<defs><pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse"><path d="M80 0H0V80" fill="none" stroke="#9cff4a" stroke-opacity=".12"/></pattern><style>text{font-family:Arial,sans-serif;font-weight:700}.t{font-size:18px}.s{font-size:13px}.zoneH{fill:#2fb8ff;fill-opacity:.14;stroke:#2fb8ff;stroke-width:4;stroke-dasharray:12 8}.zoneE{fill:#ff3b35;fill-opacity:.14;stroke:#ff3b35;stroke-width:4;stroke-dasharray:12 8}.obj{fill:#9cff4a;stroke:#fff;stroke-width:4}.sec{fill:#ffb329;stroke:#fff;stroke-width:3}.lab{fill:#24312c;stroke:#9cff4a;stroke-opacity:.45;stroke-width:3}.bench{fill:#4b3320;stroke:#c49a54;stroke-width:2}</style></defs>
+<rect width="720" height="720" fill="#07120c"/><rect x="40" y="40" width="640" height="640" fill="#111b17" stroke="#43d66f" stroke-width="4"/><rect x="40" y="40" width="640" height="640" fill="url(#grid)"/>
+<rect x="40" y="40" width="170" height="170" class="zoneH"/><text x="125" y="132" fill="#8fd8ff" class="s" text-anchor="middle">Herois</text>
+<rect x="510" y="510" width="170" height="170" class="zoneE"/><text x="595" y="602" fill="#ff9b92" class="s" text-anchor="middle">Clan</text>
+<rect x="270" y="275" width="180" height="130" class="lab"/><text x="360" y="345" fill="#d5e8c8" class="t" text-anchor="middle">Taller central</text>
+<rect x="110" y="300" width="120" height="45" class="bench"/><rect x="500" y="210" width="120" height="45" class="bench"/><rect x="265" y="500" width="170" height="45" class="bench"/>
+<circle cx="360" cy="340" r="28" class="obj"/><text x="360" y="385" fill="#fff" class="s" text-anchor="middle">Baxter apareix aci</text>
+<circle cx="210" cy="210" r="18" class="sec"/><text x="210" y="245" fill="#ffdd91" class="s" text-anchor="middle">Peça 1</text>
+<circle cx="520" cy="440" r="18" class="sec"/><text x="520" y="475" fill="#ffdd91" class="s" text-anchor="middle">Peça 2</text>
+<circle cx="180" cy="515" r="18" class="sec"/><text x="180" y="550" fill="#ffdd91" class="s" text-anchor="middle">Peça 3 / nova</text>
+<circle cx="570" cy="150" r="18" class="sec"/><text x="570" y="185" fill="#ffdd91" class="s" text-anchor="middle">Ordinador</text>
+<text x="360" y="706" fill="#d5e8c8" class="s" text-anchor="middle">24&quot; x 24&quot; - taller: bancs, bidons, generadors i ferralla</text></svg>
